@@ -25,3 +25,34 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+html {
+  scroll-behavior: smooth !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+  transition: all 0.5s ease-in-out;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+
+/* .container {
+  max-width: 78.125rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+} */
+
+@media screen and (max-width: 790px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+  .aos-init:not(.aos-animate):after {
+    position: fixed;
+  }
+}
