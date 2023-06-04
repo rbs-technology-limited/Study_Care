@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
-const AOSProvider = ({ children }) => {
+import AOS from "aos";
+
+const AOSProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",

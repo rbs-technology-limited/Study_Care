@@ -34,6 +34,7 @@
     "touch-cli": "^0.0.1"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@types/node": "20.2.5",
     "@types/react": "^18.2.8",
     "eslint-config-prettier": "^8.8.0",

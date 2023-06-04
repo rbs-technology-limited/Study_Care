@@ -1,18 +1,21 @@
 "use client";
-import { useLocalStorage } from "browser_storage_hook_react";
 import { createContext } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-export const Context = createContext();
+export const Context = createContext({});
 
-const ContextProvider = ({ children }) => {
-  const [userData] = useLocalStorage("userData", "");
+interface Props {
+  children: React.ReactNode;
+}
 
+const ContextProvider = ({ children }: Props): React.ReactElement<Props> => {
   return (
     <Context.Provider
-      value={{
-        userData,
-      }}
+      value={
+        {
+          // @ts-ignore
+        }
+      }
     >
       {children}
       <ToastContainer pauseOnFocusLoss={false} />
