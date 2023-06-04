@@ -1,11 +1,11 @@
 {
-  "name": "rbs_school",
+  "name": "study_care",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore && next lint && next dev && next-sitemap --watch && prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "build": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore && next build",
+    "start": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore && next start",
     "lint": "next lint",
     "start-next": "next dev -p 8090",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",

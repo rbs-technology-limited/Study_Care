@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
@@ -38,10 +34,8 @@
     "**/*.json",
     ".next/**/*.ts",
     ".next/**/*.tsx",
-    "src/**/*.ts", "src/Shared/ScrollToTop/ScrollToTop.tsx",
-
+    "src/**/*.ts",
+    "src/Shared/ScrollToTop/ScrollToTop.tsx"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
