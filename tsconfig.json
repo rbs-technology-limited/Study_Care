@@ -38,7 +38,7 @@
     "**/*.json",
     ".next/**/*.ts",
     ".next/**/*.tsx",
-    "src/**/*.ts",
+    "src/**/*.ts", "src/Shared/ScrollToTop/ScrollToTop.tsx",
 
   ],
   "exclude": [
