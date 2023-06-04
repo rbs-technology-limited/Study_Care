@@ -1,11 +1,13 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+interface Props {}
+
 const ScrollToTop = () => {
   const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
 
   const [isShow, setIsShow] = useState(false);
-  const handleScrollToTop = (e) => {
+  const handleScrollToTop = (e: any) => {
     e.preventDefault();
     if (!isBrowser()) return;
     window.scrollTo({
