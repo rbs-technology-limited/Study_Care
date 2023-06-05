@@ -43,6 +43,8 @@ const CButton = ({
                   ? "opacity-50 cursor-not-allowed pointer-events-none"
                   : ""
               }
+
+              ${variant === "text" ? "bg-transparent text-button-teal dark:text-button-dark-teal" : ""}
               `
         }
         style={{
@@ -56,10 +58,10 @@ const CButton = ({
             backgroundColor: isHovered ? color : "transparent",
 
           }),
-          ...(variant === "text" && {
-            color: color,
-            backgroundColor: "transparent",
-          }),
+          // ...(variant === "text" && {
+          //   color: color,
+          //   backgroundColor: "transparent",
+          // }),
 
         }}
         type={type}

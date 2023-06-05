@@ -26,9 +26,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        
+
       </head>
-      <body className={`${inter.className} relative`}>
+      <body className={`${inter.className} relative dark:bg-dark-background dark:text-white`}>
         <AOSProvider>
           <Suspense fallback={<Loading />}>
             <ContextProvider>

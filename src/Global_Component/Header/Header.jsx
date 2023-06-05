@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     //gradient orange 50 to orange 100
-    <nav className="w-full fixed top-0 z-50 bg-[#EAFBFB] bg-[url('/Asset/top-header-right.svg')] bg-no-repeat bg-right-bottom">
+    <nav className="w-full fixed top-0 z-50 bg-custom-teal dark:bg-dark-teal bg-[url('/Asset/top-header-right.svg')] bg-no-repeat bg-right-bottom">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
         <>
           <div className="flex items-center justify-between py-3 lg:py-1 lg:block">
@@ -128,7 +128,8 @@ const Header = () => {
                 return (
                   <li
                     className={`text-blue-950 hover:text-gray-900
-              ${item?.text === IndexData ? "underline" : ""}
+                    dark:text-white dark:hover:text-blue-300
+                    ${item?.text === IndexData ? "underline" : ""}
               `}
                     key={index}
                     onClick={() => {
@@ -138,7 +139,9 @@ const Header = () => {
                   >
                     <Link
                       href={item?.href}
-                      className="inline-block px-1 py-2 font-medium leading-5 text-center text-black-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-gray-500 focus:outline-none focus:border-black-500 focus:shadow-outline-black active:bg-gray-50 active:text-black-700"
+                      className="inline-block px-1 py-2 font-medium leading-5 text-center text-black-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-gray-500 focus:outline-none focus:border-black-500 focus:shadow-outline-black active:bg-gray-50 active:text-black-700
+                      dark:text-white dark:hover:text-gray-300
+                      "
                     >
                       <span>{item?.text}</span>
                     </Link>
