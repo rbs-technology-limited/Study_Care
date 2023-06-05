@@ -9,6 +9,8 @@ import { useRouter } from "next/navigation";
 import ProfileDropDown from "./ProfileDropDown";
 import { CButton } from "@/Shared";
 import MENU_LIST from "@/Constant/Nav_Data";
+import TopHeader from "public/Asset/top-header-right.svg";
+import { orange } from "@/Constant/Custom-Color";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -53,9 +55,9 @@ const Header = () => {
 
   return (
     //gradient orange 50 to orange 100
-    <nav className="w-full fixed top-0 z-50 bg-teal-50">
+    <nav className="w-full fixed top-0 z-50 bg-custom-teal dark:bg-dark-teal bg-[url('/Asset/top-header-right.svg')] bg-no-repeat bg-right-bottom">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
-        <div>
+        <>
           <div className="flex items-center justify-between py-3 lg:py-1 lg:block">
             {/* //logo  */}
             <Link
@@ -113,7 +115,7 @@ const Header = () => {
               </button>
             </div>
           </div>
-        </div>
+        </>
         {/* //desktop menu */}
         <div>
           <div
@@ -126,7 +128,8 @@ const Header = () => {
                 return (
                   <li
                     className={`text-blue-950 hover:text-gray-900
-              ${item?.text === IndexData ? "underline" : ""}
+                    dark:text-white dark:hover:text-blue-300
+                    ${item?.text === IndexData ? "underline" : ""}
               `}
                     key={index}
                     onClick={() => {
@@ -136,7 +139,9 @@ const Header = () => {
                   >
                     <Link
                       href={item?.href}
-                      className="inline-block px-1 py-2 font-medium leading-5 text-center text-black-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-gray-500 focus:outline-none focus:border-black-500 focus:shadow-outline-black active:bg-gray-50 active:text-black-700"
+                      className="inline-block px-1 py-2 font-medium leading-5 text-center text-black-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-gray-500 focus:outline-none focus:border-black-500 focus:shadow-outline-black active:bg-gray-50 active:text-black-700
+                      dark:text-white dark:hover:text-gray-300
+                      "
                     >
                       <span>{item?.text}</span>
                     </Link>
@@ -169,6 +174,8 @@ const Header = () => {
             <CButton
               type="button"
               textUpperCased
+              variant="solid"
+              color={orange}
               // className="px-4 py-2 mb-5 lg:mb-0 text-sm text-stone-700 transition-all bg-orange-400 rounded-lg outline-none hover:bg-orange-500 focus:bg-orange-500 uppercase focus:outline-none border-2 shadow-lg shadow-orange-500/50"
               onClick={() => {
                 handleLogin();

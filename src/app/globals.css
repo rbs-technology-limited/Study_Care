@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@1,700&display=swap');
+
+
+@layer base {
+  /* //roboto font */
+  html {
+    font-family: 'Roboto', sans-serif !important;
+  }
+}
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -30,7 +39,9 @@ html {
   scroll-behavior: smooth !important;
   box-sizing: border-box !important;
   overflow-x: hidden !important;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out !important;
+  font-family: 'Roboto', sans-serif !important;
+
 }
 
 body {

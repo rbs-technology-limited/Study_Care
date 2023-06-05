@@ -1,9 +1,11 @@
-import Image from 'next/image'
+import HeroSection from "@/components/Home/HeroSection/HeroSection";
+import MainFeature from "@/components/Home/MainFeature/MainFeature";
 
 export default function Home() {
   return (
     <main>
-      <h1>Home</h1>
+      <HeroSection />
+      <MainFeature />
     </main>
-  )
+  );
 }
