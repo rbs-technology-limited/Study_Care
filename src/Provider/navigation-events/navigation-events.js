@@ -1,4 +1,6 @@
 "use client";
+import Footer from "@/Global_Component/Footer/Footer";
+import Header from "@/Global_Component/Header/Header";
 import { usePathname } from "next/navigation";
 
 export function NavigationEvents({ children }) {
@@ -6,9 +8,9 @@ export function NavigationEvents({ children }) {
 
   return (
     <>
-      {pathname === "/login" || pathname === "/signup" ? null : null}
+      {pathname === "/login" || pathname === "/signup" ? null : <Header />}
       {children}
-      {pathname === "/login" || pathname === "/signup" ? null : null}
+      {pathname === "/login" || pathname === "/signup" ? null : <Footer />}
     </>
   );
 }
