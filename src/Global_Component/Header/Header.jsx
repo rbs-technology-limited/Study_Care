@@ -10,7 +10,6 @@ import ProfileDropDown from "./ProfileDropDown";
 import { CButton } from "@/Shared";
 import MENU_LIST from "@/Constant/Nav_Data";
 
-
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
   const [IndexData, setIndex] = useState("");
@@ -32,10 +31,10 @@ const Header = () => {
 
   useEffect(() => {
     setPageLoading(true);
-    const key = "userData" || "";
-    const userData = JSON.parse(localStorage.getItem(key) || "") || null;
-    if (userData) {
-      setUser(userData);
+    const studyCareData = JSON.parse(localStorage.getItem(studyCareData));
+
+    if (studyCareData) {
+      setUser(studyCareData);
       setPageLoading(false);
     } else {
       setUser(null);
@@ -49,8 +48,7 @@ const Header = () => {
   // console.log(IndexData);
 
   const handleLogin = () => {
-    const type = "login" || "";
-    router.push(`/${type}`);
+    router.push("/login");
   };
 
   return (

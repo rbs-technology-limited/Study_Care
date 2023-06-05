@@ -10,7 +10,7 @@ const ProfileDropDown = ({
   setRefreshUserData,
   setUser,
 }) => {
-  const [userData, setUserData] = useLocalStorage("userData", "");
+  const [studyCareData, setUserData] = useLocalStorage("studyCareData", "");
   const handleLogout = () => {
     setDropdown(false);
     setUserData("");
