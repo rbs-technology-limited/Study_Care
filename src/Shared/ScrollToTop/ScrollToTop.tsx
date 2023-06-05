@@ -34,7 +34,7 @@ const ScrollToTop = () => {
   return (
     <>
       {/* hello */}
-      {/* //circle lime green button with arrow up icon  */}
+      {/* //circle orange green button with arrow up icon  */}
       {isShow && (
         <button
           style={{
@@ -42,9 +42,9 @@ const ScrollToTop = () => {
             bottom: "20px",
             right: "20px",
           }}
-          className="bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-2 rounded-full
+          className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-2 rounded-full
             transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 border-2 border-white animate-ping
-            shadow-lg  shadow-lime-800/50
+            shadow-lg  shadow-orange-800/50
             
             "
           onClick={(e) => {

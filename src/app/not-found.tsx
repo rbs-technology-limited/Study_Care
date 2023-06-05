@@ -11,7 +11,7 @@ export default function NotFound() {
       <div>
         <Link
           href="/"
-          className="px-6 py-2 my-6 text-sm text-white transition-all bg-lime-500 rounded-lg outline-none hover:bg-lime-400 focus:bg-lime-500 uppercase focus:outline-none border-1 border-white hover:border-lime-400 focus:border-lime-500"
+          className="px-6 py-2 my-6 text-sm text-white transition-all bg-orange-500 rounded-lg outline-none hover:bg-orange-400 focus:bg-orange-500 uppercase focus:outline-none border-1 border-white hover:border-orange-400 focus:border-orange-500"
         >
           Go home
         </Link>
