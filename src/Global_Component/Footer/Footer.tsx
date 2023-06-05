@@ -1,10 +1,8 @@
 import React from "react";
-import companyLogo from "../../../public/Asset/Logo.png";
+import companyLogo from "public/Asset/Logo.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
-import { IconType } from "react-icons";
-import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
   interface IRoute {
