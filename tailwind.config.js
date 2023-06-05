@@ -6,6 +6,9 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/Global_Component/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/Shared/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/Provider/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/Hooks/**/*.{js,ts,jsx,tsx,mdx}",
     "./public/**/*.html",
   ],
   theme: {
