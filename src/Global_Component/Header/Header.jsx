@@ -31,7 +31,7 @@ const Header = () => {
 
   useEffect(() => {
     setPageLoading(true);
-    const studyCareData = JSON.parse(localStorage.getItem(studyCareData));
+    const studyCareData = JSON.parse(localStorage.getItem("studyCareData"));
 
     if (studyCareData) {
       setUser(studyCareData);
