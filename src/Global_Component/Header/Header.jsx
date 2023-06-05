@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import ProfileDropDown from "./ProfileDropDown";
 import { CButton } from "@/Shared";
 import MENU_LIST from "@/Constant/Nav_Data";
+import TopHeader from 'public/Asset/top-header-right.svg';
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -53,7 +54,7 @@ const Header = () => {
 
   return (
     //gradient orange 50 to orange 100
-    <nav className="w-full fixed top-0 z-50 bg-teal-50">
+    <nav className="w-full fixed top-0 z-50 bg-teal-50 bg-[url('/Asset/top-header-right.svg')] bg-no-repeat bg-right-bottom">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
         <div>
           <div className="flex items-center justify-between py-3 lg:py-1 lg:block">

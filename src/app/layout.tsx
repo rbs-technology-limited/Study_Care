@@ -27,11 +27,7 @@ export default function RootLayout({
         <AOSProvider>
           <Suspense fallback={<Loading />}>
             <ContextProvider>
-              <NavigationEvents>
-                {/* <Header /> */}
-                {children}
-                {/* <Footer /> */}
-              </NavigationEvents>
+              <NavigationEvents>{children}</NavigationEvents>
             </ContextProvider>
           </Suspense>
           <ScrollToTop />
