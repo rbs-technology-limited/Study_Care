@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import AOSProvider from "@/Provider/AOSProvider/AOSProvider";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -23,6 +24,10 @@ export default function RootLayout({
 }: Props): React.ReactElement<Props> {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        
+      </head>
       <body className={`${inter.className} relative`}>
         <AOSProvider>
           <Suspense fallback={<Loading />}>

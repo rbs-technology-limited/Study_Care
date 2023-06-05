@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,6 +18,10 @@ module.exports = {
     },
     animation: {
       "animate-bounce": "bounce 4s infinite",
+    },
+    colors: {
+      "custom-teal": "#EAFBFB",
+      ...require("tailwindcss/colors"),
     },
   },
   plugins: [],

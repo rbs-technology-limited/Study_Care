@@ -1,11 +1,21 @@
 import Image from "next/image";
 import React from "react";
 import HeroImage from "public/Asset/Hero_section_Logo.svg";
+import Styles from "./Style/HeroSection.module.css";
 
 const HeroSection = () => {
   return (
-    <main className=" bg-teal-50">
-      {/* image on right side and text on left side  */}
+    <main className="relative py-20 mb-40">
+      {/* //shape  */}
+      <section
+        className="bg-custom-teal h-[43.75rem] absolute top-[-6.125rem] right-[-1.5625rem] w-[100%] z-[-5]"
+        style={{
+          transform: "rotate(-10deg)",
+          borderRadius: "5rem",
+        }}
+      />
+        {/* //shape  */}
+
       <section className="container mx-auto px-4 py-8 mt-[2.1875rem]">
         <div className="flex flex-col md:flex-row">
           <div className="flex flex-col md:w-1/2 justify-center items-center">
@@ -25,7 +35,7 @@ const HeroSection = () => {
               alt="Hero Image"
               width={300}
               height={350}
-              className="object-cover object-center transform scale-60 md:scale-110"
+              className="object-cover object-center transform scale-60 md:scale-125"
             />
           </div>
         </div>

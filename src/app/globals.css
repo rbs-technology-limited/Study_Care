@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@layer base {
+  /* //roboto font */
+  html {
+    font-family: 'Lobster', cursive !important;
+  }
+}
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -31,6 +39,7 @@ html {
   box-sizing: border-box !important;
   overflow-x: hidden !important;
   transition: all 0.5s ease-in-out;
+  font-family: 'Lobster', cursive !important;
 }
 
 body {
