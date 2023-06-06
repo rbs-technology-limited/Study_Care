@@ -1,13 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@1,700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@1,700&display=swap");
 
 @layer base {
   /* //roboto font */
   html {
-    font-family: 'Roboto', sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
   }
 }
 
@@ -40,8 +39,7 @@ html {
   box-sizing: border-box !important;
   overflow-x: hidden !important;
   transition: all 0.5s ease-in-out !important;
-  font-family: 'Roboto', sans-serif !important;
-
+  font-family: "Roboto", sans-serif !important;
 }
 
 body {
@@ -50,7 +48,6 @@ body {
   box-sizing: border-box !important;
   overflow-x: hidden !important;
 }
-
 
 /* .container {
   max-width: 78.125rem;
@@ -65,5 +62,41 @@ body {
   }
   .aos-init:not(.aos-animate):after {
     position: fixed;
+  }
+}
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
   }
 }
