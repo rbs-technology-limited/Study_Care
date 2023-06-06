@@ -7,7 +7,7 @@ import Loading from "./loading";
 import ContextProvider from "@/Context/ContextProvider";
 import { NavigationEvents } from "@/Provider/navigation-events/navigation-events";
 import ScrollToTop from "@/Shared/ScrollToTop/ScrollToTop";
-
+ 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
