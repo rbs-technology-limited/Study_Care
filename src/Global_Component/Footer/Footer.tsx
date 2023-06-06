@@ -110,14 +110,14 @@ const Footer = () => {
           alt="footer image"
           width={150}
           height={100}
-          className="absolute left-10 top-[9rem] z-[5] hidden lg:block"
+          className="absolute left-28 top-[9rem] z-[5] hidden lg:block"
         ></Image>
         <Image
           src={footerImage2}
           alt="footer image"
           width={150}
           height={100}
-          className="absolute left-[15rem] top-[5rem]  z-[-5]  hidden lg:block"
+          className="absolute left-[20rem] top-[4rem]  z-[-5]  hidden lg:block"
         ></Image>
         <Image
           src={footerImage3}
