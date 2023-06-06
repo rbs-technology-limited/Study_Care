@@ -3,6 +3,10 @@ import companyLogo from "public/Asset/Logo.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import footerImage1 from "public/Asset/footer_image1.png";
+import footerImage2 from "public/Asset/footer_image2.png";
+import footerImage3 from "public/Asset/footer_image3.png";
+import footerImage4 from "public/Asset/footer_image4.png";
 
 const Footer = () => {
   interface IRoute {
@@ -97,65 +101,109 @@ const Footer = () => {
   };
 
   return (
-    <div className="mt-36 px-8">
+    <section className="relative overflow-hidden">
+      <div className="bg-[#B2EBF2] absolute left-[-1rem] bottom-[9rem] h-[38rem] z-[-5] w-[100%] rotate-[-10deg] rounded-[80px] opacity-30"></div>
+      <Image
+        src={footerImage1}
+        alt="footer image"
+        width={150}
+        height={100}
+        className="absolute left-10 top-[10rem] z-[5]"
+      ></Image>
+      <Image
+        src={footerImage2}
+        alt="footer image"
+        width={150}
+        height={100}
+        className="absolute left-[15rem] top-[5rem] z-[5]"
+      ></Image>
+      <Image
+        src={footerImage3}
+        alt="footer image"
+        width={150}
+        height={80}
+        className="absolute left-0 bottom-0 z-[5]"
+      ></Image>
+      <Image
+        src={footerImage4}
+        alt="footer image"
+        width={150}
+        height={80}
+        className="absolute right-0 bottom-0 z-[0]"
+      ></Image>
       {/* subscribe newsletter */}
-      <div className="text-center">
-        <h3 className="font-bold text-3xl">Subscribe our newsletter</h3>
-        <p className="my-9">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem dolor
-          cumque illo error id beatae veniam voluptatibus recusandae,
-          dignissimos unde!
-        </p>
-        <div className="w-full">
-          <input
-            type="text"
-            placeholder="Enter your email"
-            className="relative w-6/12"
-          />
-          {/* <button className="absolute left-0">Subscribe</button> */}
+      <section className="container md:px-16 px-12 mt-[12rem]">
+        <div className="flex flex-col items-center">
+          <h3 className="font-bold text-3xl ">Subscribe our newsletter</h3>
+          <p className="my-9 w-6/12 text-center">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
+            dolor cumque illo error id beatae veniam voluptatibus recusandae,
+            dignissimos unde!
+          </p>
+          <div className="relative w-6/12">
+            <input
+              type="text"
+              placeholder="Enter your email"
+              className="w-full p-2 pr-16 relative border border-rgba(0, 0, 0, 0.42) focus:outline-0 rounded"
+            />
+            <button className="absolute bottom-0 right-0 top-0 bg-[#00BCD4] text-white px-4 py-2 rounded w-28">
+              Subscribe
+            </button>
+          </div>
         </div>
-      </div>
 
-      {/* footer route portion */}
-      <div className="grid grid-cols-12 mt-36">
-        <div className="col-span-10">
-          <div className="grid grid-cols-4">
-            <div className="">
-              <Image src={footerData.details.icon} alt="company logo" />
-              <p>{footerData.details.description}</p>
-              &copy; {footerData.details.title} {new Date().getFullYear()}
-            </div>
+        {/* footer route portion */}
+        <div className="grid grid-cols-12 mt-36 pb-12">
+          <div className="col-span-10">
+            <div className="grid grid-cols-4 gap-3 px-3 py-4">
+              <div className="">
+                <Image
+                  src={footerData.details.icon}
+                  alt="company logo"
+                  height={350}
+                  width={300}
+                />
+                <p className="my-2">{footerData.details.description}</p>
+                <p>
+                  &copy; {footerData.details.title} {new Date().getFullYear()}
+                </p>
+              </div>
 
-            {footerData.footerRoutes.map((route: IFooterRoutes) => (
-              <div key={route.title} className="">
-                <div>
-                  <h3 className="text-2xl font-bold ">{route.title}</h3>
-                  {route.routes.map((routeItem: IRoute) => (
-                    <p key={routeItem.title}>{routeItem.title}</p>
-                  ))}
+              {footerData.footerRoutes.map((route: IFooterRoutes) => (
+                <div key={route.title}>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 text-[#00838F]">
+                      {route.title}
+                    </h3>
+                    {route.routes.map((routeItem: IRoute) => (
+                      <p key={routeItem.title} className="py-2">
+                        {routeItem.title}
+                      </p>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          {/* social links portion */}
+          <div className="col-span-2 items-center">
+            <div className="grid grid-cols-4">
+              {footerData.social.map((sLink: ISocial) => (
+                <div key={sLink.link}>
+                  <Link
+                    href={{ pathname: sLink.link }}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {sLink.icon}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        {/* social links portion */}
-        <div className="col-span-2">
-          <div className="grid grid-cols-4">
-            {footerData.social.map((sLink: ISocial) => (
-              <div key={sLink.link}>
-                <Link
-                  href={{ pathname: sLink.link }}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {sLink.icon}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 
