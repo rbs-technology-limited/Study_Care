@@ -3,10 +3,10 @@ import companyLogo from "public/Asset/Logo.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
-import footerImage1 from "public/Asset/footer_image1.png";
-import footerImage2 from "public/Asset/footer_image2.png";
-import footerImage3 from "public/Asset/footer_image3.png";
-import footerImage4 from "public/Asset/footer_image4.png";
+import footerImage1 from "public/Asset/image/footer/footer_image1.png";
+import footerImage2 from "public/Asset/image/footer/footer_image2.png";
+import footerImage3 from "public/Asset/image/footer/footer_image3.png";
+import footerImage4 from "public/Asset/image/footer/footer_image4.png";
 
 const Footer = () => {
   interface IRoute {

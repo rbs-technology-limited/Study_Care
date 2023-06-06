@@ -1,16 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/Global_Component/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/Shared/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/Provider/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/Hooks/**/*.{js,ts,jsx,tsx,mdx}",
-    "./public/**/*.html",
-  ],
+  content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./public/**/*.html"],
   theme: {
     extend: {
       backgroundImage: {
@@ -29,6 +20,9 @@ module.exports = {
       "button-teal": "#00BCD4",
       "button-dark-teal": "#B2EBF2",
       ...require("tailwindcss/colors"),
+    },
+    fontFamily: {
+      Roboto: ["Roboto", "sans-serif"],
     },
   },
   plugins: [],
