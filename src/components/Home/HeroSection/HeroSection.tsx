@@ -23,7 +23,7 @@ const HeroSection = () => {
   return (
     <main className="relative py-20">
       {/* //shape  */}
-      <section
+      <div
         className="bg-custom-teal dark:bg-dark-teal h-[43.75rem] absolute top-[-6.125rem] right-[-1.5625rem] w-[100%] z-[-5]"
         style={{
           transform: "rotate(-10deg)",
