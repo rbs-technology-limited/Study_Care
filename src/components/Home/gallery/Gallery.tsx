@@ -40,7 +40,7 @@ export default function Gallery() {
                     </h2>
                     <Image
                         src={line}
-                        alt="Hero Image"
+                        alt="line"
                         width={152}
                         height={13}
                     />
