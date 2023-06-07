@@ -7,7 +7,7 @@ import line from '../../../../public/Asset/image/line.svg';
 export default function About() {
     return (
         <div
-            className=" container mx-auto px-4 py-8 bg-white  justify-center items-center flex "
+            className=" container mx-auto px-4 py-8   justify-center items-center flex "
 
         >
             <div className="inline-block w-[80%]  relative z-10  dark:bg-black bg-white rounded-2xl justify-center items-center overflow-hidden">
