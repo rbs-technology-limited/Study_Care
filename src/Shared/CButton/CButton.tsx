@@ -35,7 +35,8 @@ const CButton = ({
             ? customClass
             : ` px-4 py-[0.5625rem]
               rounded-lg
-              text-sm
+              text-[0.625rem]
+              sm:text-sm
               font-semibold
             ${fullWidth ? "w-full" : ""} ${textUpperCased ? "uppercase" : ""}
               ${
