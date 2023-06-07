@@ -19,6 +19,7 @@ module.exports = {
       "dark-background": "#1E1E1E",
       "button-teal": "#00BCD4",
       "button-dark-teal": "#B2EBF2",
+      "custom-orange": "#FBC131",
       ...require("tailwindcss/colors"),
     },
     fontFamily: {

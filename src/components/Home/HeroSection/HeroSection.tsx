@@ -21,7 +21,7 @@ const HERO_SECTION_BOTTOM = [
 
 const HeroSection = () => {
   return (
-    <main className="relative py-20">
+    <main className="relative md:py-20 pt-14">
       {/* //shape  */}
       <section
         className="bg-custom-teal dark:bg-dark-teal h-[43.75rem] absolute top-[-6.125rem] right-[-1.5625rem] w-[100%] z-[-5]"
