@@ -1,4 +1,4 @@
-import { teal } from "@/Constant/Custom-Color";
+import { orange } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
 import Image from "next/image";
 import aboutImg from '../../../../public/Asset/image/about/About.svg';
@@ -48,8 +48,8 @@ export default function About() {
 
                                 Tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.  Quisque ut metus sit amet augue rutrum feugiat.
                             </p>
-                            <CButton variant="solid" color={teal} textUpperCased>
-                                Download
+                            <CButton variant="solid" color={orange} textUpperCased>
+                                About Us More
                             </CButton>
                         </div>
                     </div>
