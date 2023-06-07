@@ -49,11 +49,11 @@ export default function Workflow() {
     ]
     return (
         <section
-            className="relative z-10 overflow-hidden bg-[#141414] py-12 "
+            className="relative z-10 overflow-hidden bg-[#141414] dark:bg-[#F3FCFD] py-12 "
         >
             <div className="container mx-auto px-4 py-8">
                 <div className="flex flex-col justify-center items-center">
-                    <h2 className="text-[#E4E4E7] text-3xl font-bold text-center">
+                    <h2 className="text-[#E4E4E7] dark:text-gray-900 text-3xl font-bold text-center">
                         Whatever you get with us
                     </h2>
                     <Image
@@ -64,7 +64,7 @@ export default function Workflow() {
                     />
                 </div>
                 <p
-                    className="text-[DFDFDF] text-center text-base font-normal py-4"
+                    className="text-[#DFDFDF] dark:text-[#363636] text-center text-base font-normal py-4"
                 >
                     WeCare Education offers a comprehensive range of services, from admissions support <br /> to visa assistance, to ensure a smooth and stress-free application <br />
                     process for our students.
@@ -79,10 +79,10 @@ export default function Workflow() {
                             className="flex flex-col justify-center items-center py-4"
                         >
                             <div
-                                className="flex justify-center items-center bg-[#1D1D1D] rounded-lg p-4 border-solid border-2 border-sky-500 hover:border-green-400 hover:cursor-pointer"
+                                className="flex justify-center items-center bg-[#1D1D1D] dark:bg-white rounded-lg p-4 border-solid border-2 border-sky-500 hover:border-green-400 hover:cursor-pointer"
                             >
                                 <h1
-                                    className="text-[#E4E4E7] text-[1.1rem] font-semibold text-center px-4 py-2"
+                                    className="text-[#E4E4E7] dark:text-[#181818] text-[1.1rem] font-semibold text-center px-4 py-2"
                                 >
                                     {item.title}
                                 </h1>
