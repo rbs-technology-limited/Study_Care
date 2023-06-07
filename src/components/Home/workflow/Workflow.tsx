@@ -49,7 +49,7 @@ export default function Workflow() {
     ]
     return (
         <section
-            className="position-relative z-10 overflow-hidden bg-[#141414] "
+            className="relative z-10 overflow-hidden bg-[#141414] py-12 "
         >
             <div className="container mx-auto px-4 py-8">
                 <div className="flex flex-col justify-center items-center">
@@ -92,7 +92,12 @@ export default function Workflow() {
                     ))
                 }
             </div>
-
+            {/* left blur */}
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#1BE1FF] opacity-40 blur-[100px]   z-10">
+            </div>
+            {/* right blur */}
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#FBC131] opacity-40 blur-[100px]  z-10">
+            </div>
         </section>
     )
 }
