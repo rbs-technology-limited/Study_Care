@@ -15,7 +15,7 @@ module.exports = {
     },
     colors: {
       "custom-teal": "#EAFBFB",
-      "dark-teal": "#00838F",
+      "dark-teal": "#00838F50",
       "dark-background": "#1E1E1E",
       "button-teal": "#00BCD4",
       "button-dark-teal": "#B2EBF2",

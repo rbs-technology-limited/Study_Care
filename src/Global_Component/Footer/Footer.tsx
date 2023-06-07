@@ -7,6 +7,8 @@ import footerImage1 from "public/Asset/image/footer/footer_image1.png";
 import footerImage2 from "public/Asset/image/footer/footer_image2.png";
 import footerImage3 from "public/Asset/image/footer/footer_image3.png";
 import footerImage4 from "public/Asset/image/footer/footer_image4.png";
+import styles from "./Footer.module.css";
+import { CInput } from "@/Shared";
 
 const Footer = () => {
   interface IRoute {
@@ -103,7 +105,10 @@ const Footer = () => {
   return (
     <section className="overflow-hidden mx-auto">
       <div className="relative pt-9">
-        <div className="bg-[#B2EBF2] absolute left-[-1rem] bottom-[-9rem] h-[54rem] z-[-5] w-[100%] rotate-[-10deg] rounded-[80px] opacity-30"></div>
+        {/* bg-custom-teal dark:bg-dark-teal
+        bg-[#B2EBF2] dark:bg-[#00838F]
+        */}
+        <div className="bg-custom-teal dark:bg-dark-teal absolute left-[-1rem] bottom-[-9rem] h-[54rem] z-[-5] w-[100%] rotate-[-10deg] rounded-[80px]"></div>
 
         <Image
           src={footerImage1}
@@ -145,10 +150,10 @@ const Footer = () => {
               dignissimos unde!
             </p>
             <div className="relative w-full md:w-6/12">
-              <input
+              <CInput
                 type="text"
                 placeholder="Enter your email"
-                className="w-full p-2 pr-16 relative border border-rgba(0, 0, 0, 0.42) focus:outline-0 rounded"
+                // className={`dark:${styles.inputPlaceholder} w-full p-2 pr-16 relative border border-rgba(0, 0, 0, 0.42) focus:outline-0 rounded dark:text-white text-black dark:bg-transparent`}
               />
               <button className="absolute bottom-0 right-0 top-0 bg-[#00BCD4] text-white px-4 py-2 rounded w-28">
                 Subscribe
