@@ -6,6 +6,10 @@ import { lightTeal, teal } from "@/Constant/Custom-Color";
 import { HERO_SECTION_BOTTOM, heroContent } from "@/Content";
 
 const HeroSection = () => {
+  interface HERO_SECTION_BOTTOM {
+    title: string;
+    shortDescription: string;
+  }
   return (
     <main className="relative md:py-20 pt-14">
       {/* //shape  */}
@@ -65,7 +69,7 @@ const HeroSection = () => {
           {/* //3 cards section here . middle card left ,right line  */}
           <div className="text-center mt-20">
             <div className="flex flex-col md:flex-row md:justify-between text-center items-center mb-4">
-              {HERO_SECTION_BOTTOM?.map((item, index) => (
+              {HERO_SECTION_BOTTOM?.map((item: HERO_SECTION_BOTTOM, index) => (
                 <div
                   key={index}
                   className={`md:w-1/3 mx-auto md:mx-0 md:mb-0 mb-4
