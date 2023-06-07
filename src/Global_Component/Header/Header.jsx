@@ -56,7 +56,7 @@ const Header = () => {
   return (
     //gradient orange 50 to orange 100
     <nav className="w-full fixed top-0 z-50 bg-custom-teal dark:bg-dark-teal bg-[url('/Asset/top-header-right.svg')] bg-no-repeat bg-right-bottom">
-      <div className="justify-between px-4 mx-auto lg:items-center lg:flex lg:px-8 container">
+      <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
         <>
           <div className="flex items-center justify-between py-3 lg:py-1 lg:block">
             {/* //logo  */}
@@ -78,7 +78,7 @@ const Header = () => {
             {/* //mobile menu  */}
             <div className="lg:hidden">
               <button
-                className="flex items-center py-2 text-black-400 border border-black-400 rounded hover:text-black-500 hover:border-black-500"
+                className="flex items-center px-3 py-2 text-black-400 border border-black-400 rounded hover:text-black-500 hover:border-black-500"
                 onClick={() => {
                   setNavbar(!navbar);
                 }}
