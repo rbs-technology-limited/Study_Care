@@ -3,12 +3,13 @@ import companyLogo from "public/Asset/Logo.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
-import footerImage1 from "public/Asset/image/footer/footer_image1.png";
-import footerImage2 from "public/Asset/image/footer/footer_image2.png";
-import footerImage3 from "public/Asset/image/footer/footer_image3.png";
-import footerImage4 from "public/Asset/image/footer/footer_image4.png";
+import footerImage1 from "public/Asset/svg/footer_image1.svg";
+import footerImage2 from "public/Asset/svg/footer_image2.svg";
+import footerImage3 from "public/Asset/svg/footer_image3.svg";
+import footerImage4 from "public/Asset/svg/footer_image4.svg";
 import styles from "./Footer.module.css";
-import { CInput } from "@/Shared";
+import { CButton, CInput } from "@/Shared";
+import { teal } from "@/Constant/Custom-Color";
 
 const Footer = () => {
   interface IRoute {
@@ -155,9 +156,13 @@ const Footer = () => {
                 placeholder="Enter your email"
                 // className={`dark:${styles.inputPlaceholder} w-full p-2 pr-16 relative border border-rgba(0, 0, 0, 0.42) focus:outline-0 rounded dark:text-white text-black dark:bg-transparent`}
               />
-              <button className="absolute bottom-0 right-0 top-0 bg-[#00BCD4] text-white px-4 py-2 rounded w-28">
+              <CButton
+                customClass="absolute bottom-0 right-2 top-2 bg-button-teal text-white px-4  rounded w-28 h-7"
+                variant="solid"
+                color={teal}
+              >
                 Subscribe
-              </button>
+              </CButton>
             </div>
           </div>
 
