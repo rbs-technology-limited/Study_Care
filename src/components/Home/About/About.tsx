@@ -1,67 +1,68 @@
-import Image from "next/image";
-import React from "react";
-import AboutImage from "public/Asset/svg/About.svg";
+import { orange } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
-import { orange, teal } from "@/Constant/Custom-Color";
+import Image from "next/image";
+import aboutImg from '../../../../public/Asset/image/about/About.svg';
+import line from '../../../../public/Asset/image/line.svg';
 
-const HomeAbout = () => {
-  return (
-    <main>
-      <section className="container mx-auto py-20 md:px-4 lg:px-8 ">
-        <section
-          // linear-gradient(to right top, #213f43, #20333c, #202730, #1d1c23, #161316, #39202740, #81413650);
-          className="flex flex-col lg:flex-row justify-between items-center mx-auto md:p-24 p-10 rounded-xl shadow-md
-          dark:bg-[linear-gradient(to_right_top,#213f43,#20333c,#202730,#1d1c23,#161316,#39202740,#81413650)]
-          bg-[linear-gradient(to_right_top,#00BCD460,#fff,#fff,#fff,#fff,#fff,#e89f2950)]
-        "
-          // style={{
-          //   background: `linear-gradient(to right top, #213f43, #20333c, #202730, #1d1c23, #161316, #39202740, #81413650);`,
-          // }}
+export default function About() {
+    return (
+        <div
+            className=" container mx-auto px-4 py-8 bg-white  justify-center items-center flex "
+
         >
-          <Image
-            src={AboutImage} 
-            alt="Hero Image"
-            width={300}
-            height={350}
-            className="object-contain object-center transform scale-60 w-full lg:w-1/2"
-          />
+            <div className="inline-block w-[80%]  relative z-10  bg-black dark:bg-white rounded-2xl justify-center items-center overflow-hidden">
+                <div
+                    className="md:flex  gap-4 justify-center items-center py-6"
+                >
+                    {/* image section */}
 
-          <div
-            className="flex flex-col justify-center
-            text-center lg:text-left
-          w-full lg:w-1/2
-          "
-          >
-            <h1 className="text-xl font-bold text-left md:text-3xl">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold dark:from-orange-300 dark:to-purple-400">
-                About Us
-              </span>
-            </h1>
-            <p className="text-left text-sm text-stone-500 dark:text-stone-300 mt-6">
-              Aliquam gravida quam dui, venenatis suscipit erat dapibus eu.
-              Donec non libero ultricies Cras convallis lacus orci. Tristique
-              tincidunt magna consequat in.
-            </p>
-            <p className="text-left text-sm text-stone-500 dark:text-stone-300 my-3">
-              In vel pulvinar est, at euismod libero. Quisque ut metus sit amet
-              augue rutrum feugiat.
-            </p>
+                    <div
+                    //  className="flex justify-center items-center sm:w-1/2 "
+                    >
+                        <Image
+                            src={aboutImg}
+                            alt="About img"
+                            width={630}
+                            height={350}
+                            className="object-cover object-center  "
+                        />
+                    </div>
+                    {/* text section */}
+                    <div className="px-2">
+                        <div className="sm:hidden md:block">
+                            <h2 className="text-white dark:text-gray-900 text-3xl font-bold ">
+                                About Us
+                            </h2>
+                            <Image
+                                src={line}
+                                alt="line"
+                                width={152}
+                                height={13}
+                            />
+                        </div>
+                        <div className="sm:flex md:block flex-col justify-center items-center ">
+                            <p
+                                className="text-[#e5e5e5] dark:text-[#363636] text-[1.1rem] font-normal  py-4 sm:text-center md:text-left"
+                            >
+                                Aliquam gravida quam dui, venenatis suscipit erat dapibus eu. Donec non libero ultricies  Cras convallis lacus orci. <br /> <br />
 
-            <div>
-              <CButton
-                type="button"
-                textUpperCased
-                variant="solid"
-                color={orange}
-              >
-                Join Now
-              </CButton>
+                                Tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.  Quisque ut metus sit amet augue rutrum feugiat.
+                            </p>
+                            <CButton variant="solid" color={orange} textUpperCased>
+                                About Us More
+                            </CButton>
+                        </div>
+                    </div>
+
+
+                </div>
+                {/* left blur */}
+                <div className="absolute bottom-[-5rem] left-[-2rem] w-52 h-52 rounded-full bg-[#1BE1FF] opacity-40 blur-[100px] z-10">
+                </div>
+                {/* right blur */}
+                <div className="absolute top-[-5rem] right-[-2rem] w-52 h-52 rounded-full bg-[#FBC131] opacity-40 blur-[150px] z-10">
+                </div>
             </div>
-          </div>
-        </section>
-      </section>
-    </main>
-  );
-};
-
-export default HomeAbout;
+        </div>
+    )
+}
