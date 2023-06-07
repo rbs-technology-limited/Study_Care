@@ -10,7 +10,7 @@ export default function About() {
             className=" container mx-auto px-4 py-8 bg-white  justify-center items-center flex "
 
         >
-            <div className="inline-block w-[80%]  relative z-10  bg-black dark:bg-white rounded-2xl justify-center items-center overflow-hidden">
+            <div className="inline-block w-[80%]  relative z-10  dark:bg-black bg-white rounded-2xl justify-center items-center overflow-hidden">
                 <div
                     className="md:flex  gap-4 justify-center items-center py-6"
                 >
@@ -30,7 +30,7 @@ export default function About() {
                     {/* text section */}
                     <div className="px-2">
                         <div className="sm:hidden md:block">
-                            <h2 className="text-white dark:text-gray-900 text-3xl font-bold ">
+                            <h2 className="dark:text-white text-gray-900 text-3xl font-bold ">
                                 About Us
                             </h2>
                             <Image
@@ -42,7 +42,7 @@ export default function About() {
                         </div>
                         <div className="sm:flex md:block flex-col justify-center items-center ">
                             <p
-                                className="text-[#e5e5e5] dark:text-[#363636] text-[1.1rem] font-normal  py-4 sm:text-center md:text-left"
+                                className="dark:text-[#e5e5e5] text-[#363636] text-[1.1rem] font-normal  py-4 sm:text-center md:text-left"
                             >
                                 Aliquam gravida quam dui, venenatis suscipit erat dapibus eu. Donec non libero ultricies  Cras convallis lacus orci. <br /> <br />
 

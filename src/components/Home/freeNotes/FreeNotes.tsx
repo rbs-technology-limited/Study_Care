@@ -7,12 +7,12 @@ export default function FreeNotes() {
             className=" container mx-auto px-4 py-8 bg-white justify-center items-center flex "
 
         >
-            <div className="inline-block w-[80%]  relative z-10  bg-black dark:bg-white rounded-2xl justify-center items-center overflow-hidden">
+            <div className="inline-block w-[80%]  relative z-10  dark:bg-black bg-white rounded-2xl justify-center items-center overflow-hidden">
                 <div
                     className="flex flex-col gap-4 justify-center items-center py-6"
                 >
                     <h1
-                        className="text-white dark:text-gray-900 text-[2.2rem] font-bold text-center py-2 mt-4"
+                        className="dark:text-white text-gray-900 text-[2.2rem] font-bold text-center py-2 mt-4"
                     >  Need the best teacher&apos;s class notes
                         and <br /> lecture sheets?</h1>
                     <CButton variant="solid" color={teal} textUpperCased>
