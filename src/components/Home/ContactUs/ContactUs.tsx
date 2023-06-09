@@ -20,7 +20,10 @@ const ContactUs = () => {
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
           {/* image part */}
           <div className="p-12 relative">
-            <div className="basis-6/12  mx-auto rounded-2xl overflow-hidden ">
+            <div
+              className="basis-6/12  mx-auto rounded-2xl overflow-hidden "
+              data-aos="fade-right"
+            >
               <Image
                 src={contactImage1}
                 alt="contact image"
@@ -34,7 +37,7 @@ const ContactUs = () => {
             </div>
           </div>
           {/* details part */}
-          <div className="basis-6/12">
+          <div className="basis-6/12" data-aos="fade-left">
             <div className="flex flex-col gap-y-8 md:py-12 ">
               <div className="flex items-center gap-3">
                 <Image src={callImage} alt="" width={50} height={50} />

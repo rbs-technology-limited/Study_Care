@@ -9,7 +9,10 @@ export default function About() {
   return (
     <div className=" container mx-auto px-4 py-8  justify-center items-center flex ">
       <div className="inline-block md:w-[80%]  relative  dark:bg-black bg-white rounded-2xl justify-center items-center overflow-hidden">
-        <div className="md:flex  gap-4 justify-center items-center py-6">
+        <div
+          className="md:flex  gap-4 justify-center items-center py-6"
+          data-aos="fade-up"
+        >
           {/* image section */}
 
           <div

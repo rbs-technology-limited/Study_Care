@@ -31,6 +31,7 @@ export default function Workflow() {
             <div
               key={index}
               className="flex flex-col justify-center items-center py-4"
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
             >
               <div className="flex justify-center items-center dark:bg-[#1D1D1D] bg-white rounded-lg p-4 border-solid border-2 border-sky-500 hover:border-green-400 hover:cursor-pointer">
                 <h1 className="dark:text-[#E4E4E7] text-[#181818] text-[1.1rem] font-semibold text-center px-4 py-2">
