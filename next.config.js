@@ -25,7 +25,7 @@ const withPWA = withPWAInit({
 
 const nextConfig = {
   images: {
-    domains: ["45.94.209.101"],
+    domains: ["picsum.photos"],
   },
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
