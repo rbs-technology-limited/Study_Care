@@ -3,25 +3,15 @@ import React from "react";
 import HeroImage from "public/Asset/Hero_section_Logo.svg";
 import { CButton } from "@/Shared";
 import { lightTeal, teal } from "@/Constant/Custom-Color";
-
-const HERO_SECTION_BOTTOM = [
-  {
-    title: "Business Solutions",
-    shortDescription: "Lorem ipsum dolor sit amet",
-  },
-  {
-    title: "Free Courses",
-    shortDescription: "Lorem ipsum dolor sit amet",
-  },
-  {
-    title: "Tutoring",
-    shortDescription: "Lorem ipsum dolor sit amet",
-  },
-];
+import { HERO_SECTION_BOTTOM, heroContent } from "@/Content";
 
 const HeroSection = () => {
+  interface HERO_SECTION_BOTTOM {
+    title: string;
+    shortDescription: string;
+  }
   return (
-    <main className="relative py-20">
+    <main className="relative md:py-20 pt-14">
       {/* //shape  */}
       <section
         className="bg-custom-teal dark:bg-dark-teal h-[43.75rem] absolute top-[-6.125rem] right-[-1.5625rem] w-[100%] z-[-5]"
@@ -42,23 +32,23 @@ const HeroSection = () => {
               dark:from-orange-300 dark:to-purple-400
               "
                 >
-                  Study Care
+                  {heroContent?.content1}
                 </span>
-                To The Next Level
+                {heroContent?.content2}
               </h1>
               <p
                 className="text-center md:text-left text-xl text-stone-500 my-4
             dark:text-stone-300 
             "
               >
-                The best place to study online
+                {heroContent?.content3}
               </p>
               <section className="mt-4 flex justify-center md:justify-start">
                 <CButton variant="text" color={lightTeal} textUpperCased>
-                  More Info
+                  {heroContent?.button1}
                 </CButton>
                 <CButton variant="solid" color={teal} textUpperCased>
-                  See Details
+                  {heroContent?.button2}
                 </CButton>
               </section>
             </div>
@@ -79,7 +69,7 @@ const HeroSection = () => {
           {/* //3 cards section here . middle card left ,right line  */}
           <div className="text-center mt-20">
             <div className="flex flex-col md:flex-row md:justify-between text-center items-center mb-4">
-              {HERO_SECTION_BOTTOM.map((item, index) => (
+              {HERO_SECTION_BOTTOM?.map((item: HERO_SECTION_BOTTOM, index) => (
                 <div
                   key={index}
                   className={`md:w-1/3 mx-auto md:mx-0 md:mb-0 mb-4
