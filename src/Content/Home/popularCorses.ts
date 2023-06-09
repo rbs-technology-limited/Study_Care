@@ -5,7 +5,7 @@ export const popularCourses = [
     description:
       "React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.",
     image: "https://cdn.auth0.com/blog/react-js/react.png",
-    rating: 4.5,
+    rating: 3,
     price: 100,
   },
   {
@@ -23,7 +23,7 @@ export const popularCourses = [
     description:
       "Vue.js - The Progressive JavaScript Framework. Versatile. An incrementally adoptable ecosystem that scales between a library and a full-featured framework.",
     image: "https://cdn.auth0.com/blog/vuejs/vue-logo.png",
-    rating: 4.5,
+    rating: 1.5,
     price: 100,
   },
   {
@@ -32,7 +32,7 @@ export const popularCourses = [
     description:
       "Node.js® is a JavaScript runtime built on Chrome V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.",
     image: "https://cdn.auth0.com/blog/node-js/nodejs-logo.png",
-    rating: 4.5,
+    rating: 8,
     price: 100,
   },
   {

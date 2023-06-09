@@ -9,12 +9,12 @@ const PopularCourses = () => {
   return (
     <main className="relative pb-20 pt-12">
       <div
-        className="absolute top-0 left-0 w-[95%] lg:h-[500px] h-full bg-custom-teal dark:bg-dark-teal
+        className="absolute top-0 left-0 w-[95%]  h-full bg-custom-teal dark:bg-dark-teal
       rounded-r-[60px] z-[-5]"
       ></div>
-      <section className="container mx-auto px-4 lg:px-8 py-8">
+      <section className="container mx-auto px-4 lg:px-8 ">
         {/* //top  */}
-        <section className="flex flex-col md:flex-row md:justify-between flex-col-reverse ">
+        <section className="flex flex-col md:flex-row md:justify-between">
           <div className="flex flex-col justify-center">
             <h1
               className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold pr-2
