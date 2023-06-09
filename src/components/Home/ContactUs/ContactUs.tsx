@@ -17,7 +17,7 @@ const ContactUs = () => {
           <Image src={line} alt="line" width={152} height={13} />
         </div>
         {/* image and contact details part */}
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
           {/* image part */}
           <div className="p-12 relative">
             <div className="basis-6/12  mx-auto rounded-2xl overflow-hidden ">
