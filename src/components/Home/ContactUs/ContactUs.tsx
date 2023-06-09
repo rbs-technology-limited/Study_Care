@@ -26,7 +26,7 @@ const ContactUs = () => {
                 alt="contact image"
                 width={450}
                 height={300}
-                className="object-cover object-center"
+                className="object-cover object-center transform hover:scale-105 transition-all duration-500 ease-in-out"
               />
             </div>
             <div className="absolute left-[1rem] top-[1rem] z-[-1]">

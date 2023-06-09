@@ -12,6 +12,7 @@
 
 * {
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box !important;
 }
 
 /* :root {
@@ -39,7 +40,6 @@ body {
 } */
 html {
   scroll-behavior: smooth !important;
-  box-sizing: border-box !important;
   overflow-x: hidden !important;
   transition: all 0.5s ease-in-out !important;
   font-family: "Roboto", sans-serif !important;
