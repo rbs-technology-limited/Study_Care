@@ -32,7 +32,7 @@ export default function SingleCard({ name, designation, image, id }: item) {
                 />
             </div>
             <div
-                className="flex justify-between items-center gap-4 pt-4"
+                className="flex justify-between items-center gap-4 pt-4 relative z-50"
             >
                 <div>
                     <p
