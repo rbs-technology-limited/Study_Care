@@ -27,6 +27,7 @@ const CourseSlides = () => {
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
   return (
     <>
       <button
@@ -48,7 +49,7 @@ const CourseSlides = () => {
           "
         />
       </div>
-        {/* //slider */}
+      {/* //slider */}
       <div className="lg:w-4/5 w-full mt-10">
         <Swiper
           slidesPerView={1}

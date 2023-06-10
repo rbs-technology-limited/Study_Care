@@ -45,3 +45,12 @@ export const popularCourses = [
     price: 100,
   },
 ];
+
+const popularCouseContent = {
+  content1: "Popular Courses",
+  content2:
+    "Choose from many options of popular courses at a breakthrough price.",
+  button1: "See All",
+};
+
+export default popularCouseContent;

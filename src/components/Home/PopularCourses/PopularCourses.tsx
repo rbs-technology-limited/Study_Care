@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import line from "public/Asset/image/line.svg";
 import CourseSlides from "./CourseSlides/CourseSlides";
+import { popularCouseContent } from "@/Content";
 
 const PopularCourses = () => {
   return (
@@ -20,18 +21,17 @@ const PopularCourses = () => {
               className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold pr-2
               dark:from-orange-300 dark:to-purple-400"
             >
-              Popular Courses
+              {popularCouseContent?.content1}
             </h1>
             <Image src={line} alt="line" width={250} height={1} />
             <small className="text-center md:text-left text-sm text-stone-500 my-4 dark:text-stone-300 ">
-              Choose from many options of popular courses at a breakthrough
-              price.
+            {popularCouseContent?.content2}
             </small>
           </div>
 
           <div className="flex justify-center items-center" data-aos="zoom-in">
             <CButton variant="text" color={lightTeal}>
-              See All{" "}
+            {popularCouseContent?.button1}
             </CButton>
             <span>
               {/* //right arrow svg here */}
