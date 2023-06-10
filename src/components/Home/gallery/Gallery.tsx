@@ -1,8 +1,8 @@
 import Image from "next/image";
 
+import { galleryContent, galleryImages } from "@/Content";
 import line from "public/Asset/image/line.svg";
 import GallrySlider from "./GallrySlider/GallrySlider";
-import { galleryContent, galleryImages } from "@/Content";
 
 export default function Gallery() {
   return (
@@ -12,7 +12,7 @@ export default function Gallery() {
           <h2 className="text-black dark:text-white text-3xl font-bold text-center">
             {galleryContent?.title}
           </h2>
-          <Image src={line} alt="line" width={152} height={13} />
+          <Image src={line} alt="line" width={100} height={13} />
         </div>
       </div>
       <div className="gap-4">
