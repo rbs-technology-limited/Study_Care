@@ -3,15 +3,8 @@ import arrow from '../../../../public/Asset/image/ArrowRighticon.svg';
 import line from '../../../../public/Asset/image/line.svg';
 import SingleCard from "./SingleCard";
 
-interface Provider {
-    id: number;
-    question: string;
-    answer: string;
-}
 
 export default function Faq() {
-    let isAcive = false;
-    // const [selected, setSelected] = useState<number | null>(null)
     const questions = [
         {
             id: 1,

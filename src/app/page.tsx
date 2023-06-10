@@ -7,6 +7,7 @@ import FreeNotes from "@/components/Home/freeNotes/FreeNotes";
 import Gallery from "@/components/Home/gallery/Gallery";
 import Workflow from "@/components/Home/workflow/Workflow";
 import PopularCourses from "@/components/Home/PopularCourses/PopularCourses";
+import Instructor from "@/components/Home/instructor/Instructor";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroSection />
       <PopularCourses />
       <About />
+      <Instructor />
       <Faq />
       <MainFeature />
       <Gallery />
