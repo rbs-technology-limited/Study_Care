@@ -11,6 +11,8 @@ export default function SingleCard({ title, description, image }: item) {
     return (
         <div
             className="flex gap-1 "
+            data-aos={"zoom-out"}
+
 
         >
             <Image src={image} alt="image" width={200} height={160} />
