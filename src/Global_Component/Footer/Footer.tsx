@@ -117,6 +117,7 @@ const Footer = () => {
           width={150}
           height={100}
           className="absolute left-28 top-[9rem] z-[5] hidden lg:block"
+          data-aos="zoom-in"
         ></Image>
         <Image
           src={footerImage2}
@@ -124,6 +125,7 @@ const Footer = () => {
           width={150}
           height={100}
           className="absolute left-[20rem] top-[4rem]  z-[-5]  hidden lg:block"
+          data-aos="zoom-in"
         ></Image>
         <Image
           src={footerImage3}
