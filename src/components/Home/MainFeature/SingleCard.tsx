@@ -7,7 +7,7 @@ interface item {
   image: string;
 }
 
-export default function SingleCard({ title, description, image }: item) {
+export default function SingleCard({ featureData }: { featureData: item }) {
   return (
     <div
       className="flex
@@ -18,11 +18,11 @@ export default function SingleCard({ title, description, image }: item) {
     "
       data-aos={"zoom-out"}
     >
-      <Image src={image} alt="image" width={200} height={160} />
+      <Image src={featureData?.image} alt="image" width={200} height={160} />
       <div>
-        <h3 className="text-3xl font-bold">{title}</h3>
+        <h3 className="text-3xl font-bold">{featureData?.title}</h3>
         <p className="text-lg font-medium dark:text-gray-500 text-black-500">
-          {description}
+          {featureData?.description}
         </p>
       </div>
     </div>

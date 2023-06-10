@@ -27,13 +27,7 @@ const MainFeature = () => {
         <div className="w-[60%] mx-auto py-8 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
             {mainFeature?.map((item: mainFeature) => (
-              <SingleCard
-                key={item.id}
-                title={item.title}
-                description={item.description}
-                image={item.image}
-                id={item.id}
-              />
+              <SingleCard key={item.id} featureData={item} />
             ))}
           </div>
         </div>
