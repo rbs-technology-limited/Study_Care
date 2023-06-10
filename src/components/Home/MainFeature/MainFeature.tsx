@@ -1,26 +1,54 @@
 import { mainFeatureContent } from "@/Content";
 import Image from "next/image";
-import React from "react";
 import line from "public/Asset/image/line.svg";
+import SingleCard from "./SingleCard";
 
 const MainFeature = () => {
+
   return (
-    <main className=" pb-20 pt-12">
-      <section className="container mx-auto px-4 lg:px-8 mt-6">
-        <section className="flex flex-col items-center space-y-3">
-          <h1
-            className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold pr-2
-              dark:from-orange-300 dark:to-purple-400"
-          >
-            {mainFeatureContent?.content1}
-          </h1>
-          <Image src={line} alt="line" width={250} height={1} />
-          <small className="text-center md:text-left text-sm text-stone-500 my-4 dark:text-stone-300 ">
-            {mainFeatureContent?.content2}
-          </small>
-        </section>
-      </section>
-    </main>
+    <section
+      className="relative z-10 overflow-hidden  py-12 "
+    >
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-col justify-center items-center">
+          <h2 className="dark:text-[#E4E4E7] text-gray-900 md:text-3xl text-2xl  font-bold text-center">
+            {mainFeatureContent.section_title}
+          </h2>
+          <Image
+            src={line}
+            alt="line"
+            width={152}
+            height={13}
+          />
+        </div>
+        <p
+          className="dark:text-[#DFDFDF] text-[#363636] text-center text-base font-normal py-4"
+        >
+          {mainFeatureContent.section_description}
+        </p>
+
+        <div
+          className="w-[60%] mx-auto py-8 "
+        >
+          <div className='grid grid-cols-1 md:grid-cols-2  gap-4  justify-center px-4' >
+            {
+              mainFeatureContent.data.map((item) => (
+                <SingleCard
+                  key={item.id}
+                  title={item.title}
+                  description={item.description}
+                  image={item.image}
+                  id={item.id}
+                />
+              ))
+            }
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
   );
 };
 
