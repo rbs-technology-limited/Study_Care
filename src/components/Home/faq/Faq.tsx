@@ -1,6 +1,7 @@
 import Image from "next/image";
 import arrow from '../../../../public/Asset/image/ArrowRighticon.svg';
 import line from '../../../../public/Asset/image/line.svg';
+import SingleCard from "./SingleCard";
 
 interface Provider {
     id: number;
@@ -63,65 +64,27 @@ export default function Faq() {
                 >
                     Please contact Safespace team for any questions you may have.
                 </p>
-                <a href="#"
-                    className="flex justify-center items-center gap-2 dark:text-[#00A6C0] text-[#363636] text-center text-base font-normal py-4"
-                >Read more FAQ
-                    <span>
-                        <Image
-                            src={arrow}
-                            alt="About img"
-                            width={20}
-                            height={20}
-                            className="object-cover object-center  "
-                        />
-                    </span>
-                </a>
-                <div className='grid md:grid-cols-2 gap-4  justify-center  px-4'>
+                <div
+                    className="flex justify-center items-center gap-2"
+                >
+                    <a href="#"
+                        className="w-fit flex justify-center items-center gap-2 dark:text-[#00A6C0] text-[#363636] text-center text-base font-normal py-4"
+                    >Read more FAQ
+                        <span>
+                            <Image
+                                src={arrow}
+                                alt="About img"
+                                width={20}
+                                height={20}
+                                className="object-cover object-center  "
+                            />
+                        </span>
+                    </a>
+                </div>
+                <div className='grid md:grid-cols-2 gap-4  justify-center px-4'>
                     {
                         questions.map((item, index) => (
-                            <div
-
-                                key={index}
-                                className=" py-4"
-                            >
-                                <div
-                                    className="dark:bg-[#222222] bg-white rounded-[10px] p-4 hover:cursor-pointer shadow-lg shadow-[#00000014]"
-                                >
-                                    <div className="px-4">
-                                        <div
-                                            className="flex justify-between items-center gap-4"
-                                        >
-                                            <h1
-                                                className="dark:text-[#E4E4E7] text-[#181818] text-[1.1rem] font-semibold  py-2"
-                                            >
-                                                {item.question}
-                                            </h1>
-                                            <div
-                                            >
-
-                                                {
-                                                    isAcive ? (
-                                                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M4.375 14H23.625" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                                                            <path d="M14 4.375V23.625" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-
-                                                    ) : (
-                                                        <svg
-                                                            width="24" height="4" viewBox="0 0 24 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M2.375 2H21.625" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                                                        </svg>
-                                                    )
-                                                }
-                                            </div>
-                                        </div>
-                                        <p>
-                                            {item.answer}
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
+                            <SingleCard key={index} question={item.question} answer={item.answer} id={item.id} />
                         ))
                     }
                 </div>
