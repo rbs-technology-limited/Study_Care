@@ -24,10 +24,6 @@ import { popularCourses } from "@/Content";
 
 const CourseSlides = () => {
   const [_, setInit] = useState<any>(null);
-
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-
   interface Course {
     id: number;
     title: string;
@@ -41,7 +37,9 @@ const CourseSlides = () => {
     <>
       <button
         className="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 z-10 px-2"
-        ref={prevRef}
+        onClick={() => {
+          _?.slidePrev();
+        }}
       >
         <BsFillArrowLeftCircleFill size={40} color={lightTeal} />
       </button>
@@ -70,8 +68,8 @@ const CourseSlides = () => {
             dynamicBullets: true,
           }}
           navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }}
           modules={[FreeMode, Pagination, Navigation]}
           className="mySwiper"
@@ -169,7 +167,9 @@ const CourseSlides = () => {
 
       <button
         className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 px-2 z-[10]"
-        ref={nextRef}
+        onClick={() => {
+          _?.slideNext();
+        }}
       >
         <BsFillArrowRightCircleFill size={40} color={lightTeal} />
       </button>

@@ -8,6 +8,8 @@ import exploreCoursesContent, {
   exploreCoursesData3,
 } from "./Home/exploreCourses";
 import mainFeatureContent, { mainFeature } from "./Home/mainFeature";
+import galleryContent, { galleryImages } from "./Home/gallery";
+
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -22,4 +24,6 @@ export {
   exploreCoursesData3,
   mainFeatureContent,
   mainFeature,
+  galleryImages,
+  galleryContent
 };

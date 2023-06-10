@@ -14,7 +14,11 @@ const CourseSectionThree = () => {
             {exploreCoursesContent?.course3?.title}
           </h1>
           <div className="flex justify-center items-center" data-aos="zoom-in">
-            <CButton variant="text" color={lightTeal}>
+            <CButton
+              variant="text"
+              color={lightTeal}
+              
+            >
               {exploreCoursesContent?.course3?.button}
             </CButton>
             <ArrowRight color={lightTeal} width={20} height={20} />

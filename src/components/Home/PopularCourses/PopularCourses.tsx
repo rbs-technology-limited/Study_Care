@@ -26,13 +26,16 @@ const PopularCourses = () => {
             </h1>
             <Image src={line} alt="line" width={250} height={1} />
             <small className="text-center md:text-left text-sm text-stone-500 my-4 dark:text-stone-300 ">
-            {popularCouseContent?.content2}
+              {popularCouseContent?.content2}
             </small>
           </div>
 
           <div className="flex justify-center items-center" data-aos="zoom-in">
-            <CButton variant="text" color={lightTeal}>
-            {popularCouseContent?.button1}
+            <CButton
+              variant="text"
+              color={lightTeal}
+            >
+              {popularCouseContent?.button1}
             </CButton>
             <ArrowRight color={lightTeal} width={20} height={20} />
           </div>

@@ -105,7 +105,7 @@ const CourseSectionSlider = ({
                       src={course?.image}
                       alt={course?.title}
                       className="object-contain object-center w-[300px] rounded-lg mx-auto "
-                      width={100}
+                      width={500}
                       height={100}
                     />
                   </div>
