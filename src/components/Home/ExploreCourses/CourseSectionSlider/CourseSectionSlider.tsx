@@ -1,70 +1,56 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  BsFillArrowLeftCircleFill,
-  BsFillArrowRightCircleFill,
-} from "react-icons/bs";
+// import {
+//   BsFillArrowLeftCircleFill,
+//   BsFillArrowRightCircleFill,
+// } from "react-icons/bs";
 
 import "swiper/css/free-mode";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
+// import "swiper/css/navigation";
 
 // import "./slides.css";
 
 // import required modules
 import { Pagination, FreeMode, Navigation } from "swiper";
 import Image from "next/image";
-import HeroImage from "public/Asset/Hero_section_Logo.svg";
+// import HeroImage from "public/Asset/Hero_section_Logo.svg";
 import { CButton } from "@/Shared";
 import { lightTeal, teal } from "@/Constant/Custom-Color";
-import { popularCourses } from "@/Content";
+// import { exploreCoursesData1 } from "@/Content";
 
-const CourseSlides = () => {
-  const [_, setInit] = useState();
+interface CourseSectionSliderProps {
+  exploreCoursesData?: Array<any>;
+}
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+const CourseSectionSlider = ({
+  exploreCoursesData,
+}: CourseSectionSliderProps) => {
+  const [init, setInit] = useState<any>(null);
+  interface courseData {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    rating: number;
+    price: number;
+  }
 
   return (
     <>
-      <button
-        className="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 z-10 px-2"
-        ref={prevRef}
-      >
-        <BsFillArrowLeftCircleFill size={40} color={lightTeal} />
-      </button>
-
-      <div className="lg:w-1/5 w-full" data-aos="fade-right">
-        <Image
-          src={HeroImage}
-          alt="Hero Image"
-          width={100}
-          height={150}
-          className="object-cover object-center w-full h-[50%]
-          rounded-lg
-          lg:h-full
-          "
-        />
-      </div>
-      {/* //slider */}
-      <div className="lg:w-4/5 w-full mt-10">
+      <div className="w-full mt-4">
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
-          loop={true}
+          //   loop={true}
           freeMode={true}
           pagination={{
             clickable: true,
-            dynamicBullets: true,
           }}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          modules={[FreeMode, Pagination, Navigation]}
+          modules={[FreeMode, Pagination]}
           className="mySwiper"
           onInit={(swiper) => {
             setInit(swiper);
@@ -84,41 +70,38 @@ const CourseSlides = () => {
             // when window width is >= 1024px
             1024: {
               slidesPerView: 3,
-              spaceBetween: 20,
+              spaceBetween: 10,
             },
             // when window width is >= 1200px
             1200: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 10,
             },
           }}
         >
-          {popularCourses?.map((course) => {
-            // {
-            //   id: 1,
-            //   title: "React",
-            //   description:
-            //     "React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.",
-            //   image: "https://cdn.auth0.com/blog/react-js/react.png",
-            //   rating: 4.5,
-            //   price: 100,
-            // },
+          {exploreCoursesData?.map((course: courseData) => {
             return (
               <SwiperSlide key={course?.id}>
-                <div className="flex flex-col items-center bg-white dark:bg-gray-600 rounded-lg shadow-lg text-black dark:text-white h-full p-2">
+                <div
+                  className="flex flex-row items-center 
+                justify-between gap-3
+                bg-white dark:bg-gray-600 rounded-lg shadow-lg text-black dark:text-white h-full p-2
+                 shadow-gray-700/30"
+                >
                   <div className="w-full">
                     <Image
                       src={course?.image}
                       alt={course?.title}
-                      className="object-contain object-center w-[200px] rounded-lg mx-auto "
+                      className="object-contain object-center w-[300px] rounded-lg mx-auto border-2"
                       width={100}
                       height={100}
                     />
                   </div>
-                  <section className="flex flex-col items-center justify-center pb-5">
+
+                  <section className="flex flex-col justify-center pb-5">
                     <h1 className="text-lg font-semibold">{course?.title}</h1>
                     <p className="text-sm">
-                      {course?.description?.slice(0, 100)}...
+                      {course?.description?.slice(0, 90)}...
                     </p>
                     <div className="flex items-center justify-between w-full py-3">
                       {/* //rating */}
@@ -156,8 +139,8 @@ const CourseSlides = () => {
                     </div>
 
                     {/* //see detail button */}
-                    <CButton color={teal} variant="outline">
-                      See Details
+                    <CButton color={teal} variant="outline" textUpperCased>
+                      Explore
                     </CButton>
                   </section>
                 </div>
@@ -166,15 +149,8 @@ const CourseSlides = () => {
           })}
         </Swiper>
       </div>
-
-      <button
-        className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 px-2 z-[10]"
-        ref={nextRef}
-      >
-        <BsFillArrowRightCircleFill size={40} color={lightTeal} />
-      </button>
     </>
   );
 };
 
-export default CourseSlides;
+export default CourseSectionSlider;

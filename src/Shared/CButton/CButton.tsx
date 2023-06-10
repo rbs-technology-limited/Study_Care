@@ -33,7 +33,7 @@ const CButton = ({
         className={
           customClass
             ? customClass
-            : ` px-4 py-[0.5625rem]
+            : ` px-4 py-[0.3438rem]
               rounded-lg
               text-[0.625rem]
               sm:text-sm

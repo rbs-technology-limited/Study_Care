@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import line from "public/Asset/image/line.svg";
 import CourseSectionOne from "./CourseSectionOne/CourseSectionOne";
+import CourseSectionTwo from "./CourseSectionTwo/CourseSectionTwo";
 
 const ExploreCourses = () => {
   return (
@@ -28,9 +29,10 @@ const ExploreCourses = () => {
             </small>
           </div>
         </section>
-          {/* //other couses section  */}
-        <section>
+        {/* //other couses section  */}
+        <section className="flex flex-col space-y-8">
           <CourseSectionOne />
+          <CourseSectionTwo />
         </section>
 
         <section className="flex flex-col lg:flex-row lg:justify-between items-center">
