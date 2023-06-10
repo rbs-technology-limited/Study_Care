@@ -86,6 +86,7 @@ export default function Instructor() {
                                     name={item.name}
                                     designation={item.designation}
                                     image={item.image}
+                                    id={item.id}
                                 />
                             ))
                         }
