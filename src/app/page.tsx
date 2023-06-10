@@ -13,11 +13,11 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <MainFeature />
       <PopularCourses />
       <ExploreCourses />
       <About />
       <Faq />
-      <MainFeature />
       <Gallery />
       <ContactUs />
       <Workflow />

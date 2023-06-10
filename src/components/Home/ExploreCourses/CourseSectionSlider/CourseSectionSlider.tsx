@@ -55,6 +55,7 @@ const CourseSectionSlider = ({
           pagination={{
             clickable: true,
           }}
+          allowTouchMove={true}
           modules={[FreeMode, Pagination, Autoplay]}
           className="mySwiper"
           onInit={(swiper) => {
@@ -63,6 +64,7 @@ const CourseSectionSlider = ({
           autoplay={{
             delay: delayTime,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
           autoHeight={true}
           breakpoints={{

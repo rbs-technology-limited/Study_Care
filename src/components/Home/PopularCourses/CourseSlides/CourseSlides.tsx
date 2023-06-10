@@ -17,16 +17,25 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, FreeMode, Navigation } from "swiper";
 import Image from "next/image";
-import HeroImage from "public/Asset/Hero_section_Logo.svg";
+import HeroImage from "public/Asset/to-do-list.svg";
 import { CButton } from "@/Shared";
 import { lightTeal, teal } from "@/Constant/Custom-Color";
 import { popularCourses } from "@/Content";
 
 const CourseSlides = () => {
-  const [_, setInit] = useState();
+  const [_, setInit] = useState<any>(null);
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  interface Course {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    rating: number;
+    price: number;
+  }
 
   return (
     <>
@@ -50,7 +59,7 @@ const CourseSlides = () => {
         />
       </div>
       {/* //slider */}
-      <div className="lg:w-4/5 w-full mt-10">
+      <div className="lg:w-4/5 w-full mt-10" data-aos="fade-left">
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -93,16 +102,7 @@ const CourseSlides = () => {
             },
           }}
         >
-          {popularCourses?.map((course) => {
-            // {
-            //   id: 1,
-            //   title: "React",
-            //   description:
-            //     "React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.",
-            //   image: "https://cdn.auth0.com/blog/react-js/react.png",
-            //   rating: 4.5,
-            //   price: 100,
-            // },
+          {popularCourses?.map((course: Course) => {
             return (
               <SwiperSlide key={course?.id}>
                 <div className="flex flex-col items-center bg-white dark:bg-gray-600 rounded-lg shadow-lg text-black dark:text-white h-full p-2">
@@ -110,8 +110,8 @@ const CourseSlides = () => {
                     <Image
                       src={course?.image}
                       alt={course?.title}
-                      className="object-contain object-center w-[200px] rounded-lg mx-auto "
-                      width={100}
+                      className="object-contain object-center rounded-lg mx-auto"
+                      width={400}
                       height={100}
                     />
                   </div>

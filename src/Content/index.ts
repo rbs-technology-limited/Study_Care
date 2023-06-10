@@ -7,7 +7,7 @@ import exploreCoursesContent, {
   exploreCoursesData2,
   exploreCoursesData3,
 } from "./Home/exploreCourses";
-
+import mainFeatureContent, { mainFeature } from "./Home/mainFeature";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -20,4 +20,6 @@ export {
   exploreCoursesData1,
   exploreCoursesData2,
   exploreCoursesData3,
+  mainFeatureContent,
+  mainFeature,
 };
