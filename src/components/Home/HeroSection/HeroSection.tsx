@@ -3,25 +3,15 @@ import React from "react";
 import HeroImage from "public/Asset/Hero_section_Logo.svg";
 import { CButton } from "@/Shared";
 import { lightTeal, teal } from "@/Constant/Custom-Color";
-
-const HERO_SECTION_BOTTOM = [
-  {
-    title: "Business Solutions",
-    shortDescription: "Lorem ipsum dolor sit amet",
-  },
-  {
-    title: "Free Courses",
-    shortDescription: "Lorem ipsum dolor sit amet",
-  },
-  {
-    title: "Tutoring",
-    shortDescription: "Lorem ipsum dolor sit amet",
-  },
-];
+import { HERO_SECTION_BOTTOM, heroContent } from "@/Content";
 
 const HeroSection = () => {
+  interface HERO_SECTION_BOTTOM {
+    title: string;
+    shortDescription: string;
+  }
   return (
-    <main className="relative py-20">
+    <main className="relative md:py-20 pt-14">
       {/* //shape  */}
       <section
         className="bg-custom-teal dark:bg-dark-teal h-[43.75rem] absolute top-[-6.125rem] right-[-1.5625rem] w-[100%] z-[-5]"
@@ -35,35 +25,41 @@ const HeroSection = () => {
       <section className="container mx-auto px-4 lg:px-8 py-8 md:mt-[2.1875rem]">
         <section>
           <div className="flex flex-col md:flex-row md:justify-between items-center flex-col-reverse ">
-            <div className="flex flex-col md:w-1/2 justify-center">
+            <div
+              className="flex flex-col md:w-1/2 justify-center"
+              data-aos="fade-right"
+            >
               <h1 className="text-2xl font-bold text-center md:text-left md:text-3xl dark:text-black">
                 <span
                   className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold pr-2
               dark:from-orange-300 dark:to-purple-400
               "
                 >
-                  Study Care
+                  {heroContent?.content1}
                 </span>
-                To The Next Level
+                {heroContent?.content2}
               </h1>
               <p
                 className="text-center md:text-left text-xl text-stone-500 my-4
             dark:text-stone-300 
             "
               >
-                The best place to study online
+                {heroContent?.content3}
               </p>
               <section className="mt-4 flex justify-center md:justify-start">
                 <CButton variant="text" color={lightTeal} textUpperCased>
-                  More Info
+                  {heroContent?.button1}
                 </CButton>
                 <CButton variant="solid" color={teal} textUpperCased>
-                  See Details
+                  {heroContent?.button2}
                 </CButton>
               </section>
             </div>
 
-            <div className="flex justify-center items-center md:w-1/3">
+            <div
+              className="flex justify-center items-center md:w-1/3"
+              data-aos="zoom-in"
+            >
               <Image
                 src={HeroImage}
                 alt="Hero Image"
@@ -79,13 +75,20 @@ const HeroSection = () => {
           {/* //3 cards section here . middle card left ,right line  */}
           <div className="text-center mt-20">
             <div className="flex flex-col md:flex-row md:justify-between text-center items-center mb-4">
-              {HERO_SECTION_BOTTOM.map((item, index) => (
+              {HERO_SECTION_BOTTOM?.map((item: HERO_SECTION_BOTTOM, index) => (
                 <div
                   key={index}
                   className={`md:w-1/3 mx-auto md:mx-0 md:mb-0 mb-4
                 ${index === 1 ? "md:border-l md:border-r" : ""}
-
+                
                 `}
+                  data-aos={
+                    index === 0
+                      ? "fade-right"
+                      : index === 1
+                      ? "fade-up"
+                      : "fade-left"
+                  }
                 >
                   <h1 className="text-xl font-bold text-center md:text-xl">
                     <span
