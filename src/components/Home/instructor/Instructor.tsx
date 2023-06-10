@@ -59,7 +59,7 @@ export default function Instructor() {
         >
             <div className="container mx-auto px-4 py-8">
                 <div className="flex flex-col justify-center items-center">
-                    <h2 className="dark:text-[#E4E4E7] text-gray-900 text-3xl font-bold text-center">
+                    <h2 className="dark:text-[#E4E4E7] text-gray-900 md:text-3xl text-2xl  font-bold text-center">
                         {instructorData.section_title}
                     </h2>
                     <Image
