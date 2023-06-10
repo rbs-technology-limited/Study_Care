@@ -6,6 +6,7 @@ import FreeNotes from "@/components/Home/freeNotes/FreeNotes";
 import Gallery from "@/components/Home/gallery/Gallery";
 import Workflow from "@/components/Home/workflow/Workflow";
 import PopularCourses from "@/components/Home/PopularCourses/PopularCourses";
+import Instructor from "@/components/Home/instructor/Instructor";
 import ExploreCourses from "@/components/Home/ExploreCourses/ExploreCourses";
 import ContactUs from "@/components/Home/ContactUs/ContactUs";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <PopularCourses />
       <ExploreCourses />
       <About />
+      <Instructor />
       <Faq />
       <Gallery />
       <ContactUs />
