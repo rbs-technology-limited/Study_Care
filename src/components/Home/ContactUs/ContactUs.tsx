@@ -1,16 +1,15 @@
 import Image from "next/image";
-import React from "react";
 import line from "public/Asset/image/line.svg";
-import contactImage1 from "public/Asset/svg/contact_us_image1.svg";
-import callImage from "public/Asset/svg/contactUs/call.svg";
-import emailImage from "public/Asset/svg/contactUs/email.svg";
 import addressImage from "public/Asset/svg/contactUs/address_image1.svg";
 import addressImage2 from "public/Asset/svg/contactUs/address_image2.svg";
+import callImage from "public/Asset/svg/contactUs/call.svg";
+import emailImage from "public/Asset/svg/contactUs/email.svg";
 import shape from "public/Asset/svg/contactUs/small_shape.svg";
+import contactImage1 from "public/Asset/svg/contact_us_image1.svg";
 
 const ContactUs = () => {
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col justify-center items-center my-6">
           <h1 className="text-2xl md:text-3xl font-bold">Contact Us</h1>
@@ -19,10 +18,11 @@ const ContactUs = () => {
         {/* image and contact details part */}
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
           {/* image part */}
-          <div className="p-12 relative">
+          <div className="p-12 relative"
+            data-aos="fade-right"
+          >
             <div
               className="basis-6/12  mx-auto rounded-2xl overflow-hidden "
-              data-aos="fade-right"
             >
               <Image
                 src={contactImage1}
