@@ -1,7 +1,15 @@
 import heroContent, { HERO_SECTION_BOTTOM } from "./Home/hero";
 import aboutContent from "./Home/about";
 import workflowContent, { workflowData } from "./Home/workflow";
-import {popularCourses} from "./Home/popularCorses";
+import popularCouseContent, { popularCourses } from "./Home/popularCorses";
+import exploreCoursesContent, {
+  exploreCoursesData1,
+  exploreCoursesData2,
+  exploreCoursesData3,
+} from "./Home/exploreCourses";
+import mainFeatureContent, { mainFeature } from "./Home/mainFeature";
+import galleryContent, { galleryImages } from "./Home/gallery";
+
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -9,4 +17,13 @@ export {
   workflowData,
   workflowContent,
   popularCourses,
+  popularCouseContent,
+  exploreCoursesContent,
+  exploreCoursesData1,
+  exploreCoursesData2,
+  exploreCoursesData3,
+  mainFeatureContent,
+  mainFeature,
+  galleryImages,
+  galleryContent
 };

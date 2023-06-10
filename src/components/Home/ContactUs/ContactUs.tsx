@@ -30,6 +30,7 @@ const ContactUs = () => {
                 width={450}
                 height={300}
                 className="object-cover object-center transform hover:scale-105 transition-all duration-500 ease-in-out"
+
               />
             </div>
             <div className="absolute left-[1rem] top-[1rem] z-[-1]">
@@ -38,6 +39,7 @@ const ContactUs = () => {
           </div>
           {/* details part */}
           <div className="basis-6/12" data-aos="fade-left">
+
             <div className="flex flex-col gap-y-8 md:py-12 ">
               <div className="flex items-center gap-3">
                 <Image src={callImage} alt="" width={50} height={50} />
