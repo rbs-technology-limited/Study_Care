@@ -15,7 +15,7 @@ import "swiper/css/pagination";
 // import "./slides.css";
 
 // import required modules
-import { Pagination, FreeMode, Navigation } from "swiper";
+import { Pagination, FreeMode, Autoplay } from "swiper";
 import Image from "next/image";
 // import HeroImage from "public/Asset/Hero_section_Logo.svg";
 import { CButton } from "@/Shared";
@@ -24,10 +24,14 @@ import { lightTeal, teal } from "@/Constant/Custom-Color";
 
 interface CourseSectionSliderProps {
   exploreCoursesData?: Array<any>;
+  bgColor?: string;
+  delayTime?: number;
 }
 
 const CourseSectionSlider = ({
   exploreCoursesData,
+  bgColor,
+  delayTime,
 }: CourseSectionSliderProps) => {
   const [init, setInit] = useState<any>(null);
   interface courseData {
@@ -45,15 +49,20 @@ const CourseSectionSlider = ({
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
-          //   loop={true}
+          loop={true}
+          centeredSlides={true}
           freeMode={true}
           pagination={{
             clickable: true,
           }}
-          modules={[FreeMode, Pagination]}
+          modules={[FreeMode, Pagination, Autoplay]}
           className="mySwiper"
           onInit={(swiper) => {
             setInit(swiper);
+          }}
+          autoplay={{
+            delay: delayTime,
+            disableOnInteraction: false,
           }}
           autoHeight={true}
           breakpoints={{
@@ -83,16 +92,17 @@ const CourseSectionSlider = ({
             return (
               <SwiperSlide key={course?.id}>
                 <div
-                  className="flex flex-row items-center 
+                  className={`flex flex-row items-center 
                 justify-between gap-3
                 bg-white dark:bg-gray-600 rounded-lg shadow-lg text-black dark:text-white h-full p-2
-                 shadow-gray-700/30"
+                 shadow-gray-700/30
+                 border-[0.0625rem] ${bgColor}`}
                 >
                   <div className="w-full">
                     <Image
                       src={course?.image}
                       alt={course?.title}
-                      className="object-contain object-center w-[300px] rounded-lg mx-auto border-2"
+                      className="object-contain object-center w-[300px] rounded-lg mx-auto "
                       width={100}
                       height={100}
                     />

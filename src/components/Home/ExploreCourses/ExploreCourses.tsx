@@ -5,6 +5,7 @@ import React from "react";
 import line from "public/Asset/image/line.svg";
 import CourseSectionOne from "./CourseSectionOne/CourseSectionOne";
 import CourseSectionTwo from "./CourseSectionTwo/CourseSectionTwo";
+import CourseSectionThree from "./CourseSectionThree/CourseSectionThree";
 
 const ExploreCourses = () => {
   return (
@@ -33,6 +34,7 @@ const ExploreCourses = () => {
         <section className="flex flex-col space-y-8">
           <CourseSectionOne />
           <CourseSectionTwo />
+          <CourseSectionThree />
         </section>
 
         <section className="flex flex-col lg:flex-row lg:justify-between items-center">

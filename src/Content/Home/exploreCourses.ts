@@ -99,7 +99,7 @@ export const exploreCoursesData2 = [
     title: "Node",
     description:
       "Node.js® is a JavaScript runtime built on Chrome V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.",
-    image: "https://cdn.auth0.com/blog/node-js/nodejs-logo.png",
+    image: "https://cdn.auth0.com/blog/react-js/react.png",
     rating: 8,
     price: 100,
   },
@@ -108,7 +108,7 @@ export const exploreCoursesData2 = [
     title: "Django",
     description:
       "Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.",
-    image: "https://cdn.auth0.com/blog/django/django.png",
+    image: "https://cdn.auth0.com/blog/react-js/react.png",
     rating: 4.5,
     price: 100,
   },
@@ -147,7 +147,7 @@ export const exploreCoursesData3 = [
     title: "Node",
     description:
       "Node.js® is a JavaScript runtime built on Chrome V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.",
-    image: "https://cdn.auth0.com/blog/node-js/nodejs-logo.png",
+    image: "https://cdn.auth0.com/blog/angular2-series/angular2-logo.png",
     rating: 8,
     price: 100,
   },
@@ -156,7 +156,7 @@ export const exploreCoursesData3 = [
     title: "Django",
     description:
       "Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.",
-    image: "https://cdn.auth0.com/blog/django/django.png",
+    image: "https://cdn.auth0.com/blog/angular2-series/angular2-logo.png",
     rating: 4.5,
     price: 100,
   },
