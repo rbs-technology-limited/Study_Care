@@ -12,6 +12,8 @@ export default function SingleCard({ question, answer, id }: item) {
     return <div>
         <div
             className=" py-4"
+            data-aos={id % 2 === 0 ? "fade-right" : "fade-left"}
+
         >
             <div
                 className="dark:bg-[#222222] bg-white rounded-[10px] p-4 hover:cursor-pointer shadow-lg shadow-[#00000014]"
