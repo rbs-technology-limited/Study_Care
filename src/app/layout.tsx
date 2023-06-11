@@ -8,7 +8,7 @@ import ContextProvider from "@/Context/ContextProvider";
 import { NavigationEvents } from "@/Provider/navigation-events/navigation-events";
 import ScrollToTop from "@/Shared/ScrollToTop/ScrollToTop";
 const inter = Inter({ subsets: ["latin"] });
-import { ThemeProvider } from "next-themes"
+import { ThemeProvider } from "next-themes";
 
 export const metadata = {
   title: "Study Care",
@@ -23,7 +23,7 @@ export default function RootLayout({
   children,
 }: Props): React.ReactElement<Props> {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
       </head>

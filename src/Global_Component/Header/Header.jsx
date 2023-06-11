@@ -12,9 +12,10 @@ import { orange } from "@/Constant/Custom-Color";
 import ThemeToogleButton from "../../Shared/ThemeToogleButton/ThemeToogleButton.tsx";
 import HeaderBg from "public/Asset/svg/HeaderBg";
 import { useTheme } from "next-themes";
+import getStystemPreference from "@/Utils/getSystemTheme.tsx";
 
 const Header = () => {
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const [navbar, setNavbar] = useState(false);
   const [IndexData, setIndex] = useState("");
@@ -23,7 +24,7 @@ const Header = () => {
   // const [refreshUserData, setRefreshUserData] = useState(false);
   const [user, setUser] = useState(null);
   const router = useRouter();
-
+  const [currentTheme, setTheeFromLocal] = useState(null);
   useEffect(() => {
     if (window.location.pathname === "/") {
       setIndex("Home");
@@ -62,7 +63,13 @@ const Header = () => {
       {/* add a svg image in absolute position top right corner */}
 
       <section className="absolute -top-14 left-[60%] w-full h-full z-[-1]">
-        <HeaderBg color={theme == "dark" ? "#02838F" : "#B2EBF3"} />
+        <HeaderBg
+          color={
+            getStystemPreference() == true && theme == "dark"
+              ? "#02838F"
+              : "#B2EBF3"
+          }
+        />
       </section>
 
       <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
@@ -163,7 +170,7 @@ const Header = () => {
         {/* //sign in button
          */}
         <div className={`lg:block ${navbar ? "block" : "hidden"}`}>
-          <div>
+          <div className="flex items-center justify-center mt-4 lg:mt-0">
             {/* <ProfileDropDown
               user={user}
               dropdown={dropdown}
@@ -171,6 +178,7 @@ const Header = () => {
               // setRefreshUserData={setRefreshUserData}
               // setUser={setUser}
             /> */}
+
             <CButton
               type="button"
               textUpperCased
@@ -197,7 +205,7 @@ const Header = () => {
               Register
             </CButton>
 
-              
+            <div className="border-r-[0.0625rem] border-stone-400 dark:border-stone-300 h-12 mx-4"></div>
             {/* //toogle button  */}
             <ThemeToogleButton />
           </div>

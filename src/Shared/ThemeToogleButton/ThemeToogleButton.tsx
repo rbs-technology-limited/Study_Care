@@ -2,17 +2,54 @@
 import React from "react";
 import { useTheme } from "next-themes";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
+import getStystemPreference from "@/Utils/getSystemTheme";
 
 const ThemeToggleButton = () => {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+  if (!mounted)
+    return (
+      // BLINKING
+      <div className="w-10 h-10 p-3 rounded "></div>
+    );
+  const isSystem = theme === "system";
+  const isDark = theme === "dark";
+  const isLight = theme === "light";
 
   return (
     <button
-      onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
-      className="btn btn-primary"
+      aria-label="Toggle Dark Mode"
+      type="button"
+      className="w-10 h-10 p-3  rounded "
+      onClick={() => setTheme(isDark ? "light" : "dark")}
     >
-      {currentTheme === "dark" ? <BsFillMoonFill /> : <BsFillSunFill />}
+      {isSystem === true && getStystemPreference() === true && (
+        <BsFillMoonFill
+          className="w-4 h-4 text-gray-800 dark:text-gray-200"
+          aria-hidden="true"
+        />
+      )}
+
+      {isSystem === true && getStystemPreference() === false && (
+        <BsFillSunFill
+          className="w-4 h-4 text-gray-800 dark:text-gray-200"
+          aria-hidden="true"
+        />
+      )}
+
+      {isLight && (
+        <BsFillSunFill
+          className="w-4 h-4 text-gray-800 dark:text-gray-200"
+          aria-hidden="true"
+        />
+      )}
+      {isDark && (
+        <BsFillMoonFill
+          className="w-4 h-4 text-gray-800 dark:text-gray-200"
+          aria-hidden="true"
+        />
+      )}
     </button>
   );
 };
