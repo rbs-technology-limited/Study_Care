@@ -16,6 +16,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <MainFeature />
+      <Workflow />
       <PopularCourses />
       <ExploreCourses />
       <About />
@@ -24,7 +25,6 @@ export default function Home() {
       <Faq />
       <Gallery />
       <ContactUs />
-      <Workflow />
       <FreeNotes />
     </main>
   );

@@ -12,7 +12,7 @@ const MainFeature = () => {
   }
 
   return (
-    <section className="relative z-10 overflow-hidden  py-12 ">
+    <section className="relative z-10 overflow-hidden py-10 ">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col justify-center items-center">
           <h2 className="dark:text-[#E4E4E7] text-gray-900 md:text-3xl text-2xl  font-bold text-center">
