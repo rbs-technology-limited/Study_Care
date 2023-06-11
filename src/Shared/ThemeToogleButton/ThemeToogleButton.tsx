@@ -5,14 +5,7 @@ import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import getStystemPreference from "@/Utils/getSystemTheme";
 
 const ThemeToggleButton = () => {
-  const { systemTheme, theme, setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
-  React.useEffect(() => setMounted(true), []);
-  if (!mounted)
-    return (
-      // BLINKING
-      <div className="w-10 h-10 p-3 rounded "></div>
-    );
+  const { theme, setTheme } = useTheme();
   const isSystem = theme === "system";
   const isDark = theme === "dark";
   const isLight = theme === "light";

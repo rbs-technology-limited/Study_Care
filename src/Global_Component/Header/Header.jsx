@@ -65,7 +65,9 @@ const Header = () => {
       <section className="absolute -top-14 left-[60%] w-full h-full z-[-1]">
         <HeaderBg
           color={
-            getStystemPreference() == true && theme == "dark"
+            getStystemPreference() == true && theme == "system"
+              ? "#02838F"
+              : getStystemPreference() == true && theme == "dark"
               ? "#02838F"
               : "#B2EBF3"
           }

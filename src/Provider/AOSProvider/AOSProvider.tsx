@@ -6,6 +6,9 @@ import { Flowbite } from "flowbite-react";
 import { ThemeProvider } from "next-themes";
 
 const AOSProvider = ({ children }: { children: React.ReactNode }) => {
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
@@ -14,6 +17,8 @@ const AOSProvider = ({ children }: { children: React.ReactNode }) => {
       duration: 500,
     });
   }, []);
+  
+  if (!mounted) return null;
   return (
     <ThemeProvider attribute="class">
       <Flowbite>{children}</Flowbite>
