@@ -41,9 +41,7 @@ const CourseSlides = () => {
           _?.slidePrev();
         }}
       >
-        <BsFillArrowLeftCircleFill size={40} 
-        
-        />
+        <BsFillArrowLeftCircleFill size={40} />
       </CButton>
 
       <div className="lg:w-1/5 w-full" data-aos="fade-right">
@@ -173,7 +171,7 @@ const CourseSlides = () => {
           _?.slideNext();
         }}
       >
-        <BsFillArrowRightCircleFill size={40}/>
+        <BsFillArrowRightCircleFill size={40} />
       </CButton>
     </>
   );
