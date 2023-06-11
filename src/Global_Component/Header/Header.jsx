@@ -5,22 +5,26 @@ import React, { useEffect, useState } from "react";
 // import Asset from "public/asset/Asset 1-8.png";
 import Logo from "public/Asset/Logo.png";
 import { useRouter } from "next/navigation";
-
-import ProfileDropDown from "./ProfileDropDown";
+// import ProfileDropDown from "./ProfileDropDown";
 import { CButton } from "@/Shared";
 import MENU_LIST from "@/Constant/Nav_Data";
-import TopHeader from "public/Asset/top-header-right.svg";
 import { orange } from "@/Constant/Custom-Color";
+import ThemeToogleButton from "../../Shared/ThemeToogleButton/ThemeToogleButton.tsx";
+import HeaderBg from "public/Asset/svg/HeaderBg";
+import { useTheme } from "next-themes";
+import getStystemPreference from "@/Utils/getSystemTheme.tsx";
 
 const Header = () => {
+  const { theme, setTheme } = useTheme();
+
   const [navbar, setNavbar] = useState(false);
   const [IndexData, setIndex] = useState("");
   const [dropdown, setDropdown] = useState(false);
-  const [pageLoading, setPageLoading] = useState(true);
-  const [refreshUserData, setRefreshUserData] = useState(false);
+  // const [pageLoading, setPageLoading] = useState(true);
+  // const [refreshUserData, setRefreshUserData] = useState(false);
   const [user, setUser] = useState(null);
   const router = useRouter();
-
+  const [currentTheme, setTheeFromLocal] = useState(null);
   useEffect(() => {
     if (window.location.pathname === "/") {
       setIndex("Home");
@@ -31,31 +35,45 @@ const Header = () => {
     return () => {};
   }, []);
 
-  useEffect(() => {
-    setPageLoading(true);
-    const studyCareData = JSON.parse(localStorage.getItem("studyCareData"));
+  // useEffect(() => {
+  //   setPageLoading(true);
+  //   const studyCareData = JSON.parse(localStorage.getItem("studyCareData"));
 
-    if (studyCareData) {
-      setUser(studyCareData);
-      setPageLoading(false);
-    } else {
-      setUser(null);
-      setPageLoading(false);
-    }
-    return () => {
-      setRefreshUserData(false);
-    };
-  }, [refreshUserData]);
+  //   if (studyCareData) {
+  //     setUser(studyCareData);
+  //     setPageLoading(false);
+  //   } else {
+  //     setUser(null);
+  //     setPageLoading(false);
+  //   }
+  //   return () => {
+  //     setRefreshUserData(false);
+  //   };
+  // }, [refreshUserData]);
 
   // console.log(IndexData);
 
   const handleLogin = () => {
-    router.push("/login");
+    // router.push("/login");
   };
 
   return (
     //gradient orange 50 to orange 100
-    <nav className="w-full fixed top-0 z-50 bg-custom-teal dark:bg-dark-teal bg-[url('/Asset/top-header-right.svg')] bg-no-repeat bg-right-bottom">
+    <nav className="w-full fixed top-0 z-50 bg-custom-teal dark:bg-dark-teal">
+      {/* add a svg image in absolute position top right corner */}
+
+      <section className="absolute -top-24 left-[60%] w-full h-full z-[-1000]">
+        <HeaderBg
+          color={
+            getStystemPreference() == true && theme == "system"
+              ? "#02838F"
+              : getStystemPreference() == true && theme == "dark"
+              ? "#02838F"
+              : "#B2EBF3"
+          }
+        />
+      </section>
+
       <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
         <>
           <div className="flex items-center justify-between py-3 lg:py-1 lg:block">
@@ -154,23 +172,28 @@ const Header = () => {
         {/* //sign in button
          */}
         <div className={`lg:block ${navbar ? "block" : "hidden"}`}>
-          {pageLoading ? (
-            <div className="flex items-center justify-center">
-              <div className="w-6 h-6 border-2 border-t-2 border-orange-200 rounded-full animate-spin"></div>
-            </div>
-          ) : user?.token ? (
-            // <CButton type="button" textUpperCased>
-            //   Sign Out
-            // </CButton>
-            // show name . and after click in name ahow a dropdown with signout
-            <ProfileDropDown
+          <div className="flex items-center justify-center mt-4 lg:mt-0">
+            {/* <ProfileDropDown
               user={user}
               dropdown={dropdown}
               setDropdown={setDropdown}
-              setRefreshUserData={setRefreshUserData}
-              setUser={setUser}
-            />
-          ) : (
+              // setRefreshUserData={setRefreshUserData}
+              // setUser={setUser}
+            /> */}
+
+            <CButton
+              type="button"
+              textUpperCased
+              variant="text"
+              color="text-"
+              // className="px-4 py-2 mb-5 lg:mb-0 text-sm text-stone-700 transition-all bg-orange-400 rounded-lg outline-none hover:bg-orange-500 focus:bg-orange-500 uppercase focus:outline-none border-2 shadow-lg shadow-orange-500/50"
+              onClick={() => {
+                handleLogin();
+              }}
+            >
+              Sign In
+            </CButton>
+
             <CButton
               type="button"
               textUpperCased
@@ -181,9 +204,13 @@ const Header = () => {
                 handleLogin();
               }}
             >
-              Sign In
+              Register
             </CButton>
-          )}
+
+            <div className="border-r-[0.0625rem] border-stone-400 dark:border-stone-300 h-12 mx-4"></div>
+            {/* //toogle button  */}
+            <ThemeToogleButton />
+          </div>
         </div>
       </div>
     </nav>

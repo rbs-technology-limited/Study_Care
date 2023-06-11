@@ -39,7 +39,7 @@ const GallrySlider = ({ galleryImages }: CourseSectionSliderProps) => {
         slidesPerView={1}
         spaceBetween={10}
         loop={true}
-        centeredSlides={true}
+        // centeredSlides={true}
         freeMode={true}
         pagination={{
           clickable: true,

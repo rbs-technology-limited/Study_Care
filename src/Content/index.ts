@@ -9,7 +9,7 @@ import exploreCoursesContent, {
 } from "./Home/exploreCourses";
 import mainFeatureContent, { mainFeature } from "./Home/mainFeature";
 import galleryContent, { galleryImages } from "./Home/gallery";
-
+import reviewsContent, { reviewsData } from "./Home/reviews";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -25,5 +25,7 @@ export {
   mainFeatureContent,
   mainFeature,
   galleryImages,
-  galleryContent
+  galleryContent,
+  reviewsData,
+  reviewsContent,
 };

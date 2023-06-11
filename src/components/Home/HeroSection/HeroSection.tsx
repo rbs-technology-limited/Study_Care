@@ -11,7 +11,7 @@ const HeroSection = () => {
     shortDescription: string;
   }
   return (
-    <main className="relative md:py-20 pt-14">
+    <main className="relative md:py-14 pt-14">
       {/* //shape  */}
       <section
         className="bg-custom-teal dark:bg-dark-teal h-[43.75rem] absolute top-[-6.125rem] right-[-1.5625rem] w-[100%] z-[-5]"
@@ -47,7 +47,7 @@ const HeroSection = () => {
                 {heroContent?.content3}
               </p>
               <section className="mt-4 flex justify-center md:justify-start">
-                <CButton variant="text" color={lightTeal} textUpperCased>
+                <CButton variant="text" color={"text-button-teal dark:text-button-dark-teal"} textUpperCased>
                   {heroContent?.button1}
                 </CButton>
                 <CButton variant="solid" color={teal} textUpperCased>
