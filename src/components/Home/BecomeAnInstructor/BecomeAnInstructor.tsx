@@ -1,6 +1,6 @@
 import { CButton } from "@/Shared";
 import React from "react";
-import demoInstructorImage from "public/Asset/image/becomeAnInstructor/Teacher-Image-1.png";
+import demoInstructorImage from "public/Asset/svg/becomeAnInstructor/instructor.svg";
 import Image from "next/image";
 import line from "public/Asset/image/line.svg";
 import { teal } from "@/Constant/Custom-Color";
