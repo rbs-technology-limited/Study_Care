@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./src/**/*.{html,js,ts,jsx,tsx}", "./public/**/*.html"],
+  darkMode: 'class',
+  content: [
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{html,js,ts,jsx,tsx}",
+    "./public/**/*.html",
+  ],
   theme: {
     extend: {
       backgroundImage: {
@@ -26,5 +31,5 @@ module.exports = {
       Roboto: ["Roboto", "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("flowbite/plugin")],
 };

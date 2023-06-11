@@ -7,8 +7,8 @@ import Loading from "./loading";
 import ContextProvider from "@/Context/ContextProvider";
 import { NavigationEvents } from "@/Provider/navigation-events/navigation-events";
 import ScrollToTop from "@/Shared/ScrollToTop/ScrollToTop";
- 
 const inter = Inter({ subsets: ["latin"] });
+import { ThemeProvider } from "next-themes"
 
 export const metadata = {
   title: "Study Care",
@@ -26,9 +26,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-
       </head>
-      <body className={`${inter.className} relative dark:bg-dark-background dark:text-white`}>
+
+      <body
+        className={`${inter.className} relative dark:bg-dark-background dark:text-white`}
+      >
         <AOSProvider>
           <Suspense fallback={<Loading />}>
             <ContextProvider>

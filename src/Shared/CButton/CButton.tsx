@@ -47,7 +47,15 @@ const CButton = ({
                   : ""
               }
 
-              ${variant === "text" ? "bg-transparent text-button-teal dark:text-button-dark-teal" : ""}
+              ${
+                variant === "text"
+                  ? `bg-transparent ${
+                      color
+                        ? color
+                        : "text-button-teal dark:text-button-dark-teal"
+                    } `
+                  : ""
+              }
               `
         }
         onClick={onClick}
@@ -60,13 +68,11 @@ const CButton = ({
             border: isHovered ? `1px solid #fff` : `1px solid ${color}`,
             color: isHovered ? "#fff" : color,
             backgroundColor: isHovered ? color : "transparent",
-
           }),
           // ...(variant === "text" && {
           //   color: color,
           //   backgroundColor: "transparent",
           // }),
-
         }}
         type={type}
         disabled={disabled}
