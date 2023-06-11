@@ -7,7 +7,6 @@ import footerImage1 from "public/Asset/svg/footer_image1.svg";
 import footerImage2 from "public/Asset/svg/footer_image2.svg";
 import footerImage3 from "public/Asset/svg/footer_image3.svg";
 import footerImage4 from "public/Asset/svg/footer_image4.svg";
-import styles from "./Footer.module.css";
 import { CButton, CInput } from "@/Shared";
 import { teal } from "@/Constant/Custom-Color";
 
