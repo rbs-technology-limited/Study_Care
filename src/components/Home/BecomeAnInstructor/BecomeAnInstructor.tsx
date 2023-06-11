@@ -22,7 +22,7 @@ const BecomeAnInstructor = () => {
               নিবন্ধন করুন
             </CButton>
           </div>
-          <div>
+          <div className="relative">
             <Image
               src={demoInstructorImage}
               alt="instructor image"
@@ -30,6 +30,10 @@ const BecomeAnInstructor = () => {
               width={500}
               className="object-center object-cover"
             />
+            {/* left blur */}
+            <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#1BE1FF] opacity-40 blur-[100px] z-10"></div>
+            {/* right blur */}
+            <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-[#FBC131] opacity-40 blur-[100px] z-10"></div>
           </div>
         </div>
       </div>
