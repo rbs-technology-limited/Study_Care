@@ -35,14 +35,14 @@ const CourseSlides = () => {
 
   return (
     <>
-      <button
-        className="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 z-10 px-2"
+      <CButton
+        customClass="bg-transparent text-cyan-600 dark:text-cyan-500 hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 px-2 z-[10] "
         onClick={() => {
           _?.slidePrev();
         }}
       >
-        <BsFillArrowLeftCircleFill size={40} color={lightTeal} />
-      </button>
+        <BsFillArrowLeftCircleFill size={40} />
+      </CButton>
 
       <div className="lg:w-1/5 w-full" data-aos="fade-right">
         <Image
@@ -165,14 +165,14 @@ const CourseSlides = () => {
         </Swiper>
       </div>
 
-      <button
-        className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 px-2 z-[10]"
+      <CButton
+        customClass="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 px-2 z-[10] bg-transparent text-cyan-600 dark:text-cyan-500"
         onClick={() => {
           _?.slideNext();
         }}
       >
-        <BsFillArrowRightCircleFill size={40} color={lightTeal} />
-      </button>
+        <BsFillArrowRightCircleFill size={40} />
+      </CButton>
     </>
   );
 };

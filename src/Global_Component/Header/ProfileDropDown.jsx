@@ -7,17 +7,17 @@ const ProfileDropDown = ({
   user,
   dropdown,
   setDropdown,
-  setRefreshUserData,
-  setUser,
+  // setRefreshUserData,
+  // setUser,
 }) => {
-  const [studyCareData, setUserData] = useLocalStorage("studyCareData", "");
-  const handleLogout = () => {
-    setDropdown(false);
-    setUserData("");
-    setUser("");
-    setRefreshUserData((state) => !state);
-    // window.location.reload();
-  };
+  // const [studyCareData, setUserData] = useLocalStorage("studyCareData", "");
+  // const handleLogout = () => {
+  //   setDropdown(false);
+  //   setUserData("");
+  //   setUser("");
+  //   setRefreshUserData((state) => !state);
+  //   // window.location.reload();
+  // };
   return (
     <>
       <div className="relative inline-block text-left mb-4">
@@ -73,9 +73,9 @@ const ProfileDropDown = ({
                 type="button"
                 textUpperCased
                 className="block w-full px-4 py-2 text-sm text-left text-black-400 hover:bg-gray-100 hover:text-black-700"
-                onClick={() => {
-                  handleLogout();
-                }}
+                // onClick={() => {
+                //   handleLogout();
+                // }}
               >
                 Sign Out
               </CButton>
