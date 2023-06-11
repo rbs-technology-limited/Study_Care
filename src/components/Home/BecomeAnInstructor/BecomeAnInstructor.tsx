@@ -28,7 +28,7 @@ const BecomeAnInstructor = () => {
               alt="instructor image"
               height={500}
               width={500}
-              className="object-center object-cover"
+              className="object-center object-cover z-100"
             />
             {/* left blur */}
             <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#1BE1FF] opacity-40 blur-[100px] z-10"></div>
