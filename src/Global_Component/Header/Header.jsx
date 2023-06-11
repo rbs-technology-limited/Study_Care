@@ -62,7 +62,7 @@ const Header = () => {
     <nav className="w-full fixed top-0 z-50 bg-custom-teal dark:bg-dark-teal">
       {/* add a svg image in absolute position top right corner */}
 
-      <section className="absolute -top-14 left-[60%] w-full h-full z-[-1]">
+      <section className="absolute -top-24 left-[60%] w-full h-full z-[-1000]">
         <HeaderBg
           color={
             getStystemPreference() == true && theme == "system"
