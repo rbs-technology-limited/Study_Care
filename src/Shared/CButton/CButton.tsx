@@ -11,6 +11,7 @@ interface Props {
   disabled?: boolean;
   color?: string;
   variant?: "solid" | "outline" | "text";
+  onClick?: () => void;
   rest?: any;
 }
 
@@ -24,6 +25,7 @@ const CButton = ({
   disabled,
   color,
   variant,
+  onClick,
   ...rest
 }: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -33,7 +35,7 @@ const CButton = ({
         className={
           customClass
             ? customClass
-            : ` px-4 py-[0.5625rem]
+            : ` px-4 py-[0.3438rem]
               rounded-lg
               text-[0.625rem]
               sm:text-sm
@@ -48,6 +50,7 @@ const CButton = ({
               ${variant === "text" ? "bg-transparent text-button-teal dark:text-button-dark-teal" : ""}
               `
         }
+        onClick={onClick}
         style={{
           ...(variant === "solid" && {
             backgroundColor: color,

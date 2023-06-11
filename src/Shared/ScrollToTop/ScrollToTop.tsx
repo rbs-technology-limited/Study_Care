@@ -37,15 +37,10 @@ const ScrollToTop = () => {
       {/* //circle orange green button with arrow up icon  */}
       {isShow && (
         <button
-          style={{
-            position: "fixed",
-            bottom: "20px",
-            right: "20px",
-          }}
           className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-2 rounded-full
             transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 border-2 border-white animate-ping
             shadow-lg  shadow-orange-800/50
-            
+            fixed bottom-10 right-10 z-50
             "
           onClick={(e) => {
             handleScrollToTop(e);

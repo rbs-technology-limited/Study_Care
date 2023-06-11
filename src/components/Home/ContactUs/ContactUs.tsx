@@ -1,32 +1,36 @@
 import Image from "next/image";
-import React from "react";
 import line from "public/Asset/image/line.svg";
-import contactImage1 from "public/Asset/svg/contact_us_image1.svg";
-import callImage from "public/Asset/svg/contactUs/call.svg";
-import emailImage from "public/Asset/svg/contactUs/email.svg";
 import addressImage from "public/Asset/svg/contactUs/address_image1.svg";
 import addressImage2 from "public/Asset/svg/contactUs/address_image2.svg";
+import callImage from "public/Asset/svg/contactUs/call.svg";
+import emailImage from "public/Asset/svg/contactUs/email.svg";
 import shape from "public/Asset/svg/contactUs/small_shape.svg";
+import contactImage1 from "public/Asset/svg/contact_us_image1.svg";
 
 const ContactUs = () => {
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col justify-center items-center my-6">
           <h1 className="text-2xl md:text-3xl font-bold">Contact Us</h1>
           <Image src={line} alt="line" width={152} height={13} />
         </div>
         {/* image and contact details part */}
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
           {/* image part */}
-          <div className="p-12 relative">
-            <div className="basis-6/12  mx-auto rounded-2xl overflow-hidden ">
+          <div className="p-12 relative"
+            data-aos="fade-right"
+          >
+            <div
+              className="basis-6/12  mx-auto rounded-2xl overflow-hidden "
+            >
               <Image
                 src={contactImage1}
                 alt="contact image"
                 width={450}
                 height={300}
-                className="object-cover object-center"
+                className="object-cover object-center transform hover:scale-105 transition-all duration-500 ease-in-out"
+
               />
             </div>
             <div className="absolute left-[1rem] top-[1rem] z-[-1]">
@@ -34,7 +38,8 @@ const ContactUs = () => {
             </div>
           </div>
           {/* details part */}
-          <div className="basis-6/12">
+          <div className="basis-6/12" data-aos="fade-left">
+
             <div className="flex flex-col gap-y-8 md:py-12 ">
               <div className="flex items-center gap-3">
                 <Image src={callImage} alt="" width={50} height={50} />

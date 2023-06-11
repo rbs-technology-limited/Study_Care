@@ -25,7 +25,10 @@ const HeroSection = () => {
       <section className="container mx-auto px-4 lg:px-8 py-8 md:mt-[2.1875rem]">
         <section>
           <div className="flex flex-col md:flex-row md:justify-between items-center flex-col-reverse ">
-            <div className="flex flex-col md:w-1/2 justify-center">
+            <div
+              className="flex flex-col md:w-1/2 justify-center"
+              data-aos="fade-right"
+            >
               <h1 className="text-2xl font-bold text-center md:text-left md:text-3xl dark:text-black">
                 <span
                   className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold pr-2
@@ -53,7 +56,10 @@ const HeroSection = () => {
               </section>
             </div>
 
-            <div className="flex justify-center items-center md:w-1/3">
+            <div
+              className="flex justify-center items-center md:w-1/3"
+              data-aos="zoom-in"
+            >
               <Image
                 src={HeroImage}
                 alt="Hero Image"
@@ -74,8 +80,15 @@ const HeroSection = () => {
                   key={index}
                   className={`md:w-1/3 mx-auto md:mx-0 md:mb-0 mb-4
                 ${index === 1 ? "md:border-l md:border-r" : ""}
-
+                
                 `}
+                  data-aos={
+                    index === 0
+                      ? "fade-right"
+                      : index === 1
+                      ? "fade-up"
+                      : "fade-left"
+                  }
                 >
                   <h1 className="text-xl font-bold text-center md:text-xl">
                     <span
