@@ -14,7 +14,7 @@ export default function Reviews() {
           <Image src={line} alt="line" width={100} height={13} />
         </div>
       </div>
-      <div className="gap-4">
+      <div className="gap-4 px-4">
         <ReviewsSlider reviews={reviewsData} />
       </div>
       {/* left blur */}
