@@ -1,4 +1,5 @@
 import { teal } from "@/Constant/Custom-Color";
+import { freeNotesContent } from "@/Content";
 import { CButton } from "@/Shared";
 
 export default function FreeNotes() {
@@ -8,10 +9,10 @@ export default function FreeNotes() {
         <div className="flex flex-col gap-4 justify-center items-center py-6">
           <h1 className="dark:text-white text-gray-900 md:text-3xl text-2xl font-bold text-center py-2 mt-4">
             {" "}
-            Need the best teacher&apos;s class notes and <br /> lecture sheets?
+           {freeNotesContent.title}
           </h1>
           <CButton variant="solid" color={teal} textUpperCased>
-            Download
+            {freeNotesContent.button1}
           </CButton>
         </div>
         {/* left blur */}

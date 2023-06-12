@@ -12,6 +12,7 @@ import galleryContent, { galleryImages } from "./Home/gallery";
 import reviewsContent, { reviewsData } from "./Home/reviews";
 import instructorContent, { instructorsData } from "./Home/instructor";
 import faqContent, { questionsData } from "./Home/faq";
+import freeNotesContent from "./Home/FreeNotes";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -34,4 +35,5 @@ export {
   instructorContent,
   questionsData,
   faqContent,
+  freeNotesContent
 };
