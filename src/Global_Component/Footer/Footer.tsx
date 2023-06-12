@@ -77,17 +77,18 @@ const Footer = () => {
         <section className="container mx-auto px-8 md:mt-[7rem] lg:mt-[12rem]">
           <div className="flex flex-col items-center">
             <h3 className="font-bold text-3xl text-center">
-              Subscribe our newsletter
+              {/* Subscribe our newsletter */}
+              আমাদের নিউজলেটারে সদস্যতা নিন
             </h3>
             <p className="my-9 w-full md:w-6/12 text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
-              dolor cumque illo error id beatae veniam voluptatibus recusandae,
-              dignissimos unde!
+              লোরেম ইপসাম ডলর সিট আমেট কনসেকটেতুর, অদিপিসিং এলিট। কুইদেম ডলর
+              কুম্কুই ইল্লো এরর ইদ বিয়াতে ভেনিয়াম ভলুপটাটিবিস রেকুসান্ডে,
+              ডিগ্নিসিমোস উন্দে!
             </p>
             <div className="relative w-full md:w-6/12">
               <CInput
                 type="text"
-                placeholder="Enter your email"
+                placeholder="আপনার ইমেইল লিখুন"
                 // className={`dark:${styles.inputPlaceholder} w-full p-2 pr-16 relative border border-rgba(0, 0, 0, 0.42) focus:outline-0 rounded dark:text-white text-black dark:bg-transparent`}
               />
               <CButton
@@ -95,7 +96,8 @@ const Footer = () => {
                 variant="solid"
                 color={teal}
               >
-                Subscribe
+                {/* Subscribe */}
+                সাবস্ক্রাইব করুন
               </CButton>
             </div>
           </div>

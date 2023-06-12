@@ -4,46 +4,46 @@ import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 const footerData = {
   details: {
     icon: companyLogo,
-    title: "Study Care",
-    description: "The best place to study online",
+    title: "স্টাডি কেয়ার",
+    description: "অনলাইনে পড়ার জন্য সেরা স্থান",
   },
   footerRoutes: [
     {
-      title: "Company",
+      title: "কোম্পানি",
       routes: [
         {
-          title: "Privacy Policy",
+          title: "গোপনীয়তা নীতি",
         },
         {
-          title: "Careers",
+          title: "কর্মসংস্থান",
         },
         {
-          title: "Refund Policy",
+          title: "মূল্যফিরত নীতি",
         },
         {
-          title: "About Us",
+          title: "আমাদের সম্পর্কে",
         },
       ],
     },
     {
-      title: "Services",
+      title: "সেবা",
       routes: [
         {
-          title: "Free Courses",
+          title: "ফ্রি কোর্সসমূহ",
         },
         {
-          title: "All Courses",
+          title: "সমস্ত কোর্সসমূহ",
         },
       ],
     },
     {
-      title: "Resources",
+      title: "সম্পদসমূহ",
       routes: [
         {
-          title: "Notes and Guides",
+          title: "নোট এবং গাইড",
         },
         {
-          title: "Free Download",
+          title: "ফ্রি ডাউনলোড",
         },
       ],
     },
@@ -66,6 +66,65 @@ const footerData = {
       icon: FaInstagram,
     },
   ],
+  // footerRoutes: [
+  //   {
+  //     title: "Company",
+  //     routes: [
+  //       {
+  //         title: "Privacy Policy",
+  //       },
+  //       {
+  //         title: "Careers",
+  //       },
+  //       {
+  //         title: "Refund Policy",
+  //       },
+  //       {
+  //         title: "About Us",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     title: "Services",
+  //     routes: [
+  //       {
+  //         title: "Free Courses",
+  //       },
+  //       {
+  //         title: "All Courses",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     title: "Resources",
+  //     routes: [
+  //       {
+  //         title: "Notes and Guides",
+  //       },
+  //       {
+  //         title: "Free Download",
+  //       },
+  //     ],
+  //   },
+  // ],
+  // social: [
+  //   {
+  //     link: "https://www.facebook.com/",
+  //     icon: FaFacebook,
+  //   },
+  //   {
+  //     link: "https://www.linkedin.com/",
+  //     icon: FaLinkedin,
+  //   },
+  //   {
+  //     link: "https://www.twitter.com/",
+  //     icon: FaTwitter,
+  //   },
+  //   {
+  //     link: "https://www.instagram.com/",
+  //     icon: FaInstagram,
+  //   },
+  // ],
 };
 
 export default footerData;

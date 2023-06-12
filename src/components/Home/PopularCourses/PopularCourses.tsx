@@ -20,7 +20,7 @@ const PopularCourses = () => {
           <div className="flex flex-col justify-center">
             <h1
               className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold pr-2
-              dark:from-orange-300 dark:to-purple-400"
+              dark:from-orange-300 dark:to-purple-400 pt-2"
             >
               {popularCouseContent?.content1}
             </h1>
