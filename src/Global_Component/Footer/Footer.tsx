@@ -1,14 +1,14 @@
 import React from "react";
-import companyLogo from "public/Asset/Logo.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import { CButton, CInput } from "@/Shared";
+import { teal } from "@/Constant/Custom-Color";
 import footerImage1 from "public/Asset/svg/footer_image1.svg";
 import footerImage2 from "public/Asset/svg/footer_image2.svg";
 import footerImage3 from "public/Asset/svg/footer_image3.svg";
 import footerImage4 from "public/Asset/svg/footer_image4.svg";
-import { CButton, CInput } from "@/Shared";
-import { teal } from "@/Constant/Custom-Color";
+import { footerData } from "@/Content";
+import { IconType } from "react-icons/lib";
 
 const Footer = () => {
   interface IRoute {
@@ -22,85 +22,18 @@ const Footer = () => {
 
   interface ISocial {
     link: string;
-    icon: React.ReactNode;
+    icon: IconType;
   }
 
-  interface IFooterData {
-    details: {
-      icon: StaticImageData;
-      title: string;
-      description: string;
-    };
-    footerRoutes: IFooterRoutes[];
-    social: ISocial[];
-  }
-
-  const footerData: IFooterData = {
-    details: {
-      icon: companyLogo,
-      title: "Study Care",
-      description: "The best place to study online",
-    },
-    footerRoutes: [
-      {
-        title: "Company",
-        routes: [
-          {
-            title: "Privacy Policy",
-          },
-          {
-            title: "Careers",
-          },
-          {
-            title: "Refund Policy",
-          },
-          {
-            title: "About Us",
-          },
-        ],
-      },
-      {
-        title: "Services",
-        routes: [
-          {
-            title: "Free Courses",
-          },
-          {
-            title: "All Courses",
-          },
-        ],
-      },
-      {
-        title: "Resources",
-        routes: [
-          {
-            title: "Notes and Guides",
-          },
-          {
-            title: "Free Download",
-          },
-        ],
-      },
-    ],
-    social: [
-      {
-        link: "https://www.facebook.com/",
-        icon: <FaFacebook color="#00838F" />,
-      },
-      {
-        link: "https://www.linkedin.com/",
-        icon: <FaLinkedin color="#00838F" />,
-      },
-      {
-        link: "https://www.twitter.com/",
-        icon: <FaTwitter color="#00838F" />,
-      },
-      {
-        link: "https://www.instagram.com/",
-        icon: <FaInstagram color="#00838F" />,
-      },
-    ],
-  };
+  // interface IFooterData {
+  //   details: {
+  //     icon: StaticImageData;
+  //     title: string;
+  //     description: string;
+  //   };
+  //   footerRoutes: IFooterRoutes[];
+  //   social: ISocial[];
+  // }
 
   return (
     <section className="overflow-hidden mx-auto">
@@ -170,7 +103,7 @@ const Footer = () => {
           {/* footer route portion */}
           <div className="grid grid-cols-12 mt-28 pb-12">
             <div className="col-span-12 md:col-span-10">
-              <div className="grid  md:grid-cols-4 gap-3 px-3 py-4 justify-center">
+              <div className="grid md:grid-cols-4 gap-3 px-3 py-4 justify-center">
                 <div className="">
                   <Image
                     src={footerData.details.icon}
@@ -187,7 +120,7 @@ const Footer = () => {
                 {footerData.footerRoutes.map((route: IFooterRoutes) => (
                   <div key={route.title}>
                     <div>
-                      <h3 className="text-2xl font-bold mb-4 text-[#00838F]">
+                      <h3 className="text-2xl font-bold mb-4 text-button-teal">
                         {route.title}
                       </h3>
                       {route.routes.map((routeItem: IRoute) => (
@@ -210,7 +143,7 @@ const Footer = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      {sLink.icon}
+                      {<sLink.icon color={teal} />}
                     </Link>
                   </div>
                 ))}
