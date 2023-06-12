@@ -11,6 +11,7 @@ import mainFeatureContent, { mainFeature } from "./Home/mainFeature";
 import galleryContent, { galleryImages } from "./Home/gallery";
 import reviewsContent, { reviewsData } from "./Home/reviews";
 import instructorContent, { instructorsData } from "./Home/instructor";
+import faqContent, { questionsData } from "./Home/faq";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -31,4 +32,6 @@ export {
   reviewsContent,
   instructorsData,
   instructorContent,
+  questionsData,
+  faqContent,
 };
