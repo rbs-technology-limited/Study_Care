@@ -116,7 +116,7 @@ const CourseSlides = () => {
                   <section className="flex flex-col items-center justify-center pb-5">
                     <h1 className="text-lg font-semibold">{course?.title}</h1>
                     <p className="text-sm">
-                      {course?.description?.slice(0, 100)}...
+                      {course?.description?.slice(0, 60)}...
                     </p>
                     <div className="flex items-center justify-between w-full py-3">
                       {/* //rating */}

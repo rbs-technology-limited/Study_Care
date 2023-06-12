@@ -14,6 +14,9 @@ import becomeAnInstructorData from "./Home/becomeAnInstructor";
 import classCategoriesData from "./Home/classCategories";
 import footerData from "./Footer/footerData";
 import contactUsData from "./Home/contactUs";
+import instructorContent, { instructorsData } from "./Home/instructor";
+import faqContent, { questionsData } from "./Home/faq";
+import freeNotesContent from "./Home/FreeNotes";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -36,4 +39,9 @@ export {
   classCategoriesData,
   footerData,
   contactUsData,
+  instructorsData,
+  instructorContent,
+  questionsData,
+  faqContent,
+  freeNotesContent
 };
