@@ -15,6 +15,7 @@ export default function SingleCard({ featureData }: { featureData: item }) {
       gap-1
       rounded-lg
       shadow-lg
+      p-4
     "
       data-aos={"zoom-out"}
     >
