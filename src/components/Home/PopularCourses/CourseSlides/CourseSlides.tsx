@@ -155,7 +155,8 @@ const CourseSlides = () => {
 
                     {/* //see detail button */}
                     <CButton color={teal} variant="outline">
-                      See Details
+                      {/* See Details */}
+                      বিস্তারিত দেখুন
                     </CButton>
                   </section>
                 </div>

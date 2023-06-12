@@ -1,4 +1,4 @@
-import { contactUsData } from "@/Content";
+import { contactInfos, contactUsData } from "@/Content";
 import Image, { StaticImageData } from "next/image";
 import line from "public/Asset/image/line.svg";
 import shape from "public/Asset/svg/contactUs/small_shape.svg";
@@ -45,7 +45,7 @@ const ContactUs = () => {
           {/* details part */}
           <div className="basis-6/12" data-aos="fade-left">
             <div className="flex flex-col gap-y-8 md:py-12 ">
-              {contactUsData?.infos.map((item: IContact) => (
+              {contactInfos.map((item: IContact) => (
                 <div className="flex items-center gap-3" key={item.id}>
                   <Image
                     src={item.icon}
