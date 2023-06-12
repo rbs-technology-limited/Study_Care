@@ -3,7 +3,6 @@ import Image from "next/image";
 import line from "public/Asset/image/line.svg";
 import ReviewsSlider from "./ReviewsSlider";
 import { reviewsContent, reviewsData } from "@/Content";
-
 export default function Reviews() {
   return (
     <section className="bg-white dark:bg-[#141414] relative overflow-hidden py-20">
@@ -15,7 +14,7 @@ export default function Reviews() {
           <Image src={line} alt="line" width={100} height={13} />
         </div>
       </div>
-      <div className="gap-4">
+      <div className="gap-4 px-4">
         <ReviewsSlider reviews={reviewsData} />
       </div>
       {/* left blur */}
