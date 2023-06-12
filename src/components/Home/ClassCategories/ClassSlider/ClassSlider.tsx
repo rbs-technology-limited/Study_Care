@@ -34,13 +34,11 @@ const ClassSlider = ({ data, delayTime }: Class) => {
           slidesPerView={1}
           spaceBetween={10}
           loop={true}
-          // centeredSlides={true}
           freeMode={true}
           pagination={{
             clickable: true,
             dynamicBullets: true,
           }}
-          // showsPagination={false}
           allowTouchMove={true}
           modules={[FreeMode, Pagination, Autoplay]}
           className="mySwiper"
@@ -79,8 +77,8 @@ const ClassSlider = ({ data, delayTime }: Class) => {
           {data?.map((classData: SliderData) => {
             return (
               <SwiperSlide key={classData?.id}>
-                <div className="bg-custom-teal dark:bg-transparent p-4 rounded-2xl flex-grow border-2 ">
-                  <p className="text-md">{classData.status}</p>
+                <div className="bg-custom-teal dark:bg-transparent p-4 rounded-2xl border-2 border-button-teal">
+                  <p className="text-sm font-bold">{classData.status}</p>
                   <h1 className="text-xl mt-2 font-bold">{classData.class}</h1>
                   <div className="flex justify-center mb-5">
                     <svg

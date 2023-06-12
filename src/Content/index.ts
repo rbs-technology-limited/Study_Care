@@ -12,6 +12,8 @@ import galleryContent, { galleryImages } from "./Home/gallery";
 import reviewsContent, { reviewsData } from "./Home/reviews";
 import becomeAnInstructorData from "./Home/becomeAnInstructor";
 import classCategoriesData from "./Home/classCategories";
+import footerData from "./Footer/footerData";
+import contactUsData from "./Home/contactUs";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -32,4 +34,6 @@ export {
   reviewsContent,
   becomeAnInstructorData,
   classCategoriesData,
+  footerData,
+  contactUsData,
 };
