@@ -29,7 +29,7 @@ const BecomeAnInstructor = () => {
                 alt="instructor image"
                 height={500}
                 width={500}
-                className="object-center object-cover rounded-xl shadow-xl shadow-inner transform hover:scale-105 transition-all duration-300"
+                className="object-center object-cover rounded-xl  transform hover:scale-105 transition-all duration-300"
               />
               {/* left blur */}
               <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#1BE1FF] opacity-40 blur-[100px] z-10"></div>

@@ -89,9 +89,6 @@ const Header = () => {
                 width={120}
                 height={40}
               />
-              {/* <div>
-                <h1>Byte.Bridge</h1>
-              </div> */}
             </Link>
             {/* //mobile menu  */}
             <div className="lg:hidden">
@@ -191,7 +188,7 @@ const Header = () => {
                 handleLogin();
               }}
             >
-              Sign In
+              সাইন ইন
             </CButton>
 
             <CButton
@@ -204,7 +201,7 @@ const Header = () => {
                 handleLogin();
               }}
             >
-              Register
+              নিবন্ধন করুন
             </CButton>
 
             <div className="border-r-[0.0625rem] border-stone-400 dark:border-stone-300 h-12 mx-4"></div>
