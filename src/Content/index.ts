@@ -10,6 +10,7 @@ import exploreCoursesContent, {
 import mainFeatureContent, { mainFeature } from "./Home/mainFeature";
 import galleryContent, { galleryImages } from "./Home/gallery";
 import reviewsContent, { reviewsData } from "./Home/reviews";
+import instructorContent, { instructorsData } from "./Home/instructor";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -28,4 +29,6 @@ export {
   galleryContent,
   reviewsData,
   reviewsContent,
+  instructorsData,
+  instructorContent,
 };
