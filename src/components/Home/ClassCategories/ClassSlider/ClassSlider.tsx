@@ -10,12 +10,12 @@ import "swiper/css/free-mode";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useRouter } from "next/navigation";
+import { classCategoriesData } from "@/Content";
 
 interface SliderData {
   id: number;
   status: string;
   class: string;
-  buttonText: string;
 }
 
 type Class = {
@@ -109,7 +109,7 @@ const ClassSlider = ({ data, delayTime }: Class) => {
                       route.push(`/categories/${id}`);
                     }}
                   >
-                    {classData.buttonText}
+                    {classCategoriesData.button}
                   </CButton>
                 </div>
               </SwiperSlide>

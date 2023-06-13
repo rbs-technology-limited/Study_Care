@@ -1,5 +1,5 @@
 import React from "react";
-import { classCategoriesData } from "@/Content";
+import { categoriesData, classCategoriesData } from "@/Content";
 import ClassSlider from "./ClassSlider/ClassSlider";
 import Image from "next/image";
 import line from "public/Asset/image/line.svg";
@@ -14,7 +14,7 @@ const ClassCategories = () => {
         <Image src={line} alt="line" width={152} height={13} />
       </div>
       <div className="w-full">
-        <ClassSlider data={classCategoriesData.categories} delayTime={3000} />
+        <ClassSlider data={categoriesData} delayTime={3000} />
       </div>
     </section>
   );
