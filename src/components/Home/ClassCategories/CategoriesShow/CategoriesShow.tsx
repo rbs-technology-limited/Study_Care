@@ -16,20 +16,18 @@ const CategoriesShow = () => {
         ${showLeftSection ? "bg-gray-800/20" : "opacity-100"}`}
       >
         <section
-          className={`flex justify-between items-center gap-2
+          className={`flex justify-between gap-2
         
         `}
         >
           <div
-            className={`text-2xl font-bold md:text-left md:text-3xl border max-w-xs px-2 hidden lg:block 
+            className={`border rounded max-w-xs px-2 hidden lg:block 
           
-            ${
-              showLeftSection ? "block" : "hidden"
-            }`}
+            ${showLeftSection ? "block" : "hidden"}`}
           >
             <CategoriesLeftFilterUI />
           </div>
-          <div className="text-2xl font-bold md:text-left md:text-3xl dark:text-black border w-full lg:w-[80%] px-2">
+          <div className="border rounded w-full lg:w-[80%] px-2">
             {/* //mobile device button click to show left section as backdrop left drawer  */}
             <button
               className="border lg:hidden block"
@@ -49,7 +47,9 @@ const CategoriesShow = () => {
           open={showLeftSection}
           setOpen={setShowLeftSection}
           title="Categories"
-        />
+        >
+          <CategoriesLeftFilterUI />
+        </OffCanvus>
       </section>
     </main>
   );

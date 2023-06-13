@@ -12,6 +12,8 @@ interface Props {
   color?: string;
   variant?: "solid" | "outline" | "text";
   onClick?: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
   rest?: any;
 }
 
@@ -35,7 +37,8 @@ const CButton = ({
         className={
           customClass
             ? customClass
-            : ` px-4 py-[0.3438rem]
+            : ` px-4 
+            h-[2.4rem]
               rounded-lg
               text-[0.625rem]
               sm:text-sm
