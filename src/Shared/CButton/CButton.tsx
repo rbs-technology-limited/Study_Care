@@ -14,6 +14,7 @@ interface Props {
   onClick?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  height?: string;
   rest?: any;
 }
 
@@ -28,6 +29,7 @@ const CButton = ({
   color,
   variant,
   onClick,
+  height,
   ...rest
 }: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -38,7 +40,9 @@ const CButton = ({
           customClass
             ? customClass
             : ` px-4 
-            h-[2.4rem]
+            mt-1
+            ${height ? height : "h-[2.4rem]"}
+
               rounded-lg
               text-[0.625rem]
               sm:text-sm

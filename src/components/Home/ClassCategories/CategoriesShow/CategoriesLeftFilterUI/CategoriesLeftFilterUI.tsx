@@ -1,3 +1,4 @@
+import { teal } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
 import React from "react";
 
@@ -15,7 +16,10 @@ const CategoriesLeftFilterUI = () => {
          
            "
         />
-        <CButton variant="solid">
+        <CButton variant="outline"
+        color={teal}
+        height="h-[2rem]"
+        >
           Search
         </CButton>
       </section>
