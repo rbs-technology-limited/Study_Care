@@ -52,7 +52,7 @@ const SideBar = ({
           {icon ? (
             icon
           ) : (
-            <MdCancel className="text-2xl font-bold md:text-left text-3xl dark:text-custom-orange w-full" />
+            <MdCancel className="text-2xl font-bold md:text-left dark:text-custom-orange w-full" />
           )}
         </CButton>
       </section>

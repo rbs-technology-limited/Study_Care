@@ -43,10 +43,14 @@ const CButton = ({
             mt-1
             ${height ? height : "h-[2.4rem]"}
 
-              rounded-lg
-              text-[0.625rem]
+              rounded-md
+              text-[0.5rem]
               sm:text-sm
               font-semibold
+              transition-all
+              duration-300
+              ease-in-out
+              
             ${fullWidth ? "w-full" : ""} ${textUpperCased ? "uppercase" : ""}
               ${
                 disabled
