@@ -1,7 +1,7 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useState } from "react";
 import { Autoplay, FreeMode, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +9,7 @@ import "swiper/css/free-mode";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { useRouter } from "next/navigation";
 
 interface SliderData {
   id: number;
@@ -26,6 +27,7 @@ type ClassData = Array<SliderData>;
 
 const ClassSlider = ({ data, delayTime }: Class) => {
   const [init, setInit] = useState<any>(null);
+  const route = useRouter();
 
   return (
     <div className="flex justify-center">
@@ -99,7 +101,14 @@ const ClassSlider = ({ data, delayTime }: Class) => {
                       <path d="M13 12l2 0" />
                     </svg>
                   </div>
-                  <CButton variant="outline" color={teal}>
+                  <CButton
+                    variant="outline"
+                    color={teal}
+                    onClick={() => {
+                      const id = classData?.id;
+                      route.push(`/categories/${id}`);
+                    }}
+                  >
                     {classData.buttonText}
                   </CButton>
                 </div>

@@ -17,6 +17,7 @@ const AOSProvider = ({ children }: { children: React.ReactNode }) => {
       duration: 500,
     });
   }, []);
+
   
   if (!mounted) return null;
   return (
