@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = async ({ params }: any) => {
-  console.log(params.id);
+  console.log(params);
   return (
     <div className="h-screen text-white bg-black flex flex-col justify-center items-center">
       <h1>Class Categories Page</h1>
