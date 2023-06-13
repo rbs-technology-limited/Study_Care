@@ -1,12 +1,12 @@
+import CategoriesShow from "@/components/Home/ClassCategories/CategoriesShow/CategoriesShow";
 import React from "react";
 
 const page = async ({ params }: any) => {
   console.log(params);
   return (
-    <div className="h-screen text-white bg-black flex flex-col justify-center items-center">
-      <h1>Class Categories Page</h1>
-      <h2>{params.id}</h2>
-    </div>
+    <main className=" min-h-screen mt-[4.4rem]">
+      <CategoriesShow />
+    </main>
   );
 };
 
