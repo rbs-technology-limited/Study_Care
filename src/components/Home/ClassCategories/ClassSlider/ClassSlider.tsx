@@ -23,7 +23,7 @@ type Class = {
   delayTime?: number;
 };
 
-type ClassData = Array<SliderData>;
+// type ClassData = Array<SliderData>;
 
 const ClassSlider = ({ data, delayTime }: Class) => {
   const [init, setInit] = useState<any>(null);

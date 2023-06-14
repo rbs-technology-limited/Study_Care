@@ -12,7 +12,10 @@ interface ICardData {
   price: number;
   status?: string | null;
   rating?: number;
-  courseDetails: Array<{ id: number; title: string }>;
+  courseDetails: {
+    id: number;
+    title: string;
+  }[];
 }
 interface ICourseCardData {
   courseCardData: ICardData;
@@ -33,14 +36,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
       ${isCardHovered ? "bg-gray-800/20" : "bg-white dark:bg-gray-800"}
         `}
         >
-          <div
-            className="w-2/4 relative bg-no-repeat"
-            // style={{
-            //   backgroundImage: `url('https://img.freepik.com/free-photo/boy-studying-from-home-online-classroom-new-normal_53876-96659.jpg?w=740&t=st=1686653491~exp=1686654091~hmac=35ee66c6704ba0c67dbb073abcb6b9ec44986ce9d2fa771913a88f8601184813')`,
-            //   // backgroundSize: "300px 280px",
-            //   // backgroundPosition: "left center",
-            // }}
-          >
+          <div className="w-2/4 relative bg-no-repeat">
             <Image
               src={`https://img.freepik.com/free-photo/boy-studying-from-home-online-classroom-new-normal_53876-96659.jpg?w=740&t=st=1686653491~exp=1686654091~hmac=35ee66c6704ba0c67dbb073abcb6b9ec44986ce9d2fa771913a88f8601184813`}
               alt="course"
@@ -66,7 +62,9 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
               {courseCardData?.courseDetails.map((courseDetail) => (
                 <div className="flex items-center gap-1 " key={courseDetail.id}>
                   <FaGenderless className="text-sm" color={teal} />
-                  <p className=" text-gray-600 dark:text-white text-sm">{courseDetail.title}</p>
+                  <p className=" text-gray-600 dark:text-white text-sm">
+                    {courseDetail.title}
+                  </p>
                 </div>
               ))}
             </div>
