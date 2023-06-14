@@ -10,6 +10,7 @@ const coursesCardData = [
     price: 4700,
     rating: 4.5,
     status: "New",
+    sold: 1200,
     courseDetails: [
       {
         id: 1,
@@ -31,6 +32,7 @@ const coursesCardData = [
     price: 4500,
     rating: 3.7,
     status: null,
+    sold: 3000,
     courseDetails: [
       {
         id: 1,
@@ -94,6 +96,7 @@ const coursesCardData = [
     price: 6500,
     rating: 4.5,
     status: "Recommended",
+    sold: 50000,
     courseDetails: [
       {
         id: 1,
