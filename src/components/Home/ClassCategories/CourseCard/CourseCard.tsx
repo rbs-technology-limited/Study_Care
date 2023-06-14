@@ -134,7 +134,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
             ${
               isCardHovered
                 ? "-translate-x-2 -translate-y-2 visible"
-                : "-translate-x-full translate-y-full invisible"
+                : "translate-x-full translate-y-full invisible"
             }
 
           bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-center justify-center`}
@@ -148,7 +148,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
           </div>
           {/* delete and edit button visible on hover */}
           <div
-            className={`absolute top-0 right-0 transition duration-300 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg 
+            className={`absolute top-0 right-0 transition duration-300 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700
           ${
             isCardHovered
               ? "-translate-x-2 translate-y-2 visible"
