@@ -1,10 +1,15 @@
 import React from "react";
+import { coursesCardData } from "@/Content";
+import CourseCard from "../../CourseCard/CourseCard";
 
 const CategoriesRightDataUI = () => {
   return (
-    <div className="break-all text-black dark:text-white">
+    <section className="break-all text-black dark:text-white">
       This is CategoriesRightDataUI
-    </div>
+      {coursesCardData.map((courseCardData) => (
+        <CourseCard courseCardData={courseCardData} key={courseCardData.id} />
+      ))}
+    </section>
   );
 };
 

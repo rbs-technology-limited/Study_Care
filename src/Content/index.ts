@@ -11,13 +11,16 @@ import mainFeatureContent, { mainFeature } from "./Home/mainFeature";
 import galleryContent, { galleryImages } from "./Home/gallery";
 import reviewsContent, { reviewsData } from "./Home/reviews";
 import becomeAnInstructorData from "./Home/becomeAnInstructor";
-import classCategoriesData from "./Home/classCategories";
 import footerData from "./Footer/footerData";
 import { footerRoutes } from "./Footer/footerData";
 import contactUsData, { contactInfos } from "./Home/contactUs";
 import instructorContent, { instructorsData } from "./Home/instructor";
 import faqContent, { questionsData } from "./Home/faq";
 import freeNotesContent from "./Home/FreeNotes";
+import { categoriesData } from "./Home/classCategories";
+import classCategoriesData from "./Home/classCategories";
+import coursesCardData from "./course/coursesData";
+import { courseData } from "./course/coursesData";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -47,4 +50,7 @@ export {
   faqContent,
   freeNotesContent,
   contactInfos,
+  categoriesData,
+  coursesCardData,
+  courseData,
 };
