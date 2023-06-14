@@ -30,7 +30,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
         <div
           className={`
         flex max-w-lg shadow-lg rounded-lg overflow-hidden
-      ${isCardHovered ? "bg-gray-800/20" : "bg-white"}
+      ${isCardHovered ? "bg-gray-800/20" : "bg-white dark:bg-gray-800"}
         `}
         >
           <div
@@ -59,14 +59,14 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
             )}
           </div>
           <div className="w-2/3 p-2">
-            <h1 className="text-gray-900 font-bold text-sm">
+            <h1 className="text-gray-900 font-bold text-sm dark:text-white">
               {courseCardData?.title}
             </h1>
             <div className="my-2">
               {courseCardData?.courseDetails.map((courseDetail) => (
                 <div className="flex items-center gap-1 " key={courseDetail.id}>
                   <FaGenderless className="text-sm" color={teal} />
-                  <p className=" text-gray-600 text-sm">{courseDetail.title}</p>
+                  <p className=" text-gray-600 dark:text-white text-sm">{courseDetail.title}</p>
                 </div>
               ))}
             </div>
@@ -110,7 +110,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
                 : "-translate-x-full translate-y-full invisible"
             }
 
-          bg-white rounded-lg shadow-lg flex items-center justify-center`}
+          bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-center justify-center`}
           >
             <CButton variant="solid" color={teal}>
               {courseData.button1}
