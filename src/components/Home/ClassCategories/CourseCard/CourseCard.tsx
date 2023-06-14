@@ -26,6 +26,18 @@ interface ICourseCardData {
 
 const CourseCard = ({ courseCardData }: ICourseCardData) => {
   const [isCardHovered, setIsCardHovered] = React.useState<boolean>(false);
+
+  type BanglaDigit = string | number;
+
+  // convert english digit to bangla digit
+  const convertToBangla = (englishDigit: BanglaDigit) => {
+    const updatedBangleNumber = Number(englishDigit).toLocaleString("bn-BD", {
+      useGrouping: true,
+    });
+    const banglaDigit = `কোর্সটি করছেন ${updatedBangleNumber} জন`;
+    return banglaDigit;
+  };
+
   return (
     <>
       <section
@@ -79,7 +91,8 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
                 <div className="flex gap-1 my-1">
                   <HiUserGroup color={teal} className="text-[12px]" />
                   <p className="text-[8px] md:text-[9px] font-semibold">
-                    {`কোর্সটি করছেন ${courseCardData?.sold} জন`}
+                    {/* {`কোর্সটি করছেন ${courseCardData?.sold} জন`} */}
+                    {convertToBangla(courseCardData?.sold)}
                   </p>
                 </div>
               )}
