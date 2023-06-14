@@ -1,9 +1,11 @@
 "use client";
 
-import { OffCanvus } from "@/Shared";
+import { CButton, OffCanvus } from "@/Shared";
 import React, { useState } from "react";
 import CategoriesLeftFilterUI from "./CategoriesLeftFilterUI/CategoriesLeftFilterUI";
 import CategoriesRightDataUI from "./CategoriesRightDataUI/CategoriesRightDataUI";
+import { teal } from "@/Constant/Custom-Color";
+import { BiFilterAlt } from "react-icons/bi";
 
 const CategoriesShow = () => {
   const [showLeftSection, setShowLeftSection] = useState<boolean>(false);
@@ -17,7 +19,8 @@ const CategoriesShow = () => {
       >
         <section
           className={`flex justify-between gap-2
-        
+          lg:flex-row flex-col
+
         `}
         >
           <div
@@ -27,17 +30,23 @@ const CategoriesShow = () => {
           >
             <CategoriesLeftFilterUI />
           </div>
+
+          <CButton
+            customClass="border rounded mt-3 lg:hidden block justify-self-start w-24"
+            variant="outline"
+            color={teal}
+            onClick={() => {
+              // console.log("clicked");
+              setShowLeftSection(!showLeftSection);
+            }}
+          >
+            <BiFilterAlt className="inline-block mr-1" />
+            Filter
+          </CButton>
+
           <div className="border rounded w-full lg:w-[120%] px-1">
             {/* //mobile device button click to show left section as backdrop left drawer  */}
-            <button
-              className="border lg:hidden block"
-              onClick={() => {
-                // console.log("clicked");
-                setShowLeftSection(!showLeftSection);
-              }}
-            >
-              filter
-            </button>
+
             <CategoriesRightDataUI />
           </div>
 

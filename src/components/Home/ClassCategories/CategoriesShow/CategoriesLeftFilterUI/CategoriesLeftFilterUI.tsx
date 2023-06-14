@@ -1,8 +1,13 @@
+"use client";
 import { teal } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 
-const CategoriesLeftFilterUI = () => {
+const CategoriesLeftFilterUI = async () => {
+  const searchParams = useSearchParams();
+  const queryCategoryName = searchParams.get("category");
+
   return (
     <div className="break-all py-2">
       {/* //search field  */}
@@ -16,10 +21,7 @@ const CategoriesLeftFilterUI = () => {
          
            "
         />
-        <CButton variant="outline"
-        color={teal}
-        height="h-[2rem]"
-        >
+        <CButton variant="outline" color={teal} height="h-[2rem]">
           অনুসন্ধান করুন
         </CButton>
       </section>

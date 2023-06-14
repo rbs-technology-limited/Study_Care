@@ -106,7 +106,8 @@ const ClassSlider = ({ data, delayTime }: Class) => {
                     color={teal}
                     onClick={() => {
                       const id = classData?.id;
-                      route.push(`/categories/${id}`);
+                      const category = classData?.class;
+                      route.push(`/categories/${id}?category=${category}`);
                     }}
                   >
                     {classCategoriesData.button}
