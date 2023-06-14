@@ -9,5 +9,7 @@
     "শ্রেণী",
     "ষষ্ঠ",
     "স্পেশাল"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

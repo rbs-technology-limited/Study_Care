@@ -41,6 +41,8 @@ export const categoriesData = [
   },
 ];
 
+// export conat 
+
 const classCategoriesData = {
   title: "কোর্সসমূহ (ষষ্ঠ-দ্বাদশ শ্রেণী)",
   button: "বিস্তারিত দেখুন",
