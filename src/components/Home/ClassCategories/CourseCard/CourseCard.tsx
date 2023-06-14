@@ -22,14 +22,16 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
   const [isCardHovered, setIsCardHovered] = React.useState<boolean>(false);
   return (
     <>
-      <div className={`p-1 relative`}>
+      <section
+        className={`p-1 relative`}
+        onMouseEnter={() => setIsCardHovered(true)}
+        onMouseLeave={() => setIsCardHovered(false)}
+      >
         <div
           className={`
         flex max-w-lg shadow-lg rounded-lg overflow-hidden
       ${isCardHovered ? "bg-gray-800/20" : "bg-white"}
         `}
-          onMouseEnter={() => setIsCardHovered(true)}
-          onMouseLeave={() => setIsCardHovered(false)}
         >
           <div
             className="w-2/4 relative bg-no-repeat"
@@ -118,7 +120,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
             </CButton>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
