@@ -3,6 +3,7 @@ import { CButton } from "@/Shared";
 import React from "react";
 import { FaEdit, FaGenderless } from "react-icons/fa";
 import { RiDeleteBin5Fill } from "react-icons/ri";
+import { HiUserGroup } from "react-icons/hi";
 import { teal } from "@/Constant/Custom-Color";
 import { courseData } from "@/Content";
 import Image from "next/image";
@@ -13,6 +14,7 @@ interface ICardData {
   price: number;
   status?: string | null;
   rating?: number;
+  sold?: number;
   courseDetails: {
     id: number;
     title: string;
@@ -59,15 +61,28 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
             <h1 className="text-gray-900 font-bold text-sm dark:text-white">
               {courseCardData?.title}
             </h1>
-            <div className="my-2">
-              {courseCardData?.courseDetails.map((courseDetail) => (
-                <div className="flex items-center gap-1 " key={courseDetail.id}>
-                  <FaGenderless className="text-sm" color={teal} />
-                  <p className=" text-gray-600 dark:text-white text-sm">
-                    {courseDetail.title}
+            <div className="h-16 my-1">
+              <div className="my-1">
+                {courseCardData?.courseDetails.map((courseDetail) => (
+                  <div
+                    className="flex items-center gap-1 "
+                    key={courseDetail.id}
+                  >
+                    <FaGenderless className="text-sm" color={teal} />
+                    <p className=" text-gray-600 dark:text-white text-[10px]">
+                      {courseDetail.title}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              {courseCardData?.sold && (
+                <div className="flex gap-1 my-1">
+                  <HiUserGroup color={teal} className="text-[12px]" />
+                  <p className="text-[8px] md:text-[9px] font-semibold">
+                    {`কোর্সটি করছেন ${courseCardData?.sold} জন`}
                   </p>
                 </div>
-              ))}
+              )}
             </div>
             <div className="flex items-center justify-between">
               <div className="flex item-center">
