@@ -21,6 +21,8 @@ import { categoriesData } from "./Home/classCategories";
 import classCategoriesData from "./Home/classCategories";
 import coursesCardData from "./course/coursesData";
 import { courseData } from "./course/coursesData";
+import filterData from "./filter/filterData";
+import { searchFilterData } from "./filter/filterData";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -53,4 +55,6 @@ export {
   categoriesData,
   coursesCardData,
   courseData,
+  filterData,
+  searchFilterData,
 };
