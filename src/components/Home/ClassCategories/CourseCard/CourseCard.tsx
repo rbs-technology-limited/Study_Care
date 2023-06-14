@@ -1,7 +1,8 @@
 "use client";
 import { CButton } from "@/Shared";
 import React from "react";
-import { FaGenderless } from "react-icons/fa";
+import { FaEdit, FaGenderless } from "react-icons/fa";
+import { RiDeleteBin5Fill } from "react-icons/ri";
 import { teal } from "@/Constant/Custom-Color";
 import { courseData } from "@/Content";
 import Image from "next/image";
@@ -116,6 +117,21 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
             <CButton variant="outline" color={teal}>
               {courseData.button2}
             </CButton>
+          </div>
+          {/* delete and edit button visible on hover */}
+          <div
+            className={`absolute top-0 right-0 transition duration-300 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg 
+          ${
+            isCardHovered
+              ? "-translate-x-2 translate-y-2 visible"
+              : "-translate-x-full translate-y-full invisible"
+          }
+          `}
+          >
+            <div className="flex gap-1 cursor-pointer">
+              <FaEdit color={teal} />
+              <RiDeleteBin5Fill color={teal} />
+            </div>
           </div>
         </div>
       </section>
