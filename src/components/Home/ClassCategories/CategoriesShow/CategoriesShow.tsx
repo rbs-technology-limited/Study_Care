@@ -27,7 +27,7 @@ const CategoriesShow = () => {
           >
             <CategoriesLeftFilterUI />
           </div>
-          <div className="border rounded w-full lg:w-[80%] px-2">
+          <div className="border rounded w-full lg:w-[120%] px-1">
             {/* //mobile device button click to show left section as backdrop left drawer  */}
             <button
               className="border lg:hidden block"
