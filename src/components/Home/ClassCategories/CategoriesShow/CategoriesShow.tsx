@@ -24,7 +24,7 @@ const CategoriesShow = () => {
         `}
         >
           <div
-            className={`border rounded max-w-xs px-2 hidden lg:block 
+            className={`border-r dark:border-gray-200/10 max-w-xs px-2 hidden lg:block 
           
             ${showLeftSection ? "block" : "hidden"}`}
           >
@@ -32,7 +32,7 @@ const CategoriesShow = () => {
           </div>
 
           <CButton
-            customClass="border rounded mt-3 lg:hidden block justify-self-start w-24"
+            customClass=" rounded mt-3 lg:hidden block justify-self-start w-24"
             variant="outline"
             color={teal}
             onClick={() => {
@@ -44,7 +44,7 @@ const CategoriesShow = () => {
             Filter
           </CButton>
 
-          <div className="border rounded w-full lg:w-[120%] px-1">
+          <div className=" rounded w-full lg:w-[120%] px-1">
             {/* //mobile device button click to show left section as backdrop left drawer  */}
 
             <CategoriesRightDataUI />
