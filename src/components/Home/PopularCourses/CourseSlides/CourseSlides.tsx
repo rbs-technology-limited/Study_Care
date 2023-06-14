@@ -108,7 +108,7 @@ const CourseSlides = () => {
                     <Image
                       src={course?.image}
                       alt={course?.title}
-                      className="object-contain object-center rounded-lg mx-auto"
+                      className="object-auto object-center rounded-lg mx-auto"
                       width={400}
                       height={100}
                     />
