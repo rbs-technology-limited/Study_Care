@@ -30,14 +30,14 @@ export default function RootLayout({
       <body
         className={`${inter.className} relative dark:bg-dark-background dark:text-white`}
       >
-        <AOSProvider>
-          <NavigationEvents>
-            <Suspense fallback={<Loading />}>
+        <Suspense fallback={<Loading />}>
+          <AOSProvider>
+            <NavigationEvents>
               <ContextProvider>{children}</ContextProvider>
-            </Suspense>
-            <ScrollToTop />
-          </NavigationEvents>
-        </AOSProvider>
+              <ScrollToTop />
+            </NavigationEvents>
+          </AOSProvider>
+        </Suspense>
       </body>
     </html>
   );
