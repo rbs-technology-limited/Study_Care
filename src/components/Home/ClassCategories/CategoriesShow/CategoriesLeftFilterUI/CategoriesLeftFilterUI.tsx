@@ -1,5 +1,5 @@
 "use client";
-import { teal } from "@/Constant/Custom-Color";
+import { orange } from "@/Constant/Custom-Color";
 import { CButton, SelectField } from "@/Shared";
 import { useSearchParams } from "next/navigation";
 import React from "react";
@@ -17,13 +17,13 @@ const CategoriesLeftFilterUI = () => {
         <input
           type="text"
           placeholder={searchFilterData?.placeholder}
-          className="border w-full px-2 py-1 rounded text-black bg-gradient-to-r from-yellow-100 to-cyan-100 
-          border-cyan-100
-           dark:border-gray-800 focus:outline-none focus:ring-1 focus:ring-button-teal focus:border-transparent placeholder-gray-400
+          className="border w-full px-2 py-1 rounded text-black  
+          border-button-teal
+           dark:border-custom-orange focus:outline-none focus:ring-1 focus:ring-button-teal focus:border-transparent placeholder-gray-400
          
            "
         />
-        <CButton variant="outline" color={teal} height="h-[2rem]">
+        <CButton variant="outline" color={orange} height="h-[2rem]">
           {searchFilterData?.button}
         </CButton>
       </section>
@@ -36,7 +36,8 @@ const CategoriesLeftFilterUI = () => {
               <SelectField
                 type="checkbox"
                 name={sItem.title}
-                // checked
+                defaultChecked={categoryName === sItem.title || false}
+                disabled={categoryName === sItem.title || categoryName === ""}
                 key={sItem.id}
               />
             ))}

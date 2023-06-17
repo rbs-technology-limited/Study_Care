@@ -1,4 +1,4 @@
-import About from "@/components/Home/About/About";
+import AboutStudyTour from "@/components/Home/AboutStudyTour/AboutStudyTour";
 import BecomeAnInstructor from "@/components/Home/BecomeAnInstructor/BecomeAnInstructor";
 import ClassCategories from "@/components/Home/ClassCategories/ClassCategories";
 import ContactUs from "@/components/Home/ContactUs/ContactUs";
@@ -22,7 +22,7 @@ export default function Home() {
       <Workflow />
       <PopularCourses />
       <ExploreCourses />
-      <About />
+      <AboutStudyTour />
       <Instructor />
       <Reviews />
       <Faq />
