@@ -19,12 +19,10 @@ const CategoriesShow = () => {
       >
         <section
           className={`flex justify-between gap-2
-          lg:flex-row flex-col
-
-        `}
+          lg:flex-row flex-col h-[900px] `}
         >
           <div
-            className={`border-r dark:border-gray-200/10 max-w-xs px-2 hidden lg:block 
+            className={`border-r dark:border-gray-200/10 max-w-xs px-2 hidden lg:block  
           
             ${showLeftSection ? "block" : "hidden"}`}
           >
@@ -36,7 +34,6 @@ const CategoriesShow = () => {
             variant="outline"
             color={teal}
             onClick={() => {
-              // console.log("clicked");
               setShowLeftSection(!showLeftSection);
             }}
           >
@@ -44,7 +41,13 @@ const CategoriesShow = () => {
             Filter
           </CButton>
 
-          <div className=" rounded w-full lg:w-[120%] px-1">
+          <div
+            className=" rounded w-full lg:w-[120%] px-1 overflow-y-auto overflow-x-hidden"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
             {/* //mobile device button click to show left section as backdrop left drawer  */}
 
             <CategoriesRightDataUI />
@@ -60,6 +63,18 @@ const CategoriesShow = () => {
           <CategoriesLeftFilterUI />
         </OffCanvus>
       </section>
+      <style>
+        {`
+          ::-webkit-scrollbar {
+            width: 0.5em;
+            background-color: transparent;
+          }
+          
+          ::-webkit-scrollbar-thumb {
+            background-color: transparent;
+          }
+        `}
+      </style>
     </main>
   );
 };

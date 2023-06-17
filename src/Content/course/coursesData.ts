@@ -112,6 +112,250 @@ const coursesCardData = [
       },
     ],
   },
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 6500,
+    rating: 4.5,
+    status: "Recommended",
+    sold: 50000,
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
 ];
 
 export default coursesCardData;
