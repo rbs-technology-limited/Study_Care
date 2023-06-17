@@ -1,0 +1,15 @@
+{
+  "cSpell.words": [
+    "Gulshan",
+    "একাদশ",
+    "কোর্সসমূহ",
+    "দেখুন",
+    "দ্বাদশ",
+    "বিস্তারিত",
+    "শ্রেণী",
+    "ষষ্ঠ",
+    "স্পেশাল"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
+}

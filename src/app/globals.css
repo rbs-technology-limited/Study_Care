@@ -98,3 +98,6 @@ body {
   height: 100%;
 }
 
+::placeholder {
+  font-size: 0.8125rem;
+}

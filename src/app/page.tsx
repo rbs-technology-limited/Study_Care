@@ -1,5 +1,6 @@
-import About from "@/components/Home/About/About";
+import AboutStudyTour from "@/components/Home/AboutStudyTour/AboutStudyTour";
 import BecomeAnInstructor from "@/components/Home/BecomeAnInstructor/BecomeAnInstructor";
+import ClassCategories from "@/components/Home/ClassCategories/ClassCategories";
 import ContactUs from "@/components/Home/ContactUs/ContactUs";
 import ExploreCourses from "@/components/Home/ExploreCourses/ExploreCourses";
 import HeroSection from "@/components/Home/HeroSection/HeroSection";
@@ -16,11 +17,12 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
+      <ClassCategories />
       <MainFeature />
       <Workflow />
       <PopularCourses />
       <ExploreCourses />
-      <About />
+      <AboutStudyTour />
       <Instructor />
       <Reviews />
       <Faq />

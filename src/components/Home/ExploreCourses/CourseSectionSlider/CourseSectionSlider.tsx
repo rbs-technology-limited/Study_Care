@@ -152,7 +152,8 @@ const CourseSectionSlider = ({
 
                     {/* //see detail button */}
                     <CButton color={teal} variant="outline" textUpperCased>
-                      Explore
+                      {/* Explore */}
+                      অন্বেষণ করুন
                     </CButton>
                   </section>
                 </div>

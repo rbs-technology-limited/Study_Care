@@ -10,6 +10,19 @@ import exploreCoursesContent, {
 import mainFeatureContent, { mainFeature } from "./Home/mainFeature";
 import galleryContent, { galleryImages } from "./Home/gallery";
 import reviewsContent, { reviewsData } from "./Home/reviews";
+import becomeAnInstructorData from "./Home/becomeAnInstructor";
+import footerData from "./Footer/footerData";
+import { footerRoutes } from "./Footer/footerData";
+import contactUsData, { contactInfos } from "./Home/contactUs";
+import instructorContent, { instructorsData } from "./Home/instructor";
+import faqContent, { questionsData } from "./Home/faq";
+import freeNotesContent from "./Home/FreeNotes";
+import { categoriesData } from "./Home/classCategories";
+import classCategoriesData from "./Home/classCategories";
+import coursesCardData from "./course/coursesData";
+import { courseData } from "./course/coursesData";
+import filterData from "./filter/filterData";
+import { searchFilterData } from "./filter/filterData";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -28,4 +41,20 @@ export {
   galleryContent,
   reviewsData,
   reviewsContent,
+  becomeAnInstructorData,
+  classCategoriesData,
+  footerData,
+  footerRoutes,
+  contactUsData,
+  instructorsData,
+  instructorContent,
+  questionsData,
+  faqContent,
+  freeNotesContent,
+  contactInfos,
+  categoriesData,
+  coursesCardData,
+  courseData,
+  filterData,
+  searchFilterData,
 };

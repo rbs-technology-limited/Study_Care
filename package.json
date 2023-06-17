@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore && next lint && next dev && next-sitemap --watch",
     "build": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore && next build",
-    "start": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore && next start",
+    "start": "npm run build && next start",
     "lint": "next lint",
     "start-next": "next dev -p 8090",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",

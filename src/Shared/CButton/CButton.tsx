@@ -12,6 +12,9 @@ interface Props {
   color?: string;
   variant?: "solid" | "outline" | "text";
   onClick?: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  height?: string;
   rest?: any;
 }
 
@@ -26,6 +29,7 @@ const CButton = ({
   color,
   variant,
   onClick,
+  height,
   ...rest
 }: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -35,12 +39,20 @@ const CButton = ({
         className={
           customClass
             ? customClass
-            : ` px-4 py-[0.3438rem]
-              rounded-lg
-              text-[0.625rem]
+            : ` px-4 
+            mt-1
+            ${height ? height : "h-[2.4rem]"}
+
+              rounded-md
+              text-[0.7rem]
               sm:text-sm
               font-semibold
-            ${fullWidth ? "w-full" : ""} ${textUpperCased ? "uppercase" : ""}
+              transition-all
+              duration-300
+              ease-in-out
+              
+            ${fullWidth ? "w-full" : ""} 
+            ${textUpperCased ? "uppercase" : ""}
               ${
                 disabled
                   ? "opacity-50 cursor-not-allowed pointer-events-none"

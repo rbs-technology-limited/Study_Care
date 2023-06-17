@@ -32,7 +32,7 @@ const HeroSection = () => {
               <h1 className="text-2xl font-bold text-center md:text-left md:text-3xl dark:text-black">
                 <span
                   className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold pr-2
-              dark:from-orange-300 dark:to-purple-400
+              dark:from-orange-300 dark:to-purple-400 py-2
               "
                 >
                   {heroContent?.content1}
@@ -93,7 +93,7 @@ const HeroSection = () => {
                   <h1 className="text-xl font-bold text-center md:text-xl">
                     <span
                       className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold
-                    dark:from-orange-300 dark:to-purple-400
+                    dark:from-orange-300 dark:to-purple-400 py-2
                     "
                     >
                       {item.title}

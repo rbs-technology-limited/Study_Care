@@ -39,7 +39,8 @@ export const galleryImages = [
 
 
 const galleryContent = {
-  title: "Gallery",
+  // title: "Gallery",
+  title: "গ্যালারি",
 }
 
 export default galleryContent;

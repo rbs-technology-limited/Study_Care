@@ -108,7 +108,7 @@ const CourseSlides = () => {
                     <Image
                       src={course?.image}
                       alt={course?.title}
-                      className="object-contain object-center rounded-lg mx-auto"
+                      className="object-auto object-center rounded-lg mx-auto"
                       width={400}
                       height={100}
                     />
@@ -116,7 +116,7 @@ const CourseSlides = () => {
                   <section className="flex flex-col items-center justify-center pb-5">
                     <h1 className="text-lg font-semibold">{course?.title}</h1>
                     <p className="text-sm">
-                      {course?.description?.slice(0, 100)}...
+                      {course?.description?.slice(0, 60)}...
                     </p>
                     <div className="flex items-center justify-between w-full py-3">
                       {/* //rating */}
@@ -155,7 +155,8 @@ const CourseSlides = () => {
 
                     {/* //see detail button */}
                     <CButton color={teal} variant="outline">
-                      See Details
+                      {/* See Details */}
+                      বিস্তারিত দেখুন
                     </CButton>
                   </section>
                 </div>
