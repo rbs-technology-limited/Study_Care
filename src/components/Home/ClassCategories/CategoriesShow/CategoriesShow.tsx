@@ -19,7 +19,7 @@ const CategoriesShow = () => {
       >
         <section
           className={`flex justify-between gap-2
-          lg:flex-row flex-col h-[900px] `}
+          lg:flex-row flex-col h-[56.25rem] `}
         >
           <div
             className={`border-r dark:border-gray-200/10 max-w-xs px-2 hidden lg:block  
