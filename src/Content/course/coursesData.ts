@@ -11,6 +11,7 @@ const coursesCardData = [
     rating: 4.5,
     status: "New",
     sold: 1200,
+    category: "১০ম শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -33,6 +34,7 @@ const coursesCardData = [
     rating: 3.7,
     status: null,
     sold: 3000,
+    category: "৮ম শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -54,6 +56,7 @@ const coursesCardData = [
     price: 3500,
     rating: 2.5,
     status: "New",
+    category: "একাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -75,6 +78,7 @@ const coursesCardData = [
     price: 3500,
     rating: 2.5,
     status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -97,6 +101,7 @@ const coursesCardData = [
     rating: 4.5,
     status: "Recommended",
     sold: 50000,
+    category: "১০ম শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -113,12 +118,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -135,12 +140,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -157,12 +162,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -179,58 +184,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
-    courseDetails: [
-      {
-        id: 1,
-        title: "৫ টি বিষয়",
-      },
-      {
-        id: 2,
-        title: "৯০ টি লাইভ ক্লাস",
-      },
-      {
-        id: 3,
-        title: "৫ টি ফাইনাল মডেল টেস্ট",
-      },
-    ],
-  },
-
-  {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
-    courseDetails: [
-      {
-        id: 1,
-        title: "৫ টি বিষয়",
-      },
-      {
-        id: 2,
-        title: "৯০ টি লাইভ ক্লাস",
-      },
-      {
-        id: 3,
-        title: "৫ টি ফাইনাল মডেল টেস্ট",
-      },
-    ],
-  },
-
-  {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -247,12 +206,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -269,12 +228,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -291,12 +250,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -313,12 +272,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -335,12 +294,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -357,12 +316,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -379,12 +338,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -401,12 +360,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -423,12 +382,12 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
@@ -445,12 +404,1310 @@ const coursesCardData = [
     ],
   },
   {
-    id: 5,
-    title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
-    price: 6500,
-    rating: 4.5,
-    status: "Recommended",
-    sold: 50000,
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
+    courseDetails: [
+      {
+        id: 1,
+        title: "৫ টি বিষয়",
+      },
+      {
+        id: 2,
+        title: "৯০ টি লাইভ ক্লাস",
+      },
+      {
+        id: 3,
+        title: "৫ টি ফাইনাল মডেল টেস্ট",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "SSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
+    price: 3500,
+    rating: 2.5,
+    status: "Hot",
+    category: "দ্বাদশ শ্রেণী",
     courseDetails: [
       {
         id: 1,
