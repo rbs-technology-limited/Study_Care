@@ -14,7 +14,6 @@ interface IBlankBackground {
 }
 
 const BlankBackground = ({ data }: IBlankBackground) => {
-  console.log("item", data);
   return (
     <section>
       <div className="flex flex-col gap-1">
