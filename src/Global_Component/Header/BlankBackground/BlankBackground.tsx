@@ -11,9 +11,10 @@ interface IBlankBackground {
       href: string;
     }[];
   };
+  setNavbar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const BlankBackground = ({ data }: IBlankBackground) => {
+const BlankBackground = ({ data, setNavbar }: IBlankBackground) => {
   return (
     <section>
       <div className="flex flex-col gap-1">
@@ -25,6 +26,9 @@ const BlankBackground = ({ data }: IBlankBackground) => {
             }}
             key={subItem.id}
             className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white px-2 py-1 rounded-md hover:bg-gray-100/50 hover:font-semibold dark:hover:bg-gray-800/50"
+            onClick={() => {
+              setNavbar(false);
+            }}
           >
             {subItem?.text}
           </Link>
