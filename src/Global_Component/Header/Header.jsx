@@ -28,6 +28,7 @@ const Header = () => {
   const router = useRouter();
   const [currentTheme, setTheeFromLocal] = useState(null);
   const [showBlankBackground, setShowBlankBackground] = useState(false);
+
   useEffect(() => {
     if (window.location.pathname === "/") {
       setIndex("Home");
@@ -152,7 +153,11 @@ const Header = () => {
                     key={index}
                     onClick={() => {
                       setIndex(item?.text);
-                      setNavbar(false);
+                      if (item?.href) {
+                        setNavbar(false);
+                      } else {
+                        setNavbar(true);
+                      }
                     }}
                   >
                     {item?.href ? (
@@ -165,28 +170,42 @@ const Header = () => {
                         <span>{item?.text}</span>
                       </Link>
                     ) : (
-                      <div className="relative">
+                      <>
                         <div
-                          className="flex gap-1"
-                          onMouseOver={() =>
-                            setShowBlankBackground(!showBlankBackground)
-                          }
-                          onMouseLeave={() => setShowBlankBackground(false)}
+                          className={`relative lg:block px-1 
+                          
+                          `}
                         >
-                          <p>{item?.text}</p>
-                          <RiArrowDownSFill />
-                        </div>
-                        {/* blank background would pop up when hovering over কোর্সসমূহ */}
-                        {showBlankBackground && (
                           <div
-                            className="bg-button-dark-teal w-72 absolute left-0 top-[25px] rounded-lg p-5"
-                            onMouseOver={() => setShowBlankBackground(true)}
-                            onMouseLeave={() => setShowBlankBackground(false)}
+                            className="flex gap-1 cursor-pointer"
+                            onMouseOver={() => {
+                              setShowBlankBackground(!showBlankBackground);
+                              if (navbar) {
+                                setNavbar(false);
+                              }
+                            }}
+                            onMouseLeave={() => {
+                              setShowBlankBackground(false);
+                            }}
                           >
-                            <BlankBackground data={item} />
+                            <p>{item?.text}</p>
+                            <RiArrowDownSFill />
                           </div>
-                        )}
-                      </div>
+                          {/* blank background would pop up when hovering over কোর্সসমূহ */}
+                          {showBlankBackground && (
+                            <div
+                              className="bg-button-dark-teal w-72 absolute left-0 top-[25px] rounded-lg p-5"
+                              onMouseOver={() => setShowBlankBackground(true)}
+                              onMouseLeave={() => setShowBlankBackground(false)}
+                            >
+                              <BlankBackground
+                                data={item}
+                                setNavbar={setNavbar}
+                              />
+                            </div>
+                          )}
+                        </div>
+                      </>
                     )}
                   </li>
                 );
