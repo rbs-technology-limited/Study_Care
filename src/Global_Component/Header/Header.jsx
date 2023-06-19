@@ -177,7 +177,7 @@ const Header = () => {
                           `}
                         >
                           <div
-                            className="flex gap-1"
+                            className="flex gap-1 cursor-pointer"
                             onMouseEnter={() => {
                               setShowBlankBackground(true);
                             }}
