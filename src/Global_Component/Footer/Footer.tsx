@@ -36,7 +36,7 @@ const Footer = () => {
   // }
 
   return (
-    <section className="overflow-hidden mx-auto">
+    <section className="overflow-hidden mx-auto ">
       <div className="relative pt-9">
         <div className="bg-custom-teal dark:bg-dark-teal absolute left-[-1rem] bottom-[-9rem] h-[54rem] z-[-5] w-[100%] rotate-[-10deg] rounded-[80px]"></div>
         <Image

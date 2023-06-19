@@ -8,7 +8,7 @@ import { filterData, searchFilterData } from "@/Content";
 const CategoriesLeftFilterUI = () => {
   const searchParams = useSearchParams();
   const categoryName = searchParams.get("category") || "";
-  // console.log(categoryName);
+  console.log(categoryName);
 
   return (
     <div className="break-all py-2">

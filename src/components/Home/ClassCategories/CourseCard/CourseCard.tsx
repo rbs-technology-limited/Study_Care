@@ -15,6 +15,7 @@ interface ICardData {
   status?: string | null;
   rating?: number;
   sold?: number;
+  category?: string;
   courseDetails: {
     id: number;
     title: string;
@@ -81,7 +82,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
                     key={courseDetail.id}
                   >
                     <FaGenderless className="text-sm" color={teal} />
-                    <p className=" text-gray-600 dark:text-white text-[10px]">
+                    <p className=" text-gray-600 dark:text-white text-[.625rem]">
                       {courseDetail.title}
                     </p>
                   </div>
@@ -89,13 +90,18 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
               </div>
               {courseCardData?.sold && (
                 <div className="flex gap-1 my-1">
-                  <HiUserGroup color={teal} className="text-[12px]" />
-                  <p className="text-[8px] md:text-[9px] font-semibold">
+                  <HiUserGroup color={teal} className="text-[.75rem]" />
+                  <p className="text-[.5rem] md:text-[.5625rem] font-semibold">
                     {/* {`কোর্সটি করছেন ${courseCardData?.sold} জন`} */}
                     {convertToBangla(courseCardData?.sold)}
                   </p>
                 </div>
               )}
+            </div>
+            <div className="w-16 bg-[#DFF4D7] text-center my-1">
+              <p className="text-[.5rem] md:text-[.5625rem] text-[#51933E] p-[1px]">
+                {courseCardData?.category}
+              </p>
             </div>
             <div className="flex items-center justify-between">
               <div className="flex item-center">
@@ -147,7 +153,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
             </CButton>
           </div>
           {/* delete and edit button visible on hover */}
-          <div
+          {/* <div
             className={`absolute top-0 right-0 transition duration-300 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700
           ${
             isCardHovered
@@ -160,7 +166,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
               <FaEdit color={teal} />
               <RiDeleteBin5Fill color={teal} />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

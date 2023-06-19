@@ -13,6 +13,8 @@ import ThemeToogleButton from "../../Shared/ThemeToogleButton/ThemeToogleButton.
 import HeaderBg from "public/Asset/svg/HeaderBg";
 import { useTheme } from "next-themes";
 import getStystemPreference from "@/Utils/getSystemTheme.tsx";
+import { RiArrowDownSFill } from "react-icons/ri";
+import BlankBackground from "./BlankBackground/BlankBackground.tsx";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -25,6 +27,7 @@ const Header = () => {
   const [user, setUser] = useState(null);
   const router = useRouter();
   const [currentTheme, setTheeFromLocal] = useState(null);
+  const [showBlankBackground, setShowBlankBackground] = useState(false);
   useEffect(() => {
     if (window.location.pathname === "/") {
       setIndex("Home");
@@ -152,14 +155,39 @@ const Header = () => {
                       setNavbar(false);
                     }}
                   >
-                    <Link
-                      href={item?.href}
-                      className="inline-block px-1 py-2 font-medium leading-5 text-center text-black-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-gray-500 focus:outline-none focus:border-black-500 focus:shadow-outline-black active:bg-gray-50 active:text-black-700
+                    {item?.href ? (
+                      <Link
+                        href={item?.href}
+                        className="inline-block px-1 py-2 font-medium leading-5 text-center text-black-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-gray-500 focus:outline-none focus:border-black-500 focus:shadow-outline-black active:bg-gray-50 active:text-black-700
                       dark:text-white dark:hover:text-gray-300
                       "
-                    >
-                      <span>{item?.text}</span>
-                    </Link>
+                      >
+                        <span>{item?.text}</span>
+                      </Link>
+                    ) : (
+                      <div className="relative">
+                        <div
+                          className="flex gap-1"
+                          onMouseOver={() =>
+                            setShowBlankBackground(!showBlankBackground)
+                          }
+                          onMouseLeave={() => setShowBlankBackground(false)}
+                        >
+                          <p>{item?.text}</p>
+                          <RiArrowDownSFill />
+                        </div>
+                        {/* blank background would pop up when hovering over কোর্সসমূহ */}
+                        {showBlankBackground && (
+                          <div
+                            className="bg-button-dark-teal w-72 absolute left-0 top-[25px] rounded-lg p-5"
+                            onMouseOver={() => setShowBlankBackground(true)}
+                            onMouseLeave={() => setShowBlankBackground(false)}
+                          >
+                            <BlankBackground data={item} />
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </li>
                 );
               })}
