@@ -178,11 +178,8 @@ const Header = () => {
                         >
                           <div
                             className="flex gap-1"
-                            onMouseOver={() => {
-                              setShowBlankBackground(!showBlankBackground);
-                              if (navbar) {
-                                setNavbar(false);
-                              }
+                            onMouseEnter={() => {
+                              setShowBlankBackground(true);
                             }}
                             onMouseLeave={() => {
                               setShowBlankBackground(false);
