@@ -175,6 +175,9 @@ const Header = () => {
                           className={`relative lg:block px-1 
                           
                           `}
+                          onMouseEnter={() => {
+                            setShowBlankBackground(true);
+                          }}
                         >
                           <div
                             className="flex gap-1 cursor-pointer"
