@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -26,11 +27,15 @@ const BlankBackground = ({ data, setNavbar }: IBlankBackground) => {
             }}
             key={subItem.id}
             className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white px-2 py-1 rounded-md hover:bg-gray-100/50 hover:font-semibold dark:hover:bg-gray-800/50"
-            onClick={() => {
-              setNavbar(false);
-            }}
           >
-            {subItem?.text}
+            <span
+              className="text-sm"
+              onClick={() => {
+                setNavbar(false);
+              }}
+            >
+              {subItem?.text}
+            </span>
           </Link>
         ))}
       </div>

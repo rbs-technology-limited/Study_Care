@@ -175,19 +175,11 @@ const Header = () => {
                           className={`relative lg:block px-1 
                           
                           `}
+                          onMouseEnter={() => {
+                            setShowBlankBackground(true);
+                          }}
                         >
-                          <div
-                            className="flex gap-1 cursor-pointer"
-                            onMouseOver={() => {
-                              setShowBlankBackground(!showBlankBackground);
-                              if (navbar) {
-                                setNavbar(false);
-                              }
-                            }}
-                            onMouseLeave={() => {
-                              setShowBlankBackground(false);
-                            }}
-                          >
+                          <div className="flex gap-1 cursor-pointer">
                             <p>{item?.text}</p>
                             <RiArrowDownSFill />
                           </div>
