@@ -78,7 +78,15 @@ const ClassSlider = ({ data, delayTime }: Class) => {
         >
           {data?.map((classData: SliderData) => {
             return (
-              <SwiperSlide key={classData?.id}>
+              <SwiperSlide
+                key={classData?.id}
+                onClick={() => {
+                  const id = classData?.id;
+                  const category = classData?.class;
+                  route.push(`/categories/${id}?category=${category}`);
+                }}
+                className="cursor-pointer"
+              >
                 <div className="bg-custom-teal dark:bg-transparent p-4 rounded-2xl border-2 border-button-teal">
                   <p className="text-sm font-bold">{classData.status}</p>
                   <h1 className="text-xl mt-2 font-bold">{classData.class}</h1>
