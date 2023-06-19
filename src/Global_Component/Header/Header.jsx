@@ -179,7 +179,15 @@ const Header = () => {
                             setShowBlankBackground(true);
                           }}
                         >
-                          <div className="flex gap-1 cursor-pointer">
+                          <div
+                            className="flex gap-1 cursor-pointer"
+                            onMouseEnter={() => {
+                              setShowBlankBackground(true);
+                            }}
+                            onMouseLeave={() => {
+                              setShowBlankBackground(false);
+                            }}
+                          >
                             <p>{item?.text}</p>
                             <RiArrowDownSFill />
                           </div>
