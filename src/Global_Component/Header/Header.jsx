@@ -177,7 +177,7 @@ const Header = () => {
                           `}
                         >
                           <div
-                            className="flex gap-1"
+                            className="flex gap-1 cursor-pointer"
                             onMouseOver={() => {
                               setShowBlankBackground(!showBlankBackground);
                               if (navbar) {
