@@ -7,6 +7,7 @@ import { HiUserGroup } from "react-icons/hi";
 import { teal } from "@/Constant/Custom-Color";
 import { courseData } from "@/Content";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface ICardData {
   id: number;
@@ -26,6 +27,7 @@ interface ICourseCardData {
 }
 
 const CourseCard = ({ courseCardData }: ICourseCardData) => {
+  const route = useRouter();
   const [isCardHovered, setIsCardHovered] = React.useState<boolean>(false);
 
   type BanglaDigit = string | number;
@@ -148,7 +150,11 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
             <CButton variant="solid" color={teal}>
               {courseData.button1}
             </CButton>
-            <CButton variant="outline" color={teal}>
+            <CButton
+              variant="outline"
+              color={teal}
+              onClick={() => route.push(`/courses/${courseCardData.id}`)}
+            >
               {courseData.button2}
             </CButton>
           </div>
