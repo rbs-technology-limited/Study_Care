@@ -50,7 +50,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
       >
         <div
           className={`
-        flex max-w-lg shadow-lg rounded-lg overflow-hidden
+        flex max-w-lg shadow-lg rounded-lg overflow-hidden cursor-pointer
       ${isCardHovered ? "bg-gray-800/20" : "bg-white dark:bg-gray-800"}
         `}
         >

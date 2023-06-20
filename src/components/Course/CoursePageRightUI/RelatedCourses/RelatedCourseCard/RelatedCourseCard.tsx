@@ -50,8 +50,8 @@ const RelatedCourseCard = ({
     >
       <div
         className={`
-        flex max-w-lg shadow-lg rounded-lg overflow-hidden
-      ${isCardHovered ? "bg-gray-800/20" : "bg-white dark:bg-gray-800"}
+        flex max-w-lg shadow-lg rounded-lg overflow-hidden cursor-pointer
+      ${isCardHovered ? "bg-gray-800/20" : "bg-white dark:bg-gray-800 "}
         `}
       >
         <div className="w-2/4 relative bg-no-repeat">
