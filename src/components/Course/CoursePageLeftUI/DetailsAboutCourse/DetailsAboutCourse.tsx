@@ -4,7 +4,7 @@ import { Accordion } from "@/Shared";
 
 const DetailsAboutCourse = () => {
   return (
-    <section className="mt-8">
+    <section className="mt-12">
       <h1 className="text-xl font-bold dark:text-white text-gray-800">
         {courseDetailsStaticData?.title}
       </h1>

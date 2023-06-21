@@ -8,7 +8,7 @@ const ClassRequirements = () => {
     <section>
       {/* class requirements */}
       <div className="mt-12">
-        <h1 className="text-2xl font-bold dark:text-white text-gray-800">
+        <h1 className="text-xl font-bold dark:text-white text-gray-800">
           {coursePageStaticData?.class_requirements?.title}
         </h1>
 

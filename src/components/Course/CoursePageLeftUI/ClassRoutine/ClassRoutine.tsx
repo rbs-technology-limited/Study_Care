@@ -4,7 +4,7 @@ import { couseClassRoutineData } from "@/Content";
 const ClassRoutine = () => {
   return (
     <>
-      <h1 className="text-xl mb-5 mt-8 font-semibold dark:text-white text-gray-800">
+      <h1 className="text-xl mb-5 mt-12 font-semibold dark:text-white text-gray-800">
         {couseClassRoutineData.title}
       </h1>
       <table className="border table-auto w-full">
