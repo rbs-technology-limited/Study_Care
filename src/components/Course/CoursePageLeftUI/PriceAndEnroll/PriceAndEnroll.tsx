@@ -7,7 +7,7 @@ import { teal } from "@/Constant/Custom-Color";
 const PriceAndEnroll = () => {
   return (
     <section>
-      <div className="flex justify-between gap-4 mt-8">
+      <div className="flex justify-between gap-4 mt-5">
         <CButton
           variant="outline"
           color={teal}
