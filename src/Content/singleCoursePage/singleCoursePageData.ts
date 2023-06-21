@@ -54,6 +54,19 @@ export const coursePageData = {
 
 export const coursePageStaticData = {
   button1: "বুকিং করো এখনই",
+  class_requirements: {
+    title: "ক্লাস করার জন্য প্রয়োজন হবে",
+    lists: [
+      {
+        id: 1,
+        title: "ইন্টারনেট সংযোগ (ওয়াইফাই বা মোবাইল ইন্টারনেট)",
+      },
+      {
+        id: 2,
+        title: "স্মার্টফোন অথবা পিসি",
+      },
+    ],
+  },
 };
 
 export const relatedCoursesData = [

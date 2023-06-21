@@ -13,7 +13,7 @@ const PriceAndEnroll = () => {
           color={teal}
           btnTitle={coursePageStaticData?.button1}
         />
-        <p className="md:text-3xl text-2xl font-semibold">
+        <p className="text-2xl font-bold text-gray-800 dark:text-white">
           ট {coursePageData?.course_price}
         </p>
       </div>

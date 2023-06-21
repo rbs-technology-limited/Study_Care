@@ -4,10 +4,12 @@ import { coursePageData } from "@/Content";
 const TitleAndDescription = () => {
   return (
     <section>
-      <h1 className="md:text-3xl text-2xl font-semibold">
+      <h1 className="text-2xl font-bold dark:text-white text-gray-800">
         {coursePageData?.title}
       </h1>
-      <p className="text-md my-4">{coursePageData?.description}</p>
+      <p className="text-md dark:text-white my-4 text-gray-600">
+        {coursePageData?.description}
+      </p>
     </section>
   );
 };
