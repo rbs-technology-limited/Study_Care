@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore && next lint && next dev && next-sitemap --watch",
-    "dev-th": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore && next lint && next dev",
     "build": "NODE_OPTIONS=\"--max-old-space-size=4096\" next build",
     "build-win": "set NODE_OPTIONS=--max-old-space-size=4096 && next build",
     "start": "npm run build && next start",
