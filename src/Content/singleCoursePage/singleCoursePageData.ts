@@ -1,3 +1,5 @@
+import PriceAndEnroll from "@/components/Course/CoursePageLeftUI/PriceAndEnroll/PriceAndEnroll";
+
 export const coursePageData = {
   id: 1,
   title: "HSC 25 অনলাইন ব্যাচ (ফিজিক্স, কেমিস্ট্রি, ম্যাথ, বায়োলজি)",
@@ -47,6 +49,11 @@ export const coursePageData = {
       },
     ],
   },
+  course_price: 4500,
+};
+
+export const coursePageStaticData = {
+  button1: "বুকিং করো এখনই",
 };
 
 export const relatedCoursesData = [
