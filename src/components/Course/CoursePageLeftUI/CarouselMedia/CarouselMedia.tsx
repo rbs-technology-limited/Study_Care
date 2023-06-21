@@ -2,8 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, FreeMode, Pagination } from "swiper";
-
+import { Pagination } from "swiper";
+import ReactPlayer from "react-player/lazy";
 import "swiper/css/free-mode";
 // Import Swiper styles
 import "swiper/css";
@@ -19,53 +19,58 @@ const CarouselMedia = () => {
         slidesPerView={1}
         spaceBetween={10}
         loop={true}
-        freeMode={true}
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
         allowTouchMove={true}
-        modules={[FreeMode, Pagination, Autoplay]}
-        className="mySwiper h-full "
-        autoplay={{
-          delay: 6000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
+        modules={[Pagination]}
+        className="mySwiper h-full"
+        // autoplay={{
+        //   delay: 6000,
+        //   disableOnInteraction: false,
+        //   pauseOnMouseEnter: true,
+        // }}
       >
         {coursePageData?.mediaLinks?.map((media) => (
-          <SwiperSlide
-            key={media.id}
-            className="h-full flex items-center justify-center w-full"
-          >
-            <div className="h-full w-full">
-              {media.type === "video" ? (
-                <iframe
-                  width="560"
-                  height="400"
-                  src={media.video_link}
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              ) : media?.image_link ? (
-                <div className="h-full w-full">
-                  <Image
-                    src={media.image_link}
-                    alt=""
-                    width={1500}
-                    height={400}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
+          <>
+            <SwiperSlide
+              key={media.id}
+              className="h-full flex items-center justify-center w-full rounded-md"
+            >
+              <div className="h-full w-full rounded-md">
+                {media.type === "video" ? (
+                  <ReactPlayer
+                    url={media.video_link}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    fallback={
+                      //skeleton
+                      <div className="h-full w-full bg-gray-200">
+                        <div className="h-full w-full bg-gray-300 animate-pulse"></div>
+                      </div>
+                    }
                   />
-                </div>
-              ) : null}
-            </div>
-          </SwiperSlide>
+                ) : media?.image_link ? (
+                  <div className="h-full w-full">
+                    <Image
+                      src={media.image_link}
+                      alt="media"
+                      width={1500}
+                      height={400}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "0.5rem",
+                      }}
+                    />
+                  </div>
+                ) : null}
+              </div>
+            </SwiperSlide>
+          </>
         ))}
       </Swiper>
     </div>
