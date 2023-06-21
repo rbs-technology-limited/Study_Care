@@ -1,15 +1,15 @@
 "use client";
 import { CButton } from "@/Shared";
-import { useLocalStorage } from "browser_storage_hook_react";
+// import { useLocalStorage } from "browser_storage_hook_react";
 import React from "react";
 
 const ProfileDropDown = ({
   user,
   dropdown,
   setDropdown,
-  // setRefreshUserData,
-  // setUser,
-}) => {
+}: // setRefreshUserData,
+// setUser,
+any) => {
   // const [studyCareData, setUserData] = useLocalStorage("studyCareData", "");
   // const handleLogout = () => {
   //   setDropdown(false);
@@ -24,7 +24,7 @@ const ProfileDropDown = ({
         <div>
           <CButton
             type="button"
-            className="inline-flex justify-center w-full mt-4 px-4 py-2 text-sm font-medium text-black-400 bg-orange-400 border border-black-400 rounded-md shadow-sm hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+            customClass="inline-flex justify-center w-full mt-4 px-4 py-2 text-sm font-medium text-black-400 bg-orange-400 border border-black-400 rounded-md shadow-sm hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
             id="options-menu"
             aria-haspopup="true"
             aria-expanded="true"
@@ -72,7 +72,7 @@ const ProfileDropDown = ({
               <CButton
                 type="button"
                 textUpperCased
-                className="block w-full px-4 py-2 text-sm text-left text-black-400 hover:bg-gray-100 hover:text-black-700"
+                customClass="block w-full px-4 py-2 text-sm text-left text-black-400 hover:bg-gray-100 hover:text-black-700"
                 // onClick={() => {
                 //   handleLogout();
                 // }}

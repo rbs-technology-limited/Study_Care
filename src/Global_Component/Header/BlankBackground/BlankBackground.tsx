@@ -3,15 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 interface IBlankBackground {
-  data: {
-    id: number;
-    text: string;
-    subMenu: {
-      id: number;
-      text: string;
-      href: string;
-    }[];
-  };
+  data?: any;
   setNavbar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -19,7 +11,7 @@ const BlankBackground = ({ data, setNavbar }: IBlankBackground) => {
   return (
     <section>
       <div className="flex flex-col gap-1">
-        {data?.subMenu.map((subItem) => (
+        {data?.subMenu.map((subItem: any) => (
           <Link
             href={{
               pathname: `/categories/${subItem.id}`,

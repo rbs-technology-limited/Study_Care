@@ -5,6 +5,7 @@ import TitleAndDescription from "./TitleAndDescription/TitleAndDescription";
 import { coursePageStaticData } from "@/Content";
 import { BsCheck2Square } from "react-icons/bs";
 import { teal } from "@/Constant/Custom-Color";
+import ClassRoutine from "./ClassRoutine/ClassRoutine";
 
 const CoursePageLeftUI = () => {
   return (
@@ -12,11 +13,13 @@ const CoursePageLeftUI = () => {
       <CarouselMedia />
       <PriceAndEnroll />
       <TitleAndDescription />
+      <ClassRoutine />
       {/* class requirements */}
       <div className="mt-12">
         <h1 className="text-2xl font-bold dark:text-white text-gray-800">
           {coursePageStaticData?.class_requirements?.title}
         </h1>
+
         <ul className="border-[.0925rem] p-3 my-5 rounded-lg">
           {coursePageStaticData?.class_requirements?.lists.map((list) => (
             <li

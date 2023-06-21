@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 
 interface Props {
+  id?: string;
   customClass?: string;
   fullWidth?: boolean;
   type?: "button" | "submit" | "reset";
@@ -19,6 +20,7 @@ interface Props {
 }
 
 const CButton = ({
+  id,
   customClass,
   fullWidth,
   type,

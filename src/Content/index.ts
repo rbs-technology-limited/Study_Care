@@ -26,7 +26,10 @@ import { searchFilterData } from "./filter/filterData";
 import { coursePageData } from "./singleCoursePage/singleCoursePageData";
 import { coursePageStaticData } from "./singleCoursePage/singleCoursePageData";
 import { relatedCoursesData } from "./singleCoursePage/singleCoursePageData";
-import { relatedCoursesStaticData } from "./singleCoursePage/singleCoursePageData";
+import {
+  relatedCoursesStaticData,
+  couseClassRoutineData,
+} from "./singleCoursePage/singleCoursePageData";
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -65,4 +68,5 @@ export {
   coursePageStaticData,
   relatedCoursesData,
   relatedCoursesStaticData,
+  couseClassRoutineData,
 };
