@@ -2,63 +2,19 @@ import React from "react";
 import CarouselMedia from "./CarouselMedia/CarouselMedia";
 import PriceAndEnroll from "./PriceAndEnroll/PriceAndEnroll";
 import TitleAndDescription from "./TitleAndDescription/TitleAndDescription";
-import { coursePageStaticData } from "@/Content";
-import { BsCheck2Square } from "react-icons/bs";
-import { teal } from "@/Constant/Custom-Color";
 import ClassRoutine from "./ClassRoutine/ClassRoutine";
-import { Accordion } from "@/Shared";
+import DetailsAboutCourse from "./DetailsAboutCourse/DetailsAboutCourse";
+import ClassRequirements from "./ClassRequirements/ClassRequirements";
 
 const CoursePageLeftUI = () => {
-  const accordionData = [
-    {
-      id: 1,
-      title: "HSC 2025 অনলাইন ব্যাচ কোর্স সম্পর্কে:",
-      content:
-        "HSC বিজ্ঞান বিভাগের ৪ টি বিষয়ের (পদার্থবিজ্ঞান, রসায়ন, জীববিজ্ঞান এবং উচ্চতর গণিত) সিলেবাস এমন ভাবে শেষ করা হবে এই কোর্সে যেখানে বেসিক থেকে শুরু করে প্রব্লেম সল্ভিং-সহ প্রতিটি খুঁটিনাটি বিষয় শেষ করা হবে যা HSC শিক্ষার্থীদের প্রতিটি বিষয়ে করে তুলবে পারদর্শী। যা নিশ্চিত করবে তাদের HSC পরীক্ষায় ভালো ফলাফল এবং তার সাথে এডমিশনের বেসিক প্রস্তুতির জন্য তৈরি করবে শিক্ষার্থীদের। তাই, HSC’র শুরুতেই বিজ্ঞান বিভাগের ক্যালেন্ডার গুছিয়ে প্রথম ও দ্বিতীয় পত্রের সিলেবাসের ১০০ তে ১০০ প্রস্তুতি নিশ্চিত করতে টেন মিনিট স্কুল নিয়ে এলো HSC 2025 অনলাইন ব্যাচ। ",
-    },
-    {
-      id: 2,
-      title: "'HSC 2025 অনলাইন ব্যাচ' যেই দিকগুলো বিশেষভাবে বিবেচনা করা হয়েছে:",
-      content:
-        "পুর্নবিন্যাসকৃত অথবা ফুল সিলেবাস যেভাবেই হোক তোমাদের বোর্ড পরীক্ষা, পিছিয়ে থাকবে না তোমাদের প্রিপারেশন! যে চ্যাপ্টারগুলো বেশি গুরুত্বপূর্ন সেইগুলো দিয়েই শুরু হচ্ছে তোমাদের ক্লাস। সরকার থেকে সিলেবাস পরিবর্তন সংক্রান্ত কোনো সিদ্ধান্ত আসলেই সেই অনুযায়ী তোমাদের কোর্স কারিকুলাম আপডেট করা হবে।পুর্নবিন্যাসকৃত অথবা ফুল সিলেবাস যেভাবেই হোক তোমাদের বোর্ড পরীক্ষা, পিছিয়ে থাকবে না তোমাদের প্রিপারেশন! যে চ্যাপ্টারগুলো বেশি গুরুত্বপূর্ন সেইগুলো দিয়েই শুরু হচ্ছে তোমাদের ক্লাস। সরকার থেকে সিলেবাস পরিবর্তন সংক্রান্ত কোনো সিদ্ধান্ত আসলেই সেই অনুযায়ী তোমাদের কোর্স কারিকুলাম আপডেট করা হবে।",
-    },
-    {
-      id: 3,
-      title: "'HSC 2025 অনলাইন ব্যাচ' যেই দিকগুলো বিশেষভাবে বিবেচনা করা হয়েছে:",
-      content:
-        "পুর্নবিন্যাসকৃত অথবা ফুল সিলেবাস যেভাবেই হোক তোমাদের বোর্ড পরীক্ষা, পিছিয়ে থাকবে না তোমাদের প্রিপারেশন! যে চ্যাপ্টারগুলো বেশি গুরুত্বপূর্ন সেইগুলো দিয়েই শুরু হচ্ছে তোমাদের ক্লাস। সরকার থেকে সিলেবাস পরিবর্তন সংক্রান্ত কোনো সিদ্ধান্ত আসলেই সেই অনুযায়ী তোমাদের কোর্স কারিকুলাম আপডেট করা হবে।পুর্নবিন্যাসকৃত অথবা ফুল সিলেবাস যেভাবেই হোক তোমাদের বোর্ড পরীক্ষা, পিছিয়ে থাকবে না তোমাদের প্রিপারেশন! যে চ্যাপ্টারগুলো বেশি গুরুত্বপূর্ন সেইগুলো দিয়েই শুরু হচ্ছে তোমাদের ক্লাস। সরকার থেকে সিলেবাস পরিবর্তন সংক্রান্ত কোনো সিদ্ধান্ত আসলেই সেই অনুযায়ী তোমাদের কোর্স কারিকুলাম আপডেট করা হবে।",
-    },
-    {
-      id: 4,
-      title: "'HSC 2025 অনলাইন ব্যাচ' যেই দিকগুলো বিশেষভাবে বিবেচনা করা হয়েছে:",
-      content:
-        "পুর্নবিন্যাসকৃত অথবা ফুল সিলেবাস যেভাবেই হোক তোমাদের বোর্ড পরীক্ষা, পিছিয়ে থাকবে না তোমাদের প্রিপারেশন! যে চ্যাপ্টারগুলো বেশি গুরুত্বপূর্ন সেইগুলো দিয়েই শুরু হচ্ছে তোমাদের ক্লাস। সরকার থেকে সিলেবাস পরিবর্তন সংক্রান্ত কোনো সিদ্ধান্ত আসলেই সেই অনুযায়ী তোমাদের কোর্স কারিকুলাম আপডেট করা হবে।পুর্নবিন্যাসকৃত অথবা ফুল সিলেবাস যেভাবেই হোক তোমাদের বোর্ড পরীক্ষা, পিছিয়ে থাকবে না তোমাদের প্রিপারেশন! যে চ্যাপ্টারগুলো বেশি গুরুত্বপূর্ন সেইগুলো দিয়েই শুরু হচ্ছে তোমাদের ক্লাস। সরকার থেকে সিলেবাস পরিবর্তন সংক্রান্ত কোনো সিদ্ধান্ত আসলেই সেই অনুযায়ী তোমাদের কোর্স কারিকুলাম আপডেট করা হবে।",
-    },
-  ];
   return (
     <section>
       <CarouselMedia />
       <PriceAndEnroll />
       <TitleAndDescription />
       <ClassRoutine />
-      <Accordion contents={accordionData}></Accordion>
-      {/* class requirements */}
-      <div className="mt-12">
-        <h1 className="text-2xl font-bold dark:text-white text-gray-800">
-          {coursePageStaticData?.class_requirements?.title}
-        </h1>
-
-        <ul className="border-[.0925rem] p-3 my-5 rounded-lg">
-          {coursePageStaticData?.class_requirements?.lists.map((list) => (
-            <li
-              className="my-4 flex gap-3 items-center dark:text-white"
-              key={list?.id}
-            >
-              <BsCheck2Square color={teal} className="text-xl" /> {list.title}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <DetailsAboutCourse />
+      <ClassRequirements />
     </section>
   );
 };
