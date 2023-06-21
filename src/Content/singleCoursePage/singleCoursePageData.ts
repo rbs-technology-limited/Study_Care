@@ -153,7 +153,7 @@ export const relatedCoursesData = [
 export const relatedCoursesStaticData = {
   title: "Related Courses",
   button1: "কোর্সটি কিনুন",
-  button২: "বিস্তারিত দেখুন",
+  button2: "বিস্তারিত দেখুন",
 };
 
 export const couseClassRoutineData = {
