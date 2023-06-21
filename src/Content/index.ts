@@ -24,6 +24,7 @@ import { courseData } from "./course/coursesData";
 import filterData from "./filter/filterData";
 import { searchFilterData } from "./filter/filterData";
 import { coursePageData } from "./singleCoursePage/singleCoursePageData";
+import { coursePageStaticData } from "./singleCoursePage/singleCoursePageData";
 import { relatedCoursesData } from "./singleCoursePage/singleCoursePageData";
 import { relatedCoursesStaticData } from "./singleCoursePage/singleCoursePageData";
 export {
@@ -61,6 +62,7 @@ export {
   filterData,
   searchFilterData,
   coursePageData,
+  coursePageStaticData,
   relatedCoursesData,
   relatedCoursesStaticData,
 };
