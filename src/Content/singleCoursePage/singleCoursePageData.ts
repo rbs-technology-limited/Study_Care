@@ -94,7 +94,7 @@ export const relatedCoursesData = [
     ],
     tags: ["HSC", "ফিজিক্স", "কেমিস্ট্রি", "ম্যাথ", "বায়োলজি"],
     image_link:
-      "https://img.freepik.com/free-vector/isometric-university-landing-page-template_5২683-14465.jpg?w=740&t=st=1687২67410~exp=1687২68010~hmac=7২b76২30d0841cbf২160f94২3২81ae1977df711f২17a3২0a34b4cf458ae1c78e",
+      "https://img.freepik.com/free-psd/courses-home-landing-page-template_23-2149109787.jpg?w=900&t=st=1687370644~exp=1687371244~hmac=c2e518b9b4ceb9e644f208e45476a9c0eea8eea3174ed622a51f7d14d1d4b436",
   },
   {
     id: 2,
@@ -120,7 +120,7 @@ export const relatedCoursesData = [
     ],
     tags: ["HSC", "ফিজিক্স", "কেমিস্ট্রি", "ম্যাথ", "বায়োলজি"],
     image_link:
-      "https://img.freepik.com/free-vector/isometric-university-landing-page-template_5২683-14465.jpg?w=740&t=st=1687২67410~exp=1687২68010~hmac=7২b76২30d0841cbf২160f94২3২81ae1977df711f২17a3২0a34b4cf458ae1c78e",
+      "https://img.freepik.com/free-psd/courses-home-landing-page-template_23-2149109787.jpg?w=900&t=st=1687370644~exp=1687371244~hmac=c2e518b9b4ceb9e644f208e45476a9c0eea8eea3174ed622a51f7d14d1d4b436",
   },
   {
     id: 3,
@@ -146,14 +146,14 @@ export const relatedCoursesData = [
     ],
     tags: ["HSC", "ফিজিক্স", "কেমিস্ট্রি", "ম্যাথ", "বায়োলজি"],
     image_link:
-      "https://img.freepik.com/free-vector/isometric-university-landing-page-template_5২683-14465.jpg?w=740&t=st=1687২67410~exp=1687২68010~hmac=7২b76২30d0841cbf২160f94২3২81ae1977df711f২17a3২0a34b4cf458ae1c78e",
+      "https://img.freepik.com/free-psd/courses-home-landing-page-template_23-2149109787.jpg?w=900&t=st=1687370644~exp=1687371244~hmac=c2e518b9b4ceb9e644f208e45476a9c0eea8eea3174ed622a51f7d14d1d4b436",
   },
 ];
 
 export const relatedCoursesStaticData = {
   title: "Related Courses",
   button1: "কোর্সটি কিনুন",
-  button২: "বিস্তারিত দেখুন",
+  button2: "বিস্তারিত দেখুন",
 };
 
 export const couseClassRoutineData = {
@@ -192,4 +192,32 @@ export const couseClassRoutineData = {
       classCount: "২ দুটি ক্লাস",
     },
   ],
+};
+
+export const qAData = [
+  {
+    id: 1,
+    title: "কোর্সগুলো কাদের জন্য?",
+    content: "SSC 2023 এবং ভবিষ্যৎ HSC 25 ব্যাচের জন্য",
+  },
+  {
+    id: 2,
+    title: "কোর্সগুলো ইংরেজি ভার্শনের শিক্ষার্থীদের জন্য কি প্রযোজ্য?",
+    content: "না, কোর্সটি বাংলা ভার্শনের শিক্ষার্থীদের জন্য সাজানো হয়েছে।",
+  },
+  {
+    id: 3,
+    title: "ক্লাস কবে থেকে শুরু?",
+    content:
+      "তোমার কলেজের ক্লাস শুরু হওয়ার পরেই ‘HSC 25- অনলাইন ব্যাচ’ এর ক্লাস শুরু হবে (সম্ভাব্য ক্লাস সেপ্টেম্বর মাস থেকে)",
+  },
+  {
+    id: 4,
+    title: "কত দিনের কোর্স?",
+    content: "১৫ মাসের",
+  },
+];
+
+export const qAStaticData = {
+  title: "সচরাচর জিজ্ঞাসা",
 };

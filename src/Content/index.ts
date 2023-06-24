@@ -23,13 +23,16 @@ import coursesCardData from "./course/coursesData";
 import { courseData } from "./course/coursesData";
 import filterData from "./filter/filterData";
 import { searchFilterData } from "./filter/filterData";
-import { coursePageData } from "./singleCoursePage/singleCoursePageData";
-import { coursePageStaticData } from "./singleCoursePage/singleCoursePageData";
-import { relatedCoursesData } from "./singleCoursePage/singleCoursePageData";
 import {
+  coursePageData,
+  coursePageStaticData,
+  relatedCoursesData,
   relatedCoursesStaticData,
   couseClassRoutineData,
+  qAData,
+  qAStaticData,
 } from "./singleCoursePage/singleCoursePageData";
+
 export {
   heroContent,
   HERO_SECTION_BOTTOM,
@@ -69,4 +72,6 @@ export {
   relatedCoursesData,
   relatedCoursesStaticData,
   couseClassRoutineData,
+  qAData,
+  qAStaticData,
 };
