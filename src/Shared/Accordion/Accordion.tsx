@@ -41,68 +41,69 @@ const Accordion = ({
       const isActive = index === activeIndex;
       const isLastItem = index === contents?.slice(0, sliceNumber).length - 1;
       return (
-        <>
-          <div onClick={() => onContentClick(!isActive ? index : null)}>
-            <div
-              className={`${
-                !isActive && !isLastItem
-                  ? "border-b-[0.10rem] border-dashed border-gray-300 "
-                  : "border-0"
-              } flex justify-between items-center gap-4 cursor-pointer`}
-            >
-              <div className=" text-gray-800 dark:text-[#FFFFFF] text-sm font-semibold  py-4">
-                {content.title}
-              </div>
-              <div>
-                {!isActive ? (
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 28 28"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={`rotate-0 transition transform duration-300 ease-in-out ${
-                      isActive && "rotate-180"
-                    }`}
-                  >
-                    <path
-                      d="M4.375 14H23.625"
-                      stroke={teal}
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M14 4.375V23.625"
-                      stroke={teal}
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    width="18"
-                    height="4"
-                    viewBox="0 0 24 4"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={`rotate-0 transition transform duration-300 ease-in-out ${
-                      isActive && "rotate-180"
-                    }`}
-                  >
-                    <path
-                      d="M2.375 2H21.625"
-                      stroke={teal}
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                )}
-              </div>
+        <div
+          onClick={() => onContentClick(!isActive ? index : null)}
+          key={index}
+        >
+          <div
+            className={`${
+              !isActive && !isLastItem
+                ? "border-b-[0.10rem] border-dashed border-gray-300 "
+                : "border-0"
+            } flex justify-between items-center gap-4 cursor-pointer`}
+          >
+            <div className=" text-gray-800 dark:text-[#FFFFFF] text-md font-semibold  py-4">
+              {content.title}
             </div>
-
+            <div>
+              {!isActive ? (
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`rotate-0 transition transform duration-300 ease-in-out ${
+                    isActive && "rotate-180"
+                  }`}
+                >
+                  <path
+                    d="M4.375 14H23.625"
+                    stroke={teal}
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M14 4.375V23.625"
+                    stroke={teal}
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  width="18"
+                  height="4"
+                  viewBox="0 0 24 4"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`rotate-0 transition transform duration-300 ease-in-out ${
+                    isActive && "rotate-180"
+                  }`}
+                >
+                  <path
+                    d="M2.375 2H21.625"
+                    stroke={teal}
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              )}
+            </div>
+          </div>
             {isActive && (
               <div
                 className={`${

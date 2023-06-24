@@ -34,6 +34,8 @@ import {
   courseSyllabusData,
   courseSyllabusStaticData,
   anyQuestionData,
+  classTeacherListData,
+  classTeacherInfoData,
 } from "./singleCoursePage/singleCoursePageData";
 
 export {
@@ -80,4 +82,6 @@ export {
   courseSyllabusData,
   courseSyllabusStaticData,
   anyQuestionData,
+  classTeacherListData,
+  classTeacherInfoData,
 };
