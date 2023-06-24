@@ -5,6 +5,7 @@ import TitleAndDescription from "./TitleAndDescription/TitleAndDescription";
 import ClassRoutine from "./ClassRoutine/ClassRoutine";
 import QAAboutCourse from "./QAAboutCourse/QAAboutCourse";
 import ClassRequirements from "./ClassRequirements/ClassRequirements";
+import AnyQuestionSection from "./AnyQuestionSection/AnyQuestionSection";
 
 const CoursePageLeftUI = () => {
   return (
@@ -15,6 +16,7 @@ const CoursePageLeftUI = () => {
       <ClassRoutine />
       <QAAboutCourse />
       <ClassRequirements />
+      <AnyQuestionSection />
     </section>
   );
 };

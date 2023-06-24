@@ -232,3 +232,9 @@ export const qAData = [
 export const qAStaticData = {
   title: "সচরাচর জিজ্ঞাসা",
 };
+
+
+export const anyQuestionData = {
+  title: "আর কোনো জিজ্ঞাসা আছে?",
+  description: "কল করুন ১১১১ নম্বরে",
+}
