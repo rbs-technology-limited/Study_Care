@@ -97,6 +97,7 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
       </>
     );
   });
+  
   return (
     <div className="border-[0.0845rem] p-5 rounded-lg my-4">
       {renderContents}
