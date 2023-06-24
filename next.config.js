@@ -25,7 +25,7 @@ const withPWA = withPWAInit({
 
 const nextConfig = {
   images: {
-    domains: ["picsum.photos", "cdn.auth0.com", "img.freepik.com"],
+    domains: ["picsum.photos", "cdn.auth0.com", "img.freepik.com", "i.ibb.co"],
   },
 
   reactStrictMode: true,

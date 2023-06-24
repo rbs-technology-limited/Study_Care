@@ -32,6 +32,8 @@ import {
   qAData,
   qAStaticData,
   anyQuestionData,
+  classTeacherListData,
+  classTeacherInfoData,
 } from "./singleCoursePage/singleCoursePageData";
 
 export {
@@ -76,4 +78,6 @@ export {
   qAData,
   qAStaticData,
   anyQuestionData,
+  classTeacherListData,
+  classTeacherInfoData,
 };

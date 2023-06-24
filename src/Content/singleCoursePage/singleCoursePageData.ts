@@ -1,4 +1,4 @@
-import PriceAndEnroll from "@/components/Course/CoursePageLeftUI/PriceAndEnroll/PriceAndEnroll";
+import Hero_section_Logo from "public/Asset/Hero_section_Logo.svg";
 
 export const coursePageData = {
   id: 1,
@@ -235,8 +235,78 @@ export const qAStaticData = {
   btn_collapse: "কম দেখুন",
 };
 
-
 export const anyQuestionData = {
   title: "আর কোনো জিজ্ঞাসা আছে?",
   description: "কল করুন ১১১১ নম্বরে",
-}
+};
+
+export const classTeacherInfoData = {
+  title: "ক্লাস শিক্ষকের তথ্য",
+};
+
+export const classTeacherListData = [
+  {
+    id: 1,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 2,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "GNU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 3,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 4,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 5,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 6,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "GNU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 7,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 8,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+];
