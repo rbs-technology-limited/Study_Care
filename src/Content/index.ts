@@ -29,8 +29,8 @@ import {
   relatedCoursesData,
   relatedCoursesStaticData,
   couseClassRoutineData,
-  courseDetailsData,
-  courseDetailsStaticData,
+  qAData,
+  qAStaticData,
 } from "./singleCoursePage/singleCoursePageData";
 
 export {
@@ -72,6 +72,6 @@ export {
   relatedCoursesData,
   relatedCoursesStaticData,
   couseClassRoutineData,
-  courseDetailsData,
-  courseDetailsStaticData,
+  qAData,
+  qAStaticData,
 };

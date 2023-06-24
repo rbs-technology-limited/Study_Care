@@ -3,7 +3,7 @@ import CarouselMedia from "./CarouselMedia/CarouselMedia";
 import PriceAndEnroll from "./PriceAndEnroll/PriceAndEnroll";
 import TitleAndDescription from "./TitleAndDescription/TitleAndDescription";
 import ClassRoutine from "./ClassRoutine/ClassRoutine";
-import DetailsAboutCourse from "./DetailsAboutCourse/DetailsAboutCourse";
+import QAAboutCourse from "./QAAboutCourse/QAAboutCourse";
 import ClassRequirements from "./ClassRequirements/ClassRequirements";
 
 const CoursePageLeftUI = () => {
@@ -13,7 +13,7 @@ const CoursePageLeftUI = () => {
       <PriceAndEnroll />
       <TitleAndDescription />
       <ClassRoutine />
-      <DetailsAboutCourse />
+      <QAAboutCourse />
       <ClassRequirements />
     </section>
   );
