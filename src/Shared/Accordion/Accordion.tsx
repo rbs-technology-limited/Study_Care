@@ -14,8 +14,8 @@ type Accordion = {
 };
 
 const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
-  const [activeIndex, setActiveIndex] = React.useState<number | null>(0);
-  const onContentClick = (index: number) => {
+  const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
+  const onContentClick = (index: any) => {
     setActiveIndex(index);
   };
 
@@ -25,7 +25,7 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
 
     return (
       <>
-        <div onClick={() => onContentClick(index)}>
+        <div onClick={() => onContentClick(!isActive ? index : null)}>
           <div
             className={`${
               !isActive && !isLastItem
@@ -36,7 +36,7 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
             <div className=" text-gray-800 dark:text-[#FFFFFF] text-lg font-semibold  py-4 cursor-pointer">
               {content.title}
             </div>
-            <div>
+            <div className="cursor-pointer">
               {!isActive ? (
                 <svg
                   width="18"
