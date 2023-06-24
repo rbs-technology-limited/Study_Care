@@ -22,7 +22,6 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
 
   const [sliceNumber, setSliceNumber] = React.useState<number>(5);
 
-
   const renderContents = contents
     ?.slice(0, sliceNumber)
     ?.map((content, index) => {
@@ -36,12 +35,12 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
                 !isActive && !isLastItem
                   ? "border-b-[0.10rem] border-dashed border-gray-300 "
                   : "border-0"
-              } flex justify-between items-center gap-4`}
+              } flex justify-between items-center gap-4 cursor-pointer`}
             >
-              <div className=" text-gray-800 dark:text-[#FFFFFF] text-lg font-semibold  py-4 cursor-pointer">
+              <div className=" text-gray-800 dark:text-[#FFFFFF] text-md font-semibold  py-4">
                 {content.title}
               </div>
-              <div className="cursor-pointer">
+              <div>
                 {!isActive ? (
                   <svg
                     width="18"
@@ -49,6 +48,9 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
                     viewBox="0 0 28 28"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    className={`rotate-0 transition transform duration-300 ease-in-out ${
+                      isActive && "rotate-180"
+                    }`}
                   >
                     <path
                       d="M4.375 14H23.625"
@@ -72,6 +74,9 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
                     viewBox="0 0 24 4"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
+                    className={`rotate-0 transition transform duration-300 ease-in-out ${
+                      isActive && "rotate-180"
+                    }`}
                   >
                     <path
                       d="M2.375 2H21.625"
