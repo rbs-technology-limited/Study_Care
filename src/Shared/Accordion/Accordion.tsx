@@ -14,7 +14,7 @@ type Accordion = {
 };
 
 const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
-  const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = React.useState<number | null>(0);
   const onContentClick = (index: any) => {
     setActiveIndex(index);
   };
