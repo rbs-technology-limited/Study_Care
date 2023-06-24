@@ -39,8 +39,8 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
             <div>
               {!isActive ? (
                 <svg
-                  width="28"
-                  height="28"
+                  width="18"
+                  height="18"
                   viewBox="0 0 28 28"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
                 </svg>
               ) : (
                 <svg
-                  width="24"
+                  width="18"
                   height="4"
                   viewBox="0 0 24 4"
                   fill="none"
