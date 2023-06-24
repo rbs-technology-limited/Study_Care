@@ -19,11 +19,11 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
     setActiveIndex(index);
   };
 
-  const [sliceNumber, setSliceNumber] = React.useState(5);
+  const [sliceNumber, setSliceNumber] = React.useState<number>(5);
 
   const renderContents = contents
     ?.slice(0, sliceNumber)
-    .map((content, index) => {
+    ?.map((content, index) => {
       const isActive = index === activeIndex;
       const isLastItem = index === contents?.slice(0, sliceNumber).length - 1;
 
