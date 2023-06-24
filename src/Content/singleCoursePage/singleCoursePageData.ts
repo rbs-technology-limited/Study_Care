@@ -235,6 +235,107 @@ export const qAStaticData = {
   btn_collapse: "কম দেখুন",
 };
 
+export const courseSyllabusData = [
+  {
+    id: 1,
+    title: "Chemistry 1st Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: ল্যাবরেটরির নিরাপদ ব্যবহার",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: মৌলিক রসায়ন",
+      },
+      {
+        id: 3,
+        title: "অধ্যায় ৩: গ্যাস ও গ্যাসের বিশেষ ধরন",
+      },
+      {
+        id: 4,
+        title: "অধ্যায় ৪: তাপগতীয় পরিবর্তন",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Chemistry 2nd Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: পরিবেশ রসায়ন",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: অক্সিজেন ও হাইড্রোজেন",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Physics 1st Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: বল ও গতি",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: তড়িৎ ও তথ্য",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Physics 2nd Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: বল ও গতি",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: তড়িৎ ও তথ্য",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Math 1st Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: বল ও গতি",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: তড়িৎ ও তথ্য",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Math 2nd Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: বল ও গতি",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: তড়িৎ ও তথ্য",
+      },
+    ],
+  },
+];
+
+export const courseSyllabusStaticData = {
+  title: "কোর্স সিলেবাস",
+  btn_expand: "সকল বিষয়",
+  btn_collapse: "সংক্ষিপ্ত করুন",
+};
+
 export const anyQuestionData = {
   title: "আর কোনো জিজ্ঞাসা আছে?",
   description: "কল করুন ১১১১ নম্বরে",
@@ -310,3 +411,4 @@ export const classTeacherListData = [
     subject: "ইংরেজি",
   },
 ];
+

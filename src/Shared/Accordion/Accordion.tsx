@@ -6,23 +6,24 @@ import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
-
-type CustomComponent = (content: string) => React.ReactNode;
+import { BsFileEarmarkText } from "react-icons/bs";
 
 type Accordion = {
   contents: {
     id: number;
     title: string;
-    content: string;
+    content?: string | undefined;
+    contents?: Array<{
+      id: number;
+      title: string;
+    }>;
   }[];
-  customComponent?: CustomComponent;
   btnExpand?: string;
   btnCollapse?: string;
 };
 
 const Accordion = ({
   contents,
-  customComponent,
   btnExpand,
   btnCollapse,
   ...rest
@@ -103,21 +104,32 @@ const Accordion = ({
               )}
             </div>
           </div>
-
-          {isActive && (
-            <div
-              className={`${
-                isActive &&
-                !isLastItem &&
-                "border-b-[0.10rem] border-gray-300 border-dashed "
-              } pb-2 text-md text-gray-600 dark:text-white/90`}
-            >
-              {customComponent
-                ? customComponent(content.content)
-                : content.content}
-            </div>
-          )}
-        </div>
+            {isActive && (
+              <div
+                className={`${
+                  isActive &&
+                  !isLastItem &&
+                  "border-b-[0.10rem] border-gray-300 border-dashed "
+                } pb-2 text-sm text-gray-600 dark:text-white/90`}
+              >
+                {content.contents ? (
+                  <>
+                    {content.contents.map((content, index) => (
+                      <div key={content.id}>
+                        <div className="flex gap-3 py-2">
+                          <BsFileEarmarkText className="text-lg" color={teal} />
+                          <h1 className="font-semibold">{content.title}</h1>
+                        </div>
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  content.content
+                )}
+              </div>
+            )}
+          </div>
+        </>
       );
     });
 
