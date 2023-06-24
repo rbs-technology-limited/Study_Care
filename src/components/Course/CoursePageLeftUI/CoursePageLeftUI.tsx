@@ -5,6 +5,7 @@ import TitleAndDescription from "./TitleAndDescription/TitleAndDescription";
 import ClassRoutine from "./ClassRoutine/ClassRoutine";
 import QAAboutCourse from "./QAAboutCourse/QAAboutCourse";
 import ClassRequirements from "./ClassRequirements/ClassRequirements";
+import CourseSyllabus from "./CourseSyllabus/CourseSyllabus";
 import AnyQuestionSection from "./AnyQuestionSection/AnyQuestionSection";
 
 const CoursePageLeftUI = () => {
@@ -14,6 +15,7 @@ const CoursePageLeftUI = () => {
       <PriceAndEnroll />
       <TitleAndDescription />
       <ClassRoutine />
+      <CourseSyllabus />
       <QAAboutCourse />
       <ClassRequirements />
       <AnyQuestionSection />

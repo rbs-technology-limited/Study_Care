@@ -22,12 +22,12 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
 
   const [sliceNumber, setSliceNumber] = React.useState<number>(5);
 
+
   const renderContents = contents
     ?.slice(0, sliceNumber)
     ?.map((content, index) => {
       const isActive = index === activeIndex;
       const isLastItem = index === contents?.slice(0, sliceNumber).length - 1;
-
       return (
         <>
           <div onClick={() => onContentClick(!isActive ? index : null)}>
