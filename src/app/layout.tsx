@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import AOSProvider from "@/Provider/AOSProvider/AOSProvider";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -30,16 +29,15 @@ export default function RootLayout({
       <body
         className={`${inter.className} relative dark:bg-dark-background dark:text-white`}
       >
-        <Suspense fallback={<Loading />}>
-          <AOSProvider>
-            <NavigationEvents>
-              <ContextProvider>{children}</ContextProvider>
-              <ScrollToTop />
-            </NavigationEvents>
-          </AOSProvider>
-        </Suspense>
+        <AOSProvider>
+          <Suspense fallback={<Loading />}>
+            <ContextProvider>
+              <NavigationEvents>{children}</NavigationEvents>
+            </ContextProvider>
+          </Suspense>
+          <ScrollToTop />
+        </AOSProvider>
       </body>
     </html>
   );
-  
 }

@@ -9,12 +9,12 @@ import { useRouter } from "next/navigation";
 import { CButton } from "@/Shared";
 import MENU_LIST from "@/Constant/Nav_Data";
 import { orange } from "@/Constant/Custom-Color";
-import ThemeToogleButton from "../../Shared/ThemeToogleButton/ThemeToogleButton.tsx";
+import ThemeToogleButton from "../../Shared/ThemeToogleButton/ThemeToogleButton";
 import HeaderBg from "public/Asset/svg/HeaderBg";
 import { useTheme } from "next-themes";
-import getStystemPreference from "@/Utils/getSystemTheme.tsx";
+import getStystemPreference from "@/Utils/getSystemTheme";
 import { RiArrowDownSFill } from "react-icons/ri";
-import BlankBackground from "./BlankBackground/BlankBackground.tsx";
+import BlankBackground from "./BlankBackground/BlankBackground";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
@@ -162,7 +162,9 @@ const Header = () => {
                   >
                     {item?.href ? (
                       <Link
-                        href={item?.href}
+                        href={{
+                          pathname: item?.href,
+                        }}
                         className="inline-block px-1 py-2 font-medium leading-5 text-center text-black-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-gray-500 focus:outline-none focus:border-black-500 focus:shadow-outline-black active:bg-gray-50 active:text-black-700
                       dark:text-white dark:hover:text-gray-300
                       "
@@ -179,7 +181,15 @@ const Header = () => {
                             setShowBlankBackground(true);
                           }}
                         >
-                          <div className="flex gap-1 cursor-pointer">
+                          <div
+                            className="flex gap-1 cursor-pointer"
+                            onMouseEnter={() => {
+                              setShowBlankBackground(true);
+                            }}
+                            onMouseLeave={() => {
+                              setShowBlankBackground(false);
+                            }}
+                          >
                             <p>{item?.text}</p>
                             <RiArrowDownSFill />
                           </div>
