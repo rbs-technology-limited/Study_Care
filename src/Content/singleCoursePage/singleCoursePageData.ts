@@ -231,4 +231,6 @@ export const qAData = [
 
 export const qAStaticData = {
   title: "সচরাচর জিজ্ঞাসা",
+  btn_expand: "সকল প্রশ্ন-উত্তর",
+  btn_collapse: "কম দেখুন",
 };
