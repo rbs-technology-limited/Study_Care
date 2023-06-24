@@ -1,6 +1,7 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
 import React from "react";
+import CButton from "../CButton/CButton";
 
 type CustomComponent = (content: string) => React.ReactNode;
 
@@ -109,21 +110,21 @@ const Accordion = ({ contents, customComponent, ...rest }: Accordion) => {
       {/* /bottom center of the accordion add a button to show more contents */}
       {sliceNumber < contents?.length ? (
         <div className="absolute bottom-[-50] left-1/2 transform -translate-x-1/2">
-          <button
+          <CButton
             onClick={() => setSliceNumber(contents?.length)}
-            className="bg-[#F6F6F6] text-gray-800 dark:text-black font-semibold px-4 py-2 rounded-lg"
+            customClass="bg-[#F6F6F6] text-gray-800 dark:text-black font-semibold px-3 py-2 rounded-lg"
           >
             আরও দেখুন
-          </button>
+          </CButton>
         </div>
       ) : (
         <div className="absolute bottom-[-50] left-1/2 transform -translate-x-1/2">
-          <button
+          <CButton
             onClick={() => setSliceNumber(5)}
-            className="bg-[#F6F6F6] text-gray-800 dark:text-black font-semibold px-4 py-2 rounded-lg"
+            customClass="bg-[#F6F6F6] text-gray-800 dark:text-black font-semibold px-4 py-2 rounded-lg"
           >
             কম দেখুন
-          </button>
+          </CButton>
         </div>
       )}
     </div>
