@@ -275,3 +275,8 @@ export const courseSyllabusStaticData = {
   btn_expand: "সকল বিষয়",
   btn_collapse: "সংক্ষিপ্ত করুন",
 };
+
+export const anyQuestionData = {
+  title: "আর কোনো জিজ্ঞাসা আছে?",
+  description: "কল করুন ১১১১ নম্বরে",
+};

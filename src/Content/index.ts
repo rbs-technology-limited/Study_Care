@@ -33,6 +33,7 @@ import {
   qAStaticData,
   courseSyllabusData,
   courseSyllabusStaticData,
+  anyQuestionData,
 } from "./singleCoursePage/singleCoursePageData";
 
 export {
@@ -78,4 +79,5 @@ export {
   qAStaticData,
   courseSyllabusData,
   courseSyllabusStaticData,
+  anyQuestionData,
 };
