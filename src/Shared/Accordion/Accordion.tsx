@@ -124,7 +124,7 @@ const Accordion = ({
                   ))}
                 </>
               ) : (
-                content.content
+                <span>{content.content}</span>
               )}
             </div>
           )}
