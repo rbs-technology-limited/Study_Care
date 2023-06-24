@@ -31,6 +31,8 @@ import {
   couseClassRoutineData,
   qAData,
   qAStaticData,
+  courseSyllabusData,
+  courseSyllabusStaticData,
 } from "./singleCoursePage/singleCoursePageData";
 
 export {
@@ -74,4 +76,6 @@ export {
   couseClassRoutineData,
   qAData,
   qAStaticData,
+  courseSyllabusData,
+  courseSyllabusStaticData,
 };
