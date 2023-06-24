@@ -1,4 +1,4 @@
-import PriceAndEnroll from "@/components/Course/CoursePageLeftUI/PriceAndEnroll/PriceAndEnroll";
+import Hero_section_Logo from "public/Asset/Hero_section_Logo.svg";
 
 export const coursePageData = {
   id: 1,
@@ -231,4 +231,184 @@ export const qAData = [
 
 export const qAStaticData = {
   title: "সচরাচর জিজ্ঞাসা",
+  btn_expand: "সকল প্রশ্ন-উত্তর",
+  btn_collapse: "কম দেখুন",
 };
+
+export const courseSyllabusData = [
+  {
+    id: 1,
+    title: "Chemistry 1st Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: ল্যাবরেটরির নিরাপদ ব্যবহার",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: মৌলিক রসায়ন",
+      },
+      {
+        id: 3,
+        title: "অধ্যায় ৩: গ্যাস ও গ্যাসের বিশেষ ধরন",
+      },
+      {
+        id: 4,
+        title: "অধ্যায় ৪: তাপগতীয় পরিবর্তন",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Chemistry 2nd Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: পরিবেশ রসায়ন",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: অক্সিজেন ও হাইড্রোজেন",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Physics 1st Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: বল ও গতি",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: তড়িৎ ও তথ্য",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Physics 2nd Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: বল ও গতি",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: তড়িৎ ও তথ্য",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Math 1st Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: বল ও গতি",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: তড়িৎ ও তথ্য",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Math 2nd Paper",
+    contents: [
+      {
+        id: 1,
+        title: "অধ্যায় ১: বল ও গতি",
+      },
+      {
+        id: 2,
+        title: "অধ্যায় ২: তড়িৎ ও তথ্য",
+      },
+    ],
+  },
+];
+
+export const courseSyllabusStaticData = {
+  title: "কোর্স সিলেবাস",
+  btn_expand: "সকল বিষয়",
+  btn_collapse: "সংক্ষিপ্ত করুন",
+};
+
+export const anyQuestionData = {
+  title: "আর কোনো জিজ্ঞাসা আছে?",
+  description: "কল করুন ১১১১ নম্বরে",
+};
+
+export const classTeacherInfoData = {
+  title: "ক্লাস শিক্ষকের তথ্য",
+};
+
+export const classTeacherListData = [
+  {
+    id: 1,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 2,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "GNU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 3,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 4,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 5,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 6,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "GNU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 7,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+  {
+    id: 8,
+    name: "মোঃ আব্দুল কাদের",
+    designation: "DU, IBA",
+    experience: "১০ বছর",
+    image: Hero_section_Logo,
+    subject: "ইংরেজি",
+  },
+];
+

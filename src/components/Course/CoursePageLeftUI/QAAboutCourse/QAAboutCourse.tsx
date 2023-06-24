@@ -8,7 +8,11 @@ const QAAboutCourse = () => {
       <h1 className="text-xl font-bold dark:text-white text-gray-800">
         {qAStaticData?.title}
       </h1>
-      <Accordion contents={qAData}></Accordion>
+      <Accordion
+        contents={qAData}
+        btnExpand={qAStaticData?.btn_expand}
+        btnCollapse={qAStaticData?.btn_collapse}
+      />
     </section>
   );
 };

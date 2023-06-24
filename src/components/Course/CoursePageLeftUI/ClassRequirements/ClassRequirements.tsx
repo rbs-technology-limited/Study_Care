@@ -15,7 +15,7 @@ const ClassRequirements = () => {
         <ul className="border-[.0925rem] p-3 my-5 rounded-lg">
           {coursePageStaticData?.class_requirements?.lists.map((list) => (
             <li
-              className="my-4 flex gap-3 items-center dark:text-white"
+              className="my-4 flex gap-3 items-center text-sm dark:text-white"
               key={list?.id}
             >
               <BsCheck2Square color={teal} className="text-xl" /> {list.title}
