@@ -58,7 +58,7 @@ const Header = () => {
   // console.log(IndexData);
 
   const handleLogin = () => {
-    // router.push("/login");
+    router.push("/login");
   };
 
   return (
