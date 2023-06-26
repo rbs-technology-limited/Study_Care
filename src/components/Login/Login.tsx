@@ -16,10 +16,10 @@ const Login = () => {
   };
   return (
     <section className="container-lg mx-auto">
-      <div className="h-[100vh]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full">
-          <div className="col-span-1">
-            <div className=" bg-white">
+      <div className="h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full ">
+          <div className="col-span-1 flex justify-center items-center">
+            <div className="bg-white">
               <div className="px-6 lg:px-14 pt-8">
                 <h1 className="text-3xl dark:text-white font-bold mb-8">
                   {loginStaticData?.title1}
@@ -40,7 +40,7 @@ const Login = () => {
                       className="cursor-pointer"
                     />
                   </div>
-                  <CInput type="email" placeholder="Email" />
+                  <CInput type="text" placeholder="Email/Phone" />
                   <CInput type="password" placeholder="Password" />
 
                   <p className="text-button-teal my-1 cursor-pointer">
@@ -79,8 +79,8 @@ const Login = () => {
           </div>
           {/* image section */}
 
-          <div className="hidden md:block md:col-span-1 lg:col-span-2">
-            <div className="bg-gray-200 h-full">
+          <div className="hidden bg-gray-200 md:block md:col-span-1 lg:col-span-2 flex justify-center items-center">
+            <div className="h-full">
               <LoginSvg />
             </div>
           </div>
