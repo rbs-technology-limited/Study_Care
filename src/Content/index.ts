@@ -38,6 +38,7 @@ import {
   classTeacherInfoData,
 } from "./singleCoursePage/singleCoursePageData";
 import loginStaticData from "./login/loginData";
+import signupStaticData from "./signup/signup";
 
 export {
   heroContent,
@@ -86,4 +87,5 @@ export {
   classTeacherListData,
   classTeacherInfoData,
   loginStaticData,
+  signupStaticData,
 };

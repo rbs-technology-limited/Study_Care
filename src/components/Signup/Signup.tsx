@@ -5,6 +5,7 @@ import React from "react";
 import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
 import RegisterSvg from "../svgComponents/RegisterSvg";
 import { useRouter } from "next/navigation";
+import { signupStaticData } from "@/Content";
 
 const Signup = () => {
   const router = useRouter();
@@ -20,7 +21,9 @@ const Signup = () => {
                 className="flex items-center gap-1 mb-4 cursor-pointer"
                 onClick={() => router.push("/login")}
               >
-                <p className="text-button-teal">Already a member?</p>
+                <p className="text-button-teal">
+                  {signupStaticData?.loginLink}
+                </p>
                 <BsFillPersonFill color={teal} />
               </div>
             </div>
@@ -28,17 +31,17 @@ const Signup = () => {
             <div className="flex flex-col md:flex-row gap-8">
               <div className="w-full md:w-6/12">
                 <h1 className="text-3xl font-bold text-gray-600">
-                  Input your <br /> information
+                  {signupStaticData?.primary_title1}
+                  <br /> {signupStaticData?.primary_title2}
                 </h1>
               </div>
               <div className="w-full md:w-6/12">
                 <p className="text-grey-600">
-                  We need you to help us with some basic information for your
-                  account creation. Here are our{" "}
+                  {signupStaticData?.description1}{" "}
                   <span className="text-button-teal cursor-pointer">
-                    terms and conditins
+                    {signupStaticData?.terms}
                   </span>
-                  . Please read them carefully. We are GDRP compliiant
+                  . {signupStaticData?.description2}
                 </p>
               </div>
             </div>
@@ -51,29 +54,9 @@ const Signup = () => {
                   {/* name */}
                   <div className="mb-2">
                     <div className="flex justify-between items-center">
-                      <label htmlFor="name">Name</label>
-                      <BsQuestionCircleFill
-                        color={teal}
-                        className="cursor-pointer"
-                      />
-                    </div>
-                    <CInput type="text" placeholder="Name" id="name" />
-                  </div>
-                  {/* address */}
-                  <div className="mb-2">
-                    <div className="flex justify-between items-center">
-                      <label htmlFor="address">Address</label>
-                      <BsQuestionCircleFill
-                        color={teal}
-                        className="cursor-pointer"
-                      />
-                    </div>
-                    <CInput type="text" placeholder="Address" id="address" />
-                  </div>
-                  {/* phone number */}
-                  <div className="mb-2 md:mb-0">
-                    <div className="flex justify-between items-center">
-                      <label htmlFor="phoneNumber">Phone Number</label>
+                      <label htmlFor="name">
+                        {signupStaticData?.inputDetails?.firstName?.title}
+                      </label>
                       <BsQuestionCircleFill
                         color={teal}
                         className="cursor-pointer"
@@ -81,7 +64,47 @@ const Signup = () => {
                     </div>
                     <CInput
                       type="text"
-                      placeholder="+88 0000"
+                      placeholder={
+                        signupStaticData?.inputDetails?.firstName?.placeholder
+                      }
+                      id="name"
+                    />
+                  </div>
+                  {/* address */}
+                  <div className="mb-2">
+                    <div className="flex justify-between items-center">
+                      <label htmlFor="address">
+                        {signupStaticData?.inputDetails?.address?.title}
+                      </label>
+                      <BsQuestionCircleFill
+                        color={teal}
+                        className="cursor-pointer"
+                      />
+                    </div>
+                    <CInput
+                      type="text"
+                      placeholder={
+                        signupStaticData?.inputDetails?.address?.placeholder
+                      }
+                      id="address"
+                    />
+                  </div>
+                  {/* phone number */}
+                  <div className="mb-2 md:mb-0">
+                    <div className="flex justify-between items-center">
+                      <label htmlFor="phoneNumber">
+                        {signupStaticData?.inputDetails?.phoneNumber?.title}
+                      </label>
+                      <BsQuestionCircleFill
+                        color={teal}
+                        className="cursor-pointer"
+                      />
+                    </div>
+                    <CInput
+                      type="text"
+                      placeholder={
+                        signupStaticData?.inputDetails?.phoneNumber?.placeholder
+                      }
                       id="phoneNumber"
                     />
                   </div>
@@ -91,30 +114,8 @@ const Signup = () => {
                   {/* last name */}
                   <div className="mb-2">
                     <div className="flex justify-between items-center">
-                      <label htmlFor="lastName">Last Name</label>
-                      <BsQuestionCircleFill
-                        color={teal}
-                        className="cursor-pointer"
-                      />
-                    </div>
-                    <CInput type="text" placeholder="Last Name" id="lastName" />
-                  </div>
-                  {/* email */}
-                  <div className="mb-2">
-                    <div className="flex justify-between items-center">
-                      <label htmlFor="email">Email</label>
-                      <BsQuestionCircleFill
-                        color={teal}
-                        className="cursor-pointer"
-                      />
-                    </div>
-                    <CInput type="email" placeholder="Email" id="email" />
-                  </div>
-                  {/* phone number(optional)*/}
-                  <div>
-                    <div className="flex justify-between items-center">
-                      <label htmlFor="phoneNumberOptional">
-                        Phone Number (Optional)
+                      <label htmlFor="lastName">
+                        {signupStaticData?.inputDetails?.lastName?.title}
                       </label>
                       <BsQuestionCircleFill
                         color={teal}
@@ -123,7 +124,51 @@ const Signup = () => {
                     </div>
                     <CInput
                       type="text"
-                      placeholder="+88 0000"
+                      placeholder={
+                        signupStaticData?.inputDetails?.lastName?.placeholder
+                      }
+                      id="lastName"
+                    />
+                  </div>
+                  {/* email */}
+                  <div className="mb-2">
+                    <div className="flex justify-between items-center">
+                      <label htmlFor="email">
+                        {signupStaticData?.inputDetails?.email?.title}
+                      </label>
+                      <BsQuestionCircleFill
+                        color={teal}
+                        className="cursor-pointer"
+                      />
+                    </div>
+                    <CInput
+                      type="email"
+                      placeholder={
+                        signupStaticData?.inputDetails?.email?.placeholder
+                      }
+                      id="email"
+                    />
+                  </div>
+                  {/* phone number(optional)*/}
+                  <div>
+                    <div className="flex justify-between items-center">
+                      <label htmlFor="phoneNumberOptional">
+                        {
+                          signupStaticData?.inputDetails?.phoneNumberOptional
+                            ?.title
+                        }
+                      </label>
+                      <BsQuestionCircleFill
+                        color={teal}
+                        className="cursor-pointer"
+                      />
+                    </div>
+                    <CInput
+                      type="text"
+                      placeholder={
+                        signupStaticData?.inputDetails?.phoneNumberOptional
+                          ?.placeholder
+                      }
                       id="phoneNumberOptional"
                     />
                   </div>
@@ -137,7 +182,9 @@ const Signup = () => {
                   {/* password */}
                   <div className="mb-2 md:mb-0">
                     <div className="flex justify-between items-center">
-                      <label htmlFor="password">Password</label>
+                      <label htmlFor="password">
+                        {signupStaticData?.inputDetails?.password?.title}
+                      </label>
                       <BsQuestionCircleFill
                         color={teal}
                         className="cursor-pointer"
@@ -150,7 +197,9 @@ const Signup = () => {
                   {/* confirm password */}
                   <div>
                     <div className="flex justify-between items-center">
-                      <label htmlFor="confirmPassword">Confirm Password</label>
+                      <label htmlFor="confirmPassword">
+                        {signupStaticData?.inputDetails?.confirmPassword?.title}
+                      </label>
                       <BsQuestionCircleFill
                         color={teal}
                         className="cursor-pointer"
@@ -169,9 +218,9 @@ const Signup = () => {
                 <div className="flex items-center gap-1">
                   <SelectField type="checkbox" pl="0" />
                   <p className="mt-2 text-[11px] md:text-sm">
-                    I agree with{" "}
+                    {signupStaticData?.acceptTerms}{" "}
                     <span className=" text-button-teal cursor-pointer">
-                      terms and conditions
+                      {signupStaticData?.terms}
                     </span>
                     .
                   </p>
@@ -179,7 +228,7 @@ const Signup = () => {
                 <CButton
                   type="submit"
                   variant="solid"
-                  btnTitle="Register"
+                  btnTitle={signupStaticData?.button}
                   color={teal}
                 />
               </div>
