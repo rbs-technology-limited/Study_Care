@@ -1,10 +1,13 @@
+"use client";
 import { teal } from "@/Constant/Custom-Color";
 import { CButton, CInput, SelectField } from "@/Shared";
 import React from "react";
 import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
 import RegisterSvg from "../svgComponents/RegisterSvg";
+import { useRouter } from "next/navigation";
 
 const Signup = () => {
+  const router = useRouter();
   return (
     <section className="container-lg mx-auto">
       <div className="h-[100vh]">
@@ -13,7 +16,10 @@ const Signup = () => {
           <div className="col-span-1 md:col-span-2 p-6 text-sm text-gray-600">
             {/* already a member? section */}
             <div className="flex justify-end">
-              <div className="flex items-center gap-1 mb-4 cursor-pointer">
+              <div
+                className="flex items-center gap-1 mb-4 cursor-pointer"
+                onClick={() => router.push("/login")}
+              >
                 <p className="text-button-teal">Already a member?</p>
                 <BsFillPersonFill color={teal} />
               </div>

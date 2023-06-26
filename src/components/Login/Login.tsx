@@ -6,8 +6,10 @@ import React, { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { loginStaticData } from "@/Content";
 import LoginSvg from "../svgComponents/LoginSvg";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+  const router = useRouter();
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("form submitted");
@@ -65,7 +67,10 @@ const Login = () => {
                 {/* don't have an account and register */}
                 <div className="flex flex-col justify-center items-center mt-12">
                   <p className="text-gray-600">{`Don't have an account yet?`}</p>
-                  <p className="text-button-teal my-1 cursor-pointer">
+                  <p
+                    className="text-button-teal my-1 cursor-pointer"
+                    onClick={() => router.push("/signup")}
+                  >
                     {loginStaticData?.link2}
                   </p>
                 </div>
