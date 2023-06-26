@@ -162,9 +162,9 @@ const Signup = () => {
                 {/* terms and condition */}
                 <div className="flex items-center gap-1">
                   <SelectField type="checkbox" pl="0" />
-                  <p className="mt-2">
+                  <p className="mt-2 text-[11px] md:text-sm">
                     I agree with{" "}
-                    <span className="text-button-teal cursor-pointer">
+                    <span className=" text-button-teal cursor-pointer">
                       terms and conditions
                     </span>
                     .
@@ -181,10 +181,8 @@ const Signup = () => {
           </div>
           {/* image section */}
           <div className="hidden md:block md:col-span-1">
-            <div className="relative">
-              <div className="h-full bg-gray-200 absolute left-0 bottom-0 right-0">
-                <RegisterSvg />
-              </div>
+            <div className="h-full bg-gray-200 ">
+              <RegisterSvg />
             </div>
           </div>
         </div>
