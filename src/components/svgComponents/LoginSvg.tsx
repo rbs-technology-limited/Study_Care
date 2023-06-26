@@ -1,6 +1,6 @@
 import { teal } from "@/Constant/Custom-Color";
 import * as React from "react";
-const SvgComponent = (props: any) => (
+const LoginSvg = (props: any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 500 500"
@@ -1192,4 +1192,4 @@ const SvgComponent = (props: any) => (
     />
   </svg>
 );
-export default SvgComponent;
+export default LoginSvg;
