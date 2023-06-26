@@ -31,8 +31,8 @@ const Signup = () => {
             <div className="flex flex-col md:flex-row gap-8">
               <div className="w-full md:w-6/12">
                 <h1 className="text-3xl font-bold text-gray-600">
-                  {signupStaticData?.primary_title1}
-                  <br /> {signupStaticData?.primary_title2}
+                  {signupStaticData?.primary_title1}{" "}
+                  {signupStaticData?.primary_title2}
                 </h1>
               </div>
               <div className="w-full md:w-6/12">
