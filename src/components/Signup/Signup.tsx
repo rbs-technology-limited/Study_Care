@@ -51,7 +51,10 @@ const Signup = () => {
                 {/* name */}
                 <div className="md:mb-1 lg:mb-2">
                   <div className="flex justify-between items-center">
-                    <label htmlFor="name" className="xl:my-1">
+                    <label
+                      htmlFor="name"
+                      className="my-2 md:my-0 lg:my-0 xl:my-1"
+                    >
                       {signupStaticData?.inputDetails?.firstName?.title}
                     </label>
                     <BsQuestionCircleFill
@@ -71,7 +74,10 @@ const Signup = () => {
                 {/* address */}
                 <div className="md:mb-1 lg:mb-2">
                   <div className="flex justify-between items-center">
-                    <label htmlFor="address" className="xl:my-1">
+                    <label
+                      htmlFor="address"
+                      className="my-2 md:my-0 lg:my-0 xl:my-1"
+                    >
                       {signupStaticData?.inputDetails?.address?.title}
                     </label>
                     <BsQuestionCircleFill
@@ -91,7 +97,10 @@ const Signup = () => {
                 {/* phone number */}
                 <div className="mb-2 md:mb-0">
                   <div className="flex justify-between items-center">
-                    <label htmlFor="phoneNumber" className="xl:my-1">
+                    <label
+                      htmlFor="phoneNumber"
+                      className="my-2 md:my-0 lg:my-0 xl:my-1"
+                    >
                       {signupStaticData?.inputDetails?.phoneNumber?.title}
                     </label>
                     <BsQuestionCircleFill
@@ -114,7 +123,10 @@ const Signup = () => {
                 {/* last name */}
                 <div className="md:mb-1 lg:mb-2">
                   <div className="flex justify-between items-center">
-                    <label htmlFor="lastName" className="xl:my-1">
+                    <label
+                      htmlFor="lastName"
+                      className="my-1 md:my-0 lg:my-0 xl:my-1"
+                    >
                       {signupStaticData?.inputDetails?.lastName?.title}
                     </label>
                     <BsQuestionCircleFill
@@ -134,7 +146,10 @@ const Signup = () => {
                 {/* email */}
                 <div className="md:mb-1 lg:mb-2">
                   <div className="flex justify-between items-center">
-                    <label htmlFor="email" className="xl:my-1">
+                    <label
+                      htmlFor="email"
+                      className="my-2 md:my-0 lg:my-0 xl:my-1"
+                    >
                       {signupStaticData?.inputDetails?.email?.title}
                     </label>
                     <BsQuestionCircleFill
@@ -154,7 +169,10 @@ const Signup = () => {
                 {/* phone number(optional)*/}
                 <div>
                   <div className="flex justify-between items-center">
-                    <label htmlFor="phoneNumberOptional" className="xl:my-1">
+                    <label
+                      htmlFor="phoneNumberOptional"
+                      className="my-2 md:my-0 lg:my-0 xl:my-1"
+                    >
                       {
                         signupStaticData?.inputDetails?.phoneNumberOptional
                           ?.title
@@ -185,7 +203,10 @@ const Signup = () => {
                 {/* password */}
                 <div className="mb-2 md:mb-0">
                   <div className="flex justify-between items-center">
-                    <label htmlFor="password" className="xl:my-1">
+                    <label
+                      htmlFor="password"
+                      className="my-1 md:my-0 lg:my-0 xl:my-1"
+                    >
                       {signupStaticData?.inputDetails?.password?.title}
                     </label>
                     <BsQuestionCircleFill
@@ -200,7 +221,10 @@ const Signup = () => {
                 {/* confirm password */}
                 <div>
                   <div className="flex justify-between items-center">
-                    <label htmlFor="confirmPassword" className="xl:my-1">
+                    <label
+                      htmlFor="confirmPassword"
+                      className="my-1 md:my-0 lg:my-0 xl:my-1"
+                    >
                       {signupStaticData?.inputDetails?.confirmPassword?.title}
                     </label>
                     <BsQuestionCircleFill
@@ -244,7 +268,7 @@ const Signup = () => {
           {/* left blur */}
           <div className="hidden dark:block dark:absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#1BE1FF] opacity-40 blur-[100px] z-10"></div>
           {/* right blur */}
-          <div className="hidden dark:block dark:absolute top-0 right-0 w-64 h-64 rounded-full bg-[#FBC131] opacity-40 blur-[100px] z-10"></div>
+          <div className="hidden dark:block dark:absolute top-0 right-0 w-64 h-64 rounded-full bg-custom-orange opacity-40 blur-[100px] z-10"></div>
         </div>
       </div>
     </section>
