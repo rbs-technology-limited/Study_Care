@@ -9,6 +9,7 @@ interface CheckBoxProps {
   disabled?: boolean;
   onChange?: any;
   defaultChecked?: boolean;
+  pl?: string;
 }
 
 const SelectField = ({
@@ -19,11 +20,12 @@ const SelectField = ({
   checked,
   disabled,
   onChange,
-  defaultChecked
+  defaultChecked,
+  pl,
 }: CheckBoxProps) => {
   return (
     <>
-      <div className="block min-h-6 pl-7 mt-2">
+      <div className={`block min-h-6 ${pl ? pl : "pl-7"} mt-2`}>
         <label>
           <input
             id={id ? id : "checkbox-1"}

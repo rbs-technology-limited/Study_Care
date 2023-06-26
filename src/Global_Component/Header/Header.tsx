@@ -57,8 +57,12 @@ const Header = () => {
 
   // console.log(IndexData);
 
-  const handleLogin = () => {
-    // router.push("/login");
+  const handleLogin = (options: string) => {
+    if (options === "login") {
+      router.push("/login");
+    } else {
+      router.push("/signup");
+    }
   };
 
   return (
@@ -234,7 +238,7 @@ const Header = () => {
               color="text-"
               // className="px-4 py-2 mb-5 lg:mb-0 text-sm text-stone-700 transition-all bg-orange-400 rounded-lg outline-none hover:bg-orange-500 focus:bg-orange-500 uppercase focus:outline-none border-2 shadow-lg shadow-orange-500/50"
               onClick={() => {
-                handleLogin();
+                handleLogin("login");
               }}
             >
               সাইন ইন
@@ -247,7 +251,7 @@ const Header = () => {
               color={orange}
               // className="px-4 py-2 mb-5 lg:mb-0 text-sm text-stone-700 transition-all bg-orange-400 rounded-lg outline-none hover:bg-orange-500 focus:bg-orange-500 uppercase focus:outline-none border-2 shadow-lg shadow-orange-500/50"
               onClick={() => {
-                handleLogin();
+                handleLogin("signup");
               }}
             >
               নিবন্ধন করুন
