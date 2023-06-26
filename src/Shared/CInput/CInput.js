@@ -5,7 +5,7 @@ const CInput = ({ type, ...rest }) => {
     <>
       <input
         type={type}
-        className="w-full px-5 py-3 mb-2 text-sm text-black transition duration-200 border border-gray-300 rounded-lg outline-none focus:border-orange-400 focus:outline-none dark:placeholder-white bg-transparent"
+        className="w-full px-5 py-3 mb-2 text-sm text-black dark:text-white transition duration-200 border border-gray-300 rounded-lg outline-none focus:border-orange-400 focus:outline-none dark:placeholder-white bg-transparent"
         {...rest}
       />
     </>

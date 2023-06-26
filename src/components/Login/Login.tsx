@@ -15,74 +15,64 @@ const Login = () => {
     console.log("form submitted");
   };
   return (
-    <section className="container-lg mx-auto">
-      <div className="h-screen">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full ">
-          <div className="col-span-1 flex justify-center items-center">
-            <div className="bg-white">
-              <div className="px-6 lg:px-14 pt-8">
-                <h1 className="text-3xl dark:text-white font-bold mb-8">
-                  {loginStaticData?.title1}
+    <section className="container-lg mx-auto h-screen flex md:block justify-center items-center">
+      <div className="flex justify-center items-center text-sm text-gray-600 dark:text-white">
+        <div className="w-full md:w-1/3 md:flex justify-center items-center bg-white dark:bg-transparent">
+          <div className="px-6 lg:px-14">
+            <h1 className="text-3xl font-bold mb-8">
+              {loginStaticData?.title1}
+            </h1>
+            <p className="">{loginStaticData?.description}</p>
+            {/* dashed line */}
+            <div className="border-[0.0925rem] border-dashed mt-6"></div>
+            {/* input section */}
+            <form onSubmit={handleSubmit}>
+              <div className="flex justify-between items-center mt-6">
+                <h1 className="text-md font-bold my-1 ">
+                  {loginStaticData?.title2}
                 </h1>
-                <p className="text-md text-gray-600">
-                  {loginStaticData?.description}
-                </p>
-                {/* dashed line */}
-                <div className="border-[0.0925rem] border-dashed mt-8"></div>
-                {/* input section */}
-                <form onSubmit={handleSubmit}>
-                  <div className="flex justify-between items-center mt-8">
-                    <h1 className="text-md font-bold my-1 ">
-                      {loginStaticData?.title2}
-                    </h1>
-                    <BsQuestionCircleFill
-                      color={teal}
-                      className="cursor-pointer"
-                    />
-                  </div>
-                  <CInput type="text" placeholder="Email/Phone" />
-                  <CInput type="password" placeholder="Password" />
+                <BsQuestionCircleFill color={teal} className="cursor-pointer" />
+              </div>
+              <CInput type="text" placeholder="Email/Phone" />
+              <CInput type="password" placeholder="Password" />
 
-                  <p className="text-button-teal my-1 cursor-pointer">
-                    {loginStaticData?.link1}
-                  </p>
-                  {/* dashed line */}
-                  <div className="border-[0.0925rem] border-dashed my-8"></div>
-                  {/* button and remember me */}
-                  <div className="flex justify-between items-center">
-                    <div className="flex gap-1 items-center">
-                      <SelectField type="checkbox" pl="0" />
-                      <p className="mt-2 text-gray-600 cursor-pointer">
-                        {loginStaticData?.title3}
-                      </p>
-                    </div>
-                    <CButton
-                      type="submit"
-                      variant="solid"
-                      color={teal}
-                      btnTitle="Log in"
-                    />
-                  </div>
-                </form>
-                {/* don't have an account and register */}
-                <div className="flex flex-col justify-center items-center mt-12">
-                  <p className="text-gray-600">{`Don't have an account yet?`}</p>
-                  <p
-                    className="text-button-teal my-1 cursor-pointer"
-                    onClick={() => router.push("/signup")}
-                  >
-                    {loginStaticData?.link2}
+              <p className="text-button-teal my-1 cursor-pointer">
+                {loginStaticData?.link1}
+              </p>
+              {/* dashed line */}
+              <div className="border-[0.0925rem] border-dashed my-6"></div>
+              {/* button and remember me */}
+              <div className="flex justify-between items-center gap-1">
+                <div className="flex gap-1 items-center">
+                  <SelectField type="checkbox" pl="0" />
+                  <p className="mt-2 cursor-pointer">
+                    {loginStaticData?.title3}
                   </p>
                 </div>
+                <CButton
+                  type="submit"
+                  variant="solid"
+                  color={teal}
+                  btnTitle="Log in"
+                />
               </div>
+            </form>
+            {/* don't have an account and register */}
+            <div className="flex flex-col justify-center items-center mt-8">
+              <p className="">{`Don't have an account yet?`}</p>
+              <p
+                className="text-button-teal my-1 cursor-pointer"
+                onClick={() => router.push("/signup")}
+              >
+                {loginStaticData?.link2}
+              </p>
             </div>
           </div>
-          {/* image section */}
-
-          <div className="hidden bg-gray-200 md:block md:col-span-1 lg:col-span-2 flex justify-center items-center">
-            <div className="h-full">
-              <LoginSvg />
-            </div>
+        </div>
+        {/* image section */}
+        <div className="bg-gray-200 hidden md:block w-2/3 md:justify-center md:items-center">
+          <div className="h-full">
+            <LoginSvg />
           </div>
         </div>
       </div>

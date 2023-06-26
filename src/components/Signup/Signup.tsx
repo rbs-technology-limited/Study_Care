@@ -12,7 +12,7 @@ const Signup = () => {
   return (
     <section className="container-md mx-auto">
       <div className="h-screen">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 h-full flex justify-center items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 h-full justify-center items-center">
           {/* input section */}
           <div className="col-span-1 md:col-span-2 p-6 text-sm text-gray-600">
             {/* already a member? section */}

@@ -5,8 +5,8 @@ const LoginSvg = (props: any) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 500 500"
     style={{
-      width: "45rem",
-      // height: "600px",
+      width: "40rem",
+      height: "100vh",
       objectFit: "cover",
       objectPosition: "center",
       margin: "0 auto",
