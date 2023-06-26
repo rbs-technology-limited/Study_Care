@@ -70,10 +70,14 @@ const Login = () => {
           </div>
         </div>
         {/* image section */}
-        <div className="bg-gray-200 hidden md:block w-2/3 md:justify-center md:items-center">
+        <div className="dark:relative bg-gray-200 dark:bg-transparent hidden md:block w-2/3 md:justify-center md:items-center">
           <div className="h-full">
             <LoginSvg />
           </div>
+          {/* left blur */}
+          <div className="hidden dark:block dark:absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#1BE1FF] opacity-40 blur-[100px] z-10"></div>
+          {/* right blur */}
+          <div className="hidden dark:block dark:absolute top-0 right-0 w-64 h-64 rounded-full bg-[#FBC131] opacity-40 blur-[100px] z-10"></div>
         </div>
       </div>
     </section>
