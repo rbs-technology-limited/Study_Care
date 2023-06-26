@@ -10,9 +10,9 @@ import { signupStaticData } from "@/Content";
 const Signup = () => {
   const router = useRouter();
   return (
-    <section className="container-lg mx-auto">
-      <div className="h-[100vh]">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 h-full">
+    <section className="container-md mx-auto">
+      <div className="h-screen">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 h-full flex justify-center items-center">
           {/* input section */}
           <div className="col-span-1 md:col-span-2 p-6 text-sm text-gray-600">
             {/* already a member? section */}
@@ -235,10 +235,8 @@ const Signup = () => {
             </form>
           </div>
           {/* image section */}
-          <div className="hidden md:block md:col-span-1">
-            <div className="h-full bg-gray-200 ">
-              <RegisterSvg />
-            </div>
+          <div className="hidden h-full md:block md:col-span-1 bg-gray-200">
+            <RegisterSvg />
           </div>
         </div>
       </div>

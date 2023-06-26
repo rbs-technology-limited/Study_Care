@@ -6,10 +6,11 @@ const RegisterSvg = (props: any) => (
     viewBox="0 0 500 500"
     {...props}
     style={{
-      width: "100%",
-      height: "600px",
+      width: "30rem",
+      height: "calc(100vh - .5rem)",
       objectFit: "cover",
       objectPosition: "center",
+      margin: "0 auto",
     }}
   >
     <path
