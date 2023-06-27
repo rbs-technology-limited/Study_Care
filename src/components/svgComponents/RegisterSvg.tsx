@@ -6,8 +6,8 @@ const RegisterSvg = (props: any) => (
     viewBox="0 0 500 500"
     {...props}
     style={{
-      width: "30rem",
-      height: "calc(100vh - .5rem)",
+      width: "25rem",
+      height: "100vh",
       objectFit: "cover",
       objectPosition: "center",
       margin: "0 auto",

@@ -20,7 +20,7 @@ const signupStaticData = {
       placeholder: "Address",
     },
     phoneNumber: {
-      title: "Phone Number",
+      title: "Phone Number (Parents)",
       placeholder: "+88  0000",
     },
     email: {
