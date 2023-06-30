@@ -1,8 +1,8 @@
 const KJUR = require("jsrsasign");
 import ZOOM from "@/Constant/zoom";
 
-
 export default function handler(req: any, res: any) {
+  console.log(req);
   const iat = Math.round(new Date().getTime() / 1000) - 30;
   const exp = iat + 60 * 60 * 2;
 
@@ -31,5 +31,6 @@ export default function handler(req: any, res: any) {
   res.status(200).json({
     signature: meetingSignature,
     sdkKey: ZOOM.SDK.KEY,
+    message: "success",
   });
 }
