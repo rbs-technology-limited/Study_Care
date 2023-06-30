@@ -2,10 +2,16 @@
 import React, { useEffect } from "react";
 import Styles from "./meeting.module.css";
 import axios from "axios";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const LiveClass = () => {
-  const router = useRouter();
+  const searchParams = useSearchParams();
+  // const pathname = usePathname()
+  // console.log(searchParams.get("meetingNumber"));
+  // console.log(searchParams.get("role"));
+
   useEffect(() => {
     return async () => {
       new Promise(async (resolve, reject) => {
@@ -21,19 +27,20 @@ const LiveClass = () => {
             zoomAppRoot: meetingSDKElement,
           });
 
-          let payload = router.query;
-          console.log(payload);
+          let payload = {
+            meetingNumber: searchParams.get("meetingNumber"),
+            role: searchParams.get("role"),
+            userName: searchParams.get("userName"),
+            password: searchParams.get("password"),
+          };
+          // console.log(searchParams);
           const { data } = await axios({
-            url: "/zoom",
+            url: "/api/zoom",
             method: "POST",
-            body: payload,
-          })
-            .then((res) => {
-              return res;
-            })
-            .catch((error) =>
-              console.log("- signature req failed --> ", error)
-            );
+            data: payload,
+          }).catch((error) => {
+            console.log("error", error);
+          });
           console.log(data);
           client.join({
             signature: data.signature,
@@ -53,7 +60,7 @@ const LiveClass = () => {
           console.log("error", error);
         });
     };
-  }, [router.query]);
+  }, []);
 
   return (
     <div className="container mx-auto">

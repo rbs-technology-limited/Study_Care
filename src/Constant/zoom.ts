@@ -1,8 +1,8 @@
 const ZOOM = {
     SDK:{
-        KEY:"",
-        SECRET:""
+        KEY:"edO395yySTGBmgIkxMBQhQ",
+        SECRET:"GZToUW99114Pjn1Cg5OWQdiAhpvYFMLJ"
     }
 }
 
-export default ZOOM;
+module.exports = ZOOM;
