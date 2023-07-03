@@ -35,5 +35,6 @@ export async function POST(Request: Request) {
   return NextResponse.json({
     message: "success",
     signature: meetingSignature,
+    sdkkey: ZOOM.SDK.KEY,
   });
 }

@@ -46,7 +46,7 @@ const LiveClass = () => {
             signature: data.signature,
             meetingNumber: payload.meetingNumber,
             userName: payload.userName,
-            sdkkey: data.sdkkey,
+            sdkKey: data.sdkkey,
             tk: "",
             success: (success) => {
               console.log("join meeting success");
