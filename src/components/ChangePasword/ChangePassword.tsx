@@ -1,14 +1,13 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
-import { CButton, CInput, SelectField } from "@/Shared";
-import Image from "next/image";
+import { CButton, CInput } from "@/Shared";
 import React, { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
-import { loginStaticData } from "@/Content";
-import LoginSvg from "../svgComponents/LoginSvg";
+import { changePasswordStaticData } from "@/Content";
 import { useRouter } from "next/navigation";
+import ChangePasswordSvg from "../svgComponents/ChangePasswordSvg";
 
-const Login = () => {
+const ChangePassword = () => {
   const router = useRouter();
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,57 +18,55 @@ const Login = () => {
       <div className="flex justify-center items-center text-sm text-gray-600 dark:text-white">
         <div className="w-full md:w-1/3 md:flex justify-center items-center bg-white dark:bg-transparent">
           <div className="px-6 lg:px-14">
-            <h1 className="text-3xl font-bold mb-8">
-              {loginStaticData?.title1}
+            <h1 className=" text-2xl xl:text-3xl font-bold mb-8">
+              {changePasswordStaticData?.title1}
             </h1>
-            <p className="">{loginStaticData?.description}</p>
+            <p className="text-justify">
+              {changePasswordStaticData?.description}
+            </p>
             {/* dashed line */}
-            <div className="border-[0.0925rem] border-dashed mt-6"></div>
+            <div className="border-[0.0925rem] border-dashed my-4 md:my-2 lg:my-3 xl:my-6"></div>
             {/* input section */}
             <form onSubmit={handleSubmit}>
-              <div className="flex justify-between items-center mt-6">
-                <h1 className="text-md font-bold my-1 ">
-                  {loginStaticData?.title2}
-                </h1>
+              <div className="flex justify-between items-center">
+                <label htmlFor="newPassword" className=" font-bold my-1 ">
+                  {changePasswordStaticData?.new_password_label}
+                </label>
                 <BsQuestionCircleFill color={teal} className="cursor-pointer" />
               </div>
-              <CInput type="text" placeholder="Email/Phone" />
-              <CInput type="password" placeholder="Password" />
-
-              <p
-                className="text-button-teal my-1 cursor-pointer"
-                onClick={() => {
-                  router.push("/forgotPassword");
-                }}
-              >
-                {loginStaticData?.link1}
-              </p>
+              <CInput type="text" placeholder="Email/Phone" id="newPassword" />
+              <div className="flex justify-between items-center ">
+                <label htmlFor="confirmPassword" className="font-bold my-1 ">
+                  {changePasswordStaticData?.confirm_password_label}
+                </label>
+                <BsQuestionCircleFill color={teal} className="cursor-pointer" />
+              </div>
+              <CInput
+                type="text"
+                placeholder="Email/Phone"
+                id="confirmPassword"
+              />
               {/* dashed line */}
-              <div className="border-[0.0925rem] border-dashed my-6"></div>
-              {/* button and remember me */}
-              <div className="flex justify-between items-center gap-1">
-                <div className="flex gap-1 items-center">
-                  <SelectField type="checkbox" pl="0" />
-                  <p className="mt-2 cursor-pointer">
-                    {loginStaticData?.title3}
-                  </p>
-                </div>
+              <div className="border-[0.0925rem] border-dashed my-4 md:my-2 lg:my-3 xl:my-6"></div>
+              {/* button*/}
+              <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
                 <CButton
                   type="submit"
                   variant="solid"
                   color={teal}
-                  btnTitle="Log in"
+                  fullWidth
+                  btnTitle={changePasswordStaticData?.button1}
                 />
               </div>
             </form>
-            {/* don't have an account and register */}
-            <div className="flex flex-col justify-center items-center mt-8">
-              <p className="">{`Don't have an account yet?`}</p>
+            {/* customer support part */}
+            <div className="flex flex-col justify-center items-center mt-5 xl:mt-8">
+              <p className="">{changePasswordStaticData?.title3}</p>
               <p
                 className="text-button-teal my-1 cursor-pointer"
                 onClick={() => router.push("/signup")}
               >
-                {loginStaticData?.link2}
+                {changePasswordStaticData?.link1}
               </p>
             </div>
           </div>
@@ -77,8 +74,9 @@ const Login = () => {
         {/* image section */}
         <div className="dark:relative bg-gray-200 dark:bg-transparent hidden md:block w-2/3 md:justify-center md:items-center">
           <div className="h-full">
-            <LoginSvg />
+            <ChangePasswordSvg />
           </div>
+
           {/* left blur */}
           <div className="hidden dark:block dark:absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#1BE1FF] opacity-40 blur-[100px] z-10"></div>
           {/* right blur */}
@@ -89,4 +87,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ChangePassword;
