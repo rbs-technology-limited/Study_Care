@@ -1,7 +1,6 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
 import { CButton, CInput, SelectField } from "@/Shared";
-import Image from "next/image";
 import React, { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { loginStaticData } from "@/Content";

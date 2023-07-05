@@ -12,8 +12,12 @@ const SuccessRegister = () => {
         <h1 className="text-3xl dark:text-white font-bold">
           {registerSuccessStaticData.title}
         </h1>
-        <p className="my-6 w-1/2">{registerSuccessStaticData.message1}</p>
-        <p className="my-4 w-1/2">{registerSuccessStaticData.message2}</p>
+        <p className="my-6 w-3/4 md:w-1/2">
+          {registerSuccessStaticData.message1}
+        </p>
+        <p className="my-4 w-3/4 md:w-1/2">
+          {registerSuccessStaticData.message2}
+        </p>
         <CButton
           variant="solid"
           color={teal}

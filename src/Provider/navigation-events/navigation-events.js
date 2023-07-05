@@ -12,7 +12,8 @@ export function NavigationEvents({ children }) {
       pathname === "/signup" ||
       pathname === "/forgotPassword" ||
       pathname === "/changePassword" ||
-      pathname === "/successRegister" ? null : (
+      pathname === "/successRegister" ||
+      pathname === "/successPassword" ? null : (
         <Header />
       )}
       {children}
@@ -20,7 +21,8 @@ export function NavigationEvents({ children }) {
       pathname === "/signup" ||
       pathname === "/forgotPassword" ||
       pathname === "/changePassword" ||
-      pathname === "/successRegister" ? null : (
+      pathname === "/successRegister" ||
+      pathname === "/successPassword" ? null : (
         <Footer />
       )}
     </>
