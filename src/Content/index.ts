@@ -41,6 +41,7 @@ import loginStaticData from "./login/loginData";
 import signupStaticData from "./signup/signup";
 import forgotPasswordStaticData from "./forgotPassword/forgotPasswordData";
 import changePasswordStaticData from "./changePassword/changePasswordData";
+import { registerSuccessStaticData } from "./success/successData";
 
 export {
   heroContent,
@@ -92,4 +93,5 @@ export {
   signupStaticData,
   forgotPasswordStaticData,
   changePasswordStaticData,
+  registerSuccessStaticData,
 };
