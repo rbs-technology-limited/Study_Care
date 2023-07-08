@@ -1,14 +1,12 @@
-"use client";
 import { teal } from "@/Constant/Custom-Color";
 import { CButton, CInput } from "@/Shared";
 import React, { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { forgotPasswordStaticData } from "@/Content";
-import { useRouter } from "next/navigation";
 import ForgotPasswordSvg from "../svgComponents/ForgotPasswordSvg";
+import Link from "next/link";
 
 const ForgotPassword = () => {
-  const router = useRouter();
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("form submitted");
@@ -51,12 +49,11 @@ const ForgotPassword = () => {
             {/* customer support part */}
             <div className="flex flex-col justify-center items-center mt-8">
               <p className="">{forgotPasswordStaticData?.title3}</p>
-              <p
-                className="text-button-teal my-1 cursor-pointer"
-                onClick={() => router.push("/signup")}
-              >
-                {forgotPasswordStaticData?.link1}
-              </p>
+              <Link href={"/signup"}>
+                <p className="text-button-teal my-1 cursor-pointer">
+                  {forgotPasswordStaticData?.link1}
+                </p>
+              </Link>
             </div>
           </div>
         </div>

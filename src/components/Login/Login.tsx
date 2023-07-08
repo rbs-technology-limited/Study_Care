@@ -5,10 +5,9 @@ import React, { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { loginStaticData } from "@/Content";
 import LoginSvg from "../svgComponents/LoginSvg";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Login = () => {
-  const router = useRouter();
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("form submitted");
@@ -35,14 +34,11 @@ const Login = () => {
               <CInput type="text" placeholder="Email/Phone" />
               <CInput type="password" placeholder="Password" />
 
-              <p
-                className="text-button-teal my-1 cursor-pointer"
-                onClick={() => {
-                  router.push("/forgotPassword");
-                }}
-              >
-                {loginStaticData?.link1}
-              </p>
+              <Link href={"/forgotPassword"}>
+                <p className="text-button-teal my-1 cursor-pointer">
+                  {loginStaticData?.link1}
+                </p>
+              </Link>
               {/* dashed line */}
               <div className="border-[0.0925rem] border-dashed my-6"></div>
               {/* button and remember me */}
@@ -64,12 +60,11 @@ const Login = () => {
             {/* don't have an account and register */}
             <div className="flex flex-col justify-center items-center mt-8">
               <p className="">{`Don't have an account yet?`}</p>
-              <p
-                className="text-button-teal my-1 cursor-pointer"
-                onClick={() => router.push("/signup")}
-              >
-                {loginStaticData?.link2}
-              </p>
+              <Link href={"/signup"}>
+                <p className="text-button-teal my-1 cursor-pointer">
+                  {loginStaticData?.link2}
+                </p>
+              </Link>
             </div>
           </div>
         </div>
