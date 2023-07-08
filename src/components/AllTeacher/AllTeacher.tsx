@@ -26,16 +26,22 @@ const AllTeacher = () => {
   };
 
   return (
-    <section className="container-lg mx-auto px-16 py-8">
+    <section className="container-lg mx-auto px-4 md:px-16 py-8">
       {/*search section  */}
-      <div className="w-1/3 flex gap-2 items-center">
-        <CInput mb="0" onChange={handleInputChange} />
-        <CButton
-          variant="solid"
-          color="teal"
-          btnTitle="Search"
-          onClick={handleSearch}
+      <div className="w-full md:w-2/4 lg:w-1/3 flex flex-col md:flex-row gap-2 md:items-center">
+        <CInput
+          mb="0"
+          onChange={handleInputChange}
+          placeholder="Search by teacher name"
         />
+        <div className="w-2/5">
+          <CButton
+            variant="solid"
+            color="teal"
+            btnTitle="Search"
+            onClick={handleSearch}
+          />
+        </div>
       </div>
       {/* instructor list */}
       <div className="my-8">
