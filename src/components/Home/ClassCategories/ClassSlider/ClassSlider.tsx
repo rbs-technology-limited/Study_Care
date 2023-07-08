@@ -115,7 +115,7 @@ const ClassSlider = ({ data, delayTime }: Class) => {
                     onClick={() => {
                       const id = classData?.id;
                       const category = classData?.class;
-                      route.push(`/categories/${id}?category=${category}`);
+                      route.prefetch(`/categories/${id}?category=${category}`);
                     }}
                   >
                     {classCategoriesData.button}

@@ -59,9 +59,9 @@ const Header = () => {
 
   const handleLogin = (options: string) => {
     if (options === "login") {
-      router.push("/login");
+      router.prefetch("/login");
     } else {
-      router.push("/signup");
+      router.prefetch("/signup");
     }
   };
 
