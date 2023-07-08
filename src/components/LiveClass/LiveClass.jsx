@@ -60,7 +60,7 @@ const LiveClass = () => {
           console.log("error", error);
         });
     };
-  }, []);
+  }, [searchParams]);
 
   return (
     <div className="container mx-auto">
