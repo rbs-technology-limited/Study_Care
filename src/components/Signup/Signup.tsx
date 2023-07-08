@@ -3,12 +3,11 @@ import { teal } from "@/Constant/Custom-Color";
 import React from "react";
 import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
 import RegisterSvg from "../svgComponents/RegisterSvg";
-import { useRouter } from "next/navigation";
 import { signupStaticData } from "@/Content";
 import { CButton, CInput, SelectField } from "@/Shared";
+import Link from "next/link";
 
 const Signup = () => {
-  const router = useRouter();
   return (
     <section className="container-md mx-auto h-screen">
       <div className="flex justify-center items-center text-[11px] lg:text-sm text-gray-600 dark:text-white">
@@ -16,13 +15,14 @@ const Signup = () => {
         <div className="w-full md:w-2/3 px-4 md:px-6 py-6 md:py-2">
           {/* already a member? section */}
           <div className="flex justify-end">
-            <div
-              className="flex items-center gap-1 mb-4 cursor-pointer"
-              onClick={() => router.push("/login")}
-            >
-              <p className="text-button-teal">{signupStaticData?.loginLink}</p>
-              <BsFillPersonFill color={teal} />
-            </div>
+            <Link href={"/login"}>
+              <div className="flex items-center gap-1 mb-4 cursor-pointer">
+                <p className="text-button-teal">
+                  {signupStaticData?.loginLink}
+                </p>
+                <BsFillPersonFill color={teal} />
+              </div>
+            </Link>
           </div>
           {/* title and description */}
           <div className="flex flex-col md:flex-row gap-8">

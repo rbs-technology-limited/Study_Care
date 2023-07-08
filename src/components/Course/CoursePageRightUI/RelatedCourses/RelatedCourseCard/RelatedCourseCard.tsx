@@ -150,7 +150,9 @@ const RelatedCourseCard = ({
           <CButton
             variant="outline"
             color={teal}
-            onClick={() => route.push(`/courses/${relatedCourseCardData.id}`)}
+            onClick={() =>
+              route.prefetch(`/courses/${relatedCourseCardData.id}`)
+            }
           >
             {relatedCoursesStaticData.button2}
           </CButton>

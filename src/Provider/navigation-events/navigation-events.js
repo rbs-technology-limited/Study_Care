@@ -8,9 +8,23 @@ export function NavigationEvents({ children }) {
 
   return (
     <>
-      {pathname === "/login" || pathname === "/signup" ? null : <Header />}
+      {pathname === "/login" ||
+      pathname === "/signup" ||
+      pathname === "/forgotPassword" ||
+      pathname === "/changePassword" ||
+      pathname === "/successRegister" ||
+      pathname === "/successPassword" ? null : (
+        <Header />
+      )}
       {children}
-      {pathname === "/login" || pathname === "/signup" ? null : <Footer />}
+      {pathname === "/login" ||
+      pathname === "/signup" ||
+      pathname === "/forgotPassword" ||
+      pathname === "/changePassword" ||
+      pathname === "/successRegister" ||
+      pathname === "/successPassword" ? null : (
+        <Footer />
+      )}
     </>
   );
 }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import line from "../../../../public/Asset/image/line.svg";
 import SingleCard from "./SingleCard";
 import { instructorContent, instructorsData } from "@/Content";
+import Link from "next/link";
 
 export default function Instructor() {
   return (
@@ -33,9 +34,11 @@ export default function Instructor() {
           </div>
         </div>
         <div className="flex justify-center items-center mt-8">
-          <CButton variant="outline" color={orange} textUpperCased>
-            {instructorContent.button1}
-          </CButton>
+          <Link href="/allTeacher">
+            <CButton variant="outline" color={orange} textUpperCased>
+              {instructorContent.button1}
+            </CButton>
+          </Link>
         </div>
       </div>
 

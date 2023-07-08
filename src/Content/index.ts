@@ -39,6 +39,12 @@ import {
 } from "./singleCoursePage/singleCoursePageData";
 import loginStaticData from "./login/loginData";
 import signupStaticData from "./signup/signup";
+import forgotPasswordStaticData from "./forgotPassword/forgotPasswordData";
+import changePasswordStaticData from "./changePassword/changePasswordData";
+import {
+  registerSuccessStaticData,
+  passwordSuccessStaticData,
+} from "./success/successData";
 
 export {
   heroContent,
@@ -88,4 +94,8 @@ export {
   classTeacherInfoData,
   loginStaticData,
   signupStaticData,
+  forgotPasswordStaticData,
+  changePasswordStaticData,
+  registerSuccessStaticData,
+  passwordSuccessStaticData,
 };
