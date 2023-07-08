@@ -1,3 +1,4 @@
+"use client";
 import { teal } from "@/Constant/Custom-Color";
 import { CButton, CInput } from "@/Shared";
 import React, { FormEvent } from "react";
