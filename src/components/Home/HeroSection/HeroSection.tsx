@@ -29,7 +29,7 @@ const HeroSection = () => {
               className="flex flex-col md:w-1/2 justify-center"
               data-aos="fade-right"
             >
-              <h1 className="text-2xl font-bold text-center md:text-left md:text-3xl dark:text-black">
+              <h1 className="text-2xl font-bold text-center md:text-left md:text-3xl dark:text-white">
                 <span
                   className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold pr-2
               dark:from-orange-300 dark:to-purple-400 py-2
