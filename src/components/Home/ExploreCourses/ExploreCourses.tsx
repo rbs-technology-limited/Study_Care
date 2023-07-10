@@ -1,17 +1,15 @@
 import { exploreCoursesContent } from "@/Content";
-import { CButton } from "@/Shared";
 import Image from "next/image";
-import React from "react";
 import line from "public/Asset/image/line.svg";
 import CourseSectionOne from "./CourseSectionOne/CourseSectionOne";
-import CourseSectionTwo from "./CourseSectionTwo/CourseSectionTwo";
 import CourseSectionThree from "./CourseSectionThree/CourseSectionThree";
+import CourseSectionTwo from "./CourseSectionTwo/CourseSectionTwo";
 
 const ExploreCourses = () => {
   return (
     <main className="relative pb-20 pt-12">
       <div
-        className="absolute top-0 left-0 w-[75%]  h-full bg-yellow-100 dark:bg-yellow-900
+        className="absolute top-0 left-0 w-[75%]  h-full bg-custom-teal dark:bg-yellow-900
       rounded-br-[60px] z-[-5]"
       ></div>
       <section className="container mx-auto px-4 lg:px-8 ">
