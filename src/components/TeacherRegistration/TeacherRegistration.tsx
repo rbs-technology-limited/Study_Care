@@ -8,6 +8,7 @@ const TeacherRegistration = () => {
   const [selectOption, setSelectOption] = useState("dhaka");
   const [selectSegment, setSelectSegment] = useState("Class6-10");
   const [selectYear, setSelectYear] = useState("1stYear");
+
   const options = [
     {
       value: "dhaka",
@@ -45,11 +46,6 @@ const TeacherRegistration = () => {
   const handleSelectYear = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectYear(e.target.value);
   };
-
-  //   const subjects = [
-  //     { id: "bangla", name: "Bangla" },
-  //     { id: "english", name: "English" },
-  //   ];
 
   const subjects = [
     "Bangla",
@@ -114,89 +110,82 @@ const TeacherRegistration = () => {
       {/* form part */}
       <div className="my-5 text-gray-600 dark:text-white">
         <form onSubmit={handleFormSubmit}>
-          <div className="flex gap-5">
-            {/* left part */}
-            <div className="w-full">
-              <div>
-                <label htmlFor="name" className="font-bold text-sm">
-                  Your Full Name (as per NID/Certificate)
-                </label>
-                <CInput type="text" id="name" required />
-              </div>
-              <div>
-                <label htmlFor="phoneNumber" className="font-bold text-sm">
-                  Phone Number
-                </label>
-                <CInput type="text" id="phoneNumber" required />
-              </div>
-              <div>
-                <label htmlFor="currentAddress" className="font-bold text-sm">
-                  Your Current Address
-                </label>
-                <CInput type="text" id="currentAddress" required />
-              </div>
-              <div>
-                <label htmlFor="departmentName" className="font-bold text-sm">
-                  Your Department Name
-                </label>
-                <CInput type="text" id="departmentName" required />
-              </div>
-              <div>
-                <label htmlFor="segment" className="font-bold text-sm">
-                  Which segment are you most comfortable in teaching?
-                </label>
-                <CDropdown
-                  id="segment"
-                  options={segments}
-                  value={selectSegment}
-                  onChange={handleSelectSegment}
-                />
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div>
+              <label htmlFor="name" className="font-bold text-sm">
+                Your Full Name (as per NID/Certificate)
+              </label>
+              <CInput type="text" id="name" required />
             </div>
-            {/* right part */}
-            <div className="w-full">
-              <div>
-                <label htmlFor="email" className="font-bold text-sm">
-                  Email Address
-                </label>
-                <CInput type="email" id="email" required />
-              </div>
-              <div>
-                <label htmlFor="currentLocation" className="font-bold text-sm ">
-                  Your Current Location
-                </label>
-                <CDropdown
-                  options={options}
-                  value={selectOption}
-                  onChange={handleSelectOption}
-                />
-              </div>
-              <div>
-                <label htmlFor="universityName" className="font-bold text-sm">
-                  Your University Name
-                </label>
-                <CInput type="text" id="universityName" required />
-              </div>
-              <div>
-                <label htmlFor="CurrentYear" className="font-bold text-sm">
-                  Your Current Education Year
-                </label>
-                <CDropdown
-                  id="CurrentYear"
-                  options={educationYears}
-                  value={selectOption}
-                  onChange={handleSelectOption}
-                />
-              </div>
-              <div>
-                <label htmlFor="facebookLink" className="font-bold text-sm">
-                  Facebook ID Link (Please try to keep your profile public)
-                </label>
-                <CInput type="text" id="facebookLink" required />
-              </div>
+            <div>
+              <label htmlFor="email" className="font-bold text-sm">
+                Email Address
+              </label>
+              <CInput type="email" id="email" required />
+            </div>
+            <div>
+              <label htmlFor="phoneNumber" className="font-bold text-sm">
+                Phone Number
+              </label>
+              <CInput type="text" id="phoneNumber" required />
+            </div>
+            <div>
+              <label htmlFor="currentLocation" className="font-bold text-sm ">
+                Your Current Location
+              </label>
+              <CDropdown
+                options={options}
+                value={selectOption}
+                onChange={handleSelectOption}
+              />
+            </div>
+            <div>
+              <label htmlFor="currentAddress" className="font-bold text-sm">
+                Your Current Address
+              </label>
+              <CInput type="text" id="currentAddress" required />
+            </div>
+            <div>
+              <label htmlFor="universityName" className="font-bold text-sm">
+                Your University Name
+              </label>
+              <CInput type="text" id="universityName" required />
+            </div>
+            <div>
+              <label htmlFor="departmentName" className="font-bold text-sm">
+                Department Name
+              </label>
+              <CInput type="text" id="departmentName" required />
+            </div>
+            <div>
+              <label htmlFor="CurrentYear" className="font-bold text-sm">
+                Your Current Education Year
+              </label>
+              <CDropdown
+                id="CurrentYear"
+                options={educationYears}
+                value={selectYear}
+                onChange={handleSelectYear}
+              />
+            </div>
+            <div>
+              <label htmlFor="segment" className="font-bold text-sm">
+                Which segment are you most comfortable in teaching?
+              </label>
+              <CDropdown
+                id="segment"
+                options={segments}
+                value={selectSegment}
+                onChange={handleSelectSegment}
+              />
+            </div>
+            <div>
+              <label htmlFor="facebookLink" className="font-bold text-sm">
+                Facebook ID Link (Please try to keep your profile public)
+              </label>
+              <CInput type="text" id="facebookLink" required />
             </div>
           </div>
-
           <TeachingSubjects subjects={subjects} />
 
           <div className="my-4">
