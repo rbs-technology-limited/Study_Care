@@ -41,9 +41,6 @@ const nextConfig = {
       sharp: "commonjs sharp",
       canvas: "commonjs canvas",
     });
-    // config.resolve.alias = Object.assign({}, config.resolve.alias, {
-    //   "react-pdf": "react-pdf/dist/entry.noworker.js",
-    // });
     return config;
   },
   //   typescript: {

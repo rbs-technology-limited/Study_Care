@@ -30,6 +30,7 @@ const TeachingSubjects = ({ subjects, label }: Subjects) => {
                     type="radio"
                     name={`secondChoice_${index}`}
                     value={subject}
+                    className="cursor-pointer"
                   />
                 </td>
               );
@@ -44,6 +45,7 @@ const TeachingSubjects = ({ subjects, label }: Subjects) => {
                     type="radio"
                     name={`secondChoice_${index}`}
                     value={subject}
+                    className="cursor-pointer"
                   />
                 </td>
               );
