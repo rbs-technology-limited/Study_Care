@@ -1,12 +1,13 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
+import { relatedCoursesStaticData } from "@/Content";
 import { CButton } from "@/Shared";
+import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { FaGenderless } from "react-icons/fa";
 import { HiUserGroup } from "react-icons/hi";
-import { relatedCoursesStaticData } from "@/Content";
-import Image from "next/image";
 
 interface IRelatedCardData {
   id: number;
@@ -147,15 +148,11 @@ const RelatedCourseCard = ({
           <CButton variant="solid" color={teal}>
             {relatedCoursesStaticData.button1}
           </CButton>
-          <CButton
-            variant="outline"
-            color={teal}
-            onClick={() =>
-              route.prefetch(`/courses/${relatedCourseCardData.id}`)
-            }
-          >
-            {relatedCoursesStaticData.button2}
-          </CButton>
+          <Link href={`/courses/${relatedCourseCardData.id}`}>
+            <CButton variant="outline" color={teal}>
+              {relatedCoursesStaticData.button2}
+            </CButton>
+          </Link>
         </div>
       </div>
     </section>
