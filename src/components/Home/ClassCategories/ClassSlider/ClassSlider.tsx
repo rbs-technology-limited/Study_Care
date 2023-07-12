@@ -2,15 +2,15 @@
 import { teal } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
 // import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Autoplay, FreeMode, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/free-mode";
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
+import { classCategoriesData } from "@/Content";
+import { useRouter } from "next/navigation";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useRouter } from "next/navigation";
-import { classCategoriesData } from "@/Content";
 
 interface SliderData {
   id: number;
@@ -115,7 +115,7 @@ const ClassSlider = ({ data, delayTime }: Class) => {
                     onClick={() => {
                       const id = classData?.id;
                       const category = classData?.class;
-                      route.prefetch(`/categories/${id}?category=${category}`);
+                      route.push(`/categories/${id}?category=${category}`);
                     }}
                   >
                     {classCategoriesData.button}
