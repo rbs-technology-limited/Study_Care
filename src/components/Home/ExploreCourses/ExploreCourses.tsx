@@ -9,7 +9,7 @@ const ExploreCourses = () => {
   return (
     <main className="relative pb-20 pt-12">
       <div
-        className="absolute top-0 left-0 w-[75%]  h-full bg-custom-teal dark:bg-yellow-900
+        className="absolute top-0 left-0 w-[75%] h-full bg-custom-teal dark:bg-yellow-900
       rounded-br-[60px] z-[-5]"
       ></div>
       <section className="container mx-auto px-4 lg:px-8 ">
@@ -17,7 +17,7 @@ const ExploreCourses = () => {
         <section className="flex flex-col md:flex-row md:justify-between">
           <div className="flex flex-col justify-center">
             <h1
-              className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 font-bold pr-2
+              className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-600 pr-2
               dark:from-orange-300 dark:to-purple-400 py-2"
             >
               {exploreCoursesContent?.content1}

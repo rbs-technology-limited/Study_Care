@@ -2,6 +2,7 @@
 import { teal } from "@/Constant/Custom-Color";
 import { CButton, CDropdown, CInput } from "@/Shared";
 import React, { useState } from "react";
+import { Document, Page, pdfjs } from "react-pdf";
 import TeachingSubjects from "./TeachingSubjects/TeachingSubjects";
 
 const TeacherRegistration = () => {
@@ -102,11 +103,32 @@ const TeacherRegistration = () => {
     console.log("form submitted");
   };
 
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  const onDocumentLoadSuccess = ({ numPages }: any) => {
+    setNumPages(numPages);
+  };
+
+  console.log("numPages", numPages);
+
+  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
   return (
     <section className="container mx-auto px-8 py-8">
       {/*pdf view  */}
-      <div></div>
-
+      <div className="flex justify-center overflow-x-auto w-full">
+        <Document
+          file="/Asset/sampleFile.pdf"
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
+          <Page
+            pageNumber={pageNumber}
+            renderTextLayer={false}
+            renderAnnotationLayer={false}
+          />
+        </Document>
+      </div>
       {/* form part */}
       <div className="my-5 text-gray-600 dark:text-white">
         <form onSubmit={handleFormSubmit}>

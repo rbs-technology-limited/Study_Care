@@ -36,6 +36,16 @@ const nextConfig = {
     appDir: true,
     typedRoutes: true,
   },
+  webpack: (config) => {
+    config.externals.push({
+      sharp: "commonjs sharp",
+      canvas: "commonjs canvas",
+    });
+    // config.resolve.alias = Object.assign({}, config.resolve.alias, {
+    //   "react-pdf": "react-pdf/dist/entry.noworker.js",
+    // });
+    return config;
+  },
   //   typescript: {
   // //     // !! WARN !!
   // //     // Dangerously allow production builds to successfully complete even if
