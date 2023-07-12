@@ -1,12 +1,13 @@
 type Subjects = {
   subjects: string[];
+  label: string;
 };
 
-const TeachingSubjects = ({ subjects }: Subjects) => {
+const TeachingSubjects = ({ subjects, label }: Subjects) => {
   return (
     <div className="mt-2 text-sm">
       <label htmlFor="teachingSubjects" className="font-bold text-sm">
-        Which subjects are you interested in teaching?
+        {label}
       </label>
       <div className="overflow-x-scroll ">
         <table>

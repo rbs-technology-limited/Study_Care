@@ -42,6 +42,14 @@ import {
   passwordSuccessStaticData,
   registerSuccessStaticData,
 } from "./success/successData";
+import {
+  educationYears,
+  options,
+  segments,
+  subjects,
+  teacherRegistrationStaticData,
+} from "./teacherRegistration/teacherRegistration";
+
 export {
   HERO_SECTION_BOTTOM,
   aboutContent,
@@ -61,6 +69,7 @@ export {
   courseSyllabusStaticData,
   coursesCardData,
   couseClassRoutineData,
+  educationYears,
   exploreCoursesContent,
   exploreCoursesData1,
   exploreCoursesData2,
@@ -79,6 +88,7 @@ export {
   loginStaticData,
   mainFeature,
   mainFeatureContent,
+  options,
   passwordSuccessStaticData,
   popularCourses,
   popularCouseContent,
@@ -91,8 +101,11 @@ export {
   reviewsContent,
   reviewsData,
   searchFilterData,
+  segments,
   signupStaticData,
   singleTeacherData,
+  subjects,
+  teacherRegistrationStaticData,
   workflowContent,
   workflowData,
 };

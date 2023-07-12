@@ -1,5 +1,12 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
+import {
+  educationYears,
+  options,
+  segments,
+  subjects,
+  teacherRegistrationStaticData,
+} from "@/Content";
 import { CButton, CDropdown, CInput } from "@/Shared";
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -9,33 +16,8 @@ const TeacherRegistration = () => {
   const [selectOption, setSelectOption] = useState("dhaka");
   const [selectSegment, setSelectSegment] = useState("Class6-10");
   const [selectYear, setSelectYear] = useState("1stYear");
-
-  const options = [
-    {
-      value: "dhaka",
-      label: "Dhaka",
-    },
-    {
-      value: "chattogram",
-      label: "Chattogram",
-    },
-    {
-      value: "rajshahi",
-      label: "Rajshahi",
-    },
-    {
-      value: "khulna",
-      label: "Khulna",
-    },
-    {
-      value: "barishal",
-      label: "Barishal",
-    },
-    {
-      value: "sylhet",
-      label: "Sylhet",
-    },
-  ];
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
 
   const handleSelectOption = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectOption(e.target.value);
@@ -48,80 +30,37 @@ const TeacherRegistration = () => {
     setSelectYear(e.target.value);
   };
 
-  const subjects = [
-    "Bangla",
-    "English",
-    "math",
-    "physics",
-    "chemistry",
-    "ict",
-    "biology",
-    "accounting",
-    "finance",
-    "marketing",
-    "management",
-    "economics",
-    "statistics",
-    "history",
-  ];
-
-  const segments = [
-    {
-      value: "class6-10",
-      label: "Class 6-10",
-    },
-    {
-      value: "hscAndUniversityAdmission",
-      label: "HSC and University Admission",
-    },
-    {
-      value: "both",
-      label: "Both",
-    },
-  ];
-  const educationYears = [
-    {
-      value: "1stYear",
-      label: "1st Year",
-    },
-    {
-      value: "2ndYear",
-      label: "2nd Year",
-    },
-    {
-      value: "3rdYear",
-      label: "3rd Year",
-    },
-    {
-      value: "4thYear",
-      label: "4th Year",
-    },
-  ];
-
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("form submitted");
   };
 
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+  // pdf view
 
   const onDocumentLoadSuccess = ({ numPages }: any) => {
     setNumPages(numPages);
   };
 
-  console.log("numPages", numPages);
-
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
+  const {
+    lName,
+    lCurrentAddress,
+    lCurrentLocation,
+    lCurrentYear,
+    lDepartmentName,
+    lEmail,
+    lPhoneNumber,
+    lSegment,
+    lSubject,
+    lUniversityName,
+    lFbLink,
+  } = teacherRegistrationStaticData;
   return (
     <section className="container mx-auto px-8 py-8">
       {/*pdf view  */}
       <div className="flex justify-center overflow-x-auto w-full">
-        <Document
-          file="/Asset/sampleFile.pdf"
-          onLoadSuccess={onDocumentLoadSuccess}
-        >
+        <Document file="/demoSample1.pdf" onLoadSuccess={onDocumentLoadSuccess}>
           <Page
             pageNumber={pageNumber}
             renderTextLayer={false}
@@ -130,30 +69,30 @@ const TeacherRegistration = () => {
         </Document>
       </div>
       {/* form part */}
-      <div className="my-5 text-gray-600 dark:text-white">
+      <div className="my-5 text-sm text-gray-600 dark:text-white">
         <form onSubmit={handleFormSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div>
-              <label htmlFor="name" className="font-bold text-sm">
-                Your Full Name (as per NID/Certificate)
+              <label htmlFor="name" className="font-bold ">
+                {lName}
               </label>
               <CInput type="text" id="name" required />
             </div>
             <div>
-              <label htmlFor="email" className="font-bold text-sm">
-                Email Address
+              <label htmlFor="email" className="font-bold ">
+                {lEmail}
               </label>
               <CInput type="email" id="email" required />
             </div>
             <div>
-              <label htmlFor="phoneNumber" className="font-bold text-sm">
-                Phone Number
+              <label htmlFor="phoneNumber" className="font-bold ">
+                {lPhoneNumber}
               </label>
               <CInput type="text" id="phoneNumber" required />
             </div>
             <div>
-              <label htmlFor="currentLocation" className="font-bold text-sm ">
-                Your Current Location
+              <label htmlFor="currentLocation" className="font-bold  ">
+                {lCurrentLocation}
               </label>
               <CDropdown
                 options={options}
@@ -162,26 +101,26 @@ const TeacherRegistration = () => {
               />
             </div>
             <div>
-              <label htmlFor="currentAddress" className="font-bold text-sm">
-                Your Current Address
+              <label htmlFor="currentAddress" className="font-bold ">
+                {lCurrentAddress}
               </label>
               <CInput type="text" id="currentAddress" required />
             </div>
             <div>
-              <label htmlFor="universityName" className="font-bold text-sm">
-                Your University Name
+              <label htmlFor="universityName" className="font-bold ">
+                {lUniversityName}
               </label>
               <CInput type="text" id="universityName" required />
             </div>
             <div>
-              <label htmlFor="departmentName" className="font-bold text-sm">
-                Department Name
+              <label htmlFor="departmentName" className="font-bold ">
+                {lDepartmentName}
               </label>
               <CInput type="text" id="departmentName" required />
             </div>
             <div>
-              <label htmlFor="CurrentYear" className="font-bold text-sm">
-                Your Current Education Year
+              <label htmlFor="CurrentYear" className="font-bold ">
+                {lCurrentYear}
               </label>
               <CDropdown
                 id="CurrentYear"
@@ -191,8 +130,8 @@ const TeacherRegistration = () => {
               />
             </div>
             <div>
-              <label htmlFor="segment" className="font-bold text-sm">
-                Which segment are you most comfortable in teaching?
+              <label htmlFor="segment" className="font-bold ">
+                {lSegment}
               </label>
               <CDropdown
                 id="segment"
@@ -202,15 +141,15 @@ const TeacherRegistration = () => {
               />
             </div>
             <div>
-              <label htmlFor="facebookLink" className="font-bold text-sm">
-                Facebook ID Link (Please try to keep your profile public)
+              <label htmlFor="facebookLink" className="font-bold ">
+                {lFbLink}
               </label>
               <CInput type="text" id="facebookLink" required />
             </div>
           </div>
-          <TeachingSubjects subjects={subjects} />
+          <TeachingSubjects subjects={subjects} label={lSubject} />
 
-          <div className="my-4">
+          <div className="my-5">
             <CButton
               type="submit"
               color={teal}
