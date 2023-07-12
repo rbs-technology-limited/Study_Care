@@ -4,7 +4,6 @@ import { courseData } from "@/Content";
 import { CButton } from "@/Shared";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { FaGenderless } from "react-icons/fa";
 import { HiUserGroup } from "react-icons/hi";
@@ -27,7 +26,6 @@ interface ICourseCardData {
 }
 
 const CourseCard = ({ courseCardData }: ICourseCardData) => {
-  const route = useRouter();
   const [isCardHovered, setIsCardHovered] = React.useState<boolean>(false);
 
   type BanglaDigit = string | number;
