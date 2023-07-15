@@ -1,3 +1,4 @@
+import { teal } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,7 +43,7 @@ const DashboardCard = ({ data }: ICardData) => {
           </div>
           <CButton
             variant="outline"
-            color="teal"
+            color={teal}
             btnTitle="See Course Report"
           />
         </div>
