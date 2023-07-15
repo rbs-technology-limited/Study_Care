@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import UserInfo from "./UserInfo/UserInfo";
 
 const StudentProfile = () => {
-    return (
-        <div>
-            StudentProfile
-        </div>
-    );
+  return (
+    <div>
+      <UserInfo />
+    </div>
+  );
 };
 
 export default StudentProfile;
