@@ -23,9 +23,10 @@ interface ICardData {
 }
 interface ICourseCardData {
   courseCardData: ICardData;
+  key: number;
 }
 
-const CourseCard = ({ courseCardData }: ICourseCardData) => {
+const CourseCard = ({ courseCardData,key }: ICourseCardData) => {
   const [isCardHovered, setIsCardHovered] = React.useState<boolean>(false);
 
   type BanglaDigit = string | number;
@@ -41,7 +42,7 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
 
   return (
     <>
-      <section
+      <section key={key}
         className={`p-1 relative`}
         onMouseEnter={() => setIsCardHovered(true)}
         onMouseLeave={() => setIsCardHovered(false)}
