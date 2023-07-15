@@ -1,11 +1,11 @@
-import React from 'react';
+import StudentDashboard from "@/components/StudentDashboard/StudentDashboard";
 
 const page = () => {
-    return (
-        <div>
-            <h1>Student Dashboard</h1>
-        </div>
-    );
+  return (
+    <div className="mt-[4.4rem]">
+      <StudentDashboard />
+    </div>
+  );
 };
 
 export default page;
