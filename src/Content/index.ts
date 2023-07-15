@@ -50,6 +50,11 @@ import {
   teacherRegistrationStaticData,
 } from "./teacherRegistration/teacherRegistration";
 
+import {
+  dashboardCardData,
+  dashboardLeftSideStaticData,
+} from "./dashboard/dashboard";
+
 export {
   HERO_SECTION_BOTTOM,
   aboutContent,
@@ -69,6 +74,8 @@ export {
   courseSyllabusStaticData,
   coursesCardData,
   couseClassRoutineData,
+  dashboardCardData,
+  dashboardLeftSideStaticData,
   educationYears,
   exploreCoursesContent,
   exploreCoursesData1,

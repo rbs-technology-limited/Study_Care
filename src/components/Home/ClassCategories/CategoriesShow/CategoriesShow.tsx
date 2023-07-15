@@ -1,11 +1,11 @@
 "use client";
 
+import { teal } from "@/Constant/Custom-Color";
 import { CButton, OffCanvus } from "@/Shared";
-import React, { useState } from "react";
+import { useState } from "react";
+import { BiFilterAlt } from "react-icons/bi";
 import CategoriesLeftFilterUI from "./CategoriesLeftFilterUI/CategoriesLeftFilterUI";
 import CategoriesRightDataUI from "./CategoriesRightDataUI/CategoriesRightDataUI";
-import { teal } from "@/Constant/Custom-Color";
-import { BiFilterAlt } from "react-icons/bi";
 
 const CategoriesShow = () => {
   const [showLeftSection, setShowLeftSection] = useState<boolean>(false);
