@@ -1,8 +1,8 @@
 "use client";
+import { instructorsData } from "@/Content";
 import { CButton, CInput } from "@/Shared";
 import React, { ChangeEvent } from "react";
 import SingleCard from "../Home/instructor/SingleCard";
-import { instructorsData } from "@/Content";
 
 type inputEvent = ChangeEvent<HTMLInputElement>;
 

@@ -1,13 +1,12 @@
 "use client";
-import { CButton } from "@/Shared";
-import React from "react";
-import { FaEdit, FaGenderless } from "react-icons/fa";
-import { RiDeleteBin5Fill } from "react-icons/ri";
-import { HiUserGroup } from "react-icons/hi";
 import { teal } from "@/Constant/Custom-Color";
 import { courseData } from "@/Content";
+import { CButton } from "@/Shared";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import React from "react";
+import { FaGenderless } from "react-icons/fa";
+import { HiUserGroup } from "react-icons/hi";
 
 interface ICardData {
   id: number;
@@ -27,7 +26,6 @@ interface ICourseCardData {
 }
 
 const CourseCard = ({ courseCardData }: ICourseCardData) => {
-  const route = useRouter();
   const [isCardHovered, setIsCardHovered] = React.useState<boolean>(false);
 
   type BanglaDigit = string | number;
@@ -150,13 +148,11 @@ const CourseCard = ({ courseCardData }: ICourseCardData) => {
             <CButton variant="solid" color={teal}>
               {courseData.button1}
             </CButton>
-            <CButton
-              variant="outline"
-              color={teal}
-              onClick={() => route.push(`/courses/${courseCardData.id}`)}
-            >
-              {courseData.button2}
-            </CButton>
+            <Link href={`/courses/${courseCardData.id}`}>
+              <CButton variant="outline" color={teal}>
+                {courseData.button2}
+              </CButton>
+            </Link>
           </div>
           {/* delete and edit button visible on hover */}
           {/* <div

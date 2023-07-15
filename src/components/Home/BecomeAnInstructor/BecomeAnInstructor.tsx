@@ -1,9 +1,10 @@
 import { teal } from "@/Constant/Custom-Color";
+import { becomeAnInstructorData } from "@/Content";
 import { CButton } from "@/Shared";
 import Image from "next/image";
+import Link from "next/link";
 import line from "public/Asset/image/line.svg";
 import demoInstructorImage from "public/Asset/svg/becomeAnInstructor/instructor.svg";
-import { becomeAnInstructorData } from "@/Content";
 
 const BecomeAnInstructor = () => {
   return (
@@ -21,9 +22,11 @@ const BecomeAnInstructor = () => {
               <p className="text-sm md:text-xl mb-6">
                 {becomeAnInstructorData?.description}
               </p>
-              <CButton color={teal} variant="outline">
-                {becomeAnInstructorData?.buttonText}
-              </CButton>
+              <Link href={"/teacherRegistration"}>
+                <CButton color={teal} variant="outline">
+                  {becomeAnInstructorData?.buttonText}
+                </CButton>
+              </Link>
             </div>
             <div className="relative" data-aos="fade-left">
               <Image

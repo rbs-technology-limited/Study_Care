@@ -2,6 +2,7 @@
 import { lightPurple } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface item {
@@ -37,9 +38,11 @@ export default function SingleCard({ name, designation, image, id }: item) {
             @{designation}
           </p>
         </div>
-        <CButton variant="outline" color={lightPurple} textUpperCased>
-          প্রোফাইল
-        </CButton>
+        <Link href={`/allTeacher/teacherProfile/${id}`}>
+          <CButton variant="outline" color={lightPurple} textUpperCased>
+            প্রোফাইল
+          </CButton>
+        </Link>
       </div>
       <div className="absolute  top-0 right-0 w-64 h-64 rounded-full dark:bg-[#FBC131] bg-[#1BE1FF] dark:opacity-40 opacity-10  blur-[100px] z-10"></div>
     </div>
