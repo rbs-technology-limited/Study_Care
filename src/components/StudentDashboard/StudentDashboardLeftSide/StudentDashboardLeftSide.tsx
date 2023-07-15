@@ -9,26 +9,18 @@ const StudentDashboardLeftSide = ({
   setSelectedOption,
 }: IStudentDashboardLeftSide) => {
   const { title1, title2, title3 } = dashboardLeftSideStaticData;
+  const titles = [title1, title2, title3];
   return (
-    <section className="p-3 bg-[#D9D9D9] min-h-screen">
-      <h1
-        className="bg-custom-teal px-2 py-1 my-4 cursor-pointer"
-        onClick={() => setSelectedOption(title1)}
-      >
-        {title1}
-      </h1>
-      <h1
-        className="bg-custom-teal px-2 py-1 my-4 cursor-pointer"
-        onClick={() => setSelectedOption(title2)}
-      >
-        {title2}
-      </h1>
-      <h1
-        className="bg-custom-teal px-2 py-1 my-4 cursor-pointer"
-        onClick={() => setSelectedOption(title3)}
-      >
-        {title3}
-      </h1>
+    <section className="p-3 bg-gray-50 min-h-screen rounded">
+      {titles.map((title) => (
+        <h1
+          key={title}
+          className="bg-button-teal/10 rounded p-2 border border-button-teal my-4 cursor-pointer text-md"
+          onClick={() => setSelectedOption(title)}
+        >
+          {title}
+        </h1>
+      ))}
     </section>
   );
 };
