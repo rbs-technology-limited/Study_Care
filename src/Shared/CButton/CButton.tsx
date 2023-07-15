@@ -41,7 +41,7 @@ const CButton = ({
         className={
           customClass
             ? customClass
-            : ` px-4 
+            : ` px-3
             mt-1
             ${height ? height : "h-[2.4rem]"}
 
