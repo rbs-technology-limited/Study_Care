@@ -41,9 +41,11 @@ const MENU_LIST = [
       },
     ],
   },
-  { text: "আমাদের পণ্যসমূহ", href: "/products" },
+  // { text: "আমাদের পণ্যসমূহ", href: "/products" },
   { text: "আমাদের সম্পর্কে", href: "/about" },
   { text: "যোগাযোগ", href: "/contact" },
+  { text: "ড্যাশবোর্ড"
+  , href: "/student_dashboard" },
 ];
 
 export default MENU_LIST;

@@ -24,6 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
+        {/* <link rel="manifest" href="/manifest.json" /> */}
       </head>
 
       <body
