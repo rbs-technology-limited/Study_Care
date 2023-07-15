@@ -1,7 +1,7 @@
 "use client";
 import { dashboardCardData } from "@/Content";
-import DashboardCard from "../DashboardCard/DashboardCard";
 import React from "react";
+import DashboardCard from "../DashboardCard/DashboardCard";
 
 type IDashboardRightSide = {
   selectedOption: string;
