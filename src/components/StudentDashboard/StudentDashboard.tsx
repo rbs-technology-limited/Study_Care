@@ -8,6 +8,7 @@ import { teal } from "@/Constant/Custom-Color";
 const StudentDashboard = () => {
   const [selectedOption, setSelectedOption] = useState("MY COURSES");
   const [showMenu, setShowMenu] = useState(false);
+
   return (
     <section
       className="container mx-auto lg:px-8 px-4 text-black
