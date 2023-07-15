@@ -6,6 +6,7 @@ const page = () => {
       <StudentDashboard />
     </div>
   );
+
 };
 
 export default page;
