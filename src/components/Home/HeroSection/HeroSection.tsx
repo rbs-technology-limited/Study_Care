@@ -47,7 +47,11 @@ const HeroSection = () => {
                 {heroContent?.content3}
               </p>
               <section className="mt-4 flex justify-center md:justify-start">
-                <CButton variant="text" color={"text-button-teal dark:text-button-dark-teal"} textUpperCased>
+                <CButton
+                  variant="text"
+                  color={"text-button-teal dark:text-button-dark-teal"}
+                  textUpperCased
+                >
                   {heroContent?.button1}
                 </CButton>
                 <CButton variant="solid" color={teal} textUpperCased>
