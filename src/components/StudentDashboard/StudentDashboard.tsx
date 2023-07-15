@@ -4,7 +4,8 @@ import StudentDashboardLeftSide from "./StudentDashboardLeftSide/StudentDashboar
 import StudentDashboardRightSide from "./StudentDashboardRightSide/StudentDashboardRightSide";
 
 const StudentDashboard = () => {
-  const [selectedOption, setSelectedOption] = useState("MY COURSES");
+  const [selectedOption, setSelectedOption] = useState<string>("MY COURSES");
+
   return (
     <section
       className="container mx-auto lg:px-8 px-4 text-black
@@ -14,7 +15,7 @@ const StudentDashboard = () => {
         className="flex justify-between gap-2
           lg:flex-row flex-col h-[56.25rem] "
       >
-        <div className="dark:border-gray-200/10 max-w-xs">
+        <div className="dark:border-gray-200/10 max-w-xs w-full">
           {/* left side */}
           <StudentDashboardLeftSide setSelectedOption={setSelectedOption} />
         </div>
