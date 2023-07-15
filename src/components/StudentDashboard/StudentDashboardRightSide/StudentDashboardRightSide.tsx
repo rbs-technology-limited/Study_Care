@@ -2,6 +2,7 @@
 import { dashboardCardData } from "@/Content";
 import DashboardCard from "../DashboardCard/DashboardCard";
 import React from "react";
+import StudentProfile from "../StudentProfile/StudentProfile";
 
 type IDashboardRightSide = {
   selectedOption: string;
@@ -12,7 +13,7 @@ const StudentDashboardRightSide = ({ selectedOption }: IDashboardRightSide) => {
     switch (selectedOption) {
       case "MY COURSES":
         return (
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             {dashboardCardData.map((cardData) => (
               <DashboardCard key={cardData.id} data={cardData} />
             ))}
@@ -20,7 +21,7 @@ const StudentDashboardRightSide = ({ selectedOption }: IDashboardRightSide) => {
         );
 
       case "PROFILE":
-        return <div>Profile</div>;
+        return <StudentProfile />;
 
       case "CHANGE PASSWORD":
         return <div>Change Password</div>;
@@ -36,7 +37,11 @@ const StudentDashboardRightSide = ({ selectedOption }: IDashboardRightSide) => {
     }
   }, [selectedOption]);
 
-  return <section>{contents}</section>;
+  return (
+    <section className="p-3 bg-gray-50 min-h-screen rounded">
+      {contents}
+    </section>
+  );
 };
 
 export default StudentDashboardRightSide;

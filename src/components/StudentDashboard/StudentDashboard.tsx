@@ -14,14 +14,14 @@ const StudentDashboard = () => {
   min-h-screen relative"
     >
       <div
-        className="flex justify-between gap-2
+        className="flex lg:justify-between gap-2
           lg:flex-row flex-col h-[56.25rem] "
       >
-        <div className="dark:border-gray-200/10 max-w-xs hidden md:block">
+        <div className="dark:border-gray-200/10 hidden lg:block md:w-1/4">
           {/* left side */}
-          <StudentDashboardLeftSide setSelectedOption={setSelectedOption} />
+          <StudentDashboardLeftSide setSelectedOption={setSelectedOption} selectedOption={selectedOption} />
         </div>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           {/* left side */}
           <CButton
             variant="solid"
@@ -31,10 +31,10 @@ const StudentDashboard = () => {
             Show Menu
           </CButton>
           <OffCanvus open={showMenu} setOpen={setShowMenu} title="Menu">
-            <StudentDashboardLeftSide setSelectedOption={setSelectedOption} />
+            <StudentDashboardLeftSide setSelectedOption={setSelectedOption} selectedOption={selectedOption} />
           </OffCanvus>
         </div>
-        <div className=" rounded w-full lg:w-[80%] px-1 overflow-y-auto overflow-x-hidden">
+        <div className=" rounded w-full px-1 overflow-y-auto overflow-x-hidden">
           {/* right side */}
           <StudentDashboardRightSide selectedOption={selectedOption} />
         </div>
