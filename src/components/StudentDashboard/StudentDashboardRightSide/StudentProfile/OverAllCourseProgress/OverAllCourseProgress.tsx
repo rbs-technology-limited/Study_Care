@@ -1,5 +1,4 @@
 import { courseProgressContent, courseProgressData } from "@/Content";
-import React from "react";
 import { Tooltip } from "react-tooltip";
 
 const OverAllCourseProgress = () => {
@@ -14,11 +13,12 @@ const OverAllCourseProgress = () => {
   };
 
   return (
-    <main className="my-10 border p-5 rounded-lg">
-      <section className="mb-5">
+    <main className="mt-16">
+      <section className="my-5">
         <h1 className="text-xl font-bold text-gray-600">{courseProgressContent?.title}</h1>
       </section>
-      <div className="flex flex-wrap w-full">
+        <section className="border p-5 rounded-lg bg-white shadow-md">
+        <div className="flex flex-wrap w-full">
         {courseProgressData.map((contribution: any) => (
           <>
             <a
@@ -41,7 +41,8 @@ const OverAllCourseProgress = () => {
           </>
         ))}
       </div>
-    </main>
+    </section>
+</main>
   );
 };
 

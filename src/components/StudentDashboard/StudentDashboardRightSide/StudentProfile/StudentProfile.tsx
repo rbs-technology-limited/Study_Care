@@ -10,7 +10,7 @@ const StudentProfile = () => {
     <div>
       <UserInfo data={profileData} />
       <CourseProgressInfos data={profileData.courseProgressData} />
-      <QuizReportSummary />
+      <QuizReportSummary data={profileData.quizReportSummary}/>
       <OverAllCourseProgress />
       <AssignmentReportSummary />
     </div>

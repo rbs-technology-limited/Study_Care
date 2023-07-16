@@ -27,15 +27,15 @@ const CourseProgressInfos = ({ data }: ICourseProgress) => {
     return (
       <React.Fragment key={item.id}>
         <div
-          className={`${conditions} ${firstElementLeftBorderRadius} border-gray-200 px-2 py-4 text-sm shadow-sm`}
+          className={`${conditions} ${firstElementLeftBorderRadius} border-gray-200 bg-white px-2 py-4 shadow-md`}
         >
-          <h1 className="text-lg font-bold text-gray-600">{item.title}</h1>
+          <h1 className="text-md font-bold text-gray-600">{item.title}</h1>
           <div className="flex justify-between items-center my-2">
             <h1 className="text-gray-600 flex items-center">
-              <span className="text-xl font-bold text-button-teal mr-[0.0625rem]">
+              <span className="text-md font-bold text-button-teal mr-[0.0625rem]">
                 {item?.total_modules} টি
               </span>
-              <span className="ml-[0.0625rem] font-semibold">
+              <span className="ml-[0.0625rem] font-semibold text-sm">
                 (বাকি আছে {item.incomplete_module} টি)
               </span>
             </h1>
@@ -51,7 +51,7 @@ const CourseProgressInfos = ({ data }: ICourseProgress) => {
 
   return (
     <section className="mt-24 dark:text-white">
-      <h1 className="text-xl font-bold text-gray-600 my-3">
+      <h1 className="text-xl font-bold text-gray-600 my-5">
         কোর্স অগ্রগতি - Batch-2
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3">{contents}</div>

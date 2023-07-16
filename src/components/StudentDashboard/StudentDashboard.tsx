@@ -1,9 +1,9 @@
 "use client";
+import { teal } from "@/Constant/Custom-Color";
+import { CButton, OffCanvus } from "@/Shared";
 import { useState } from "react";
 import StudentDashboardLeftSide from "./StudentDashboardLeftSide/StudentDashboardLeftSide";
 import StudentDashboardRightSide from "./StudentDashboardRightSide/StudentDashboardRightSide";
-import { CButton, OffCanvus } from "@/Shared";
-import { teal } from "@/Constant/Custom-Color";
 
 const StudentDashboard = () => {
   const [selectedOption, setSelectedOption] = useState("MY COURSES");
@@ -16,7 +16,7 @@ const StudentDashboard = () => {
     >
       <div
         className="flex lg:justify-between gap-2
-          lg:flex-row flex-col h-[56.25rem] "
+          lg:flex-row flex-col"
       >
         <div className="dark:border-gray-200/10 hidden lg:block md:w-1/4">
           {/* left side */}

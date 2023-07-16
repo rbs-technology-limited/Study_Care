@@ -1,4 +1,3 @@
-import React from "react";
 import Chart from "react-apexcharts";
 
 const AssignmentReportSummary = () => {
@@ -12,12 +11,12 @@ const AssignmentReportSummary = () => {
   };
 
   return (
-    <main>
+    <main className="mt-16">
       <h1 className="text-xl font-bold text-gray-600">
         অ্যাসাইনমেন্ট রিপোর্ট সারসংক্ষেপ
       </h1>
       <section className="my-5">
-        <div className="border md:w-3/5 w-full p-5 rounded">
+        <div className="border md:w-3/5 w-full p-5 rounded shadow-md bg-white">
           <section className="mb-5 flex flex-col-reverse md:flex-row justify-between items-center">
             <div className="flex justify-between w-full">
               <div className="w-full">
@@ -52,17 +51,18 @@ const AssignmentReportSummary = () => {
                       },
                       dataLabels: {
                         value: {
-                          show: false,
+                          show: true,
                         },
                       },
                     },
                   },
                   labels: [
-                    `${
-                      (data.getTotalAssignmentMarks /
-                        data.totalAssignmentMarks) *
-                      100
-                    }%`,
+                    // `${
+                    //   (data.getTotalAssignmentMarks /
+                    //     data.totalAssignmentMarks) *
+                    //   100
+                    // }%`,
+                    'গড় মার্ক'
                   ],
                 }}
                 series={[
@@ -70,7 +70,7 @@ const AssignmentReportSummary = () => {
                     100,
                 ]}
                 type="radialBar"
-                width="180"
+                width="250"
               />
             </section>
           </section>
