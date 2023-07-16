@@ -55,7 +55,9 @@ import {
 } from "./teacherRegistration/teacherRegistration";
 
 import { profileData } from "./dashboard/studentProfile";
-
+import courseProgressContent, {
+  courseProgressData,
+} from "./dashboard/courseCompleteAllProgress";
 export {
   HERO_SECTION_BOTTOM,
   aboutContent,
@@ -117,4 +119,6 @@ export {
   teacherRegistrationStaticData,
   workflowContent,
   workflowData,
+  courseProgressData,
+  courseProgressContent,
 };
