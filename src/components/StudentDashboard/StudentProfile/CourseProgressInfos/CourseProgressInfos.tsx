@@ -27,7 +27,7 @@ const CourseProgressInfos = ({ data }: ICourseProgress) => {
     return (
       <React.Fragment key={item.id}>
         <div
-          className={`${conditions} ${firstElementLeftBorderRadius} border-gray-200 px-2 py-4 text-sm`}
+          className={`${conditions} ${firstElementLeftBorderRadius} border-gray-200 px-2 py-4 text-sm shadow-sm`}
         >
           <h1 className="text-lg font-bold text-gray-600">{item.title}</h1>
           <div className="flex justify-between items-center my-2">
