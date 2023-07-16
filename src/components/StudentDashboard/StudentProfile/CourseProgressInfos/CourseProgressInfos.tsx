@@ -54,10 +54,7 @@ const CourseProgressInfos = ({ data }: ICourseProgress) => {
       <h1 className="text-xl font-bold text-gray-600 my-3">
         কোর্স অগ্রগতি - Batch-2
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        {/* three module statics boxes */}
-        {contents}
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3">{contents}</div>
     </section>
   );
 };

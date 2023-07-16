@@ -29,7 +29,7 @@ const UserInfo = ({ data }: IUserInfo) => {
             Change
           </CButton>
         </div>
-        <div className="flex flex-col text-sm gap-2 flex-1 bg-white p-2 rounded">
+        <div className="flex flex-col text-md gap-2 flex-1 bg-white p-2 rounded">
           <h1 className="text-xl font-bold">{data?.name}</h1>
           <p className="text-sm">
             <span className="font-bold">Email:</span> {data?.email}
