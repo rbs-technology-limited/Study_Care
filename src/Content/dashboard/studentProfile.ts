@@ -26,4 +26,12 @@ export const profileData = {
       progress: 100,
     },
   ],
+  quizReportSummary: {
+    total_quiz: 10,
+    total_attempts: 10,
+    correct_answers: 8,
+    total_questions: 10,
+    obtained_marks: 80,
+    total_marks: 100,
+  },
 };

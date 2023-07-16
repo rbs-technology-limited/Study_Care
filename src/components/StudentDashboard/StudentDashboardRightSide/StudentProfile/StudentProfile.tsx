@@ -1,14 +1,16 @@
 import { profileData } from "@/Content";
-import CourseProgressInfos from "./CourseProgressInfos/CourseProgressInfos";
-import UserInfo from "./UserInfo/UserInfo";
-import OverAllCourseProgress from "./OverAllCourseProgress/OverAllCourseProgress";
 import AssignmentReportSummary from "./AssignmentReportSummary/AssignmentReportSummary";
+import CourseProgressInfos from "./CourseProgressInfos/CourseProgressInfos";
+import OverAllCourseProgress from "./OverAllCourseProgress/OverAllCourseProgress";
+import QuizReportSummary from "./QuizReportSummary/QuizReportSummary";
+import UserInfo from "./UserInfo/UserInfo";
 
 const StudentProfile = () => {
   return (
     <div>
       <UserInfo data={profileData} />
       <CourseProgressInfos data={profileData.courseProgressData} />
+      <QuizReportSummary />
       <OverAllCourseProgress />
       <AssignmentReportSummary />
     </div>
