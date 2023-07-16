@@ -15,7 +15,7 @@ const UserInfo = ({ data }: IUserInfo) => {
   return (
     <main>
       {/* //left will be user image and right will be students inf0 */}
-      <div className="flex md:flex-row flex-col gap-4 text-gray-600 dark:text-white">
+      <div className="flex md:flex-row flex-col gap-4 text-gray-600">
         <div className="flex flex-col gap-2 items-center">
           <Image
             src="https://picsum.photos/200/300"
