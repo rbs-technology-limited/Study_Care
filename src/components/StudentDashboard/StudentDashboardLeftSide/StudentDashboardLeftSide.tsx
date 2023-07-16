@@ -13,7 +13,7 @@ const StudentDashboardLeftSide = ({
   const { title1, title2, title3 } = dashboardLeftSideStaticData;
   const titles = [title1, title2, title3];
   return (
-    <section className="p-3 bg-gray-50 min-h-screen rounded">
+    <section className="p-3 bg-gray-50 rounded">
       {titles?.map((title) => (
         <h1
           key={title}
