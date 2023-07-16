@@ -1,10 +1,12 @@
-import React from "react";
+import { profileData } from "@/Content";
+import CourseProgressInfos from "./CourseProgressInfos/CourseProgressInfos";
 import UserInfo from "./UserInfo/UserInfo";
 
 const StudentProfile = () => {
   return (
     <div>
-      <UserInfo />
+      <UserInfo data={profileData} />
+      <CourseProgressInfos data={profileData.courseProgressData} />
     </div>
   );
 };

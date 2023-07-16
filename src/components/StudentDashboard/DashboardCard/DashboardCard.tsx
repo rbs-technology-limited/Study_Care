@@ -1,3 +1,5 @@
+import { teal } from "@/Constant/Custom-Color";
+import { CButton } from "@/Shared";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,6 +32,20 @@ const DashboardCard = ({ data }: ICardData) => {
             {/* title */}
             {data.title}
           </h1>
+          <div className="flex gap-1 justify-center items-center">
+            <input
+              type="range"
+              value={data?.progress}
+              readOnly
+              className="my-2"
+            />
+            <p className="text-xs dark:text-white">{data?.progress}%</p>
+          </div>
+          <CButton
+            variant="outline"
+            color={teal}
+            btnTitle="See Course Report"
+          />
         </div>
       </div>
     </Link>
