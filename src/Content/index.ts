@@ -19,6 +19,10 @@ import reviewsContent, { reviewsData } from "./Home/reviews";
 import workflowContent, { workflowData } from "./Home/workflow";
 import changePasswordStaticData from "./changePassword/changePasswordData";
 import coursesCardData, { courseData } from "./course/coursesData";
+import {
+  dashboardCardData,
+  dashboardLeftSideStaticData,
+} from "./dashboard/dashboard";
 import filterData, { searchFilterData } from "./filter/filterData";
 import forgotPasswordStaticData from "./forgotPassword/forgotPasswordData";
 import loginStaticData from "./login/loginData";
@@ -50,10 +54,7 @@ import {
   teacherRegistrationStaticData,
 } from "./teacherRegistration/teacherRegistration";
 
-import {
-  dashboardCardData,
-  dashboardLeftSideStaticData,
-} from "./dashboard/dashboard";
+import { profileData } from "./dashboard/studentProfile";
 
 export {
   HERO_SECTION_BOTTOM,
@@ -99,6 +100,7 @@ export {
   passwordSuccessStaticData,
   popularCourses,
   popularCouseContent,
+  profileData,
   qAData,
   qAStaticData,
   questionsData,
