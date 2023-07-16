@@ -2,7 +2,7 @@
 import { dashboardCardData } from "@/Content";
 import React from "react";
 import DashboardCard from "../DashboardCard/DashboardCard";
-import StudentProfile from "../StudentProfile/StudentProfile";
+import StudentProfile from "./StudentProfile/StudentProfile";
 
 type IDashboardRightSide = {
   selectedOption: string;
