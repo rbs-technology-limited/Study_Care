@@ -54,10 +54,12 @@ import {
   teacherRegistrationStaticData,
 } from "./teacherRegistration/teacherRegistration";
 
-import { profileData } from "./dashboard/studentProfile";
 import courseProgressContent, {
   courseProgressData,
 } from "./dashboard/courseCompleteAllProgress";
+import { specificCourseSummary } from "./dashboard/specificCourseSummary";
+import { profileData } from "./dashboard/studentProfile";
+
 export {
   HERO_SECTION_BOTTOM,
   aboutContent,
@@ -73,6 +75,8 @@ export {
   courseData,
   coursePageData,
   coursePageStaticData,
+  courseProgressContent,
+  courseProgressData,
   courseSyllabusData,
   courseSyllabusStaticData,
   coursesCardData,
@@ -115,10 +119,9 @@ export {
   segments,
   signupStaticData,
   singleTeacherData,
+  specificCourseSummary,
   subjects,
   teacherRegistrationStaticData,
   workflowContent,
   workflowData,
-  courseProgressData,
-  courseProgressContent,
 };

@@ -1,3 +1,5 @@
+import { teal } from "@/Constant/Custom-Color";
+import { CButton } from "@/Shared";
 import React from "react";
 import { HiOutlineArrowUp } from "react-icons/hi";
 
@@ -11,9 +13,10 @@ type ICourseProgressInfos = {
 
 type ICourseProgress = {
   data: ICourseProgressInfos[];
+  showAccess?: boolean;
 };
 
-const CourseProgressInfos = ({ data }: ICourseProgress) => {
+const CourseProgressInfos = ({ data, showAccess }: ICourseProgress) => {
   const contents = data.map((item: ICourseProgressInfos, index) => {
     const firstElement = index === 0;
     const lastIndex = index === data.length - 1;
@@ -51,9 +54,14 @@ const CourseProgressInfos = ({ data }: ICourseProgress) => {
 
   return (
     <section className="mt-24 dark:text-white">
-      <h1 className="text-xl font-bold text-gray-600 my-5">
-        কোর্স অগ্রগতি - Batch-2
-      </h1>
+      <div className="flex justify-between items-center my-5">
+        <h1 className="text-xl font-bold text-gray-600">
+          কোর্স অগ্রগতি - Batch-2
+        </h1>
+        {showAccess && (
+          <CButton variant="outline" color={teal} btnTitle="কোর্স এক্সেস" />
+        )}
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3">{contents}</div>
     </section>
   );

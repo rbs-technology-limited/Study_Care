@@ -1,6 +1,6 @@
 import { profileData } from "@/Content";
+import CourseProgressInfos from "../../common/CourseProgressInfos/CourseProgressInfos";
 import AssignmentReportSummary from "./AssignmentReportSummary/AssignmentReportSummary";
-import CourseProgressInfos from "./CourseProgressInfos/CourseProgressInfos";
 import OverAllCourseProgress from "./OverAllCourseProgress/OverAllCourseProgress";
 import QuizReportSummary from "./QuizReportSummary/QuizReportSummary";
 import UserInfo from "./UserInfo/UserInfo";
@@ -10,7 +10,7 @@ const StudentProfile = () => {
     <div>
       <UserInfo data={profileData} />
       <CourseProgressInfos data={profileData.courseProgressData} />
-      <QuizReportSummary data={profileData.quizReportSummary}/>
+      <QuizReportSummary data={profileData.quizReportSummary} />
       <OverAllCourseProgress />
       <AssignmentReportSummary />
     </div>
