@@ -14,7 +14,7 @@ type IAllAssignmentMarks = {
 
 const AllAssignmentMarks = ({ data }: IAllAssignmentMarks) => {
   return (
-    <section className="mt-16">
+    <section>
       <h1 className="text-xl font-bold text-gray-600 dark:text-white mb-5">
         {specificCourseSummaryStaticData?.title3}
       </h1>
