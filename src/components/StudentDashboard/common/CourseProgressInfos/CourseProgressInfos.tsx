@@ -30,11 +30,13 @@ const CourseProgressInfos = ({ data, showAccess }: ICourseProgress) => {
     return (
       <React.Fragment key={item.id}>
         <div
-          className={`${conditions} ${firstElementLeftBorderRadius} border-gray-200 bg-white px-2 py-4 shadow-md`}
+          className={`${conditions} ${firstElementLeftBorderRadius} border-gray-200 bg-white dark:bg-transparent px-2 py-4 shadow-md`}
         >
-          <h1 className="text-md font-bold text-gray-600">{item.title}</h1>
+          <h1 className="text-md font-bold text-gray-600 dark:text-white">
+            {item.title}
+          </h1>
           <div className="flex justify-between items-center my-2">
-            <h1 className="text-gray-600 flex items-center">
+            <h1 className="text-gray-600 dark:text-white flex items-center">
               <span className="text-md font-bold text-button-teal mr-[0.0625rem]">
                 {item?.total_modules} টি
               </span>
@@ -55,7 +57,7 @@ const CourseProgressInfos = ({ data, showAccess }: ICourseProgress) => {
   return (
     <section className="mt-24 dark:text-white">
       <div className="flex justify-between items-center my-5">
-        <h1 className="text-xl font-bold text-gray-600">
+        <h1 className="text-xl font-bold text-gray-600 dark:text-white">
           কোর্স অগ্রগতি - Batch-2
         </h1>
         {showAccess && (

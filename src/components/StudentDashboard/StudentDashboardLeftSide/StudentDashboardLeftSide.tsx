@@ -13,7 +13,7 @@ const StudentDashboardLeftSide = ({
   const { title1, title2, title3 } = dashboardLeftSideStaticData;
   const titles = [title1, title2, title3];
   return (
-    <section className="p-3 bg-gray-50 rounded">
+    <section className="p-3 bg-gray-50 dark:bg-transparent rounded">
       {titles?.map((title) => (
         <h1
           key={title}
@@ -21,7 +21,7 @@ const StudentDashboardLeftSide = ({
           ${
             selectedOption === title
               ? "bg-button-teal text-white"
-              : "bg-button-teal/10"
+              : "bg-button-teal/10 dark:text-white"
           }
             `}
           onClick={() => setSelectedOption(title)}

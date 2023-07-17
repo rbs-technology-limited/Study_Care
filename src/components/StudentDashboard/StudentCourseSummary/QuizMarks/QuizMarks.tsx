@@ -20,15 +20,15 @@ const QuizMarks = ({ data }: IQuizMarks) => {
   };
   return (
     <main className="mt-16">
-      <section className="my-5 flex flex-col gap-3 md:flex-row justify-between items-center text-gray-600">
+      <section className="my-5 flex flex-col gap-3 md:flex-row justify-between items-center text-gray-600 dark:text-white">
         <h1 className="text-xl font-bold">
           {specificCourseSummaryStaticData?.title1}
         </h1>
-        <h1 className="text-sm text-gray-600/75">
+        <h1 className="text-sm text-gray-600/75 dark:text-white">
           {specificCourseSummaryStaticData?.key_note}
         </h1>
       </section>
-      <section className="h-56 border p-5 rounded-lg bg-white shadow-md">
+      <section className="h-56 border p-5 rounded-lg bg-white dark:bg-transparent shadow-md">
         <div className="flex flex-wrap w-full">
           {data.map((contribution: any) => (
             <>

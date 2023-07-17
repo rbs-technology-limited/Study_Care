@@ -20,13 +20,13 @@ type IQuizReportSummaryProps = {
 const QuizReportSummary = ({ data }: IQuizReportSummaryProps) => {
   return (
     <section className="mt-16">
-      <h1 className="text-xl font-bold text-gray-600 my-5">
+      <h1 className="text-xl font-bold text-gray-600 dark:text-white my-5">
         কুইজ রিপোর্ট সামারি
       </h1>
-      <div className="w-full md:w-3/5 bg-white p-5 rounded-lg shadow-md border text-sm">
+      <div className="w-full md:w-3/5 bg-white dark:bg-transparent p-5 rounded-lg shadow-md border text-sm">
         <div className="w-full flex flex-col-reverse md:flex-row justify-center items-center">
           {/* quiz marks related summary part */}
-          <div className="md:w-2/4 text-gray-600">
+          <div className="md:w-2/4 text-gray-600 dark:text-white">
             <div className="flex items-center gap-2 my-1">
               <LiaHandPointRight color={teal} />
               <p>

@@ -38,7 +38,7 @@ const StudentDashboardRightSide = ({ selectedOption }: IDashboardRightSide) => {
   }, [selectedOption]);
 
   return (
-    <section className="p-3 bg-gray-50 min-h-screen rounded">
+    <section className="p-3 bg-gray-50 dark:bg-transparent min-h-screen rounded">
       {contents}
     </section>
   );
