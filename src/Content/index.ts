@@ -57,7 +57,10 @@ import {
 import courseProgressContent, {
   courseProgressData,
 } from "./dashboard/courseCompleteAllProgress";
-import { specificCourseSummary } from "./dashboard/specificCourseSummary";
+import {
+  specificCourseSummary,
+  specificCourseSummaryStaticData,
+} from "./dashboard/specificCourseSummary";
 import { profileData } from "./dashboard/studentProfile";
 
 export {
@@ -120,6 +123,7 @@ export {
   signupStaticData,
   singleTeacherData,
   specificCourseSummary,
+  specificCourseSummaryStaticData,
   subjects,
   teacherRegistrationStaticData,
   workflowContent,
