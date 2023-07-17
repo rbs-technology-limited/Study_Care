@@ -1,5 +1,6 @@
 import { specificCourseSummary } from "@/Content";
 import CourseProgressInfos from "../common/CourseProgressInfos/CourseProgressInfos";
+import AllAssignmentMarks from "./AllAssignmentMarks/AllAssignmentMarks";
 import CourseQuizReportSummary from "./CourseQuizReportSummary/CourseQuizReportSummary";
 import QuizMarks from "./QuizMarks/QuizMarks";
 
@@ -19,6 +20,12 @@ const StudentCourseSummary = () => {
         <div className="w-full lg:w-2/4">
           <QuizMarks data={specificCourseSummary.quizMarksDetails} />
         </div>
+      </div>
+      <div className="flex justify-between items-center">
+        <AllAssignmentMarks
+          data={specificCourseSummary.assignmentMarksDetails}
+        />
+        <div></div>
       </div>
     </section>
   );

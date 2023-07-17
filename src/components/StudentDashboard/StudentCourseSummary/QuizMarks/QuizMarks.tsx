@@ -25,7 +25,7 @@ const QuizMarks = ({ data }: IQuizMarks) => {
           {specificCourseSummaryStaticData?.title1}
         </h1>
         <h1 className="text-sm text-gray-600/75 dark:text-white">
-          {specificCourseSummaryStaticData?.key_note}
+          {specificCourseSummaryStaticData?.key_note1}
         </h1>
       </section>
       <section className="h-56 border p-5 rounded-lg bg-white dark:bg-transparent shadow-md">
