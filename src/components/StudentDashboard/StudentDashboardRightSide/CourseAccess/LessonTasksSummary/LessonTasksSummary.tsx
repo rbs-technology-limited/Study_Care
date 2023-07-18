@@ -25,7 +25,7 @@ const LessonTasksSummary = () => {
   );
   return (
     <section>
-      <div className="p-3 bg-gray-50 text-sm text-gray-600 dark:text-white border rounded flex flex-col md:flex-row justify-between items-center gap-2">
+      <div className="p-3 bg-gray-50 dark:bg-transparent text-sm text-gray-600 dark:text-white border rounded flex flex-col md:flex-row justify-between items-center gap-2">
         <p className="flex gap-1 items-center">
           {quizStatusIcon}
           <span>{courseAccessData.quiz_status}</span>
