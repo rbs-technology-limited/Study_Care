@@ -1,4 +1,4 @@
-import StudentCourseSummary from "@/components/StudentDashboard/StudentCourseSummary/StudentCourseSummary";
+import StudentCourseSummary from "@/components/StudentDashboard/StudentDashboardRightSide/StudentCourseSummary/StudentCourseSummary";
 
 const page = () => {
   return (

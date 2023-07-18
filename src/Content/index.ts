@@ -54,6 +54,10 @@ import {
   teacherRegistrationStaticData,
 } from "./teacherRegistration/teacherRegistration";
 
+import {
+  courseAccessData,
+  courseAccessStaticData,
+} from "./courseAccess/courseAccess";
 import courseProgressContent, {
   courseProgressData,
 } from "./dashboard/courseCompleteAllProgress";
@@ -75,6 +79,8 @@ export {
   classTeacherListData,
   contactInfos,
   contactUsData,
+  courseAccessData,
+  courseAccessStaticData,
   courseData,
   coursePageData,
   coursePageStaticData,

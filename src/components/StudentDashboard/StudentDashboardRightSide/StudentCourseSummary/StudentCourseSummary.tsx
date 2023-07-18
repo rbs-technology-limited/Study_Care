@@ -2,7 +2,7 @@ import {
   specificCourseSummary,
   specificCourseSummaryStaticData,
 } from "@/Content";
-import CourseProgressInfos from "../common/CourseProgressInfos/CourseProgressInfos";
+import CourseProgressInfos from "../../common/CourseProgressInfos/CourseProgressInfos";
 import AllAssignmentMarks from "./AllAssignmentMarks/AllAssignmentMarks";
 import AssignmentReportSummary from "./AssignmentReportSummary/AssignmentReportSummary";
 import CourseQuizReportSummary from "./CourseQuizReportSummary/CourseQuizReportSummary";

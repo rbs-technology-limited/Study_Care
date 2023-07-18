@@ -1,5 +1,8 @@
+"use client";
 import { teal } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import React from "react";
 import { HiOutlineArrowUp } from "react-icons/hi";
 
@@ -17,6 +20,8 @@ type ICourseProgress = {
 };
 
 const CourseProgressInfos = ({ data, showAccess }: ICourseProgress) => {
+  const courseId = useParams();
+
   const contents = data.map((item: ICourseProgressInfos, index) => {
     const firstElement = index === 0;
     const lastIndex = index === data.length - 1;
@@ -61,7 +66,9 @@ const CourseProgressInfos = ({ data, showAccess }: ICourseProgress) => {
           কোর্স অগ্রগতি - Batch-2
         </h1>
         {showAccess && (
-          <CButton variant="outline" color={teal} btnTitle="কোর্স এক্সেস" />
+          <Link href={`/course_access/${courseId.id}`}>
+            <CButton variant="outline" color={teal} btnTitle="কোর্স এক্সেস" />
+          </Link>
         )}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3">{contents}</div>
