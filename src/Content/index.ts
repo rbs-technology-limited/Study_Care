@@ -57,6 +57,7 @@ import {
 import {
   courseAccessData,
   courseAccessStaticData,
+  moduleListsData,
 } from "./courseAccess/courseAccess";
 import courseProgressContent, {
   courseProgressData,
@@ -111,6 +112,7 @@ export {
   loginStaticData,
   mainFeature,
   mainFeatureContent,
+  moduleListsData,
   options,
   passwordSuccessStaticData,
   popularCourses,

@@ -1,11 +1,12 @@
 import { CInput } from "@/Shared";
 import LessonTasksSummary from "./LessonTasksSummary/LessonTasksSummary";
-import ModuleProgressSlider from "./LessonTasksSummary/ModuleProgressSlider/ModuleProgressSlider";
+import ModuleLists from "./ModuleLists/ModuleLists";
+import ModuleProgressSlider from "./ModuleProgressSlider/ModuleProgressSlider";
 
 const CourseAccess = () => {
   return (
-    <section className="container mx-auto px-8">
-      <div className="flex flex-col-reverse lg:flex-row gap-3">
+    <section className="container mx-auto px-8 py-8">
+      <div className="flex flex-col lg:flex-row gap-3">
         {/* description */}
         <div className="w-full lg:w-3/5">
           <LessonTasksSummary />
@@ -16,6 +17,8 @@ const CourseAccess = () => {
             <CInput type="text" placeholder="কোর্স লেসন সার্চ করুন" />
             <ModuleProgressSlider />
           </div>
+          {/* module list */}
+          <ModuleLists />
         </div>
       </div>
     </section>
