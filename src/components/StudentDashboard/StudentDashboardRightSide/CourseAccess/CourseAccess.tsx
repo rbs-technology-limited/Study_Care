@@ -1,4 +1,6 @@
+import { CInput } from "@/Shared";
 import LessonTasksSummary from "./LessonTasksSummary/LessonTasksSummary";
+import ModuleProgressSlider from "./LessonTasksSummary/ModuleProgressSlider/ModuleProgressSlider";
 
 const CourseAccess = () => {
   return (
@@ -10,7 +12,10 @@ const CourseAccess = () => {
         </div>
         {/* lesson part */}
         <div className="w-full lg:w-2/5">
-          <h1>Lesson list</h1>
+          <div className="border p-3">
+            <CInput type="text" />
+            <ModuleProgressSlider />
+          </div>
         </div>
       </div>
     </section>
