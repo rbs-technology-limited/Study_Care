@@ -12,8 +12,8 @@ const CourseAccess = () => {
         </div>
         {/* lesson part */}
         <div className="w-full lg:w-2/5">
-          <div className="border p-3">
-            <CInput type="text" />
+          <div className="border p-3 shadow-md">
+            <CInput type="text" placeholder="কোর্স লেসন সার্চ করুন" />
             <ModuleProgressSlider />
           </div>
         </div>

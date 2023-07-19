@@ -8,7 +8,7 @@ const ModuleProgressSlider = () => {
   const completeModules = 8;
   const moduleCompletionPercentage = (completeModules / totalModules) * 100;
   return (
-    <div className="text-gray-600">
+    <div className="text-gray-600 dark:text-white">
       <p className="my-4 font-semibold">
         10/10 টি ক্লাস শেষ করেছেন - অগ্রগতি {moduleCompletionPercentage}%
       </p>
