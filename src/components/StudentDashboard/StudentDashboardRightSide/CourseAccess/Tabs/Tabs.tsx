@@ -2,6 +2,7 @@
 import { tabs } from "@/Content";
 import parse from "html-react-parser";
 import { useState } from "react";
+import QuizBox from "./QuizBox/QuizBox";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
@@ -34,9 +35,11 @@ const Tabs = () => {
             ) : (
               tab.content
             )} */}
-            {tab?.label === "ভিডিও ডেসক্রিপশন"
-              ? parse(tab.content)
-              : tab.content}
+            {
+              tab?.label === "ভিডিও ডেসক্রিপশন" && parse(tab.content)
+              //   : tab.content
+            }
+            {tab?.label === "কুইজ" && <QuizBox data={tab} />}
           </div>
         ) : null
       )}

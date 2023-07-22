@@ -68,12 +68,12 @@ export const tabs = [
   {
     id: 2,
     label: "রেফারেন্স",
-    content: "This is the content of Tab 2.",
+    content: "লেসন প্ল্যান সম্পর্কিত গুরুত্বপূর্ণ লিংক এখানে দেওয়া হবে",
   },
   {
     id: 3,
     label: "কুইজ",
-    content: "This is the content of Tab 3.",
+    content: "প্রাপ্ত নাম্বার - 10 / 10",
   },
   {
     id: 4,
