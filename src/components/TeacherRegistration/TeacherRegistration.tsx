@@ -41,7 +41,8 @@ const TeacherRegistration = () => {
     setNumPages(numPages);
   };
 
-  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+  pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+  // `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
   const {
     lName,
@@ -60,7 +61,10 @@ const TeacherRegistration = () => {
     <section className="container mx-auto px-8 py-8">
       {/*pdf view  */}
       <div className="flex justify-center overflow-x-auto w-full">
-        <Document file="/demoSample1.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+        <Document
+          file="/Asset/demoSample1.pdf"
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
           <Page
             pageNumber={pageNumber}
             renderTextLayer={false}

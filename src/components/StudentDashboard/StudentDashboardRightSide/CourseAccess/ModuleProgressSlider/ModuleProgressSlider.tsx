@@ -10,7 +10,7 @@ const ModuleProgressSlider = () => {
   return (
     <div className="text-gray-600 dark:text-white">
       <p className="my-4 font-bold text-sm">
-        10/10 টি ক্লাস শেষ করেছেন - অগ্রগতি {moduleCompletionPercentage}%
+        8/10 টি ক্লাস শেষ করেছেন - অগ্রগতি {moduleCompletionPercentage}%
       </p>
       <div className="flex gap-3 items-center">
         <div

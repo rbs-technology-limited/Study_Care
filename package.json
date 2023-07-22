@@ -26,6 +26,7 @@
     "eslint-config-next": "13.4.10",
     "flowbite": "^1.7.0",
     "flowbite-react": "^0.4.11",
+    "html-react-parser": "^4.2.0",
     "jsrsasign": "^10.8.6",
     "jsrsasign-util": "^1.0.5",
     "moment": "^2.29.4",

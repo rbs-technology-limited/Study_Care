@@ -58,6 +58,7 @@ import {
   courseAccessData,
   courseAccessStaticData,
   moduleListsData,
+  tabs,
 } from "./courseAccess/courseAccess";
 import courseProgressContent, {
   courseProgressData,
@@ -133,6 +134,7 @@ export {
   specificCourseSummary,
   specificCourseSummaryStaticData,
   subjects,
+  tabs,
   teacherRegistrationStaticData,
   workflowContent,
   workflowData,

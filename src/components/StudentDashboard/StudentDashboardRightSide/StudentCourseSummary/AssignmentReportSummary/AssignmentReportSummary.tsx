@@ -1,7 +1,6 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
 import Chart from "react-apexcharts";
-import "react-circular-progressbar/dist/styles.css";
 import { LiaHandPointRight } from "react-icons/lia";
 
 type IQuizReportSummary = {
