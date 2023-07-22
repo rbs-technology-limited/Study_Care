@@ -35,11 +35,10 @@ const Tabs = () => {
             ) : (
               tab.content
             )} */}
-            {
-              tab?.label === "ভিডিও ডেসক্রিপশন" && parse(tab.content)
-              //   : tab.content
-            }
-            {tab?.label === "কুইজ" && <QuizBox data={tab} />}
+            {tab?.label === "ভিডিও ডেসক্রিপশন"
+              ? parse(tab.content)
+              : tab.content}
+            {tab?.label === "কুইজ" ? <QuizBox data={tab} /> : tab.content}
           </div>
         ) : null
       )}
