@@ -8,6 +8,7 @@ import { NavigationEvents } from "@/Provider/navigation-events/navigation-events
 import ScrollToTop from "@/Shared/ScrollToTop/ScrollToTop";
 const inter = Inter({ subsets: ["latin"] });
 import "react-tooltip/dist/react-tooltip.css";
+import ReduxProvider from "@/Redux/ReduxProvider/ReduxProvider";
 
 export const metadata = {
   title: "Study Care",
@@ -31,14 +32,16 @@ export default function RootLayout({
       <body
         className={`${inter.className} relative dark:bg-dark-background dark:text-white`}
       >
-        <AOSProvider>
-          <Suspense fallback={<Loading />}>
-            <ContextProvider>
-              <NavigationEvents>{children}</NavigationEvents>
-            </ContextProvider>
-          </Suspense>
-          <ScrollToTop />
-        </AOSProvider>
+        <ReduxProvider>
+          <ContextProvider>
+            <AOSProvider> 
+              <Suspense fallback={<Loading />}>
+                <NavigationEvents>{children}</NavigationEvents>
+              </Suspense>
+            </AOSProvider>
+          </ContextProvider>
+        </ReduxProvider>
+        <ScrollToTop />
       </body>
     </html>
   );
