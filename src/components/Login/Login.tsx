@@ -6,11 +6,26 @@ import { BsQuestionCircleFill } from "react-icons/bs";
 import { loginStaticData } from "@/Content";
 import LoginSvg from "../svgComponents/LoginSvg";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { AppDispatch, useAppSelector } from "@/Redux/store";
+import { getLoginInfo } from "@/Redux/features/Auth/auth-slice";
+import { handleLogin } from "@/API_CALL/PostData/Login/Login";
 
 const Login = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const loginDetails = useAppSelector((state) => state.authSlice.loginDetails);
+  const isLoading = useAppSelector((state) => state.authSlice.isLoading);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("form submitted");
+    const username = loginDetails?.username;
+    const password = loginDetails?.password;
+    const data = { username, password };
+    // console.log(data);
+    const resultAction = await dispatch(handleLogin(data));
+    const { requestStatus, arg } = resultAction.meta;
+    // const originalPromiseResult = unwrapResult(resultAction);
+    console.log(resultAction, requestStatus, arg);
   };
   return (
     <section className="container-lg mx-auto h-screen flex md:block justify-center items-center">
@@ -31,8 +46,22 @@ const Login = () => {
                 </h1>
                 <BsQuestionCircleFill color={teal} className="cursor-pointer" />
               </div>
-              <CInput type="text" placeholder="Email/Phone" />
-              <CInput type="password" placeholder="Password" />
+              <CInput
+                type="text"
+                placeholder="Email/Phone"
+                required
+                onChange={(e: any) =>
+                  dispatch(getLoginInfo({ username: e.target.value }))
+                }
+              />
+              <CInput
+                type="password"
+                placeholder="Password"
+                required
+                onChange={(e: any) =>
+                  dispatch(getLoginInfo({ password: e.target.value }))
+                }
+              />
 
               <Link href={"/forgotPassword"}>
                 <p className="text-button-teal my-1 cursor-pointer">
@@ -54,6 +83,7 @@ const Login = () => {
                   variant="solid"
                   color={teal}
                   btnTitle="Log in"
+                  loading={isLoading}
                 />
               </div>
             </form>

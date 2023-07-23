@@ -1,4 +1,4 @@
-import { apiUrl } from "@/Base/apiUrl";
+import apiUrl from "@/Base/apiUrl";
 import { cToastify } from "@/Shared";
 
 interface GetCallProps {
@@ -71,7 +71,7 @@ export async function getCall(
       // console.log(result);
       if (result?.id) {
         const products = {
-          ...result, 
+          ...result,
           quantity: 1,
         };
         // console.log(products);

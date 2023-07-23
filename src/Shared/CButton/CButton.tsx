@@ -1,4 +1,5 @@
 "use client";
+import Loading from "@/app/loading";
 import React, { useState } from "react";
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
   textUpperCased?: boolean;
   children?: React.ReactNode;
   disabled?: boolean;
+  loading?: boolean;
   color?: string;
   variant?: "solid" | "outline" | "text";
   onClick?: () => void;
@@ -32,6 +34,7 @@ const CButton = ({
   variant,
   onClick,
   height,
+  loading,
   ...rest
 }: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -94,8 +97,14 @@ const CButton = ({
         onMouseLeave={() => setIsHovered(false)}
         {...rest}
       >
-        {btnTitle}
-        {children}
+        {loading ? (
+          <Loading />
+        ) : (
+          <>
+            {btnTitle}
+            {children}
+          </>
+        )}
       </button>
     </>
   );

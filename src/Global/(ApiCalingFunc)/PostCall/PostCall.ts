@@ -1,4 +1,4 @@
-import { apiUrl } from "@/Base/apiUrl";
+import apiUrl from "@/Base/apiUrl";
 import { cToastify } from "@/Shared";
 
 interface PostCallProps {
@@ -9,7 +9,10 @@ interface PostCallProps {
 
 export async function postCall(
   endpoint: PostCallProps["endpoint"],
-  { body: body, ...customConfig }: PostCallProps["body"] & { customConfig?: any }
+  {
+    body,
+    ...customConfig
+  }: PostCallProps["body"] & { customConfig?: any }
 ) {
   const headers = { "Content-Type": "application/json" };
   try {
@@ -27,16 +30,15 @@ export async function postCall(
     if (!response.ok) {
       cToastify({
         type: "error",
-        message: "Something went wrong at Brands Data",
+        message: "Something went wrong! please try again",
       });
     }
     if (response.ok) {
       return data;
     }
     throw new Error(response.statusText);
-
   } catch (error) {
-    //console.log(error);
+    // console.log(error);
     return Promise.reject(error);
   }
 }
