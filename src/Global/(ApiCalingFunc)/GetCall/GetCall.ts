@@ -1,6 +1,5 @@
+import { refreshToken } from "@/API_CALL/PostData/RefreshToken/RefreshToken";
 import apiUrl from "@/Base/apiUrl";
-import { cToastify } from "@/Shared";
-
 interface GetCallProps {
   endpoint: string;
   data?: any;
@@ -19,7 +18,7 @@ export async function getCall(
     query: query = {},
     // revalidate will be after 4 min
     revalidate: revalidate = 240,
-    cache: cache = "default",
+    cache,
     ...customConfig
   }: GetCallProps["body"] & {
     data?: any;
@@ -59,38 +58,17 @@ export async function getCall(
     const result = await response.json();
     // console.log(data);
     if (!response.ok) {
-      cToastify({
-        type: "error",
-        message: "Something went wrong at Brands Data",
+      console.log(response.status);
+      refreshToken({
+        // refreshToken: localStorage.getItem("refreshToken"),
+        status: response.status,
       });
-      throw new Error(response.statusText);
     }
-    if (endpoint === "products") {
-      // console.log(endpoint);
-      // add a quantity property to each product
-      // console.log(result);
-      if (result?.id) {
-        const products = {
-          ...result,
-          quantity: 1,
-        };
-        // console.log(products);
-        return products;
-      } else {
-        const products = {
-          ...result,
-          results: result.results.map((product: any) => ({
-            ...product,
-            quantity: 1,
-          })),
-        };
-        return products;
-      }
-    } else {
+    if (response.ok) {
       return result;
     }
   } catch (error) {
-    //console.log(error);
+    // console.log(error);
     return Promise.reject(error);
   }
 }

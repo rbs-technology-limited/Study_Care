@@ -1,4 +1,5 @@
 import { handleLogin } from "@/API_CALL/PostData/Login/Login";
+import { saveDataInCookies } from "@/Redux/action";
 // import { handleRegister } from "@/API_CALL/PostData/Register/Register";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
@@ -29,6 +30,8 @@ const initialState = {
   },
 } as INITIAL_STATE;
 
+// console.log(initialState);
+
 export const authSlice = createSlice({
   name: "auth",
   initialState: initialState,
@@ -41,7 +44,6 @@ export const authSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-
     //for login
     builder.addCase(handleLogin.pending, (state, action) => {
       state.isLoading = true;
@@ -54,13 +56,18 @@ export const authSlice = createSlice({
         ...state.loginDetails,
         isLogin: true,
       };
-      localStorage.setItem(
-        "userInfo",
-        JSON.stringify({
-          ...value,
-          isLogin: true,
-        })
-      );
+      // localStorage.setItem(
+      //   "userInfo",
+      //   JSON.stringify({
+      //     ...value,
+      //     isLogin: true,
+      //   })
+      // );
+      //save data also in cookies for refresh token httpOnly
+
+      saveDataInCookies({
+        data: value,
+      });
     });
     builder.addCase(handleLogin.rejected, (state, action) => {
       state.isLoading = false;
