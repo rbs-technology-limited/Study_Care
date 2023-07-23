@@ -1,6 +1,6 @@
 "use client";
-import Footer from "@/Global_Component/Footer/Footer";
-import Header from "@/Global_Component/Header/Header";
+import Footer from "@/Global/Footer/Footer";
+import Header from "@/Global/Header/Header";
 import { usePathname } from "next/navigation";
 
 export function NavigationEvents({ children }) {
