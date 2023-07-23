@@ -41,11 +41,13 @@ const DashboardCard = ({ data }: ICardData) => {
             />
             <p className="text-xs dark:text-white">{data?.progress}%</p>
           </div>
-          <CButton
-            variant="outline"
-            color={teal}
-            btnTitle="See Course Report"
-          />
+          <Link href={`/student_dashboard/course_summary/${data.id}`}>
+            <CButton
+              variant="outline"
+              color={teal}
+              btnTitle="See Course Report"
+            />
+          </Link>
         </div>
       </div>
     </Link>

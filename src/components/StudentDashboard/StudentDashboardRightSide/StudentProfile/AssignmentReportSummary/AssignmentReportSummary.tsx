@@ -1,4 +1,3 @@
-import React from "react";
 import Chart from "react-apexcharts";
 
 const AssignmentReportSummary = () => {
@@ -12,27 +11,25 @@ const AssignmentReportSummary = () => {
   };
 
   return (
-    <main>
-      <h1 className="text-xl font-bold text-gray-600">
+    <main className="mt-16">
+      <h1 className="text-xl font-bold text-gray-600 dark:text-white">
         অ্যাসাইনমেন্ট রিপোর্ট সারসংক্ষেপ
       </h1>
       <section className="my-5">
-        <div className="border md:w-3/5 w-full p-5 rounded">
+        <div className="border md:w-3/5 w-full p-5 rounded shadow-md bg-white dark:bg-transparent">
           <section className="mb-5 flex flex-col-reverse md:flex-row justify-between items-center">
-            <div className="flex justify-between w-full">
+            <div className="flex justify-between w-full text-gray-600 dark:text-white">
               <div className="w-full">
-                <p className="text-sm text-gray-600">অংশগ্রহণ</p>
-                <p className="text-sm text-gray-600">সময়মত জমা</p>
-                <p className="text-sm text-gray-600">প্রাপ্ত নম্বর</p>
+                <p className="text-sm">অংশগ্রহণ</p>
+                <p className="text-sm">সময়মত জমা</p>
+                <p className="text-sm">প্রাপ্ত নম্বর</p>
               </div>
               <div className="w-full">
-                <p className="text-sm text-gray-600">
+                <p className="text-sm">
                   {data.participateCourseCount}টি/ {data.totalCourseCount}টি
                 </p>
-                <p className="text-sm text-gray-600">
-                  {data.timelySubmissionCount}টি
-                </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm">{data.timelySubmissionCount}টি</p>
+                <p className="text-sm">
                   {data.getTotalAssignmentMarks}/ {data.totalAssignmentMarks}
                 </p>
               </div>
@@ -52,17 +49,18 @@ const AssignmentReportSummary = () => {
                       },
                       dataLabels: {
                         value: {
-                          show: false,
+                          show: true,
                         },
                       },
                     },
                   },
                   labels: [
-                    `${
-                      (data.getTotalAssignmentMarks /
-                        data.totalAssignmentMarks) *
-                      100
-                    }%`,
+                    // `${
+                    //   (data.getTotalAssignmentMarks /
+                    //     data.totalAssignmentMarks) *
+                    //   100
+                    // }%`,
+                    "গড় মার্ক",
                   ],
                 }}
                 series={[
@@ -70,7 +68,7 @@ const AssignmentReportSummary = () => {
                     100,
                 ]}
                 type="radialBar"
-                width="180"
+                width="250"
               />
             </section>
           </section>

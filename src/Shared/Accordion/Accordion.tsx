@@ -1,12 +1,12 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
 import React from "react";
-import CButton from "../CButton/CButton";
+import { BsFileEarmarkText } from "react-icons/bs";
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
-import { BsFileEarmarkText } from "react-icons/bs";
+import CButton from "../CButton/CButton";
 
 type Accordion = {
   contents: {
@@ -41,10 +41,7 @@ const Accordion = ({
       const isActive = index === activeIndex;
       const isLastItem = index === contents?.slice(0, sliceNumber).length - 1;
       return (
-        <div
-          onClick={() => onContentClick(!isActive ? index : null)}
-          key={index}
-        >
+        <div onClick={() => onContentClick(!isActive && index)} key={index}>
           <div
             className={`${
               !isActive && !isLastItem

@@ -1,5 +1,6 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
+import { specificCourseSummaryStaticData } from "@/Content";
 import Chart from "react-apexcharts";
 import { LiaHandPointRight } from "react-icons/lia";
 
@@ -16,14 +17,14 @@ type IQuizReportSummaryProps = {
   data: IQuizReportSummary;
 };
 
-const QuizReportSummary = ({ data }: IQuizReportSummaryProps) => {
+const CourseQuizReportSummary = ({ data }: IQuizReportSummaryProps) => {
   return (
     <section className="mt-16">
       <h1 className="text-xl font-bold text-gray-600 dark:text-white my-5">
-        কুইজ রিপোর্ট সামারি
+        {specificCourseSummaryStaticData?.title2}
       </h1>
-      <div className="w-full md:w-3/5 bg-white dark:bg-transparent p-5 rounded-lg shadow-md border text-sm">
-        <div className="w-full flex flex-col-reverse md:flex-row justify-center items-center">
+      <div className="w-full md:h-56 bg-white dark:bg-transparent p-5 rounded-lg shadow-md border text-sm">
+        <div className="w-full h-full flex flex-col-reverse md:flex-row justify-center items-center">
           {/* quiz marks related summary part */}
           <div className="md:w-2/4 text-gray-600 dark:text-white">
             <div className="flex items-center gap-2 my-1">
@@ -79,4 +80,4 @@ const QuizReportSummary = ({ data }: IQuizReportSummaryProps) => {
   );
 };
 
-export default QuizReportSummary;
+export default CourseQuizReportSummary;

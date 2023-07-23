@@ -54,10 +54,21 @@ import {
   teacherRegistrationStaticData,
 } from "./teacherRegistration/teacherRegistration";
 
-import { profileData } from "./dashboard/studentProfile";
+import {
+  courseAccessData,
+  courseAccessStaticData,
+  moduleListsData,
+  tabs,
+} from "./courseAccess/courseAccess";
 import courseProgressContent, {
   courseProgressData,
 } from "./dashboard/courseCompleteAllProgress";
+import {
+  specificCourseSummary,
+  specificCourseSummaryStaticData,
+} from "./dashboard/specificCourseSummary";
+import { profileData } from "./dashboard/studentProfile";
+
 export {
   HERO_SECTION_BOTTOM,
   aboutContent,
@@ -70,9 +81,13 @@ export {
   classTeacherListData,
   contactInfos,
   contactUsData,
+  courseAccessData,
+  courseAccessStaticData,
   courseData,
   coursePageData,
   coursePageStaticData,
+  courseProgressContent,
+  courseProgressData,
   courseSyllabusData,
   courseSyllabusStaticData,
   coursesCardData,
@@ -98,6 +113,7 @@ export {
   loginStaticData,
   mainFeature,
   mainFeatureContent,
+  moduleListsData,
   options,
   passwordSuccessStaticData,
   popularCourses,
@@ -115,10 +131,11 @@ export {
   segments,
   signupStaticData,
   singleTeacherData,
+  specificCourseSummary,
+  specificCourseSummaryStaticData,
   subjects,
+  tabs,
   teacherRegistrationStaticData,
   workflowContent,
   workflowData,
-  courseProgressData,
-  courseProgressContent,
 };
