@@ -1,18 +1,13 @@
-import { postCall } from "@/Global/(ApiCalingFunc)/PostCall/PostCall";
+import { callAction } from "@/Global/(ApiCalingFunc)/CallAction/callAction";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const handleLogin = createAsyncThunk(
   "posts/login",
   async (initialPost: any) => {
-    const response = await postCall("login/", {
+    const response = await callAction("login/", {
       body: initialPost,
     });
     // console.log(response);
     return response;
   }
 );
-
-// if (response.status === 200) {
-//   return response;
-// }
-// return rejectWithValue(response);

@@ -5,11 +5,16 @@ interface PostCallProps {
   endpoint: string;
   body: any;
   customConfig?: any;
+  method?: string;
 }
 
-export async function postCall(
+export async function callAction(
   endpoint: PostCallProps["endpoint"],
-  { body, ...customConfig }: PostCallProps["body"] & { customConfig?: any }
+  {
+    body,
+    method = "POST",
+    ...customConfig
+  }: PostCallProps["body"] & { customConfig?: any } & { method?: string }
 ) {
   const headers = {
     ...(body instanceof FormData ? {} : { "Content-Type": "application/json" }),
@@ -17,7 +22,7 @@ export async function postCall(
   try {
     let url = `${apiUrl}/${endpoint}`;
     const response = await fetch(url, {
-      method: "POST",
+      method: method,
       headers: {
         ...headers,
         ...customConfig.headers,

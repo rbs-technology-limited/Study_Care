@@ -33,7 +33,7 @@ const Login = () => {
         type: "success",
         message: "Login Successful",
       });
-      router.push("/");
+      // router.push("/");
     }
   };
   return (
