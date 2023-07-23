@@ -1,7 +1,7 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
-import { CButton, CInput, SelectField } from "@/Shared";
-import React, { FormEvent } from "react";
+import { CButton, CInput, SelectField, cToastify } from "@/Shared";
+import React from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { loginStaticData } from "@/Content";
 import LoginSvg from "../svgComponents/LoginSvg";
@@ -10,22 +10,31 @@ import { useDispatch } from "react-redux";
 import { AppDispatch, useAppSelector } from "@/Redux/store";
 import { getLoginInfo } from "@/Redux/features/Auth/auth-slice";
 import { handleLogin } from "@/API_CALL/PostData/Login/Login";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
   const dispatch = useDispatch<AppDispatch>();
   const loginDetails = useAppSelector((state) => state.authSlice.loginDetails);
   const isLoading = useAppSelector((state) => state.authSlice.isLoading);
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const username = loginDetails?.username;
     const password = loginDetails?.password;
-    const data = { username, password };
+    const formData = new FormData();
+    formData.append("username", username);
+    formData.append("password", password);
     // console.log(data);
-    const resultAction = await dispatch(handleLogin(data));
+    const resultAction = await dispatch(handleLogin(formData));
     const { requestStatus, arg } = resultAction.meta;
-    // const originalPromiseResult = unwrapResult(resultAction);
-    console.log(resultAction, requestStatus, arg);
+    if (requestStatus === "fulfilled") {
+      cToastify({
+        type: "success",
+        message: "Login Successful",
+      });
+      router.push("/");
+    }
   };
   return (
     <section className="container-lg mx-auto h-screen flex md:block justify-center items-center">

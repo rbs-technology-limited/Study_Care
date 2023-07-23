@@ -7,6 +7,6 @@ export const handleRegister = createAsyncThunk(
       const response = await postCall("register/", {
         body: initialPost,
       });
-      return response.post;
+      return response;
     }
   );

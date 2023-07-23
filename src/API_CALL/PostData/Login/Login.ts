@@ -7,7 +7,12 @@ export const handleLogin = createAsyncThunk(
     const response = await postCall("login/", {
       body: initialPost,
     });
-    // console.log(response)
-    return response.post;
+    // console.log(response);
+    return response;
   }
 );
+
+// if (response.status === 200) {
+//   return response;
+// }
+// return rejectWithValue(response);

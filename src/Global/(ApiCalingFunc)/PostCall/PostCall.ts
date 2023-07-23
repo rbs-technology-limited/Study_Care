@@ -9,12 +9,11 @@ interface PostCallProps {
 
 export async function postCall(
   endpoint: PostCallProps["endpoint"],
-  {
-    body,
-    ...customConfig
-  }: PostCallProps["body"] & { customConfig?: any }
+  { body, ...customConfig }: PostCallProps["body"] & { customConfig?: any }
 ) {
-  const headers = { "Content-Type": "application/json" };
+  const headers = {
+    ...(body instanceof FormData ? {} : { "Content-Type": "application/json" }),
+  };
   try {
     let url = `${apiUrl}/${endpoint}`;
     const response = await fetch(url, {
@@ -23,7 +22,7 @@ export async function postCall(
         ...headers,
         ...customConfig.headers,
       },
-      body: JSON.stringify(body),
+      body: body instanceof FormData ? body : JSON.stringify(body),
     });
     const data = await response.json();
     // console.log(data);
