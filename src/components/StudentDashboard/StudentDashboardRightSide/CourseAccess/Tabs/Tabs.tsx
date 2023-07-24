@@ -2,7 +2,18 @@
 import { tabs } from "@/Content";
 import parse from "html-react-parser";
 import { useState } from "react";
+import Assignment from "./Assignment/Assignment";
 import QuizBox from "./QuizBox/QuizBox";
+
+type ITabData = {
+  id: number;
+  label: string;
+  videoDescription?: any;
+  referenceData?: any;
+  quiz?: any;
+  assignmentDetails?: any;
+  content?: any;
+};
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);
@@ -30,15 +41,17 @@ const Tabs = () => {
             className="p-2 my-6 w-full bg-gray-50 dark:bg-transparent h-max"
             key={tab.id}
           >
-            {/* {tab?.label === "ভিডিও ডেসক্রিপশন" ? (
-              <div dangerouslySetInnerHTML={{ __html: tab.content }}></div>
+            {tab.label === "ভিডিও ডেসক্রিপশন" ? (
+              parse(tab.videoDescription!)
+            ) : tab.label === "রেফারেন্স" ? (
+              <div>{tab.referenceData}</div>
+            ) : tab.label === "কুইজ" ? (
+              <QuizBox data={tab} />
+            ) : tab.label === "অ্যাসাইনমেন্ট" ? (
+              <Assignment data={tab} />
             ) : (
-              tab.content
-            )} */}
-            {tab?.label === "ভিডিও ডেসক্রিপশন"
-              ? parse(tab.content)
-              : tab.content}
-            {tab?.label === "কুইজ" ? <QuizBox data={tab} /> : tab.content}
+              parse(tab.content!)
+            )}
           </div>
         ) : null
       )}
