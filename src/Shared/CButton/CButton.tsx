@@ -10,6 +10,7 @@ interface Props {
   textUpperCased?: boolean;
   children?: React.ReactNode;
   disabled?: boolean;
+  loading?: boolean;
   color?: string;
   variant?: "solid" | "outline" | "text";
   onClick?: () => void;
@@ -32,6 +33,7 @@ const CButton = ({
   variant,
   onClick,
   height,
+  loading,
   ...rest
 }: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -94,8 +96,16 @@ const CButton = ({
         onMouseLeave={() => setIsHovered(false)}
         {...rest}
       >
-        {btnTitle}
-        {children}
+        {loading ? (
+          <div className="flex justify-center items-center">
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+          </div>
+        ) : (
+          <>
+            {btnTitle}
+            {children}
+          </>
+        )}
       </button>
     </>
   );
