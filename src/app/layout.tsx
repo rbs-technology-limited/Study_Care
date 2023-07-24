@@ -6,7 +6,6 @@ import Loading from "./loading";
 import ContextProvider from "@/Context/ContextProvider";
 import { NavigationEvents } from "@/Provider/navigation-events/navigation-events";
 import ScrollToTop from "@/Shared/ScrollToTop/ScrollToTop";
-const inter = Inter({ subsets: ["latin"] });
 import "react-tooltip/dist/react-tooltip.css";
 import ReduxProvider from "@/Redux/ReduxProvider/ReduxProvider";
 
@@ -15,6 +14,7 @@ export const metadata = {
   description: "The best place to study online",
 };
 
+const inter = Inter({ subsets: ["latin"] });
 interface Props {
   children: React.ReactNode;
 }
@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <ReduxProvider>
           <ContextProvider>
-            <AOSProvider> 
+            <AOSProvider>
               <Suspense fallback={<Loading />}>
                 <NavigationEvents>{children}</NavigationEvents>
               </Suspense>

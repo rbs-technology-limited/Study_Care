@@ -14,15 +14,19 @@ import { useTheme } from "next-themes";
 import getStystemPreference from "@/Utils/getSystemTheme";
 import { RiArrowDownSFill } from "react-icons/ri";
 import BlankBackground from "./BlankBackground/BlankBackground";
+import { getTokenCookies } from "../(cockies)/getCoockies";
+import { useAppSelector } from "@/Redux/store";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
-
   const [navbar, setNavbar] = useState(false);
   const [IndexData, setIndex] = useState("");
   const [dropdown, setDropdown] = useState(false);
-  // const [pageLoading, setPageLoading] = useState(true);
-  // const [refreshUserData, setRefreshUserData] = useState(false);
+  const isLogin = useAppSelector(
+    (state) => state.authSlice?.loginDetails?.isLogin
+  );
+  const userInfo = useAppSelector((state) => state.authSlice?.usersInfo);
+  console.log(userInfo);
   const [user, setUser] = useState(null);
   const [currentTheme, setTheeFromLocal] = useState(null);
   const [showBlankBackground, setShowBlankBackground] = useState(false);
@@ -38,30 +42,11 @@ const Header = () => {
   }, []);
 
   // useEffect(() => {
-  //   setPageLoading(true);
-  //   const studyCareData = JSON.parse(localStorage.getItem("studyCareData"));
+  //   (async()=>{
+  //     const getIsLoginData = await getTokenCookies();
+  //     if(getIsLoginData?.isLogin){
 
-  //   if (studyCareData) {
-  //     setUser(studyCareData);
-  //     setPageLoading(false);
-  //   } else {
-  //     setUser(null);
-  //     setPageLoading(false);
-  //   }
-  //   return () => {
-  //     setRefreshUserData(false);
-  //   };
-  // }, [refreshUserData]);
-
-  // console.log(IndexData);
-
-  // const handleLogin = (options: string) => {
-  //   if (options === "login") {
-  //     router.push("/login");
-  //   } else {
-  //     router.push("/signup");
-  //   }
-  // };
+  //   })
 
   return (
     //gradient orange 50 to orange 100
@@ -86,7 +71,7 @@ const Header = () => {
             {/* //logo  */}
             <Link
               href="/"
-              className="inline-block max-w-[160px] text-3xl text-black-400 font-bold leading-none"
+              className="inline-block max-w-[10rem] text-3xl text-black-400 font-bold leading-none"
             >
               <Image
                 src={Logo}
@@ -198,7 +183,7 @@ const Header = () => {
                           {/* blank background would pop up when hovering over কোর্সসমূহ */}
                           {showBlankBackground && (
                             <div
-                              className="bg-button-dark-teal w-72 absolute left-0 top-[25px] rounded-lg p-5"
+                              className="bg-button-dark-teal w-72 absolute left-0 top-[1.5625rem] rounded-lg p-5"
                               onMouseOver={() => setShowBlankBackground(true)}
                               onMouseLeave={() => setShowBlankBackground(false)}
                             >
@@ -229,29 +214,57 @@ const Header = () => {
               // setUser={setUser}
             /> */}
 
-            <Link href="/login">
-              <CButton
-                type="button"
-                textUpperCased
-                variant="text"
-                color="text-"
-              >
-                সাইন ইন
-              </CButton>
-            </Link>
+            {!isLogin ? (
+              <Link href="/login">
+                <CButton
+                  type="button"
+                  textUpperCased
+                  variant="text"
+                  color="text-"
+                >
+                  সাইন ইন
+                </CButton>
+              </Link>
+            ) : userInfo?.profile_image_thumbnail?.url ? (
+              <Image
+                src={userInfo?.profile_image_thumbnail?.url}
+                alt="user"
+                width={40}
+                height={40}
+                className="mr-2 border-2 border-black dark:border-white shadow rounded-full"
+                style={{
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                }}
+              />
+            ) : (
+              <>
+                <CButton
+                  type="button"
+                  textUpperCased
+                  variant="text"
+                  color="text-"
+                >
+                  {userInfo?.username}
+                </CButton>
+              </>
+            )}
+            {!isLogin && (
+              <Link href="/signup">
+                <CButton
+                  type="button"
+                  textUpperCased
+                  variant="solid"
+                  color={orange}
+                >
+                  নিবন্ধন করুন
+                </CButton>
+              </Link>
+            )}
 
-            <Link href="/signup">
-              <CButton
-                type="button"
-                textUpperCased
-                variant="solid"
-                color={orange}
-              >
-                নিবন্ধন করুন
-              </CButton>
-            </Link>
-
-            <div className="border-r-[0.0625rem] border-stone-400 dark:border-stone-300 h-12 mx-4"></div>
+            <div className="border-r-[1px] border-stone-400 dark:border-stone-300 h-12 mx-4"></div>
             {/* //toogle button  */}
             <ThemeToogleButton />
           </div>
