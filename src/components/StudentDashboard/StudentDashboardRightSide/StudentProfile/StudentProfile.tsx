@@ -6,6 +6,7 @@ import QuizReportSummary from "./QuizReportSummary/QuizReportSummary";
 import UserInfo from "./UserInfo/UserInfo";
 
 const StudentProfile = () => {
+  // console.log("profileData");
   return (
     <div>
       <UserInfo data={profileData} />

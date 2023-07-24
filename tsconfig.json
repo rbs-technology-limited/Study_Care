@@ -34,8 +34,7 @@
     "**/*.json",
     ".next/**/*.ts",
     ".next/**/*.tsx",
-    "src/**/*.ts",
-    "src/Shared/ScrollToTop/ScrollToTop.tsx"
+    "src/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

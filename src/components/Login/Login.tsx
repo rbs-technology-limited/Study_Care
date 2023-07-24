@@ -1,16 +1,40 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
-import { CButton, CInput, SelectField } from "@/Shared";
-import React, { FormEvent } from "react";
+import { CButton, CInput, SelectField, cToastify } from "@/Shared";
+import React from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { loginStaticData } from "@/Content";
 import LoginSvg from "../svgComponents/LoginSvg";
 import Link from "next/link";
+import { useDispatch } from "react-redux";
+import { AppDispatch, useAppSelector } from "@/Redux/store";
+import { getLoginInfo } from "@/Redux/features/Auth/auth-slice";
+import { handleLogin } from "@/API_CALL/PostData/Login/Login";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const loginDetails = useAppSelector((state) => state.authSlice.loginDetails);
+  const isLoading = useAppSelector((state) => state.authSlice.isLoading);
+  const router = useRouter();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("form submitted");
+    const username = loginDetails?.username;
+    const password = loginDetails?.password;
+    const formData = new FormData();
+    formData.append("username", username);
+    formData.append("password", password);
+    // console.log(data);
+    const resultAction = await dispatch(handleLogin(formData));
+    const { requestStatus, arg } = resultAction.meta;
+    if (requestStatus === "fulfilled") {
+      cToastify({
+        type: "success",
+        message: "Login Successful",
+      });
+      router.push("/");
+    }
   };
   return (
     <section className="container-lg mx-auto h-screen flex md:block justify-center items-center">
@@ -31,8 +55,22 @@ const Login = () => {
                 </h1>
                 <BsQuestionCircleFill color={teal} className="cursor-pointer" />
               </div>
-              <CInput type="text" placeholder="Email/Phone" />
-              <CInput type="password" placeholder="Password" />
+              <CInput
+                type="text"
+                placeholder="Email/Phone"
+                required
+                onChange={(e: any) =>
+                  dispatch(getLoginInfo({ username: e.target.value }))
+                }
+              />
+              <CInput
+                type="password"
+                placeholder="Password"
+                required
+                onChange={(e: any) =>
+                  dispatch(getLoginInfo({ password: e.target.value }))
+                }
+              />
 
               <Link href={"/forgotPassword"}>
                 <p className="text-button-teal my-1 cursor-pointer">
@@ -54,6 +92,7 @@ const Login = () => {
                   variant="solid"
                   color={teal}
                   btnTitle="Log in"
+                  loading={isLoading}
                 />
               </div>
             </form>
