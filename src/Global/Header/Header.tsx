@@ -15,18 +15,24 @@ import getStystemPreference from "@/Utils/getSystemTheme";
 import { RiArrowDownSFill } from "react-icons/ri";
 import BlankBackground from "./BlankBackground/BlankBackground";
 import { getTokenCookies } from "../(cockies)/getCoockies";
-import { useAppSelector } from "@/Redux/store";
+import { AppDispatch, useAppSelector } from "@/Redux/store";
+import { removeDataInCookies } from "../(cockies)/setCookies";
+import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { logout } from "@/Redux/features/Auth/auth-slice";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
   const [navbar, setNavbar] = useState(false);
   const [IndexData, setIndex] = useState("");
   const [dropdown, setDropdown] = useState(false);
+  const router = useRouter();
+  const dispatch = useDispatch<AppDispatch>();
   const isLogin = useAppSelector(
     (state) => state.authSlice?.loginDetails?.isLogin
   );
   const userInfo = useAppSelector((state) => state.authSlice?.usersInfo);
-  console.log(userInfo);
+  // console.log(userInfo);
   const [user, setUser] = useState(null);
   const [currentTheme, setTheeFromLocal] = useState(null);
   const [showBlankBackground, setShowBlankBackground] = useState(false);
@@ -41,12 +47,11 @@ const Header = () => {
     return () => {};
   }, []);
 
-  // useEffect(() => {
-  //   (async()=>{
-  //     const getIsLoginData = await getTokenCookies();
-  //     if(getIsLoginData?.isLogin){
-
-  //   })
+  const handleLogout = () => {
+    removeDataInCookies();
+    dispatch(logout());
+    router.push("/");
+  };
 
   return (
     //gradient orange 50 to orange 100
@@ -262,6 +267,20 @@ const Header = () => {
                   নিবন্ধন করুন
                 </CButton>
               </Link>
+            )}
+
+            {isLogin && (
+              <CButton
+                type="button"
+                textUpperCased
+                variant="solid"
+                color={orange}
+                onClick={() => {
+                  handleLogout();
+                }}
+              >
+                লগ আউট
+              </CButton>
             )}
 
             <div className="border-r-[1px] border-stone-400 dark:border-stone-300 h-12 mx-4"></div>

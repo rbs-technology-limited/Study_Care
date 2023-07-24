@@ -6,8 +6,11 @@ type IUserInfo = {
   data: {
     name: string;
     email: string;
-    phone: string;
+    mobile: string;
     address: string;
+    profile_image_thumbnail: {
+      url: string;
+    };
   };
 };
 
@@ -18,7 +21,7 @@ const UserInfo = ({ data }: IUserInfo) => {
       <div className="flex md:flex-row flex-col gap-4 text-gray-600 dark:text-white">
         <div className="flex flex-col gap-2 items-center p-2">
           <Image
-            src="https://picsum.photos/200/300"
+            src={data?.profile_image_thumbnail?.url}
             alt="user"
             width={150}
             height={100}
@@ -34,12 +37,16 @@ const UserInfo = ({ data }: IUserInfo) => {
           <p className="text-sm">
             <span className="font-bold">Email:</span> {data?.email}
           </p>
-          <p className="text-sm">
-            <span className="font-bold">Phone Number:</span> {data?.phone}
-          </p>
-          <p className="text-sm">
-            <span className="font-bold">Address:</span> {data?.address}
-          </p>
+          {data?.mobile && (
+            <p className="text-sm">
+              <span className="font-bold">Phone Number:</span> {data?.mobile}
+            </p>
+          )}
+          {data?.address && (
+            <p className="text-sm">
+              <span className="font-bold">Address:</span> {data?.address}
+            </p>
+          )}
         </div>
       </div>
     </main>

@@ -9,6 +9,7 @@ type IDashboardRightSide = {
 };
 
 const StudentDashboardRightSide = ({ selectedOption }: IDashboardRightSide) => {
+  
   const contents = React.useMemo(() => {
     switch (selectedOption) {
       case "MY COURSES":
