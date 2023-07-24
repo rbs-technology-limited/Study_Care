@@ -1,18 +1,22 @@
-
 "use server";
 import { cookies } from "next/headers";
 interface GetCallProps {
   data: any;
+  name?: string;
 }
 
-export const saveDataInCookies = async ({ data }: GetCallProps) => {
+export const saveDataInCookies = async ({
+  data,
+  name = "authToken",
+}: GetCallProps) => {
   // console.log(data);
   // console.log("server");
   cookies().set({
-    name: "userInfo",
+    name: name,
     value: JSON.stringify({
       accessToken: data.access,
       refreshToken: data.refresh,
+      ...data,
     }),
     httpOnly: true,
     // secure: true,//https
@@ -22,9 +26,9 @@ export const saveDataInCookies = async ({ data }: GetCallProps) => {
   });
 };
 
-export const removeDataInCookies = async () => {
+export const removeDataInCookies = async (name = "authToken") => {
   cookies().set({
-    name: "userInfo",
+    name: name,
     value: "",
     httpOnly: true,
     maxAge: 0,

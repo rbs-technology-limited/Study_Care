@@ -31,7 +31,7 @@ export async function getCall(
   }
 ) {
   const token = await getTokenCookies();
-  // console.log(token); 
+  // console.log(token);
   const headers = {
     "Content-Type": "application/json",
     ...(token && { Authorization: `Bearer ${token.accessToken}` }),
@@ -65,7 +65,7 @@ export async function getCall(
     const result = await response.json();
     // console.log(data);
     if (!response.ok) {
-      return;
+      return response;
     }
     if (response.ok) {
       return result;
