@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import HeroImage from "public/Asset/Hero_section_Logo.svg";
 import { CButton } from "@/Shared";
 import { lightTeal, teal } from "@/Constant/Custom-Color";
@@ -10,6 +10,7 @@ const HeroSection = () => {
     title: string;
     shortDescription: string;
   }
+
   return (
     <main className="relative md:py-14 pt-14">
       {/* //shape  */}

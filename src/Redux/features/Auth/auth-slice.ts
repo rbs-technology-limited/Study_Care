@@ -1,5 +1,5 @@
 import { handleLogin } from "@/API_CALL/PostData/Login/Login";
-import { saveDataInCookies } from "@/Redux/action";
+import { saveDataInCookies } from "@/Global/(cockies)/setCookies";
 // import { handleRegister } from "@/API_CALL/PostData/Register/Register";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 

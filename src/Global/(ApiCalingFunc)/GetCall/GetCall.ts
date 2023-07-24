@@ -1,5 +1,6 @@
-import { refreshToken } from "@/API_CALL/PostData/RefreshToken/RefreshToken";
+import { apiRequestWithRetry } from "@/API_CALL/PostData/RefreshToken/RefreshToken";
 import apiUrl from "@/Base/apiUrl";
+import { getTokenCookies } from "@/Global/(cockies)/getCoockies";
 interface GetCallProps {
   endpoint: string;
   data?: any;
@@ -8,6 +9,7 @@ interface GetCallProps {
   query?: object;
   revalidate?: number;
   cache?: any;
+  retryCount?: number;
 }
 
 export async function getCall(
@@ -28,7 +30,12 @@ export async function getCall(
     cache?: any;
   }
 ) {
-  const headers = { "Content-Type": "application/json" };
+  const token = await getTokenCookies();
+  // console.log(token); 
+  const headers = {
+    "Content-Type": "application/json",
+    ...(token && { Authorization: `Bearer ${token.accessToken}` }),
+  };
   try {
     let url = `${apiUrl}/${endpoint}`;
 
@@ -58,17 +65,13 @@ export async function getCall(
     const result = await response.json();
     // console.log(data);
     if (!response.ok) {
-      console.log(response.status);
-      refreshToken({
-        // refreshToken: localStorage.getItem("refreshToken"),
-        status: response.status,
-      });
+      return;
     }
     if (response.ok) {
       return result;
     }
   } catch (error) {
-    // console.log(error);
+    console.log(error, "error");
     return Promise.reject(error);
   }
 }
