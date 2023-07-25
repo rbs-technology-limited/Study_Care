@@ -40,31 +40,12 @@ const Login = () => {
             });
             await (async () => {
                 const getDataFromCookies = await getTokenCookies();
-                // console.log(getDataFromCookies.isLogin);
+
                 if (getDataFromCookies?.isLogin) {
                     const response = await getCall(getUserDataEndpoint, {});
                     dispatch(getLoginInfo({isLogin: true}));
-                    // console.log(response);
-                    if (response.status === 401) {
-                        // removeDataInCookies();
-                        Swal.fire({
-                            title: "Error!",
-                            text: "Unauthorized! Please login again",
-                            icon: "error",
-                            confirmButtonText: "Ok",
-                        }).then(() => {
-                            removeDataInCookies();
-                            router.push("/");
-                            dispatch(
-                                getLoginInfo({
-                                    isLogin: false,
-                                })
-                            );
-                        });
-                    } else {
-                        dispatch(getUserInfo(response));
-                        router.push("/");
-                    }
+                    dispatch(getUserInfo(response));
+                    router.push("/");
                 }
             })();
         }
