@@ -1,43 +1,65 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
 import { signupStaticData } from "@/Content";
-import { callAction } from "@/Global/(ApiCalingFunc)/CallAction/callAction";
-import { register } from "@/Redux/features/Auth/auth-slice";
+import isFetchBaseQueryError from "@/Global/ErrorType/ErrorType";
+import { useRegisterMutation } from "@/Redux/features/registration/registrationSlice";
 import { useAppDispatch, useAppSelector } from "@/Redux/store";
 import { CButton, CInput, SelectField, cToastify } from "@/Shared";
 import Link from "next/link";
-import { ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
 import RegisterSvg from "../svgComponents/RegisterSvg";
 
 const Signup = () => {
   const { userDetails } = useAppSelector((state) => state.authSlice);
   // console.log(userDetails);
+  const [details, setDetails] = useState({
+    username: "",
+    email: "",
+    password1: "",
+    password2: "",
+  });
   const dispatch = useAppDispatch();
+  const [register, { data, isLoading, isError, isSuccess, error }] =
+    useRegisterMutation();
+
+  useEffect(() => {
+    if (isSuccess) {
+      cToastify({
+        type: "success",
+        message: "Account is created successfully.",
+      });
+    }
+
+    if (isError && isFetchBaseQueryError(error)) {
+      console.log(error);
+    }
+  }, [isSuccess, isError, error]);
 
   const handleRegisterSubmit = async (e: FormEvent<HTMLFormElement>) => {
     const formData = new FormData();
     e.preventDefault();
-    for (const key in userDetails) {
-      formData.append(key, userDetails[key as keyof typeof userDetails]);
+    for (const key in details) {
+      formData.append(key, details[key as keyof typeof details]);
     }
-    try {
-      const response = await callAction("register/", {
-        body: formData,
-      });
-      console.log(response);
-      if (response.message === "success") {
-        cToastify({
-          type: "success",
-          message: "Account is created successfully.",
-        });
-      }
-      if (response?.username) {
-        console.log(response?.username[0]);
-      }
-    } catch (error: any) {
-      console.log(error?.message);
-    }
+    register(formData).unwrap();
+
+    // try {
+    //   const response = await register(formData).unwrap();
+    //   console.log(response);
+
+    //   // if (response.message === "success") {
+    //   //   cToastify({
+    //   //     type: "success",
+    //   //     message: "Account is created successfully.",
+    //   //   });
+    //   // }
+    //   // if (response?.username) {
+    //   //   console.log(response?.username[0]);
+    //   // }
+    // } catch (error: any) {
+    //   console.log(error?.message);
+    // }
 
     //   // Check if the error object has the "username" field and display the error message
     //   if (error?.username) {
@@ -116,14 +138,11 @@ const Signup = () => {
                     mb="mb-0"
                     id="name"
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                      dispatch(
-                        register({
-                          username: e.target.value,
-                        })
-                      )
+                      setDetails({ ...details, username: e.target.value })
                     }
                   />
                 </div>
+
                 {/* address */}
                 <div className="md:mb-1 lg:mb-2">
                   <div className="flex justify-between items-center">
@@ -218,9 +237,15 @@ const Signup = () => {
                     id="email"
                     mb="mb-0"
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                      dispatch(register({ email: e.target.value }))
+                      setDetails({ ...details, email: e.target.value })
                     }
                   />
+
+                  {isError && error.data.email && (
+                    <label htmlFor="" className="text-red-500 text-sm">
+                      {error.data.email[0]}
+                    </label>
+                  )}
                 </div>
                 {/* phone number(optional)*/}
                 <div>
@@ -275,7 +300,7 @@ const Signup = () => {
                     id="password"
                     mb="mb-0"
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                      dispatch(register({ password1: e.target.value }))
+                      setDetails({ ...details, password1: e.target.value })
                     }
                   />
                 </div>
@@ -300,7 +325,7 @@ const Signup = () => {
                     id="confirmPassword"
                     mb="mb-0"
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                      dispatch(register({ password2: e.target.value }))
+                      setDetails({ ...details, password2: e.target.value })
                     }
                   />
                 </div>
@@ -326,6 +351,7 @@ const Signup = () => {
                 variant="solid"
                 btnTitle={signupStaticData?.button}
                 color={teal}
+                loading={isLoading}
               />
             </div>
           </form>

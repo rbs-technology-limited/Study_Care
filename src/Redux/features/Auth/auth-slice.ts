@@ -81,7 +81,7 @@ export const authSlice = createSlice({
         },
       });
     },
-    register: (state, action: PayloadAction<any>) => {
+    postUserDetails: (state, action: PayloadAction<any>) => {
       state.userDetails = {
         ...state.userDetails,
         ...action.payload,
@@ -139,7 +139,7 @@ export const authSlice = createSlice({
   },
 });
 
-export const { getLoginInfo, getUserInfo, logout, register } =
+export const { getLoginInfo, getUserInfo, logout, postUserDetails } =
   authSlice.actions;
 
 export default authSlice.reducer;
