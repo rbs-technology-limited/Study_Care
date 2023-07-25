@@ -4,17 +4,20 @@ import AssignmentReportSummary from "./AssignmentReportSummary/AssignmentReportS
 import OverAllCourseProgress from "./OverAllCourseProgress/OverAllCourseProgress";
 import QuizReportSummary from "./QuizReportSummary/QuizReportSummary";
 import UserInfo from "./UserInfo/UserInfo";
+import { useAppSelector } from "@/Redux/store";
 
 const StudentProfile = () => {
   // console.log("profileData");
+  const getUserData = useAppSelector((state) => state.authSlice.usersInfo);
+  console.log(getUserData);
   return (
-    <div>
-      <UserInfo data={profileData} />
+    <main>
+      <UserInfo data={getUserData} />
       <CourseProgressInfos data={profileData.courseProgressData} />
       <QuizReportSummary data={profileData.quizReportSummary} />
       <OverAllCourseProgress />
       <AssignmentReportSummary />
-    </div>
+    </main>
   );
 };
 

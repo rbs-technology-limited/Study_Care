@@ -8,9 +8,14 @@ import LoginSvg from "../svgComponents/LoginSvg";
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { AppDispatch, useAppSelector } from "@/Redux/store";
-import { getLoginInfo } from "@/Redux/features/Auth/auth-slice";
+import { getLoginInfo, getUserInfo } from "@/Redux/features/Auth/auth-slice";
 import { handleLogin } from "@/API_CALL/PostData/Login/Login";
 import { useRouter } from "next/navigation";
+import { getCall } from "@/Global/(ApiCalingFunc)/GetCall/GetCall";
+import { getTokenCookies } from "@/Global/(cockies)/getCoockies";
+import { getUserDataEndpoint } from "@/API_CALL";
+import Swal from "sweetalert2";
+import { removeDataInCookies } from "@/Global/(cockies)/setCookies";
 
 const Login = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -33,7 +38,35 @@ const Login = () => {
         type: "success",
         message: "Login Successful",
       });
-      router.push("/");
+      (async () => {
+        const getDataFromCookies = await getTokenCookies();
+        // console.log(getDataFromCookies.isLogin);
+        if (getDataFromCookies?.isLogin) {
+          const response = await getCall(getUserDataEndpoint, {});
+          dispatch(getLoginInfo({ isLogin: true }));
+          // console.log(response);
+          if (response.status === 401) {
+            // removeDataInCookies();
+            Swal.fire({
+              title: "Error!",
+              text: "Unauthorized! Please login again",
+              icon: "error",
+              confirmButtonText: "Ok",
+            }).then(() => {
+              removeDataInCookies();
+              router.push("/");
+              dispatch(
+                getLoginInfo({
+                  isLogin: false,
+                })
+              );
+            });
+          } else {
+            dispatch(getUserInfo(response));
+            router.push("/");
+          }
+        }
+      })();
     }
   };
   return (
