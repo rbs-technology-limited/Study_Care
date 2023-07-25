@@ -12,7 +12,7 @@ interface Props {
   disabled?: boolean;
   loading?: boolean;
   color?: string;
-  variant?: "solid" | "outline" | "text";
+  variant?: "solid" | "outline" | "text" | "contained";
   onClick?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
@@ -70,6 +70,13 @@ const CButton = ({
                         ? color
                         : "text-button-teal dark:text-button-dark-teal"
                     } `
+                  : ""
+              }
+
+              ${
+                variant === "contained"
+                  ? `${color ? color : "bg-black text-white "}
+                  ${isHovered ? "opacity-90" : "opacity-100"}`
                   : ""
               }
               `

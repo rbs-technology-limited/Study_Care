@@ -1,4 +1,3 @@
-import { teal } from "@/Constant/Custom-Color";
 import { CButton } from "@/Shared";
 
 type IAssignmentProps = {
@@ -30,28 +29,34 @@ const Assignment = ({ data }: IAssignmentProps) => {
         জমা দেয়ার শেষ সময় - {data?.assignmentDetails?.lastSubmissionDate}
       </p>
       <div className="flex flex-col md:flex-row justify-between items-center p-3 my-3">
-        <CButton variant="outline" disabled color="green">
+        <CButton
+          variant="contained"
+          color="bg-green-600 text-white cursor-not-allowed"
+        >
           সর্বমোট নাম্বার - {data?.assignmentDetails?.totalMarks}
         </CButton>
         {data?.assignmentDetails?.assignment_attempted ? (
           <CButton
-            variant="outline"
+            variant="contained"
             color={
               data?.assignmentDetails?.submitted_date >
               data?.assignmentDetails?.lastSubmissionDate
-                ? "red"
-                : teal
+                ? "bg-red-700 text-white"
+                : "bg-cyan-800 text-white"
             }
           >
             আপনি যা জমা দিয়েছেন
           </CButton>
         ) : (
-          <CButton variant="outline" color="red">
+          <CButton variant="contained" color="bg-red-700 text-white">
             জমা দিন
           </CButton>
         )}
         {data?.assignmentDetails?.assignment_attempted && (
-          <CButton variant="outline" color="blue" disabled>
+          <CButton
+            variant="contained"
+            color="bg-blue-800 text-white cursor-not-allowed"
+          >
             প্রাপ্ত নাম্বার - {data?.assignmentDetails?.obtainedMarks}
           </CButton>
         )}
