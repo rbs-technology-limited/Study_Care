@@ -1,11 +1,10 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
-import React from "react";
-import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
-import RegisterSvg from "../svgComponents/RegisterSvg";
 import { signupStaticData } from "@/Content";
 import { CButton, CInput, SelectField } from "@/Shared";
 import Link from "next/link";
+import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
+import RegisterSvg from "../svgComponents/RegisterSvg";
 
 const Signup = () => {
   return (
