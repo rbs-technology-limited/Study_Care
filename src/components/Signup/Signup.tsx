@@ -39,14 +39,6 @@ const Signup = () => {
     }
     try {
       const response = await register(formData).unwrap();
-      console.log(response);
-
-      if (response.message === "success") {
-        cToastify({
-          type: "success",
-          message: "Account is created successfully.",
-        });
-      }
     } catch (error: FetchBaseQueryError | SerializedError | any) {
       cToastify({
         type: "error",
