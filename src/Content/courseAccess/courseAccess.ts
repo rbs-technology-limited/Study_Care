@@ -80,7 +80,7 @@ export const tabs = [
       obtainedMarks: 0,
     },
     content: "",
-    quiz_attempted: false,
+    quiz_attempted: true,
   },
   {
     id: 4,
