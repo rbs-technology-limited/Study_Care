@@ -1,8 +1,8 @@
 import { apiSlice } from "../api/apiSlice";
 
-export const forgetPassSlice = apiSlice.injectEndpoints({
+export const verifyEmailSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
-        forgetPass: builder.mutation({
+        verifyEmail: builder.mutation({
             query: (data) => ({
                 url: '/verify_email_token/v2/',
                 method: "POST",
@@ -12,4 +12,4 @@ export const forgetPassSlice = apiSlice.injectEndpoints({
 
     }),
 });
-export const { useForgetPassMutation } = forgetPassSlice;
+export const { useVerifyEmailMutation } = verifyEmailSlice;
