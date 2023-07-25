@@ -36,7 +36,7 @@ export async function callAction(
         type: "error",
         message: "Something went wrong! please try again",
       });
-      return response;
+      return data;
     }
     if (response.ok) {
       return data;

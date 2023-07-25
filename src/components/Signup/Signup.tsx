@@ -12,7 +12,7 @@ import RegisterSvg from "../svgComponents/RegisterSvg";
 
 const Signup = () => {
   const { userDetails } = useAppSelector((state) => state.authSlice);
-  console.log(userDetails);
+  // console.log(userDetails);
   const dispatch = useAppDispatch();
 
   const handleRegisterSubmit = async (e: FormEvent<HTMLFormElement>) => {
