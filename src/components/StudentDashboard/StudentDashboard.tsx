@@ -20,7 +20,10 @@ const StudentDashboard = () => {
       >
         <div className="dark:border-gray-200/10 hidden lg:block md:w-1/4">
           {/* left side */}
-          <StudentDashboardLeftSide setSelectedOption={setSelectedOption} selectedOption={selectedOption} />
+          <StudentDashboardLeftSide
+            setSelectedOption={setSelectedOption}
+            selectedOption={selectedOption}
+          />
         </div>
         <div className="lg:hidden">
           {/* left side */}
@@ -32,7 +35,10 @@ const StudentDashboard = () => {
             Show Menu
           </CButton>
           <OffCanvus open={showMenu} setOpen={setShowMenu} title="Menu">
-            <StudentDashboardLeftSide setSelectedOption={setSelectedOption} selectedOption={selectedOption} />
+            <StudentDashboardLeftSide
+              setSelectedOption={setSelectedOption}
+              selectedOption={selectedOption}
+            />
           </OffCanvus>
         </div>
         <div className=" rounded w-full px-1 overflow-y-auto overflow-x-hidden">

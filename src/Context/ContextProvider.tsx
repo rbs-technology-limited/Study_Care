@@ -51,7 +51,7 @@ const ContextProvider = ({ children }: Props): React.ReactElement<Props> => {
         }
       }
     })();
-  }, []);
+  }, [dispatch, router]);
 
   return (
     <Context.Provider

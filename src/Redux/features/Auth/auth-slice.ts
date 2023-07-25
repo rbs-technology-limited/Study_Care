@@ -1,5 +1,5 @@
 import { handleLogin } from "@/API_CALL/PostData/Login/Login";
-import { getTokenCookies } from "@/Global/(cockies)/getCoockies";
+// import { getTokenCookies } from "@/Global/(cockies)/getCoockies";
 import { saveDataInCookies } from "@/Global/(cockies)/setCookies";
 // import { handleRegister } from "@/API_CALL/PostData/Register/Register";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
@@ -17,6 +17,12 @@ type INITIAL_STATE = {
     isLogin: boolean;
   };
   usersInfo: any;
+  userDetails: {
+    username: string;
+    email: string;
+    password1: string;
+    password2: string;
+  };
 };
 
 const initialState = {
@@ -29,6 +35,12 @@ const initialState = {
     username: "",
     password: "",
     isLogin: false,
+  },
+  userDetails: {
+    username: "",
+    email: "",
+    password1: "",
+    password2: "",
   },
   usersInfo: {},
 } as INITIAL_STATE;
@@ -55,6 +67,25 @@ export const authSlice = createSlice({
         data: state.usersInfo,
         name: "userData",
       });
+    },
+    logout: (state) => {
+      state.usersInfo = {};
+      state.loginDetails = {
+        username: "",
+        password: "",
+        isLogin: false,
+      };
+      saveDataInCookies({
+        data: {
+          isLogin: false,
+        },
+      });
+    },
+    register: (state, action: PayloadAction<any>) => {
+      state.userDetails = {
+        ...state.userDetails,
+        ...action.payload,
+      };
     },
   },
   extraReducers: (builder) => {
@@ -108,6 +139,7 @@ export const authSlice = createSlice({
   },
 });
 
-export const { getLoginInfo, getUserInfo } = authSlice.actions;
+export const { getLoginInfo, getUserInfo, logout, register } =
+  authSlice.actions;
 
 export default authSlice.reducer;

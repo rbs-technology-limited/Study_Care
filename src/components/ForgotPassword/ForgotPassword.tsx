@@ -1,11 +1,11 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
-import { CButton, CInput } from "@/Shared";
-import React, { FormEvent } from "react";
-import { BsQuestionCircleFill } from "react-icons/bs";
 import { forgotPasswordStaticData } from "@/Content";
-import ForgotPasswordSvg from "../svgComponents/ForgotPasswordSvg";
+import { CButton, CInput } from "@/Shared";
 import Link from "next/link";
+import { FormEvent } from "react";
+import { BsQuestionCircleFill } from "react-icons/bs";
+import ForgotPasswordSvg from "../svgComponents/ForgotPasswordSvg";
 
 const ForgotPassword = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -37,15 +37,17 @@ const ForgotPassword = () => {
               {/* dashed line */}
               <div className="border-[0.0925rem] border-dashed my-6"></div>
               {/* button*/}
-              <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
-                <CButton
-                  type="submit"
-                  variant="solid"
-                  color={teal}
-                  fullWidth
-                  btnTitle={forgotPasswordStaticData?.button1}
-                />
-              </div>
+              <Link href={"/changePassword"}>
+                <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
+                  <CButton
+                    type="submit"
+                    variant="solid"
+                    color={teal}
+                    fullWidth
+                    btnTitle={forgotPasswordStaticData?.button1}
+                  />
+                </div>
+              </Link>
             </form>
             {/* customer support part */}
             <div className="flex flex-col justify-center items-center mt-8">

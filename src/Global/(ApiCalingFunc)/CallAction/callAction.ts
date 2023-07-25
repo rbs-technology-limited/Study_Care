@@ -36,11 +36,12 @@ export async function callAction(
         type: "error",
         message: "Something went wrong! please try again",
       });
+      return data;
     }
     if (response.ok) {
       return data;
     }
-    throw new Error(response.statusText);
+    // throw new Error(response?.statusText);
   } catch (error) {
     // console.log(error);
     return Promise.reject(error);

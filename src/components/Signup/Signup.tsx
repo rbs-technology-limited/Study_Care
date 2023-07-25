@@ -1,13 +1,59 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
-import React from "react";
+import { signupStaticData } from "@/Content";
+import { callAction } from "@/Global/(ApiCalingFunc)/CallAction/callAction";
+import { register } from "@/Redux/features/Auth/auth-slice";
+import { useAppDispatch, useAppSelector } from "@/Redux/store";
+import { CButton, CInput, SelectField, cToastify } from "@/Shared";
+import Link from "next/link";
+import { ChangeEvent, FormEvent } from "react";
 import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
 import RegisterSvg from "../svgComponents/RegisterSvg";
-import { signupStaticData } from "@/Content";
-import { CButton, CInput, SelectField } from "@/Shared";
-import Link from "next/link";
 
 const Signup = () => {
+  const { userDetails } = useAppSelector((state) => state.authSlice);
+  // console.log(userDetails);
+  const dispatch = useAppDispatch();
+
+  const handleRegisterSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    const formData = new FormData();
+    e.preventDefault();
+    for (const key in userDetails) {
+      formData.append(key, userDetails[key as keyof typeof userDetails]);
+    }
+    try {
+      const response = await callAction("register/", {
+        body: formData,
+      });
+      console.log(response);
+      if (response.message === "success") {
+        cToastify({
+          type: "success",
+          message: "Account is created successfully.",
+        });
+      }
+      if (response?.username) {
+        console.log(response?.username[0]);
+      }
+    } catch (error: any) {
+      console.log(error?.message);
+    }
+
+    //   // Check if the error object has the "username" field and display the error message
+    //   if (error?.username) {
+    //     cToastify({
+    //       type: "error",
+    //       message: error?.username[0],
+    //     });
+    //   } else {
+    //     cToastify({
+    //       type: "error",
+    //       message: "An unknown error occurred.",
+    //     });
+    //   }
+    // }
+  };
+
   return (
     <section className="container-md mx-auto h-screen">
       <div className="flex justify-center items-center text-[11px] lg:text-sm text-gray-600 dark:text-white">
@@ -45,7 +91,7 @@ const Signup = () => {
           {/* dashed line */}
           <div className="border-[0.0925rem] border-dashed my-2 xl:my-4"></div>
           {/* input section */}
-          <form>
+          <form onSubmit={handleRegisterSubmit}>
             <div className="flex flex-col md:flex-row md:gap-6 items-center">
               <div className="w-full md:w-6/12">
                 {/* name */}
@@ -69,6 +115,13 @@ const Signup = () => {
                     }
                     mb="mb-0"
                     id="name"
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      dispatch(
+                        register({
+                          username: e.target.value,
+                        })
+                      )
+                    }
                   />
                 </div>
                 {/* address */}
@@ -164,6 +217,9 @@ const Signup = () => {
                     }
                     id="email"
                     mb="mb-0"
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      dispatch(register({ email: e.target.value }))
+                    }
                   />
                 </div>
                 {/* phone number(optional)*/}
@@ -214,7 +270,14 @@ const Signup = () => {
                       className="cursor-pointer"
                     />
                   </div>
-                  <CInput type="password" id="password" mb="mb-0" />
+                  <CInput
+                    type="password"
+                    id="password"
+                    mb="mb-0"
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      dispatch(register({ password1: e.target.value }))
+                    }
+                  />
                 </div>
               </div>
               <div className="w-full md:w-6/12">
@@ -232,7 +295,14 @@ const Signup = () => {
                       className="cursor-pointer"
                     />
                   </div>
-                  <CInput type="password" id="confirmPassword" mb="mb-0" />
+                  <CInput
+                    type="password"
+                    id="confirmPassword"
+                    mb="mb-0"
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      dispatch(register({ password2: e.target.value }))
+                    }
+                  />
                 </div>
               </div>
             </div>
