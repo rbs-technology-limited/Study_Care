@@ -15,7 +15,7 @@ import {getCall} from "@/Global/(ApiCalingFunc)/GetCall/GetCall";
 import {getTokenCookies} from "@/Global/(cockies)/getCoockies";
 import {getUserDataEndpoint} from "@/API_CALL";
 import Swal from "sweetalert2";
-import {removeDataInCookies} from "@/Global/(cockies)/setCookies";
+// import {removeDataInCookies} from "@/Global/(cockies)/setCookies";
 
 const Login = () => {
     const dispatch = useDispatch<AppDispatch>();

@@ -24,6 +24,7 @@ export const saveDataInCookies = async ({
     //  expire after 1 day
     expires: new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
   });
+  return data;
 };
 
 export const removeDataInCookies = async (name = "authToken") => {
