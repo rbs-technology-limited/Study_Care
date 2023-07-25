@@ -7,7 +7,7 @@ import Tabs from "./Tabs/Tabs";
 const CourseAccess = () => {
   return (
     <section className="container mx-auto px-8 py-8">
-      <div className="flex flex-col lg:flex-row gap-3">
+      <div className="flex flex-col-reverse lg:flex-row gap-3">
         {/* description */}
         <div className="w-full lg:w-3/5">
           <LessonTasksSummary />
