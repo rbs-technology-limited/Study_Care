@@ -17,6 +17,12 @@ type INITIAL_STATE = {
     isLogin: boolean;
   };
   usersInfo: any;
+  userDetails: {
+    username: string;
+    email: string;
+    password1: string;
+    password2: string;
+  };
 };
 
 const initialState = {
@@ -29,6 +35,12 @@ const initialState = {
     username: "",
     password: "",
     isLogin: false,
+  },
+  userDetails: {
+    username: "",
+    email: "",
+    password1: "",
+    password2: "",
   },
   usersInfo: {},
 } as INITIAL_STATE;
@@ -68,6 +80,12 @@ export const authSlice = createSlice({
           isLogin: false,
         },
       });
+    },
+    register: (state, action: PayloadAction<any>) => {
+      state.userDetails = {
+        ...state.userDetails,
+        ...action.payload,
+      };
     },
   },
   extraReducers: (builder) => {
@@ -121,6 +139,7 @@ export const authSlice = createSlice({
   },
 });
 
-export const { getLoginInfo, getUserInfo, logout } = authSlice.actions;
+export const { getLoginInfo, getUserInfo, logout, register } =
+  authSlice.actions;
 
 export default authSlice.reducer;
