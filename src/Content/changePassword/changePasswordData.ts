@@ -1,4 +1,5 @@
 export const changePasswordStaticData = {
+  homeLink: "Home",
   title1: "Change Password",
   description:
     "Input your new desired password in the input fields below to create a new password. We strongly advise you to store it safely.",

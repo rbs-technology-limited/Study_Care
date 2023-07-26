@@ -1,4 +1,5 @@
-export const verifyOtpData = {
+export const verifyOtpRegisterData = {
+  homeLink: "Home",
   title1: "Verify Your Email",
   description: "An email has been sent to your email address.",
   email: "Email",
@@ -8,4 +9,13 @@ export const verifyOtpData = {
   link1: "Customer support",
 };
 
-export default verifyOtpData;
+export const verifyOtpForgotPasswordData = {
+  homeLink: "Home",
+  title1: "Verify Your OTP",
+  description: "OTP has been sent to your email address.",
+
+  otp: "OTP",
+  button1: "Submit",
+  title3: "Do you need help?",
+  link1: "Customer support",
+};
