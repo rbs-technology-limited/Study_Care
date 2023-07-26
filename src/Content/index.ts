@@ -63,6 +63,7 @@ import {
 import courseProgressContent, {
   courseProgressData,
 } from "./dashboard/courseCompleteAllProgress";
+import { editProfileData } from "./dashboard/editProfile";
 import {
   specificCourseSummary,
   specificCourseSummaryStaticData,
@@ -95,6 +96,7 @@ export {
   couseClassRoutineData,
   dashboardCardData,
   dashboardLeftSideStaticData,
+  editProfileData,
   educationYears,
   exploreCoursesContent,
   exploreCoursesData1,

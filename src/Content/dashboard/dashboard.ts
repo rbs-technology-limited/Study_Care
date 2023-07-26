@@ -25,4 +25,5 @@ export const dashboardLeftSideStaticData = {
   title1: "MY COURSES",
   title2: "PROFILE",
   title3: "CHANGE PASSWORD",
+  title4: "EDIT PROFILE",
 };

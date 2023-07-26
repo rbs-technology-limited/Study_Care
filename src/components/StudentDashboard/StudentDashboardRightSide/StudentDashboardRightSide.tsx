@@ -2,6 +2,7 @@
 import { dashboardCardData } from "@/Content";
 import React from "react";
 import DashboardCard from "../DashboardCard/DashboardCard";
+import EditProfile from "./EditProfile/EditProfile";
 import StudentProfile from "./StudentProfile/StudentProfile";
 
 type IDashboardRightSide = {
@@ -9,7 +10,6 @@ type IDashboardRightSide = {
 };
 
 const StudentDashboardRightSide = ({ selectedOption }: IDashboardRightSide) => {
-  
   const contents = React.useMemo(() => {
     switch (selectedOption) {
       case "MY COURSES":
@@ -26,6 +26,9 @@ const StudentDashboardRightSide = ({ selectedOption }: IDashboardRightSide) => {
 
       case "CHANGE PASSWORD":
         return <div>Change Password</div>;
+
+      case "EDIT PROFILE":
+        return <EditProfile />;
 
       default:
         return (
