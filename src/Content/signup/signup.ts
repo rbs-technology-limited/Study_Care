@@ -1,4 +1,5 @@
 const signupStaticData = {
+  homeLink: "Home",
   loginLink: "Already a member?",
   primary_title1: "Input your",
   primary_title2: "information",

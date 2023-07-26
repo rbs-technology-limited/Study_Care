@@ -9,6 +9,7 @@ import { FetchBaseQueryError } from "@reduxjs/toolkit/dist/query";
 import Link from "next/link";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 import RegisterSvg from "../svgComponents/RegisterSvg";
 
 const Signup = () => {
@@ -53,7 +54,15 @@ const Signup = () => {
         {/* input section */}
         <div className="w-full md:w-2/3 px-4 md:px-6 py-6 md:py-1">
           {/* already a member? section */}
-          <div className="flex justify-end">
+          <div className="flex justify-between items-center">
+            <Link href={"/"}>
+              <div className="flex justify-center items-center mb-4">
+                <HiOutlineArrowLeft className="text-sm font-normal text-button-teal" />
+                <p className="font-normal text-button-teal">
+                  {signupStaticData?.homeLink}
+                </p>
+              </div>
+            </Link>
             <Link href={"/login"}>
               <div className="flex items-center gap-1 mb-4 cursor-pointer">
                 <p className="text-button-teal">

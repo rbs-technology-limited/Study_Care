@@ -1,4 +1,5 @@
 export const loginStaticData = {
+  homeLink: "Home",
   title1: "Login",
   description: "Login to your account",
   title2: "Account",
