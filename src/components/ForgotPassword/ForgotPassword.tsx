@@ -28,7 +28,7 @@ const ForgotPassword = () => {
         </div>
         <div className="w-full md:w-1/3 md:flex justify-center items-center bg-white dark:bg-transparent">
           <div className="px-6 lg:px-14">
-            <h1 className="text-3xl font-bold mb-8">
+            <h1 className="text-3xl font-bold mt-0 md:mt-6 lg:mt-6 xl:mt-0 mb-8">
               {forgotPasswordStaticData?.title1}
             </h1>
             <p className="text-justify">

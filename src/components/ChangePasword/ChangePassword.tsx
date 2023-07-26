@@ -16,7 +16,7 @@ const ChangePassword = () => {
   return (
     <section className="container-lg mx-auto h-screen flex md:block justify-center items-center relative">
       <div className="flex justify-center items-center text-sm text-gray-600 dark:text-white">
-        <div className="absolute left-6 md:left-14 top-5">
+        <div className="absolute left-6 lg:left-14 top-5">
           <Link href={"/"}>
             <div className="flex justify-center items-center mb-4">
               <HiOutlineArrowLeft className="text-sm font-normal text-button-teal" />
