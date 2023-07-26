@@ -12,7 +12,7 @@ export const editProfileData = {
       title: "Address",
       placeholder: "Address",
     },
-    phoneNumber: {
+    phoneNumberParent: {
       title: "Phone Number (Parents)",
       placeholder: "+88  0000",
     },
@@ -20,15 +20,9 @@ export const editProfileData = {
       title: "Email",
       placeholder: "Email",
     },
-    phoneNumberOptional: {
-      title: "Phone Number (Optional)",
+    phoneNumberStudent: {
+      title: "Phone Number (Student)",
       placeholder: "+88  0000",
-    },
-    password: {
-      title: "Password",
-    },
-    confirmPassword: {
-      title: "Confirm Password",
     },
   },
   button: "Save",

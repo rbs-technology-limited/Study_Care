@@ -92,42 +92,42 @@ const EditProfile = () => {
               disabled
             />
           </div>
-          {/* phone number */}
+          {/* phone number (parent) */}
           <div className="">
             <div className="flex justify-between items-center">
               <label
                 htmlFor="phoneNumber"
                 className="my-2 md:my-0 lg:my-0 xl:my-1"
               >
-                {editProfileData?.inputDetails?.phoneNumber?.title}
+                {editProfileData?.inputDetails?.phoneNumberParent?.title}
               </label>
               <BsQuestionCircleFill color={teal} className="cursor-pointer" />
             </div>
             <CInput
               type="text"
               placeholder={
-                editProfileData?.inputDetails?.phoneNumber?.placeholder
+                editProfileData?.inputDetails?.phoneNumberParent?.placeholder
               }
               id="phoneNumber"
               mb="mb-0"
               disabled
             />
           </div>
-          {/* phone number(optional)*/}
+          {/* phone number(student)*/}
           <div>
             <div className="flex justify-between items-center">
               <label
                 htmlFor="phoneNumberOptional"
                 className="my-2 md:my-0 lg:my-0 xl:my-1"
               >
-                {editProfileData?.inputDetails?.phoneNumberOptional?.title}
+                {editProfileData?.inputDetails?.phoneNumberStudent?.title}
               </label>
               <BsQuestionCircleFill color={teal} className="cursor-pointer" />
             </div>
             <CInput
               type="text"
               placeholder={
-                editProfileData?.inputDetails?.phoneNumberOptional?.placeholder
+                editProfileData?.inputDetails?.phoneNumberStudent?.placeholder
               }
               id="phoneNumberOptional"
               mb="mb-0"
