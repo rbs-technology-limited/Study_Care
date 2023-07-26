@@ -328,13 +328,25 @@ const Signup = () => {
                   .
                 </p>
               </div>
-              <CButton
-                type="submit"
-                variant="solid"
-                btnTitle={signupStaticData?.button}
-                color={teal}
-                loading={isLoading}
-              />
+              {isSuccess ? (
+                <Link href={"/verify-otp"}>
+                  <CButton
+                    type="submit"
+                    variant="solid"
+                    btnTitle={signupStaticData?.button}
+                    color={teal}
+                    loading={isLoading}
+                  />
+                </Link>
+              ) : (
+                <CButton
+                  type="submit"
+                  variant="solid"
+                  btnTitle={signupStaticData?.button}
+                  color={teal}
+                  loading={isLoading}
+                />
+              )}
             </div>
           </form>
         </div>

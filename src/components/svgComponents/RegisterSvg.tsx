@@ -1,16 +1,11 @@
 import { teal } from "@/Constant/Custom-Color";
+
 const RegisterSvg = (props: any) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 700 700"
+    viewBox="0 0 700 500"
     {...props}
-    style={{
-      width: "25rem",
-      height: "100vh",
-      objectFit: "cover",
-      objectPosition: "center",
-      margin: "0 auto",
-    }}
+    className="w-[20rem] md:w-[26rem] lg:w-[33rem] xl:w-[40rem] h-[100vh] object-cover object-center mx-auto"
   >
     <path
       d="M466.89 316.2H303v-94.84h163.89Zm-162.89-1h161.89v-92.84H304Z"

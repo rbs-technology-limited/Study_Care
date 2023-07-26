@@ -68,6 +68,7 @@ import {
   specificCourseSummaryStaticData,
 } from "./dashboard/specificCourseSummary";
 import { profileData } from "./dashboard/studentProfile";
+import { verifyOtpData } from "./verifyOtp/verifyOtp";
 
 export {
   HERO_SECTION_BOTTOM,
@@ -136,6 +137,7 @@ export {
   subjects,
   tabs,
   teacherRegistrationStaticData,
+  verifyOtpData,
   workflowContent,
   workflowData,
 };

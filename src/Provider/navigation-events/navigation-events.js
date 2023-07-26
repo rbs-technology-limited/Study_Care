@@ -6,25 +6,23 @@ import { usePathname } from "next/navigation";
 export function NavigationEvents({ children }) {
   const pathname = usePathname();
 
+  const endPointNames = [
+    "/login",
+    "/signup",
+    "/forgotPassword",
+    "/changePassword",
+    "/successRegister",
+    "/successPassword",
+    "/verify-otp",
+  ];
+
+  const isPathNameValid = endPointNames.includes(pathname);
+
   return (
     <>
-      {pathname === "/login" ||
-      pathname === "/signup" ||
-      pathname === "/forgotPassword" ||
-      pathname === "/changePassword" ||
-      pathname === "/successRegister" ||
-      pathname === "/successPassword" ? null : (
-        <Header />
-      )}
+      {!isPathNameValid && <Header />}
       {children}
-      {pathname === "/login" ||
-      pathname === "/signup" ||
-      pathname === "/forgotPassword" ||
-      pathname === "/changePassword" ||
-      pathname === "/successRegister" ||
-      pathname === "/successPassword" ? null : (
-        <Footer />
-      )}
+      {!isPathNameValid && <Footer />}
     </>
   );
 }
