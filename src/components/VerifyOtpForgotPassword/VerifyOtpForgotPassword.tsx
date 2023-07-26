@@ -1,60 +1,57 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
-import { forgotPasswordStaticData } from "@/Content";
+import { verifyOtpData } from "@/Content";
 import { CButton, CInput } from "@/Shared";
 import Link from "next/link";
 import { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
-import ForgotPasswordSvg from "../svgComponents/ForgotPasswordSvg";
+import VerifyOtpSvg from "../svgComponents/VerifyOtpSvg";
 
-const ForgotPassword = () => {
+const VerifyOtpForgotPassword = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("form submitted");
   };
   return (
     <section className="container-lg mx-auto h-screen flex md:block justify-center items-center">
       <div className="flex justify-center items-center text-sm text-gray-600 dark:text-white">
         <div className="w-full md:w-1/3 md:flex justify-center items-center bg-white dark:bg-transparent">
           <div className="px-6 lg:px-14">
-            <h1 className="text-3xl font-bold mb-8">
-              {forgotPasswordStaticData?.title1}
+            <h1 className=" text-2xl xl:text-3xl font-bold mb-8">
+              {verifyOtpData?.title1}
             </h1>
-            <p className="text-justify">
-              {forgotPasswordStaticData?.description}
-            </p>
+            <p className="text-justify">{verifyOtpData?.description}</p>
             {/* dashed line */}
-            <div className="border-[0.0925rem] border-dashed mt-6"></div>
+            <div className="border-[0.0925rem] border-dashed my-4 md:my-2 lg:my-3 xl:my-6"></div>
             {/* input section */}
             <form onSubmit={handleSubmit}>
-              <div className="flex justify-between items-center mt-6">
-                <h1 className="text-md font-bold my-1 ">
-                  {forgotPasswordStaticData?.title2}
-                </h1>
+              <div className="flex justify-between items-center ">
+                <label htmlFor="otp" className="font-bold my-1 ">
+                  {verifyOtpData?.otp}
+                </label>
                 <BsQuestionCircleFill color={teal} className="cursor-pointer" />
               </div>
-              <CInput type="text" placeholder="Email/Phone" />
+              <CInput type="text" placeholder="Enter your OTP here" id="otp" />
               {/* dashed line */}
-              <div className="border-[0.0925rem] border-dashed my-6"></div>
+              <div className="border-[0.0925rem] border-dashed my-4 md:my-2 lg:my-3 xl:my-6"></div>
               {/* button*/}
-              <Link href={"/forgotPassword/verify-otp"}>
+              <Link href={"/changePassword"}>
                 <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
                   <CButton
                     type="submit"
                     variant="solid"
                     color={teal}
                     fullWidth
-                    btnTitle={forgotPasswordStaticData?.button1}
+                    btnTitle={verifyOtpData?.button1}
                   />
                 </div>
               </Link>
             </form>
             {/* customer support part */}
-            <div className="flex flex-col justify-center items-center mt-8">
-              <p className="">{forgotPasswordStaticData?.title3}</p>
+            <div className="flex flex-col justify-center items-center mt-5 xl:mt-8">
+              <p className="">{verifyOtpData?.title3}</p>
               <Link href={"/signup"}>
                 <p className="text-button-teal my-1 cursor-pointer">
-                  {forgotPasswordStaticData?.link1}
+                  {verifyOtpData?.link1}
                 </p>
               </Link>
             </div>
@@ -63,7 +60,7 @@ const ForgotPassword = () => {
         {/* image section */}
         <div className="dark:relative bg-gray-200 dark:bg-transparent hidden md:block w-2/3 md:justify-center md:items-center">
           <div className="h-full">
-            <ForgotPasswordSvg />
+            <VerifyOtpSvg />
           </div>
 
           {/* left blur */}
@@ -76,4 +73,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default VerifyOtpForgotPassword;

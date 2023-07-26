@@ -8,7 +8,7 @@ import { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import VerifyOtpSvg from "../svgComponents/VerifyOtpSvg";
 
-const VerifyOtp = () => {
+const VerifyOtpRegister = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
@@ -42,15 +42,17 @@ const VerifyOtp = () => {
               {/* dashed line */}
               <div className="border-[0.0925rem] border-dashed my-4 md:my-2 lg:my-3 xl:my-6"></div>
               {/* button*/}
-              <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
-                <CButton
-                  type="submit"
-                  variant="solid"
-                  color={teal}
-                  fullWidth
-                  btnTitle={verifyOtpData?.button1}
-                />
-              </div>
+              <Link href={"/successRegister"}>
+                <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
+                  <CButton
+                    type="submit"
+                    variant="solid"
+                    color={teal}
+                    fullWidth
+                    btnTitle={verifyOtpData?.button1}
+                  />
+                </div>
+              </Link>
             </form>
             {/* customer support part */}
             <div className="flex flex-col justify-center items-center mt-5 xl:mt-8">
@@ -79,4 +81,4 @@ const VerifyOtp = () => {
   );
 };
 
-export default VerifyOtp;
+export default VerifyOtpRegister;

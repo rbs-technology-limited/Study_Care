@@ -329,7 +329,7 @@ const Signup = () => {
                 </p>
               </div>
               {isSuccess ? (
-                <Link href={"/verify-otp"}>
+                <Link href={"/signup/verify-otp"}>
                   <CButton
                     type="submit"
                     variant="solid"

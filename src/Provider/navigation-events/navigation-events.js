@@ -13,7 +13,8 @@ export function NavigationEvents({ children }) {
     "/changePassword",
     "/successRegister",
     "/successPassword",
-    "/verify-otp",
+    "/signup/verify-otp",
+    "/forgotPassword/verify-otp",
   ];
 
   const isPathNameValid = endPointNames.includes(pathname);
