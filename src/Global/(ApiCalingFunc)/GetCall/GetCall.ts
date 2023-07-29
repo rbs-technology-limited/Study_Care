@@ -30,14 +30,15 @@ export async function getCall(
     cache?: any;
   }
 ) {
-  const token = await getTokenCookies();
-  console.log(token);
-  const headers = {
-    "Content-Type": "application/json",
-    ...(token && { Authorization: `Bearer ${token.accessToken}` }),
-  };
-  try {
-    let url = `${apiUrl}/${endpoint}`;
+
+    const token = await getTokenCookies();
+    // console.log(token);
+    const headers = {
+        "Content-Type": "application/json",
+        ...(token && {Authorization: `Bearer ${token.accessToken}`}),
+    };
+    try {
+        let url = `${apiUrl}/${endpoint}`;
 
     if (data?.id) {
       url = `${url}/${data.id}`;
