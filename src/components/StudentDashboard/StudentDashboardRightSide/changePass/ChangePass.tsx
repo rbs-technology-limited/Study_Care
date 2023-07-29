@@ -1,5 +1,6 @@
 import { teal } from "@/Constant/Custom-Color";
 import { editProfileData } from "@/Content";
+import { getTokenCookies } from "@/Global/(cockies)/getCoockies";
 import { useChangePassMutation } from "@/Redux/features/changePass/changePassSlice";
 import { CButton, CInput } from "@/Shared";
 import React, { ChangeEvent, FormEvent, useState } from "react";
@@ -18,12 +19,19 @@ const ChangePass = () => {
             new_password1: newPass,
             new_password2: confirmPass
         })
+        console.log('token', gettoken())
+
     };
+    const gettoken = async () => {
+        const token = await getTokenCookies()
+        return token
+    }
     React.useEffect(() => {
         if (isError) {
             console.log(error)
         }
     }, [isError, error])
+
 
     return (
         <section>
@@ -45,6 +53,9 @@ const ChangePass = () => {
                             value={oldPass}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => setOldPass(e.target.value)}
                         />
+                        <label htmlFor="" className="text-red-500 text-sm">
+                            {isError && error?.data?.message}
+                        </label>
                     </div>
                     {/* new password */}
                     <div className="">
