@@ -22,7 +22,7 @@ const Assignment = ({ data }: IAssignmentProps) => {
 
   return (
     <section>
-      <h1 className="text-md font-bold my-2 text-gray-600">
+      <h1 className="text-md dark:text-white font-bold my-2 text-gray-600">
         {data?.assignmentDetails?.title}
       </h1>
       <p className="text-sm text-justify mb-3">

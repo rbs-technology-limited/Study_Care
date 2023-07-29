@@ -63,11 +63,16 @@ import {
 import courseProgressContent, {
   courseProgressData,
 } from "./dashboard/courseCompleteAllProgress";
+import { editProfileData } from "./dashboard/editProfile";
 import {
   specificCourseSummary,
   specificCourseSummaryStaticData,
 } from "./dashboard/specificCourseSummary";
 import { profileData } from "./dashboard/studentProfile";
+import {
+  verifyOtpForgotPasswordData,
+  verifyOtpRegisterData,
+} from "./verifyOtp/verifyOtp";
 
 export {
   HERO_SECTION_BOTTOM,
@@ -94,6 +99,7 @@ export {
   couseClassRoutineData,
   dashboardCardData,
   dashboardLeftSideStaticData,
+  editProfileData,
   educationYears,
   exploreCoursesContent,
   exploreCoursesData1,
@@ -136,6 +142,8 @@ export {
   subjects,
   tabs,
   teacherRegistrationStaticData,
+  verifyOtpForgotPasswordData,
+  verifyOtpRegisterData,
   workflowContent,
   workflowData,
 };

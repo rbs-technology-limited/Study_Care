@@ -34,7 +34,8 @@
     "**/*.json",
     ".next/**/*.ts",
     ".next/**/*.tsx",
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/app/(auth)/forgotPassword/verify-otp"
   ],
   "exclude": ["node_modules"]
 }

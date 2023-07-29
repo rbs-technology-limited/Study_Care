@@ -10,8 +10,8 @@ const StudentDashboardLeftSide = ({
   setSelectedOption,
   selectedOption,
 }: IStudentDashboardLeftSide) => {
-  const { title1, title2, title3 } = dashboardLeftSideStaticData;
-  const titles = [title1, title2, title3];
+  const { title1, title2, title3, title4 } = dashboardLeftSideStaticData;
+  const titles = [title1, title2, title3, title4];
   return (
     <section className="p-3 bg-gray-50 dark:bg-transparent rounded">
       {titles?.map((title) => (

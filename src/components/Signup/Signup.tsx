@@ -9,6 +9,7 @@ import { FetchBaseQueryError } from "@reduxjs/toolkit/dist/query";
 import Link from "next/link";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 import RegisterSvg from "../svgComponents/RegisterSvg";
 
 const Signup = () => {
@@ -53,7 +54,15 @@ const Signup = () => {
         {/* input section */}
         <div className="w-full md:w-2/3 px-4 md:px-6 py-6 md:py-1">
           {/* already a member? section */}
-          <div className="flex justify-end">
+          <div className="flex justify-between items-center">
+            <Link href={"/"}>
+              <div className="flex justify-center items-center mb-4">
+                <HiOutlineArrowLeft className="text-sm font-normal text-button-teal" />
+                <p className="font-normal text-button-teal">
+                  {signupStaticData?.homeLink}
+                </p>
+              </div>
+            </Link>
             <Link href={"/login"}>
               <div className="flex items-center gap-1 mb-4 cursor-pointer">
                 <p className="text-button-teal">
@@ -101,6 +110,7 @@ const Signup = () => {
                   />
                 </div>
                 <CInput
+                  required
                   type="text"
                   placeholder={
                     signupStaticData?.inputDetails?.firstName?.placeholder
@@ -132,6 +142,7 @@ const Signup = () => {
                   />
                 </div>
                 <CInput
+                  required
                   type="text"
                   placeholder={
                     signupStaticData?.inputDetails?.lastName?.placeholder
@@ -155,6 +166,7 @@ const Signup = () => {
                   />
                 </div>
                 <CInput
+                  required
                   type="email"
                   placeholder={
                     signupStaticData?.inputDetails?.email?.placeholder
@@ -186,6 +198,7 @@ const Signup = () => {
                   />
                 </div>
                 <CInput
+                  required
                   type="text"
                   placeholder={
                     signupStaticData?.inputDetails?.phoneNumber?.placeholder
@@ -233,6 +246,7 @@ const Signup = () => {
                   />
                 </div>
                 <CInput
+                  required
                   type="text"
                   placeholder={
                     signupStaticData?.inputDetails?.address?.placeholder
@@ -261,6 +275,7 @@ const Signup = () => {
                   />
                 </div>
                 <CInput
+                  required
                   type="password"
                   id="password"
                   mb="mb-0"
@@ -294,12 +309,14 @@ const Signup = () => {
                   />
                 </div>
                 <CInput
+                  required
                   type="password"
                   id="confirmPassword"
                   mb="mb-0"
                   onChange={(e: ChangeEvent<HTMLInputElement>) =>
                     setDetails({ ...details, password2: e.target.value })
                   }
+
                 />
                 {isError && error!.data.non_field_errors && (
                   <label htmlFor="" className="text-red-500 text-[0.625rem]">
@@ -319,7 +336,9 @@ const Signup = () => {
             <div className="flex justify-between items-center">
               {/* terms and condition */}
               <div className="flex items-center gap-1">
-                <SelectField type="checkbox" pl="0" />
+                <SelectField type="checkbox" pl="0"
+                  required
+                />
                 <p className="mt-2 text-[11px] md:text-sm">
                   {signupStaticData?.acceptTerms}{" "}
                   <span className=" text-button-teal cursor-pointer">
@@ -328,13 +347,25 @@ const Signup = () => {
                   .
                 </p>
               </div>
-              <CButton
-                type="submit"
-                variant="solid"
-                btnTitle={signupStaticData?.button}
-                color={teal}
-                loading={isLoading}
-              />
+              {isSuccess ? (
+                <Link href={"/signup/verify-otp"}>
+                  <CButton
+                    type="submit"
+                    variant="solid"
+                    btnTitle={signupStaticData?.button}
+                    color={teal}
+                    loading={isLoading}
+                  />
+                </Link>
+              ) : (
+                <CButton
+                  type="submit"
+                  variant="solid"
+                  btnTitle={signupStaticData?.button}
+                  color={teal}
+                  loading={isLoading}
+                />
+              )}
             </div>
           </form>
         </div>

@@ -5,6 +5,7 @@ import { CButton, CInput } from "@/Shared";
 import Link from "next/link";
 import { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
+import { HiOutlineArrowLeft } from "react-icons/hi";
 import ForgotPasswordSvg from "../svgComponents/ForgotPasswordSvg";
 
 const ForgotPassword = () => {
@@ -13,11 +14,21 @@ const ForgotPassword = () => {
     console.log("form submitted");
   };
   return (
-    <section className="container-lg mx-auto h-screen flex md:block justify-center items-center">
+    <section className="container-lg mx-auto h-screen flex md:block justify-center items-center relative">
       <div className="flex justify-center items-center text-sm text-gray-600 dark:text-white">
+        <div className="absolute left-6 lg:left-14 top-5">
+          <Link href={"/"}>
+            <div className="flex justify-center items-center mb-4">
+              <HiOutlineArrowLeft className="text-sm font-normal text-button-teal" />
+              <p className="font-normal text-button-teal">
+                {forgotPasswordStaticData?.homeLink}
+              </p>
+            </div>
+          </Link>
+        </div>
         <div className="w-full md:w-1/3 md:flex justify-center items-center bg-white dark:bg-transparent">
           <div className="px-6 lg:px-14">
-            <h1 className="text-3xl font-bold mb-8">
+            <h1 className="text-3xl font-bold mt-0 md:mt-6 lg:mt-6 xl:mt-0 mb-8">
               {forgotPasswordStaticData?.title1}
             </h1>
             <p className="text-justify">
@@ -37,7 +48,7 @@ const ForgotPassword = () => {
               {/* dashed line */}
               <div className="border-[0.0925rem] border-dashed my-6"></div>
               {/* button*/}
-              <Link href={"/changePassword"}>
+              <Link href={"/forgotPassword/verify-otp"}>
                 <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
                   <CButton
                     type="submit"

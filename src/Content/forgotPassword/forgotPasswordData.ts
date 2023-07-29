@@ -1,4 +1,5 @@
 export const forgotPasswordStaticData = {
+  homeLink: "Home",
   title1: "Forgot Password",
   description:
     "Don’t worry we can help you out! if you still remember your email address you can quickly reset your password.  ",

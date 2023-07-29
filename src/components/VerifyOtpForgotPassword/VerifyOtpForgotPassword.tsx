@@ -1,82 +1,70 @@
 "use client";
 import { teal } from "@/Constant/Custom-Color";
-import { changePasswordStaticData } from "@/Content";
+import { verifyOtpForgotPasswordData } from "@/Content";
 import { CButton, CInput } from "@/Shared";
 import Link from "next/link";
 import { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { HiOutlineArrowLeft } from "react-icons/hi";
-import ChangePasswordSvg from "../svgComponents/ChangePasswordSvg";
+import VerifyOtpSvg from "../svgComponents/VerifyOtpSvg";
 
-const ChangePassword = () => {
+const VerifyOtpForgotPassword = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("form submitted");
   };
   return (
-    <section className="container-lg mx-auto h-screen flex md:block justify-center items-center relative">
+    <section className="relative container-lg mx-auto h-screen flex md:block justify-center items-center">
       <div className="flex justify-center items-center text-sm text-gray-600 dark:text-white">
         <div className="absolute left-6 lg:left-14 top-5">
           <Link href={"/"}>
             <div className="flex justify-center items-center mb-4">
               <HiOutlineArrowLeft className="text-sm font-normal text-button-teal" />
               <p className="font-normal text-button-teal">
-                {changePasswordStaticData?.homeLink}
+                {verifyOtpForgotPasswordData?.homeLink}
               </p>
             </div>
           </Link>
         </div>
         <div className="w-full md:w-1/3 md:flex justify-center items-center bg-white dark:bg-transparent">
-          <div className="px-6 lg:px-14">
-            <h1 className=" text-2xl xl:text-3xl font-bold mb-8">
-              {changePasswordStaticData?.title1}
+          <div className="px-6 lg:px-14 w-full">
+            <h1 className="text-2xl xl:text-3xl font-bold mb-8">
+              {verifyOtpForgotPasswordData?.title1}
             </h1>
             <p className="text-justify">
-              {changePasswordStaticData?.description}
+              {verifyOtpForgotPasswordData?.description}
             </p>
             {/* dashed line */}
             <div className="border-[0.0925rem] border-dashed my-4 md:my-2 lg:my-3 xl:my-6"></div>
             {/* input section */}
             <form onSubmit={handleSubmit}>
-              <div className="flex justify-between items-center">
-                <label htmlFor="newPassword" className=" font-bold my-1 ">
-                  {changePasswordStaticData?.new_password_label}
-                </label>
-                <BsQuestionCircleFill color={teal} className="cursor-pointer" />
-              </div>
-              <CInput type="text" placeholder="Email/Phone" id="newPassword" />
               <div className="flex justify-between items-center ">
-                <label htmlFor="confirmPassword" className="font-bold my-1 ">
-                  {changePasswordStaticData?.confirm_password_label}
+                <label htmlFor="otp" className="font-bold my-1 ">
+                  {verifyOtpForgotPasswordData?.otp}
                 </label>
                 <BsQuestionCircleFill color={teal} className="cursor-pointer" />
               </div>
-              <CInput
-                type="text"
-                placeholder="Email/Phone"
-                id="confirmPassword"
-              />
+              <CInput type="text" placeholder="Enter your OTP here" id="otp" />
               {/* dashed line */}
               <div className="border-[0.0925rem] border-dashed my-4 md:my-2 lg:my-3 xl:my-6"></div>
               {/* button*/}
-              <Link href={"/successPassword"}>
+              <Link href={"/changePassword"}>
                 <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
                   <CButton
                     type="submit"
                     variant="solid"
                     color={teal}
                     fullWidth
-                    btnTitle={changePasswordStaticData?.button1}
+                    btnTitle={verifyOtpForgotPasswordData?.button1}
                   />
                 </div>
               </Link>
             </form>
             {/* customer support part */}
             <div className="flex flex-col justify-center items-center mt-5 xl:mt-8">
-              <p className="">{changePasswordStaticData?.title3}</p>
+              <p className="">{verifyOtpForgotPasswordData?.title3}</p>
               <Link href={"/signup"}>
                 <p className="text-button-teal my-1 cursor-pointer">
-                  {changePasswordStaticData?.link1}
+                  {verifyOtpForgotPasswordData?.link1}
                 </p>
               </Link>
             </div>
@@ -85,7 +73,7 @@ const ChangePassword = () => {
         {/* image section */}
         <div className="dark:relative bg-gray-200 dark:bg-transparent hidden md:block w-2/3 md:justify-center md:items-center">
           <div className="h-full">
-            <ChangePasswordSvg />
+            <VerifyOtpSvg />
           </div>
 
           {/* left blur */}
@@ -98,4 +86,4 @@ const ChangePassword = () => {
   );
 };
 
-export default ChangePassword;
+export default VerifyOtpForgotPassword;
