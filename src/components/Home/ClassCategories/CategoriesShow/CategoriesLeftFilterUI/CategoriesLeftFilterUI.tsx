@@ -6,9 +6,9 @@ import { useSearchParams } from "next/navigation";
 
 const CategoriesLeftFilterUI = () => {
   const searchParams = useSearchParams();
-  const categoryName = searchParams.get("category") || "";
-  console.log(categoryName);
-
+  const categoryName = Number(searchParams.get("category") || "");
+  // console.log(categoryName);
+  //
   return (
     <div className="break-all py-2">
       {/* //search field  */}
@@ -35,8 +35,8 @@ const CategoriesLeftFilterUI = () => {
               <SelectField
                 type="checkbox"
                 name={sItem.title}
-                defaultChecked={categoryName === sItem.title || false}
-                disabled={categoryName === sItem.title || categoryName === ""}
+                defaultChecked={categoryName === sItem.id || false}
+                disabled={categoryName === sItem.id || false}
                 key={sItem.id}
               />
             ))}
