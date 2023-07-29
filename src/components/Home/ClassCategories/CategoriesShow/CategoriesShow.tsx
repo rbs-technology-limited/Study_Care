@@ -7,7 +7,12 @@ import { BiFilterAlt } from "react-icons/bi";
 import CategoriesLeftFilterUI from "./CategoriesLeftFilterUI/CategoriesLeftFilterUI";
 import CategoriesRightDataUI from "./CategoriesRightDataUI/CategoriesRightDataUI";
 
-const CategoriesShow = () => {
+type ICategoriesData = {
+  categoriesData: any;
+};
+
+const CategoriesShow = ({ categoriesData }: ICategoriesData) => {
+  console.log(categoriesData, "categoriesData");
   const [showLeftSection, setShowLeftSection] = useState<boolean>(false);
 
   return (
@@ -50,7 +55,7 @@ const CategoriesShow = () => {
           >
             {/* //mobile device button click to show left section as backdrop left drawer  */}
 
-            <CategoriesRightDataUI />
+            <CategoriesRightDataUI data={categoriesData} />
           </div>
 
           {/* //show left section as backdrop left drawer */}
