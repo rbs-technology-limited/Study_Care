@@ -1,14 +1,15 @@
-import React from "react";
-import { coursePageData } from "@/Content";
+import { useAppSelector } from "@/Redux/store";
 
 const TitleAndDescription = () => {
+  const { courseDetails } = useAppSelector((state) => state.category);
+
   return (
     <div className="mt-12">
       <h1 className="text-xl font-bold dark:text-white text-gray-800">
-        {coursePageData?.title}
+        {courseDetails?.title}
       </h1>
       <p className="text-md dark:text-white my-4 text-gray-600">
-        {coursePageData?.description}
+        {courseDetails?.description}
       </p>
     </div>
   );

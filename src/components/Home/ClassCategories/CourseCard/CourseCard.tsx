@@ -11,6 +11,10 @@ import { HiUserGroup } from "react-icons/hi";
 interface ICardData {
   id: number;
   title: string;
+  highlights: Array<any>;
+  class_category: any;
+  cover_image_thumbnail: any;
+  cover_image: any;
   price: number;
   status?: string | null;
   rating?: number;
@@ -23,10 +27,11 @@ interface ICardData {
 }
 interface ICourseCardData {
   courseCardData: ICardData;
-  key?: any
+  key?: any;
 }
 
-const CourseCard = ({ courseCardData,key }: ICourseCardData) => {
+const CourseCard = ({ courseCardData, key }: ICourseCardData) => {
+  console.log("coursecard", courseCardData);
   const [isCardHovered, setIsCardHovered] = React.useState<boolean>(false);
 
   type BanglaDigit = string | number;
@@ -42,7 +47,8 @@ const CourseCard = ({ courseCardData,key }: ICourseCardData) => {
 
   return (
     <>
-      <section key={key}
+      <section
+        key={key}
         className={`p-1 relative`}
         onMouseEnter={() => setIsCardHovered(true)}
         onMouseLeave={() => setIsCardHovered(false)}
@@ -55,7 +61,7 @@ const CourseCard = ({ courseCardData,key }: ICourseCardData) => {
         >
           <div className="w-2/4 relative bg-no-repeat">
             <Image
-              src={`https://img.freepik.com/free-photo/boy-studying-from-home-online-classroom-new-normal_53876-96659.jpg?w=740&t=st=1686653491~exp=1686654091~hmac=35ee66c6704ba0c67dbb073abcb6b9ec44986ce9d2fa771913a88f8601184813`}
+              src={courseCardData?.cover_image?.url}
               alt="course"
               width={300}
               height={280}
@@ -77,7 +83,7 @@ const CourseCard = ({ courseCardData,key }: ICourseCardData) => {
             </h1>
             <div className="h-16 my-1">
               <div className="my-1">
-                {courseCardData?.courseDetails.map((courseDetail) => (
+                {courseCardData?.highlights?.map((courseDetail) => (
                   <div
                     className="flex items-center gap-1 "
                     key={courseDetail.id}
@@ -101,7 +107,7 @@ const CourseCard = ({ courseCardData,key }: ICourseCardData) => {
             </div>
             <div className="w-16 bg-[#DFF4D7] text-center my-1">
               <p className="text-[.5rem] md:text-[.5625rem] text-[#51933E] p-[1px]">
-                {courseCardData?.category}
+                {courseCardData?.class_category?.name}
               </p>
             </div>
             <div className="flex items-center justify-between">

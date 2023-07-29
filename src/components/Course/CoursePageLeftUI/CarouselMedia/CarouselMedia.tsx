@@ -1,18 +1,23 @@
 "use client";
 import Image from "next/image";
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
 import ReactPlayer from "react-player/lazy";
+import { Pagination } from "swiper";
 import "swiper/css/free-mode";
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
+import { useAppSelector } from "@/Redux/store";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/bundle";
 import "swiper/css/autoplay";
-import { coursePageData } from "@/Content";
+import "swiper/css/bundle";
+import "swiper/css/pagination";
 
-const CarouselMedia = () => {
+type IMediaData = {
+  mediaData: any;
+};
+
+const CarouselMedia = ({ mediaData }: IMediaData) => {
+  console.log("mediaData", mediaData);
+  const { courseDetails } = useAppSelector((state) => state.category);
   return (
     <div className="h-[25rem]">
       <Swiper
@@ -32,16 +37,13 @@ const CarouselMedia = () => {
         //   pauseOnMouseEnter: true,
         // }}
       >
-        {coursePageData?.mediaLinks?.map((media) => (
+        {mediaData?.map((media: any) => (
           <>
-            <SwiperSlide
-              key={media.id}
-              className="h-full flex items-center justify-center w-full rounded-md"
-            >
+            <SwiperSlide className="h-full flex items-center justify-center w-full rounded-md">
               <div className="h-full w-full rounded-md">
-                {media.type === "video" ? (
+                {media.yt_video_link ? (
                   <ReactPlayer
-                    url={media.video_link}
+                    url="media.yt_video_link"
                     controls={true}
                     width="100%"
                     height="100%"
@@ -52,10 +54,10 @@ const CarouselMedia = () => {
                       </div>
                     }
                   />
-                ) : media?.image_link ? (
+                ) : media?.cover_image ? (
                   <div className="h-full w-full">
                     <Image
-                      src={media.image_link}
+                      src={media?.cover_image?.url}
                       alt="media"
                       width={1500}
                       height={400}

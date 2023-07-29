@@ -1,8 +1,9 @@
 "use client";
-
 import { teal } from "@/Constant/Custom-Color";
+import { setCategories } from "@/Redux/features/category/categorySlice";
+import { useAppDispatch } from "@/Redux/store";
 import { CButton, OffCanvus } from "@/Shared";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiFilterAlt } from "react-icons/bi";
 import CategoriesLeftFilterUI from "./CategoriesLeftFilterUI/CategoriesLeftFilterUI";
 import CategoriesRightDataUI from "./CategoriesRightDataUI/CategoriesRightDataUI";
@@ -12,8 +13,12 @@ type ICategoriesData = {
 };
 
 const CategoriesShow = ({ categoriesData }: ICategoriesData) => {
-  console.log(categoriesData, "categoriesData");
+  const dispatch = useAppDispatch();
   const [showLeftSection, setShowLeftSection] = useState<boolean>(false);
+
+  useEffect(() => {
+    dispatch(setCategories(categoriesData?.results));
+  }, [categoriesData, dispatch]);
 
   return (
     <main className="relative">
@@ -55,7 +60,7 @@ const CategoriesShow = ({ categoriesData }: ICategoriesData) => {
           >
             {/* //mobile device button click to show left section as backdrop left drawer  */}
 
-            <CategoriesRightDataUI data={categoriesData} />
+            <CategoriesRightDataUI />
           </div>
 
           {/* //show left section as backdrop left drawer */}

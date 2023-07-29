@@ -1,10 +1,11 @@
-import React from "react";
-import { coursePageData } from "@/Content";
-import { coursePageStaticData } from "@/Content";
-import { CButton } from "@/Shared";
+"use client";
 import { teal } from "@/Constant/Custom-Color";
+import { coursePageStaticData } from "@/Content";
+import { useAppSelector } from "@/Redux/store";
+import { CButton } from "@/Shared";
 
 const PriceAndEnroll = () => {
+  const { courseDetails } = useAppSelector((state) => state.category);
   return (
     <section>
       <div className="flex justify-between items-center gap-4 mt-5">
@@ -14,7 +15,7 @@ const PriceAndEnroll = () => {
           btnTitle={coursePageStaticData?.button1}
         />
         <p className="text-2xl font-bold text-gray-800 dark:text-white">
-          ট {coursePageData?.course_price}
+          ট {courseDetails?.price}
         </p>
       </div>
     </section>

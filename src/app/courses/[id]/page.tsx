@@ -1,9 +1,18 @@
+import { getCategoriesDataEndpoint } from "@/API_CALL";
+import { getCall } from "@/Global/(ApiCalingFunc)/GetCall/GetCall";
 import Course from "@/components/Course/Course";
-import React from "react";
-const page = ({ params }: any) => {
+
+const page = async ({ params }: any) => {
+  const courseData = await getCall(getCategoriesDataEndpoint, {
+    data: {
+      id: params.id,
+    },
+  });
+
+  console.log("courseData", courseData);
   return (
     <main className="mt-[4.4rem]">
-      <Course />
+      <Course courseData={courseData} />
     </main>
   );
 };

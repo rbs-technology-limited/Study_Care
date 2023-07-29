@@ -3,9 +3,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import authSlice from "./features/Auth/auth-slice";
 import { apiSlice } from "./features/api/apiSlice";
+import categoryReducer from "./features/category/categorySlice";
 
 export const store = configureStore({
   reducer: {
+    category: categoryReducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
     authSlice,
   },
