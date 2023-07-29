@@ -7,7 +7,7 @@ const page = async ({ params }: any) => {
   console.log("categoriesData", categoriesData);
   return (
     <main className=" min-h-screen mt-[4.4rem]">
-      <CategoriesShow />
+      <CategoriesShow categoriesData={categoriesData} />
     </main>
   );
 };
