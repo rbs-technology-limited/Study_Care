@@ -10,6 +10,7 @@ interface CheckBoxProps {
   onChange?: any;
   defaultChecked?: boolean;
   pl?: string;
+  required?: boolean;
 }
 
 const SelectField = ({
@@ -22,6 +23,7 @@ const SelectField = ({
   onChange,
   defaultChecked,
   pl,
+  required
 }: CheckBoxProps) => {
   return (
     <>
@@ -64,6 +66,7 @@ const SelectField = ({
             checked={checked}
             onChange={onChange}
             defaultChecked={defaultChecked}
+            required={required}
           />
           <label
             htmlFor={id ? id : "checkbox-1"}
