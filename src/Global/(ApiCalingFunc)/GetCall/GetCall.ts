@@ -32,10 +32,10 @@ export async function getCall(
     }
 ) {
     const token = await getTokenCookies();
-    console.log(token);
+    // console.log(token);
     const headers = {
         "Content-Type": "application/json",
-        // ...(token && {Authorization: `Bearer ${token.accessToken}`}),
+        ...(token && {Authorization: `Bearer ${token.accessToken}`}),
     };
     try {
         let url = `${apiUrl}/${endpoint}`;
