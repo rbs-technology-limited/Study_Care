@@ -1,21 +1,29 @@
 import { teal } from "@/Constant/Custom-Color";
 import { editProfileData } from "@/Content";
+import { useChangePassMutation } from "@/Redux/features/changePass/changePassSlice";
 import { CButton, CInput } from "@/Shared";
-import { ChangeEvent, FormEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 
 const ChangePass = () => {
     const [oldPass, setOldPass] = useState("");
     const [newPass, setNewPass] = useState("");
     const [confirmPass, setConfirmPass] = useState("");
-    const [details, setDetails] = useState({
-        username: "",
-        address: "",
-    });
+    const [changePass, { isLoading, isError, isSuccess, error }] = useChangePassMutation()
 
     const handleRegisterSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        changePass({
+            old_password: oldPass,
+            new_password1: newPass,
+            new_password2: confirmPass
+        })
     };
+    React.useEffect(() => {
+        if (isError) {
+            console.log(error)
+        }
+    }, [isError, error])
 
     return (
         <section>
@@ -30,6 +38,7 @@ const ChangePass = () => {
                             <BsQuestionCircleFill color={teal} className="cursor-pointer" />
                         </div>
                         <CInput
+                            required
                             type="text"
                             placeholder="Old Password"
                             mb="mb-0"
@@ -46,6 +55,7 @@ const ChangePass = () => {
                             <BsQuestionCircleFill color={teal} className="cursor-pointer" />
                         </div>
                         <CInput
+                            required
                             type="text"
                             placeholder="New Password"
                             mb="mb-0"
@@ -64,6 +74,7 @@ const ChangePass = () => {
                             <BsQuestionCircleFill color={teal} className="cursor-pointer" />
                         </div>
                         <CInput
+                            required
                             type="text"
                             placeholder="Confirm New Password"
                             mb="mb-0"
@@ -78,6 +89,7 @@ const ChangePass = () => {
                         variant="solid"
                         btnTitle={editProfileData?.button}
                         color={teal}
+                        loading={isLoading}
                     />
                 </div>
             </form>
