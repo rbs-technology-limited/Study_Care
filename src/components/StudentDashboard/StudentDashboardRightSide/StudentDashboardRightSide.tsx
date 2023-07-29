@@ -4,6 +4,7 @@ import React from "react";
 import DashboardCard from "../DashboardCard/DashboardCard";
 import EditProfile from "./EditProfile/EditProfile";
 import StudentProfile from "./StudentProfile/StudentProfile";
+import ChangePass from "./changePass/ChangePass";
 
 type IDashboardRightSide = {
   selectedOption: string;
@@ -25,7 +26,7 @@ const StudentDashboardRightSide = ({ selectedOption }: IDashboardRightSide) => {
         return <StudentProfile />;
 
       case "CHANGE PASSWORD":
-        return <div>Change Password</div>;
+        return <ChangePass />;
 
       case "EDIT PROFILE":
         return <EditProfile />;
