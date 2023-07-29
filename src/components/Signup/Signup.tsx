@@ -7,12 +7,14 @@ import { CButton, CInput, SelectField, cToastify } from "@/Shared";
 import { SerializedError } from "@reduxjs/toolkit";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/dist/query";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { BsFillPersonFill, BsQuestionCircleFill } from "react-icons/bs";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 import RegisterSvg from "../svgComponents/RegisterSvg";
 
 const Signup = () => {
+  const router = useRouter() as any;
   const { userDetails } = useAppSelector((state) => state.authSlice);
   const [details, setDetails] = useState({
     username: "",
@@ -25,12 +27,13 @@ const Signup = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      cToastify({
-        type: "success",
-        message: "Account is created successfully.",
-      });
+      // cToastify({
+      //   type: "success",
+      //   message: "Account is created successfully.",
+      // });
+      router.push(`/signup/verify-otp?email=${details.email}`);
     }
-  }, [isSuccess, isError, error]);
+  }, [isSuccess, router, details.email]);
 
   const handleRegisterSubmit = async (e: FormEvent<HTMLFormElement>) => {
     const formData = new FormData();
@@ -347,25 +350,13 @@ const Signup = () => {
                   .
                 </p>
               </div>
-              {isSuccess ? (
-                <Link href={"/signup/verify-otp"}>
-                  <CButton
-                    type="submit"
-                    variant="solid"
-                    btnTitle={signupStaticData?.button}
-                    color={teal}
-                    loading={isLoading}
-                  />
-                </Link>
-              ) : (
-                <CButton
-                  type="submit"
-                  variant="solid"
-                  btnTitle={signupStaticData?.button}
-                  color={teal}
-                  loading={isLoading}
-                />
-              )}
+              <CButton
+                type="submit"
+                variant="solid"
+                btnTitle={signupStaticData?.button}
+                color={teal}
+                loading={isLoading}
+              />
             </div>
           </form>
         </div>

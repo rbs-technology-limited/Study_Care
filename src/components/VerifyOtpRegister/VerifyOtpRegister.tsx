@@ -2,17 +2,32 @@
 
 import { teal } from "@/Constant/Custom-Color";
 import { verifyOtpRegisterData } from "@/Content";
+import { useVerifyEmailMutation } from "@/Redux/features/verifyEmail/verifyEmailSlice";
 import { CButton, CInput } from "@/Shared";
 import Link from "next/link";
-import { FormEvent } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import React, { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 import VerifyOtpSvg from "../svgComponents/VerifyOtpSvg";
 
 const VerifyOtpRegister = () => {
+  const router = useRouter() as any;
+  const searchParams = useSearchParams() as any;
+  const email = searchParams.get("email");
+  const [otp, setOtp] = React.useState('') as any;
+  const [verifyEmail, { isLoading, isError, isSuccess, error }] = useVerifyEmailMutation()
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    verifyEmail({ email, otp })
   };
+  React.useEffect(() => {
+    if (isSuccess) {
+      router.push("/successRegister")
+    }
+  }, [isSuccess, router])
+
   return (
     <section className="relative container-lg mx-auto h-screen flex md:block justify-center items-center">
       <div className="flex justify-center items-center text-sm text-gray-600 dark:text-white">
@@ -42,28 +57,35 @@ const VerifyOtpRegister = () => {
                 </label>
                 <BsQuestionCircleFill color={teal} className="cursor-pointer" />
               </div>
-              <CInput type="text" placeholder="Email" id="email" />
+              <CInput type="text" placeholder="Email" id="email"
+                value={email} disabled
+              />
               <div className="flex justify-between items-center ">
                 <label htmlFor="otp" className="font-bold my-1 ">
                   {verifyOtpRegisterData?.otp}
                 </label>
                 <BsQuestionCircleFill color={teal} className="cursor-pointer" />
               </div>
-              <CInput type="text" placeholder="Enter your OTP here" id="otp" />
+              <CInput type="text" placeholder="Enter your OTP here" id="otp"
+                value={otp} onChange={(e: any) => setOtp(e.target.value)}
+                required
+              />
+              <label htmlFor="" className="text-red-500 text-sm">
+                {isError && error?.data?.message}
+              </label>
               {/* dashed line */}
               <div className="border-[0.0925rem] border-dashed my-4 md:my-2 lg:my-3 xl:my-6"></div>
               {/* button*/}
-              <Link href={"/successRegister"}>
-                <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
-                  <CButton
-                    type="submit"
-                    variant="solid"
-                    color={teal}
-                    fullWidth
-                    btnTitle={verifyOtpRegisterData?.button1}
-                  />
-                </div>
-              </Link>
+              <div className="flex justify-between items-center gap-1 w-full text-[0.8125rem]">
+                <CButton
+                  type="submit"
+                  variant="solid"
+                  color={teal}
+                  fullWidth
+                  btnTitle={verifyOtpRegisterData?.button1}
+                  loading={isLoading}
+                />
+              </div>
             </form>
             {/* customer support part */}
             <div className="flex flex-col justify-center items-center mt-5 xl:mt-8">
