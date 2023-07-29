@@ -8,8 +8,12 @@ import { FormEvent } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 import VerifyOtpSvg from "../svgComponents/VerifyOtpSvg";
+import { useSearchParams } from "next/navigation";
 
 const VerifyOtpRegister = () => {
+  const searchParams = useSearchParams() as any;
+  const email = searchParams.get("email");
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
@@ -42,7 +46,9 @@ const VerifyOtpRegister = () => {
                 </label>
                 <BsQuestionCircleFill color={teal} className="cursor-pointer" />
               </div>
-              <CInput type="text" placeholder="Email" id="email" />
+              <CInput type="text" placeholder="Email" id="email"
+                value={email} disabled
+              />
               <div className="flex justify-between items-center ">
                 <label htmlFor="otp" className="font-bold my-1 ">
                   {verifyOtpRegisterData?.otp}
