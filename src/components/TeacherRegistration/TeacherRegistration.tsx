@@ -9,7 +9,6 @@ import {
 } from "@/Content";
 import { CButton, CDropdown, CInput } from "@/Shared";
 import React, { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
 import TeachingSubjects from "./TeachingSubjects/TeachingSubjects";
 
 const TeacherRegistration = () => {
@@ -35,15 +34,6 @@ const TeacherRegistration = () => {
     console.log("form submitted");
   };
 
-  // pdf view
-
-  const onDocumentLoadSuccess = ({ numPages }: any) => {
-    setNumPages(numPages);
-  };
-
-  pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-  // `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
   const {
     lName,
     lCurrentAddress,
@@ -59,19 +49,6 @@ const TeacherRegistration = () => {
   } = teacherRegistrationStaticData;
   return (
     <section className="container mx-auto px-8 py-8">
-      {/*pdf view  */}
-      <div className="flex justify-center overflow-x-auto w-full">
-        <Document
-          file="/Asset/demoSample1.pdf"
-          onLoadSuccess={onDocumentLoadSuccess}
-        >
-          <Page
-            pageNumber={pageNumber}
-            renderTextLayer={false}
-            renderAnnotationLayer={false}
-          />
-        </Document>
-      </div>
       {/* form part */}
       <div className="my-5 text-sm text-gray-600 dark:text-white">
         <form onSubmit={handleFormSubmit}>
@@ -162,6 +139,18 @@ const TeacherRegistration = () => {
             />
           </div>
         </form>
+      </div>
+
+      {/*pdf view  */}
+      <div className="flex justify-center overflow-x-auto w-full">
+        <embed
+          type="application/pdf"
+          src="/Asset/demoSample1.pdf"
+          width="100%"
+          style={{
+            height: "calc(100vh - 2rem)",
+          }}
+        />
       </div>
     </section>
   );
