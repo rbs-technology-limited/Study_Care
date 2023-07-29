@@ -1,15 +1,14 @@
 "use client";
 import { orange } from "@/Constant/Custom-Color";
+import { filterData, searchFilterData } from "@/Content";
 import { CButton, SelectField } from "@/Shared";
 import { useSearchParams } from "next/navigation";
-import React from "react";
-import { filterData, searchFilterData } from "@/Content";
 
 const CategoriesLeftFilterUI = () => {
   const searchParams = useSearchParams();
-  const categoryName = searchParams.get("category") || "";
+  const categoryName = Number(searchParams.get("category") || "");
   // console.log(categoryName);
-
+  //
   return (
     <div className="break-all py-2">
       {/* //search field  */}
@@ -36,8 +35,8 @@ const CategoriesLeftFilterUI = () => {
               <SelectField
                 type="checkbox"
                 name={sItem.title}
-                defaultChecked={categoryName === sItem.title || false}
-                disabled={categoryName === sItem.title || categoryName === ""}
+                defaultChecked={categoryName === sItem.id || false}
+                disabled={categoryName === sItem.id || false}
                 key={sItem.id}
               />
             ))}
