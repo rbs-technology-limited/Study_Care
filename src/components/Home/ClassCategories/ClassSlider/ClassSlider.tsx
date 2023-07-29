@@ -77,12 +77,13 @@ const ClassSlider = ({ data, delayTime }: Class) => {
           }}
         >
           {data?.map((classData: SliderData) => {
+            console.log(classData); 
             return (
               <SwiperSlide
                 key={classData?.id}
                 onClick={() => {
                   const id = classData?.id;
-                  const category = classData?.class;
+                  const category = classData?.id;
                   route.push(`/categories/${id}?category=${category}`);
                 }}
                 className="cursor-pointer"
@@ -114,7 +115,7 @@ const ClassSlider = ({ data, delayTime }: Class) => {
                     color={teal}
                     onClick={() => {
                       const id = classData?.id;
-                      const category = classData?.class;
+                      const category = classData?.id;
                       route.push(`/categories/${id}?category=${category}`);
                     }}
                   >

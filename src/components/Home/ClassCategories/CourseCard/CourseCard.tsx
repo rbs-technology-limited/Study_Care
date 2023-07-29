@@ -23,7 +23,7 @@ interface ICardData {
 }
 interface ICourseCardData {
   courseCardData: ICardData;
-  key: number;
+  key?: any
 }
 
 const CourseCard = ({ courseCardData,key }: ICourseCardData) => {

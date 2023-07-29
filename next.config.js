@@ -43,13 +43,13 @@ const nextConfig = {
     typedRoutes: true,
     serverActions: true,
   },
-  webpack: (config) => {
-    config.externals.push({
-      sharp: "commonjs sharp",
-      canvas: "commonjs canvas",
-    });
-    return config;
-  },
+  // webpack: (config) => {
+  //   config.externals.push({
+  //     sharp: "commonjs sharp",
+  //     canvas: "commonjs canvas",
+  //   });
+  //   return config;
+  // },
   //   typescript: {
   // //     // !! WARN !!
   // //     // Dangerously allow production builds to successfully complete even if

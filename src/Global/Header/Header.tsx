@@ -1,219 +1,216 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 // import Asset from "public/asset/Asset 1-8.png";
 import Logo from "public/Asset/Logo.png";
 // import ProfileDropDown from "./ProfileDropDown";
-import {CButton} from "@/Shared";
+import { CButton } from "@/Shared";
 import MENU_LIST from "@/Constant/Nav_Data";
-import {orange} from "@/Constant/Custom-Color";
+import { orange } from "@/Constant/Custom-Color";
 import ThemeToogleButton from "../../Shared/ThemeToogleButton/ThemeToogleButton";
 import HeaderBg from "public/Asset/svg/HeaderBg";
-import {useTheme} from "next-themes";
+import { useTheme } from "next-themes";
 import getStystemPreference from "@/Utils/getSystemTheme";
-import {RiArrowDownSFill} from "react-icons/ri";
+import { RiArrowDownSFill } from "react-icons/ri";
 import BlankBackground from "./BlankBackground/BlankBackground";
-import {getTokenCookies} from "../(cockies)/getCoockies";
-import {AppDispatch, useAppSelector} from "@/Redux/store";
-import {removeDataInCookies} from "../(cockies)/setCookies";
-import {useRouter} from "next/navigation";
-import {useDispatch} from "react-redux";
-import {logout} from "@/Redux/features/Auth/auth-slice";
+import { getTokenCookies } from "../(cockies)/getCoockies";
+import { AppDispatch, useAppSelector } from "@/Redux/store";
+import { removeDataInCookies } from "../(cockies)/setCookies";
+import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { logout } from "@/Redux/features/Auth/auth-slice";
 
 const Header = () => {
-    const {theme, setTheme} = useTheme();
-    const [navbar, setNavbar] = useState(false);
-    const [IndexData, setIndex] = useState("");
-    const [dropdown, setDropdown] = useState(false);
-    const router = useRouter();
-    const dispatch = useDispatch<AppDispatch>();
-    const isLogin = useAppSelector(
-        (state) => state.authSlice?.loginDetails?.isLogin
-    );
-    const userInfo = useAppSelector((state) => state.authSlice?.usersInfo);
-    // console.log(userInfo);
-    const [user, setUser] = useState(null);
-    const [currentTheme, setTheeFromLocal] = useState(null);
-    const [showBlankBackground, setShowBlankBackground] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [navbar, setNavbar] = useState(false);
+  const [IndexData, setIndex] = useState("");
+  const [dropdown, setDropdown] = useState(false);
+  const router = useRouter();
+  const dispatch = useDispatch<AppDispatch>();
+  const isLogin = useAppSelector(
+    (state) => state.authSlice?.loginDetails?.isLogin
+  );
+  const userInfo = useAppSelector((state) => state.authSlice?.usersInfo);
+  // console.log(userInfo);
+  const [user, setUser] = useState(null);
+  const [currentTheme, setTheeFromLocal] = useState(null);
+  const [showBlankBackground, setShowBlankBackground] = useState(false);
 
-    useEffect(() => {
-        if (window.location.pathname === "/") {
-            setIndex("Home");
-        } else {
-            setIndex(window.location.pathname.split("/")[1]);
-        }
+  useEffect(() => {
+    if (window.location.pathname === "/") {
+      setIndex("Home");
+    } else {
+      setIndex(window.location.pathname.split("/")[1]);
+    }
 
-        return () => {
-        };
-    }, []);
+    return () => {};
+  }, []);
 
-    const handleLogout = async () => {
-            await removeDataInCookies();
-            dispatch(logout());
-            router.push("/");
-        }
-    ;
+  const handleLogout = async () => {
+    await removeDataInCookies();
+    dispatch(logout());
+    router.push("/");
+  };
+  return (
+    //gradient orange 50 to orange 100
+    <nav className="w-full fixed top-0 z-50 bg-custom-teal dark:bg-dark-teal">
+      {/* add a svg image in absolute position top right corner */}
 
-    return (
-        //gradient orange 50 to orange 100
-        <nav className="w-full fixed top-0 z-50 bg-custom-teal dark:bg-dark-teal">
-            {/* add a svg image in absolute position top right corner */}
+      <section className="absolute -top-24 left-[60%] w-full h-full z-[-1000]">
+        <HeaderBg
+          color={
+            getStystemPreference() == true && theme == "system"
+              ? "#02838F"
+              : getStystemPreference() == true && theme == "dark"
+              ? "#02838F"
+              : "#B2EBF3"
+          }
+        />
+      </section>
 
-            <section className="absolute -top-24 left-[60%] w-full h-full z-[-1000]">
-                <HeaderBg
-                    color={
-                        getStystemPreference() == true && theme == "system"
-                            ? "#02838F"
-                            : getStystemPreference() == true && theme == "dark"
-                                ? "#02838F"
-                                : "#B2EBF3"
-                    }
-                />
-            </section>
-
-            <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
-                <>
-                    <div className="flex items-center justify-between py-3 lg:py-1 lg:block">
-                        {/* //logo  */}
-                        <Link
-                            href="/"
-                            className="inline-block max-w-[10rem] text-3xl text-black-400 font-bold leading-none"
-                        >
-                            <Image
-                                src={Logo}
-                                alt="logo"
-                                className="max-w-full h-auto mt-1"
-                                width={120}
-                                height={40}
-                            />
-                        </Link>
-                        {/* //mobile menu  */}
-                        <div className="lg:hidden">
-                            <button
-                                className="flex items-center px-3 py-2 text-black-400 border border-black-400 rounded hover:text-black-500 hover:border-black-500"
-                                onClick={() => {
-                                    setNavbar(!navbar);
-                                }}
-                            >
-                                {navbar ? (
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6 text-dark"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                            clipRule="evenodd"
-                                        />
-                                    </svg>
-                                ) : (
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6  text-dark"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        strokeWidth={2}
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            d="M4 6h16M4 12h16M4 18h16"
-                                        />
-                                    </svg>
-                                )}
-                            </button>
-                        </div>
-                    </div>
-                </>
-                {/* //desktop menu */}
-                <div>
-                    <div
-                        className={`flex-1 justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${
-                            navbar ? "block" : "hidden"
-                        }`}
-                    >
-                        <ul className=" bg-dark items-center justify-center space-y-4 lg:flex lg:space-x-6 lg:space-y-0">
-                            {MENU_LIST?.map((item, index) => {
-                                return (
-                                    <li
-                                        className={`text-blue-950 hover:text-gray-900
+      <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
+        <>
+          <div className="flex items-center justify-between py-3 lg:py-1 lg:block">
+            {/* //logo  */}
+            <Link
+              href="/"
+              className="inline-block max-w-[10rem] text-3xl text-black-400 font-bold leading-none"
+            >
+              <Image
+                src={Logo}
+                alt="logo"
+                className="max-w-full h-auto mt-1"
+                width={120}
+                height={40}
+              />
+            </Link>
+            {/* //mobile menu  */}
+            <div className="lg:hidden">
+              <button
+                className="flex items-center px-3 py-2 text-black-400 border border-black-400 rounded hover:text-black-500 hover:border-black-500"
+                onClick={() => {
+                  setNavbar(!navbar);
+                }}
+              >
+                {navbar ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6 text-dark"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6  text-dark"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
+          </div>
+        </>
+        {/* //desktop menu */}
+        <div>
+          <div
+            className={`flex-1 justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${
+              navbar ? "block" : "hidden"
+            }`}
+          >
+            <ul className=" bg-dark items-center justify-center space-y-4 lg:flex lg:space-x-6 lg:space-y-0">
+              {MENU_LIST?.map((item, index) => {
+                return (
+                  <li
+                    className={`text-blue-950 hover:text-gray-900
                     dark:text-white dark:hover:text-blue-300
                     ${item?.text === IndexData ? "underline" : ""}
               `}
-                                        key={index}
-                                        onClick={() => {
-                                            setIndex(item?.text);
-                                            if (item?.href) {
-                                                setNavbar(false);
-                                            } else {
-                                                setNavbar(true);
-                                            }
-                                        }}
-                                    >
-                                        {item?.href ? (
-                                            <Link
-                                                href={{
-                                                    pathname: item?.href,
-                                                }}
-                                                className="inline-block px-1 py-2 font-medium leading-5 text-center text-black-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-gray-500 focus:outline-none focus:border-black-500 focus:shadow-outline-black active:bg-gray-50 active:text-black-700
+                    key={index}
+                    onClick={() => {
+                      setIndex(item?.text);
+                      if (item?.href) {
+                        setNavbar(false);
+                      } else {
+                        setNavbar(true);
+                      }
+                    }}
+                  >
+                    {item?.href ? (
+                      <Link
+                        href={{
+                          pathname: item?.href,
+                        }}
+                        className="inline-block px-1 py-2 font-medium leading-5 text-center text-black-400 transition duration-150 ease-in-out border border-transparent rounded-md hover:text-gray-500 focus:outline-none focus:border-black-500 focus:shadow-outline-black active:bg-gray-50 active:text-black-700
                       dark:text-white dark:hover:text-gray-300
                       "
-                                            >
-                                                <span>{item?.text}</span>
-                                            </Link>
-                                        ) : (
-                                            <>
-                                                <div
-                                                    className={`relative lg:block px-1 
+                      >
+                        <span>{item?.text}</span>
+                      </Link>
+                    ) : (
+                      <>
+                        <div
+                          className={`relative lg:block px-1 
                           
                           `}
-                                                    onMouseEnter={() => {
-                                                        setShowBlankBackground(true);
-                                                    }}
-                                                >
-                                                    <div
-                                                        className="flex gap-1 cursor-pointer"
-                                                        onMouseEnter={() => {
-                                                            setShowBlankBackground(true);
-                                                        }}
-                                                        onMouseLeave={() => {
-                                                            setShowBlankBackground(false);
-                                                        }}
-                                                    >
-                                                        <p>{item?.text}</p>
-                                                        <RiArrowDownSFill/>
-                                                    </div>
-                                                    {/* blank background would pop up when hovering over কোর্সসমূহ */}
-                                                    {showBlankBackground && (
-                                                        <div
-                                                            className="bg-button-dark-teal w-72 absolute left-0 top-[1.5625rem] rounded-lg p-5"
-                                                            onMouseOver={() => setShowBlankBackground(true)}
-                                                            onMouseLeave={() => setShowBlankBackground(false)}
-                                                        >
-                                                            <BlankBackground
-                                                                data={item}
-                                                                setNavbar={setNavbar}
-                                                            />
-                                                        </div>
-                                                    )}
-                                                </div>
-                                            </>
-                                        )}
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                </div>
-                {/* //sign in button
+                          onMouseEnter={() => {
+                            setShowBlankBackground(true);
+                          }}
+                        >
+                          <div
+                            className="flex gap-1 cursor-pointer"
+                            onMouseEnter={() => {
+                              setShowBlankBackground(true);
+                            }}
+                            onMouseLeave={() => {
+                              setShowBlankBackground(false);
+                            }}
+                          >
+                            <p>{item?.text}</p>
+                            <RiArrowDownSFill />
+                          </div>
+                          {/* blank background would pop up when hovering over কোর্সসমূহ */}
+                          {showBlankBackground && (
+                            <div
+                              className="bg-button-dark-teal w-72 absolute left-0 top-[1.5625rem] rounded-lg p-5"
+                              onMouseOver={() => setShowBlankBackground(true)}
+                              onMouseLeave={() => setShowBlankBackground(false)}
+                            >
+                              <BlankBackground
+                                data={item}
+                                setNavbar={setNavbar}
+                              />
+                            </div>
+                          )}
+                        </div>
+                      </>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+        {/* //sign in button
          */}
-                <div className={`lg:block ${navbar ? "block" : "hidden"}`}>
-                    <div className="flex items-center justify-center mt-4 lg:mt-0">
-                        {/* <ProfileDropDown
+        <div className={`lg:block ${navbar ? "block" : "hidden"}`}>
+          <div className="flex items-center justify-center mt-4 lg:mt-0">
+            {/* <ProfileDropDown
               user={user}
               dropdown={dropdown}
               setDropdown={setDropdown}
@@ -221,78 +218,78 @@ const Header = () => {
               // setUser={setUser}
             /> */}
 
-                        {!isLogin ? (
-                            <Link href="/login">
-                                <CButton
-                                    type="button"
-                                    textUpperCased
-                                    variant="text"
-                                    color="text-"
-                                >
-                                    সাইন ইন
-                                </CButton>
-                            </Link>
-                        ) : userInfo?.profile_image_thumbnail?.url ? (
-                            <Image
-                                src={userInfo?.profile_image_thumbnail?.url}
-                                alt="user"
-                                width={40}
-                                height={40}
-                                className="mr-2 border-2 border-black dark:border-white shadow rounded-full"
-                                style={{
-                                    width: "2.5rem",
-                                    height: "2.5rem",
-                                    borderRadius: "50%",
-                                    objectFit: "cover",
-                                }}
-                            />
-                        ) : (
-                            <>
-                                <CButton
-                                    type="button"
-                                    textUpperCased
-                                    variant="text"
-                                    color="text-"
-                                >
-                                    {userInfo?.username}
-                                </CButton>
-                            </>
-                        )}
-                        {!isLogin && (
-                            <Link href="/signup">
-                                <CButton
-                                    type="button"
-                                    textUpperCased
-                                    variant="solid"
-                                    color={orange}
-                                >
-                                    নিবন্ধন করুন
-                                </CButton>
-                            </Link>
-                        )}
+            {!isLogin ? (
+              <Link href="/login">
+                <CButton
+                  type="button"
+                  textUpperCased
+                  variant="text"
+                  color="text-"
+                >
+                  সাইন ইন
+                </CButton>
+              </Link>
+            ) : userInfo?.profile_image_thumbnail?.url ? (
+              <Image
+                src={userInfo?.profile_image_thumbnail?.url}
+                alt="user"
+                width={40}
+                height={40}
+                className="mr-2 border-2 border-black dark:border-white shadow rounded-full"
+                style={{
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                }}
+              />
+            ) : (
+              <>
+                <CButton
+                  type="button"
+                  textUpperCased
+                  variant="text"
+                  color="text-"
+                >
+                  {userInfo?.username}
+                </CButton>
+              </>
+            )}
+            {!isLogin && (
+              <Link href="/signup">
+                <CButton
+                  type="button"
+                  textUpperCased
+                  variant="solid"
+                  color={orange}
+                >
+                  নিবন্ধন করুন
+                </CButton>
+              </Link>
+            )}
 
-                        {isLogin && (
-                            <CButton
-                                type="button"
-                                textUpperCased
-                                variant="solid"
-                                color={orange}
-                                onClick={() => {
-                                    handleLogout();
-                                }}
-                            >
-                                লগ আউট
-                            </CButton>
-                        )}
+            {isLogin && (
+              <CButton
+                type="button"
+                textUpperCased
+                variant="solid"
+                color={orange}
+                onClick={() => {
+                  handleLogout();
+                }}
+              >
+                লগ আউট
+              </CButton>
+            )}
 
-                        <div className="border-r-[1px] border-stone-400 dark:border-stone-300 h-12 mx-4"></div>
-                        {/* //toogle button  */}
-                        <ThemeToogleButton/>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    );
+            <div className="border-r-[1px] border-stone-400 dark:border-stone-300 h-12 mx-4"></div>
+            {/* //toogle button  */}
+            <ThemeToogleButton />
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Header;
