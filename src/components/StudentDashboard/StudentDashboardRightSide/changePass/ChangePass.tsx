@@ -1,8 +1,7 @@
 import { teal } from "@/Constant/Custom-Color";
 import { editProfileData } from "@/Content";
-import { getTokenCookies } from "@/Global/(cockies)/getCoockies";
 import { useChangePassMutation } from "@/Redux/features/changePass/changePassSlice";
-import { CButton, CInput } from "@/Shared";
+import { CButton, CInput, cToastify } from "@/Shared";
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { BsQuestionCircleFill } from "react-icons/bs";
 
@@ -19,18 +18,19 @@ const ChangePass = () => {
             new_password1: newPass,
             new_password2: confirmPass
         })
-        console.log('token', gettoken())
 
     };
-    const gettoken = async () => {
-        const token = await getTokenCookies()
-        return token
-    }
     React.useEffect(() => {
         if (isError) {
             console.log(error)
         }
-    }, [isError, error])
+        if (isSuccess) {
+            cToastify({
+                type: "success",
+                message: "Password changed successfully",
+            });
+        }
+    }, [isError, error, isSuccess])
 
 
     return (
@@ -54,7 +54,7 @@ const ChangePass = () => {
                             onChange={(e: ChangeEvent<HTMLInputElement>) => setOldPass(e.target.value)}
                         />
                         <label htmlFor="" className="text-red-500 text-sm">
-                            {isError && error?.data?.message}
+                            {isError && error?.data?.old_password ? error?.data?.old_password[0] : ""}
                         </label>
                     </div>
                     {/* new password */}
@@ -73,7 +73,9 @@ const ChangePass = () => {
                             value={newPass}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => setNewPass(e.target.value)}
                         />
-
+                        <label htmlFor="" className="text-red-500 text-sm">
+                            {isError && error?.data?.new_password2 ? error?.data?.new_password2[0] : ""}
+                        </label>
 
                     </div>
                     {/* confirm password */}
@@ -92,6 +94,9 @@ const ChangePass = () => {
                             value={confirmPass}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => setConfirmPass(e.target.value)}
                         />
+                        <label htmlFor="" className="text-red-500 text-sm">
+                            {isError && error?.data?.new_password2 ? error?.data?.new_password2[0] : ""}
+                        </label>
                     </div>
                 </div>
                 <div className="my-4">
