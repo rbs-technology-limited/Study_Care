@@ -1,4 +1,3 @@
-"use client";
 import { useAppSelector } from "@/Redux/store";
 import AnyQuestionSection from "./AnyQuestionSection/AnyQuestionSection";
 import CarouselMedia from "./CarouselMedia/CarouselMedia";
@@ -16,7 +15,7 @@ const CoursePageLeftUI = () => {
     courseDetails;
   return (
     <section>
-      <CarouselMedia mediaData={sliders} />
+      <CarouselMedia />
       <PriceAndEnroll />
       <TitleAndDescription />
       <ClassRoutine />

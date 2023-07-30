@@ -9,7 +9,6 @@ const page = async ({ params }: any) => {
     },
   });
 
-  console.log("courseData", courseData);
   return (
     <main className="mt-[4.4rem]">
       <Course courseData={courseData} />

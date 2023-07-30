@@ -1,15 +1,17 @@
-import React from "react";
-import { qAData, qAStaticData } from "@/Content";
+"use client";
+import { qAStaticData } from "@/Content";
+import { useAppSelector } from "@/Redux/store";
 import { Accordion } from "@/Shared";
 
 const QAAboutCourse = () => {
+  const { courseDetails } = useAppSelector((state) => state.category);
   return (
     <section className="mt-12">
       <h1 className="text-xl font-bold dark:text-white text-gray-800">
         {qAStaticData?.title}
       </h1>
       <Accordion
-        contents={qAData}
+        contents={courseDetails?.faqs}
         btnExpand={qAStaticData?.btn_expand}
         btnCollapse={qAStaticData?.btn_collapse}
       />

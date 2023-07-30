@@ -12,6 +12,9 @@ type Accordion = {
   contents: {
     id: number;
     title: string;
+    question: string;
+    answer: string;
+    description: string;
     content?: string | undefined;
     contents?: Array<{
       id: number;
@@ -50,7 +53,7 @@ const Accordion = ({
             } flex justify-between items-center gap-4 cursor-pointer`}
           >
             <div className=" text-gray-800 dark:text-[#FFFFFF] text-sm font-bold  py-4">
-              {content.title}
+              {content.question ? content.question : content.title}
             </div>
             <div>
               {!isActive ? (
@@ -109,19 +112,19 @@ const Accordion = ({
                 "border-b-[0.10rem] border-gray-300 border-dashed "
               } pb-2 text-sm text-gray-600 dark:text-white/90`}
             >
-              {content.contents ? (
-                <>
-                  {content.contents.map((content, index) => (
-                    <div key={content.id}>
-                      <div className="flex gap-3 py-2">
-                        <BsFileEarmarkText className="text-lg" color={teal} />
-                        <h1 className="font-semibold">{content.title}</h1>
-                      </div>
-                    </div>
-                  ))}
-                </>
-              ) : (
-                <span>{content.content}</span>
+              {content.title && (
+                <div className="flex gap-3 py-2">
+                  <BsFileEarmarkText className="text-lg" color={teal} />
+
+                  <h1 className="font-semibold">{content?.description}</h1>
+                </div>
+              )}
+              {content.question && (
+                <div className="flex gap-3 py-2">
+                  <BsFileEarmarkText className="text-lg" color={teal} />
+
+                  <h1 className="font-semibold">{content?.answer}</h1>
+                </div>
               )}
             </div>
           )}

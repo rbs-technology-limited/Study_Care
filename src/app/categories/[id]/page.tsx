@@ -4,7 +4,6 @@ import CategoriesShow from "@/components/Home/ClassCategories/CategoriesShow/Cat
 
 const page = async ({ params }: any) => {
   const categoriesData = await getCall(getCategoriesDataEndpoint, {});
-  console.log("categoriesData", categoriesData);
   return (
     <main className=" min-h-screen mt-[4.4rem]">
       <CategoriesShow categoriesData={categoriesData} />

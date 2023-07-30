@@ -77,7 +77,6 @@ const ClassSlider = ({ data, delayTime }: Class) => {
           }}
         >
           {data?.map((classData: SliderData) => {
-            console.log(classData); 
             return (
               <SwiperSlide
                 key={classData?.id}

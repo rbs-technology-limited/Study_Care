@@ -11,13 +11,9 @@ import "swiper/css/autoplay";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 
-type IMediaData = {
-  mediaData: any;
-};
-
-const CarouselMedia = ({ mediaData }: IMediaData) => {
-  console.log("mediaData", mediaData);
+const CarouselMedia = () => {
   const { courseDetails } = useAppSelector((state) => state.category);
+
   return (
     <div className="h-[25rem]">
       <Swiper
@@ -37,7 +33,7 @@ const CarouselMedia = ({ mediaData }: IMediaData) => {
         //   pauseOnMouseEnter: true,
         // }}
       >
-        {mediaData?.map((media: any) => (
+        {courseDetails?.sliders?.map((media: any) => (
           <>
             <SwiperSlide className="h-full flex items-center justify-center w-full rounded-md">
               <div className="h-full w-full rounded-md">
