@@ -1,4 +1,3 @@
-import { useAppSelector } from "@/Redux/store";
 import AnyQuestionSection from "./AnyQuestionSection/AnyQuestionSection";
 import CarouselMedia from "./CarouselMedia/CarouselMedia";
 import ClassRequirements from "./ClassRequirements/ClassRequirements";
@@ -10,9 +9,6 @@ import QAAboutCourse from "./QAAboutCourse/QAAboutCourse";
 import TitleAndDescription from "./TitleAndDescription/TitleAndDescription";
 
 const CoursePageLeftUI = () => {
-  const { courseDetails } = useAppSelector((state) => state.category);
-  const { sliders, syllabuses, class_routines, highlights, faqs, teachers } =
-    courseDetails;
   return (
     <section>
       <CarouselMedia />

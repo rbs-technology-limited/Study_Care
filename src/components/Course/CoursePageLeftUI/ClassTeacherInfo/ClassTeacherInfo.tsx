@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
-import { classTeacherListData, classTeacherInfoData } from "@/Content";
-import Image from "next/image";
+import { classTeacherInfoData, classTeacherListData } from "@/Content";
+import { useAppSelector } from "@/Redux/store";
 import { CButton } from "@/Shared";
+import Image from "next/image";
+import React from "react";
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
@@ -16,7 +17,8 @@ import {
 //     subject: "ইংরেজি",
 //   },
 
-interface classTeacherData {
+interface ClassTeacherData {
+  [x: string]: any;
   id: number;
   name: string;
   designation: any;
@@ -27,6 +29,7 @@ interface classTeacherData {
 
 const ClassTeacherInfo = () => {
   const [sliceNumber, setSliceNumber] = React.useState<number>(5);
+  const { courseDetails } = useAppSelector((state) => state.category);
 
   return (
     <section>
@@ -39,9 +42,9 @@ const ClassTeacherInfo = () => {
         <section className="border-[.0925rem] p-3 my-5 rounded-lg relative">
           {/* //2column grid layout */}
           <div className="grid md:grid-cols-2 grid-cols-1 gap-2 ">
-            {classTeacherListData
+            {courseDetails?.teachers
               ?.slice(0, sliceNumber)
-              ?.map((item: classTeacherData, index: number) => (
+              ?.map((item: ClassTeacherData, index: number) => (
                 <div key={index} className="flex flex-row justify-start gap-2">
                   <div className="relative w-[50px] h-[50px] rounded-full overflow-hidden">
                     <Image
@@ -53,10 +56,10 @@ const ClassTeacherInfo = () => {
                   </div>
                   <section>
                     <h1 className="text-md font-semibold dark:text-white text-gray-800">
-                      {item?.name}
+                      {item?.teacher?.user?.username}
                     </h1>
                     <h1 className="text-xs font-normal dark:text-white text-gray-800">
-                      {item?.designation}, {item?.experience}
+                      {item?.teacher?.user?.designation}, {item?.experience}
                     </h1>
 
                     <h1 className="text-sm font-base dark:text-white text-gray-800 bg-stone-100 px-3 py-.5 w-fit">
