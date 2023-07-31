@@ -1,8 +1,15 @@
+"use client";
 import { teal } from "@/Constant/Custom-Color";
-import { CButton } from "@/Shared";
+import { useAppDispatch, useAppSelector } from "@/Redux/store";
+import { CButton, cToastify } from "@/Shared";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import MultipleChoiceQuestions from "./MultipleChoiceQuestions/MultipleChoiceQuestions";
 
 const QuizSubmissionPanel = () => {
+  const courseId = useParams();
+  const { quizQAs } = useAppSelector((state) => state.courseAccess);
+  const dispatch = useAppDispatch();
   const quizData = [
     {
       id: 1,
@@ -25,13 +32,29 @@ const QuizSubmissionPanel = () => {
       ],
     },
   ];
+
+  const handleQuizAnswerSubmit = () => {
+    if (quizQAs.length !== quizData.length) {
+      cToastify({
+        type: "error",
+        message: "You have not answered all the questions!",
+      });
+    } else {
+      console.log("quizQAs", quizQAs);
+      cToastify({
+        type: "success",
+        message: "Your answers have been submitted successfully",
+      });
+    }
+  };
+
   return (
-    <section>
-      <div className="container mx-auto px-8 py-8 bg-gray-50">
+    <section className="container mx-auto px-8 py-8">
+      <div className="bg-gray-50 dark:bg-transparent">
         {quizData.map((data) => (
           <div
             key={data.id}
-            className="border rounded-lg p-2 text-gray-600 w-full my-3"
+            className="border dark:border-gray-800 rounded-lg p-6 text-gray-600 dark:text-white w-full"
           >
             <MultipleChoiceQuestions
               questions={data?.questions}
@@ -41,9 +64,25 @@ const QuizSubmissionPanel = () => {
         ))}
 
         <div className="flex justify-end my-5">
-          <CButton variant="outline" color={teal}>
-            Submit
-          </CButton>
+          {quizQAs.length !== quizData.length ? (
+            <CButton
+              variant="outline"
+              color={teal}
+              onClick={handleQuizAnswerSubmit}
+            >
+              Submit
+            </CButton>
+          ) : (
+            <Link href={`/course_access/${courseId.id}`}>
+              <CButton
+                variant="outline"
+                color={teal}
+                onClick={handleQuizAnswerSubmit}
+              >
+                Submit
+              </CButton>
+            </Link>
+          )}
         </div>
       </div>
     </section>
