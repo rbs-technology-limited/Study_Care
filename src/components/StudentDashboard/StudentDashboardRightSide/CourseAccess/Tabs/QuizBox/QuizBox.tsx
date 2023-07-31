@@ -1,4 +1,7 @@
+"use client";
 import { CButton } from "@/Shared";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
 type IQuizBoxProps = {
   data: {
@@ -14,6 +17,7 @@ type IQuizBoxProps = {
 };
 
 const QuizBox = ({ data }: IQuizBoxProps) => {
+  const courseId = useParams();
   return (
     <>
       {data?.quiz_attempted ? (
@@ -45,9 +49,11 @@ const QuizBox = ({ data }: IQuizBoxProps) => {
             </span>
           </p>
           <div className="flex justify-center items-center">
-            <CButton variant="outline" color="green">
-              কুইজ দিন
-            </CButton>
+            <Link href={`/course_access/${courseId.id}/quiz`}>
+              <CButton variant="outline" color="green">
+                কুইজ দিন
+              </CButton>
+            </Link>
           </div>
         </div>
       )}
