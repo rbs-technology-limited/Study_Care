@@ -11,6 +11,19 @@ import CategoriesRightDataUI from "./CategoriesRightDataUI/CategoriesRightDataUI
 type ICategoriesData = {
   categoriesData: any;
 };
+type IData = {
+  count: number;
+  total_pages: number;
+  course_per_page: number;
+  current_page: number;
+};
+
+const initialData: IData = {
+  count: 1,
+  total_pages: 1,
+  course_per_page: 1,
+  current_page: 1,
+};
 
 const CategoriesShow = ({ categoriesData }: ICategoriesData) => {
   const dispatch = useAppDispatch();
@@ -40,7 +53,7 @@ const CategoriesShow = ({ categoriesData }: ICategoriesData) => {
           </div>
 
           <CButton
-            customClass=" rounded mt-3 lg:hidden block justify-self-start w-24"
+            customClass="rounded mt-3 lg:hidden block justify-self-start w-24"
             variant="outline"
             color={teal}
             onClick={() => {
@@ -52,11 +65,12 @@ const CategoriesShow = ({ categoriesData }: ICategoriesData) => {
           </CButton>
 
           <div
-            className=" rounded w-full lg:w-[120%] px-1 overflow-y-auto overflow-x-hidden"
-            style={{
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-            }}
+            className="rounded w-full lg:w-[120%]"
+
+            // style={{
+            //   scrollbarWidth: "none",
+            //   msOverflowStyle: "none",
+            // }}
           >
             {/* //mobile device button click to show left section as backdrop left drawer  */}
 
@@ -73,7 +87,7 @@ const CategoriesShow = ({ categoriesData }: ICategoriesData) => {
           <CategoriesLeftFilterUI />
         </OffCanvus>
       </section>
-      <style>
+      {/* <style>
         {`
           ::-webkit-scrollbar {
             width: 0.5em;
@@ -84,7 +98,7 @@ const CategoriesShow = ({ categoriesData }: ICategoriesData) => {
             background-color: transparent;
           }
         `}
-      </style>
+      </style> */}
     </main>
   );
 };

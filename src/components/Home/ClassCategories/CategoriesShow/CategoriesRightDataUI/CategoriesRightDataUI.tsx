@@ -18,7 +18,7 @@ type IData = {
 const initialData: IData = {
   count: 1,
   total_pages: 1,
-  course_per_page: 1,
+  course_per_page: 5,
   current_page: 1,
 };
 
@@ -56,7 +56,8 @@ const CategoriesRightDataUI = () => {
           </Fragment>
         ))}
       </section>
-      <div className="absolute bottom-0 left-0 w-full flex items-center justify-center ">
+
+      <div className="lg:absolute bottom-0 w-full flex items-center justify-center ">
         <Pagination
           currentPage={filterData.current_page}
           totalPages={filterData.total_pages}
